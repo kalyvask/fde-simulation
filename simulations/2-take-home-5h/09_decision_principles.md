@@ -1,6 +1,6 @@
 # 09 — Decision Principles for Helix
 
-> Seven portable principles transferred from the Sierra interview prep, applied to the Helix case. Use these in Hour 1 (wedge selection), Hour 5 (deck framing), and the 60-min Review (architecture defense). They are the difference between a competent build and a frontier-lab final-round defense.
+> Seven portable principles transferred from the  interview prep, applied to the Helix case. Use these in Hour 1 (wedge selection), Hour 5 (deck framing), and the 60-min Review (architecture defense). They are the difference between a competent build and a frontier-lab final-round defense.
 
 ## When to read this
 
@@ -24,7 +24,7 @@ For Helix, the candidate-wedge spectrum looks like:
 
 When the Review probes "why didn't you go bigger?", this is the answer. Not "we'll get there in v2" — that's reactive. The principled answer: "I optimize wedge selection on confidence of outcome, not size. The bigger wedges have lower confidence on the kill-criteria — hallucinated numbers — and v1 is where we earn the right to v2."
 
-## Principle 2 — Outcome Risk Matrix (the Sierra transfer)
+## Principle 2 — Outcome Risk Matrix (the  transfer)
 
 Score each candidate wedge on two dimensions before you pick one:
 
@@ -82,7 +82,7 @@ Most case studies optimize one thing — accuracy, containment, latency. Senior 
 - Are analysts working around the agent (drafting in Word, ignoring the agent's output)?
 - Is Carmen reading the agent's notes with the same trust as Rachel's?
 
-An agent that hits 98% accuracy but 15% adoption is a failed engagement. The Sierra prep hammers this. So does OpenAI.
+An agent that hits 98% accuracy but 15% adoption is a failed engagement. The the prep material hammers this. So does OpenAI.
 
 In your Helix deck and Review:
 - Name the engagement metric explicitly: **"% of covered names where Rachel ships the agent's draft without re-drafting from scratch"**
@@ -143,9 +143,9 @@ Applies to:
 - Review opening (the 90-second restatement)
 - The first sentence of every Review answer when probed on architecture
 
-## Principle 8 — The 3-lens scaffold (Sierra Agent Design transfer)
+## Principle 8 — The 3-lens scaffold ( Agent Design transfer)
 
-The Customer | Product | Technical scaffold from the Sierra Round 4 whiteboarding round applies directly to Helix as the structuring backbone for: (a) your Hour 1 wedge audit, (b) Slide 1's wedge framing, (c) the Review opening 90-second restatement, (d) anchoring architecture defense under pushback.
+The Customer | Product | Technical scaffold from the the agent design whiteboarding round applies directly to Helix as the structuring backbone for: (a) your Hour 1 wedge audit, (b) Slide 1's wedge framing, (c) the Review opening 90-second restatement, (d) anchoring architecture defense under pushback.
 
 **Don't duplicate the content here — see `10_3_lens_applied_to_helix.md` for the full filled-in table** with Rachel's emotional state, the in-scope/out-of-scope split, trust levels, the one specific integration risk (MNPI watch-list drift), and the validation plan.
 

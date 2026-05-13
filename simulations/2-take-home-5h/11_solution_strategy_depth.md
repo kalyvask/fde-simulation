@@ -2,7 +2,7 @@
 
 > Companion to file 10 (`10_3_lens_applied_to_helix.md`). File 10 has the 3-lens table for the Helix earnings-note wedge. This file goes a layer deeper on Solution Strategy: workflow decomposition, agent shapes, orchestration patterns, integration read/write patterns, cost/latency budget. It also reorganizes the risk discussion into Business / UX / Technical buckets with detection signals.
 >
-> **Stays true to:** OpenAI Deployed PM emphasis (pass^k=5, eval suite as deliverable, configuration not fine-tuning, customer-first framing, production thinking). Sierra Agent Strategist principles (3-lens framework, Outcome Risk Matrix, confidence over size, sequencing, engagement gap as parallel track, read-only v1 as the senior move, principles-before-reactive, out-of-scope equally explicit, metric tension named).
+> **Stays true to:** OpenAI Deployed PM emphasis (pass^k=5, eval suite as deliverable, configuration not fine-tuning, customer-first framing, production thinking). Forward Deployed Engineer principles (3-lens framework, Outcome Risk Matrix, confidence over size, sequencing, engagement gap as parallel track, read-only v1 as the senior move, principles-before-reactive, out-of-scope equally explicit, metric tension named).
 
 ## The 5 principles of AI workforce design (Helix application)
 
@@ -11,7 +11,7 @@ When the interviewer says "walk me through the architecture", these 5 principles
 | Principle | Helix application | Probe it defends against |
 |---|---|---|
 | **1. Decompose by failure mode, not by feature** | MNPI Scrubber is separate from Drafter because regulatory leak is irreversible; bad synthesis is reversible. Citation Verifier is separate from Tone Supervisor for the same reason. | "Why these agent boundaries?" |
-| **2. Deterministic gates around the dangerous calls** | MNPI Scrubber + Citation Verifier are both deterministic. LLMs handle the soft work (drafting, tone judgment); rules handle the kill-criteria calls. Sierra ADLC discipline: configuration over fine-tuning. | "Why not LLM-as-judge for citation?" |
+| **2. Deterministic gates around the dangerous calls** | MNPI Scrubber + Citation Verifier are both deterministic. LLMs handle the soft work (drafting, tone judgment); rules handle the kill-criteria calls. the agent development lifecycle discipline: configuration over fine-tuning. | "Why not LLM-as-judge for citation?" |
 | **3. Read before write, always** | Read freely from Bloomberg + FactSet + prior-quarter notes. Write only to a holding queue Rachel approves. Never to the PMS, trader distribution, or analyst's published folder in v1. | "Why no auto-publish?" |
 | **4. Each agent has ONE job** | KPI Extractor only extracts. Drafter only drafts. Verifier only verifies. Splitting prevents one agent from cascading failures across responsibilities. | "Why so many agents?" |
 | **5. Orchestrator is dumb; agents are smart** | Orchestration is sequential + branching + retry. Intelligence lives in the agents. The Drafter doesn't know about MNPI rules; the Scrubber doesn't know about KPIs. | "How does this scale to 10x volume?" |
@@ -90,7 +90,7 @@ MNPI Scrubber → Intake → KPI Extractor → Drafter → (Tone Supervisor || C
 | Idempotency | Re-running the workflow on the same earnings call produces the same draft (deterministic seed on Drafter; cached source pulls) |
 | Observability | Every agent's input + output + latency + cost logged for the audit trace + drift detection |
 
-**The defense if probed**: "The orchestrator is intentionally dumb. Sequential + parallel critics + one branch + retry. Business logic lives in the agents. Keeps the orchestrator stable while the agents iterate. This is the Sierra ADLC pattern."
+**The defense if probed**: "The orchestrator is intentionally dumb. Sequential + parallel critics + one branch + retry. Business logic lives in the agents. Keeps the orchestrator stable while the agents iterate. This is the the agent development lifecycle pattern."
 
 ## Integration patterns (reads and writes for Helix)
 
@@ -115,7 +115,7 @@ MNPI Scrubber → Intake → KPI Extractor → Drafter → (Tone Supervisor || C
 | Approved note → trader distribution | **Approval-gated** (Rachel + Carmen one-click on the first 90 days post-promotion) | v1.5 |
 | High-confidence cases auto-publish | **Direct write with audit** | v2, after pass^k=5 + 90 days clean Tier 2 + Mei external-audit pass |
 
-### The 3-tier integration ladder (Sierra sequencing applied)
+### The 3-tier integration ladder ( sequencing applied)
 
 | Tier | What it does | When | Gate to next tier |
 |---|---|---|---|
@@ -123,7 +123,7 @@ MNPI Scrubber → Intake → KPI Extractor → Drafter → (Tone Supervisor || C
 | **Tier 2 (v1.5, weeks 5-12)** | Approval-gated write to PMS + trader distribution | After 90 days Tier 1 clean | Engagement metric ≥70% adoption (Rachel ships agent's draft without re-write) |
 | **Tier 3 (v2, weeks 13+)** | Autonomous publish for highest-confidence cases (single-sector, single-quarter, clean MNPI) | After 90 days Tier 2 clean + external audit pass | Customer-specific gates (Sarah + Mei + board-level) |
 
-**The defense if probed "why no auto-publish in v1"**: "Write access in v1 means a wrong draft becomes a wrong PMS record. Read-only keeps the failure mode at 'Rachel catches it in review' — recoverable. We earn auto-publish by shipping read-only first. Sierra-style sequencing."
+**The defense if probed "why no auto-publish in v1"**: "Write access in v1 means a wrong draft becomes a wrong PMS record. Read-only keeps the failure mode at 'Rachel catches it in review' — recoverable. We earn auto-publish by shipping read-only first. best-practice sequencing."
 
 ## Cost and latency budget
 

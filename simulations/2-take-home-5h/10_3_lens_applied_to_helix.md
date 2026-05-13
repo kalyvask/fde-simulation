@@ -1,10 +1,10 @@
 # 10 — 3-Lens Framework Applied to Helix
 
-> The Customer | Product | Technical scaffolding from the Sierra Agent Design round, applied directly to the Helix earnings-note wedge. Use this table as: (1) your Hour 1 wedge audit, (2) the structure for Slide 1's framing, (3) the Review opening 90-second restatement, (4) the anchor for architecture defense under pushback.
+> The Customer | Product | Technical scaffolding from the  Agent Design round, applied directly to the Helix earnings-note wedge. Use this table as: (1) your Hour 1 wedge audit, (2) the structure for Slide 1's framing, (3) the Review opening 90-second restatement, (4) the anchor for architecture defense under pushback.
 
-## Why a Sierra framework belongs in Helix prep
+## Why a  framework belongs in Helix prep
 
-Different artifact, same skill. Sierra Round 4 is a 5-min whiteboard. Helix is a 5-hour build + 60-min Review. Both test the same thing: can you defend an agent design under cross-examination by structuring it around the customer first, the technology last?
+Different artifact, same skill. the agent design round is a 5-min whiteboard. Helix is a 5-hour build + 60-min Review. Both test the same thing: can you defend an agent design under cross-examination by structuring it around the customer first, the technology last?
 
 The 3-lens framework is the highest-leverage transfer because it forces every load-bearing decision through the same 3 questions before the interviewer asks them.
 

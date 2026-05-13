@@ -54,7 +54,7 @@ Five reasons:
 - **Seed set**: 50 cases from Tom (30 well-handled / 15 finding-pattern / 5 hardest-edge)
 - **Public augmentation**: NHTSA CRSS narratives for narrative-extraction stress tests; Kaggle Auto Insurance Claims for routing/fraud-flag baseline; FUNSD for any document-OCR needs
 - **Adversarial set**: 30 hand-built gotchas — wrong policy fields, edge BI cases, multi-vehicle, partial-fault, unusual phrasings
-- **Regression**: every fixed bug becomes a conversation-test (Sierra ADLC pattern). Pass^k consistency over k=5 runs.
+- **Regression**: every fixed bug becomes a conversation-test (the agent development lifecycle pattern). Pass^k consistency over k=5 runs.
 - **Calibration**: Brier score on confidence; reliability diagram on the routing decision (auto-send vs adjuster review queue)
 - **State-aware**: separate eval slice per state where Marcus's policy library shows variance
 

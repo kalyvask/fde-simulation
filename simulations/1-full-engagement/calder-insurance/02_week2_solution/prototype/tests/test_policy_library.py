@@ -1,6 +1,6 @@
 """Unit tests for the deterministic policy library.
 
-Pattern: every fixed bug becomes a test (Sierra ADLC, Alhena death-spiral).
+Pattern: every fixed bug becomes a test (the agent development lifecycle, Alhena death-spiral).
 For new rules, add a test case here BEFORE adding the rule.
 """
 from __future__ import annotations

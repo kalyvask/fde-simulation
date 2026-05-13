@@ -61,7 +61,7 @@ The citation-faithfulness and hallucinated-guidance metrics are weighted 10x in 
 - **Seed set**: 30 historical Helix-covered earnings calls (David sources from research archive) — 20 well-handled + 10 hard-cases-where-analyst-caught-something
 - **Public augmentation**: EDGAR-CORPUS (40GB, 6+ billion tokens) for narrative-extraction stress tests; ECTSum for tone-shift benchmarks; SubjECTive-QA for 6-dimensional subjectivity labels
 - **Adversarial set**: 30 hand-built failures targeting hallucinated guidance, mid-narrative entity drops, MNPI smell-tests (e.g., a name on watch list smuggled into prompt), citation-misalignment edge cases, post-Q&A tone-shift detection
-- **Regression**: every fixed bug → permanent case (Sierra ADLC)
+- **Regression**: every fixed bug → permanent case (the agent development lifecycle)
 - **Calibration**: Brier score on hallucinated-guidance routing; reliability diagram per analyst sector slice
 - **Per-name slicing**: separate eval slices per sector (TMT / consumer / industrials) and per-analyst owner
 

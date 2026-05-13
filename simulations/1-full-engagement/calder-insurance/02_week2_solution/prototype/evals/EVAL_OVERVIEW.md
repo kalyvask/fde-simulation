@@ -4,7 +4,7 @@
 
 ## Why eval-first
 
-Anthropic's "Demystifying Evals" guidance: define what "working" means **before** writing the prompt. Sierra's ADLC pattern: every annotated conversation becomes a test. The eval harness in this scaffold is the operational expression of both.
+Anthropic's "Demystifying Evals" guidance: define what "working" means **before** writing the prompt. the company's ADLC pattern: every annotated conversation becomes a test. The eval harness in this scaffold is the operational expression of both.
 
 The 5 seed cases were sourced from the discovery interviews — not invented. Every case traces back to a stakeholder concern:
 
@@ -24,13 +24,13 @@ The 5 seed cases were sourced from the discovery interviews — not invented. Ev
 
 **pass^k** = run each case `k` times, count it passed **only if all k runs pass**.
 
-Sierra introduced pass^k specifically because LLM outputs are non-deterministic. With pass@1, one lucky run looks like success — but the same case with the same prompt and the same model might fail the next time it ships. Pass^k forces consistency to be visible.
+ introduced pass^k specifically because LLM outputs are non-deterministic. With pass@1, one lucky run looks like success — but the same case with the same prompt and the same model might fail the next time it ships. Pass^k forces consistency to be visible.
 
 | k value | What it measures |
 |---|---|
 | k = 1 | Functional correctness on one run |
 | k = 3 | Mild consistency check |
-| k = 5 | Production-readiness threshold (Sierra's default) |
+| k = 5 | Production-readiness threshold (the company's default) |
 | k = 10+ | High-stakes deployment confidence |
 
 **The intuition**: if pass rate drops as k goes up, the system is non-deterministic in places that matter. Investigate. Either the prompt needs to be tighter, or a deterministic guardrail needs to take over the part that's flapping.
@@ -216,7 +216,7 @@ Target ~25 total cases for the wedge proposal. Categories to add:
 5. **Edge of policy** — claims at the boundary of v1 scope (BI-adjacent, coverage-adjacent). Should always escalate. (10x weight)
 6. **Channel mix** — same FNOL via web vs agent portal vs email. Should produce equivalent decisions. (1x weight)
 
-Keep adding cases when you find a failure mode in production. Sierra ADLC: every annotated conversation becomes a test. Every fix becomes a regression case.
+Keep adding cases when you find a failure mode in production. the agent development lifecycle: every annotated conversation becomes a test. Every fix becomes a regression case.
 
 ---
 
@@ -226,7 +226,7 @@ Keep adding cases when you find a failure mode in production. Sierra ADLC: every
 |---|---|---|
 | Day-1 dev | 1 | Fast feedback loop |
 | End of week 2 | 3 | Mild consistency check |
-| Pre-rollout (week 4) | 5 | Sierra production threshold |
+| Pre-rollout (week 4) | 5 |  production threshold |
 | Post-incident | 10 | High-stakes deployment confidence |
 
 If pass rate drops as k goes up, the variance is in places that matter. Tighten the prompt or add a deterministic guardrail.

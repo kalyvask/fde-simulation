@@ -6,7 +6,7 @@
 
 OpenAI specifically requires a video walkthrough on Deployed PM (Codex) and FDE take-homes. Per the JD: FDEs present to executives weekly. The video is testing whether you can communicate technical decisions to a non-technical stakeholder under time pressure.
 
-Sierra often skips the video requirement but if you offer one, you score higher on the "Communication" rubric dimension.
+ often skips the video requirement but if you offer one, you score higher on the "Communication" rubric dimension.
 
 ## The 5-minute structure
 

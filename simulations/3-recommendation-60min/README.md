@@ -59,4 +59,4 @@ If you hit all 10, you're at the FDE final-round bar for this format.
 
 ## Note on the format
 
-This is the format Qurrent and similar AI-workforce platforms use. It's also the format for early-stage onsites at OpenAI / Anthropic / Sierra (before the take-home round). The 5-hour take-home version (sim 2) is the next round up; the full engagement (sim 1) is what the actual job looks like.
+This is the format the company and similar AI-workforce platforms use. It's also the format for early-stage onsites at OpenAI / Anthropic / frontier AI labs (before the take-home round). The 5-hour take-home version (sim 2) is the next round up; the full engagement (sim 1) is what the actual job looks like.

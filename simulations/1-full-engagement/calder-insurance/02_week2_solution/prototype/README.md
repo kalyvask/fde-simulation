@@ -78,7 +78,7 @@ prototype/
 
 4. **Eval-driven**. The harness exists before any prompt. Every eval case has a weight; rare-but-critical cases have 10x weight on misses.
 
-5. **Pass^k, not pass@1**. Sierra ADLC pattern. Default `k=1` for fast feedback; bump to `k=5` before any rollout decision.
+5. **Pass^k, not pass@1**. the agent development lifecycle pattern. Default `k=1` for fast feedback; bump to `k=5` before any rollout decision.
 
 6. **Mock fallback** for the LLM. Lets the scaffold run without a key for code-reading; real Anthropic calls when the key is set.
 

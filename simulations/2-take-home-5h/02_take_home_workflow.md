@@ -9,7 +9,7 @@
 - Fresh repo or fork of existing scaffold (your call)
 - Loom / QuickTime ready for the video at hour 5
 - Paper or notes app for hour 1 thinking (resist opening the editor early)
-- **Read `09_decision_principles.md` once before you start.** Seven portable principles transferred from the Sierra prep that apply directly to Helix. They are the difference between a competent build and a frontier-lab final-round defense.
+- **Read `09_decision_principles.md` once before you start.** Seven portable principles transferred from the the prep material that apply directly to Helix. They are the difference between a competent build and a frontier-lab final-round defense.
 
 ## Hour 1 — Discovery + framing (NO CODE)
 

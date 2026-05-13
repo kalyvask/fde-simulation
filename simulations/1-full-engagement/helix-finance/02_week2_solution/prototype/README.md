@@ -62,7 +62,7 @@ prototype/
 2. **Citation grounding is non-negotiable.** Every number in the draft traces to a source span. No exceptions. Enforced deterministically post-draft.
 3. **Trace-first.** Every agent writes to AuditTrace on every call. Same pattern as Calder. The trace is examiner-readable for FINRA compliance review.
 4. **Hybrid det+LLM** with even more deterministic guardrails than Calder. Finance regulatory cost is higher; engineer more deterministic guards.
-5. **Pass^k=5 production gate.** Same as Sierra ADLC default.
+5. **Pass^k=5 production gate.** Same as the agent development lifecycle default.
 
 ## What's NOT in v1
 

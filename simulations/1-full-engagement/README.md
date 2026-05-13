@@ -19,7 +19,7 @@ Both cases use synthetic data and a fictional customer. Both have full prototype
 
 | Case | Domain | Use it when interviewing for... |
 |---|---|---|
-| [Calder Insurance](calder-insurance/) | Personal-lines insurance / claims | OpenAI Deployed PM at insurance customer, Sierra Agent Strategist for retail-claims customer |
+| [Calder Insurance](calder-insurance/) | Personal-lines insurance / claims | OpenAI Deployed PM at insurance customer, an FDE role at a retail-AI-deployment platform |
 | [Helix Capital](helix-finance/) | Long-short equity hedge fund / earnings research | OpenAI Deployed PM at finance customer, Anthropic Solutions Engineer for hedge-fund deployment |
 
 You can run both cases sequentially to test domain-portability — that's actually a signal of senior FDE skill.

@@ -26,7 +26,7 @@
 
 - **Buyer (Sarah, CIO)**: "Senior analysts are burning out on the morning-after grind. We lost two in 2025."
 - **Brief**: "Build something that compresses the 4-hour earnings-note drafting time to 30 minutes."
-- **Industry**: Morgan Stanley, BlackRock, and peers have built citation-grounded LLM drafters with HITL approval. Anthropic's Claude is BAA-cleared. Sierra's deployment patterns apply.
+- **Industry**: Morgan Stanley, BlackRock, and peers have built citation-grounded LLM drafters with HITL approval. Anthropic's Claude is BAA-cleared. the company's deployment patterns apply.
 - **Operator (Rachel, senior analyst)**: "Most of my 4 hours is actually verification and formatting. The analysis itself is maybe 45 minutes. If you compress verification, you save 2+ hours."
 
 **Convergence**: all four point at the verification + formatting layer, not the analysis layer. The wedge is citation-grounded drafting + verification, not "automate the analysis."

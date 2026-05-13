@@ -203,7 +203,7 @@ class BaseAgent(ABC):
 
 ## Pattern E — Eval harness (evals/harness.py)
 
-**Why this pattern matters**: pass^k discipline (Sierra ADLC). Weighted by failure cost (Marcus's rules → 10x weight). Grades on decision + must_contain + must_not_contain + rules_fired.
+**Why this pattern matters**: pass^k discipline (the agent development lifecycle). Weighted by failure cost (Marcus's rules → 10x weight). Grades on decision + must_contain + must_not_contain + rules_fired.
 
 **Case format (JSONL, one per line)**:
 ```json

@@ -1,10 +1,10 @@
-# Qurrent FDE Interview Playbook (60-minute format)
+# FDE Recommendation Interview Playbook (60-minute format)
 
-> A structural playbook for the Qurrent Forward Deployed Engineer interview. The interview is high-level (recommendation-shape, no take-home build) and tests three explicit topics: Discovery, Solution Strategy, Risk & Validation. This document gives you the order in which to deploy frameworks, the points to land in each section, the predictable probes per topic, and the anti-patterns to avoid.
+> A structural playbook for the Forward Deployed Engineer recommendation interview. The interview is high-level (recommendation-shape, no take-home build) and tests three explicit topics: Discovery, Solution Strategy, Risk & Validation. This document gives you the order in which to deploy frameworks, the points to land in each section, the predictable probes per topic, and the anti-patterns to avoid.
 
-## What Qurrent is testing
+## What the company is testing
 
-Qurrent's FDE interview probes the same skill as Sierra and OpenAI's Forward Deployed roles, with a tighter format:
+A 60-min FDE interview probes the same skill as OpenAI and Anthropic's Forward Deployed roles, with a tighter format:
 
 - 60 minutes total
 - High-level recommendation, not build
@@ -107,7 +107,7 @@ If all four sources point at the same workflow stage, you have the wedge. If the
 | Day 1 | Champion + lead user | Stakeholder map + draft wedge hypothesis |
 | Day 2 | Compliance + tech owner | Regulatory boundary + integration map |
 | Day 3 | Silent skeptic + operations | Adoption risk + post-handoff ownership plan |
-| End of day 3 | Field memo to Qurrent + customer | One-page wedge proposal + 4-week plan |
+| End of day 3 | Field memo to the platform team + customer | One-page wedge proposal + 4-week plan |
 
 This is the senior FDE move. Naming a day-by-day plan beats "I'd talk to stakeholders."
 
@@ -530,7 +530,7 @@ These three gates are non-negotiable. Naming them with owners shows you've thoug
 | "What's your eval set sourced from?" | Synthetic for v1 (covers known failure modes), production-labeled subset for v1.5 (covers real distribution). |
 | "What if your eval passes but production fails?" | The eval composition is wrong. Either weight is off or distribution doesn't match reality. Diagnostic: re-weight by failure cost; expand adversarial set with the production failures. |
 | "What if compliance changes mid-engagement?" | Versioned policy library + LLM-as-judge tier-2 check on every release. Compliance owner signals the policy update; we re-run evals before next release. |
-| "Who owns this in 90 days?" | Operational owner named pre-handoff. Weekly cadence for first 30 days post-handoff. Field memo back to Qurrent product team monthly. |
+| "Who owns this in 90 days?" | Operational owner named pre-handoff. Weekly cadence for first 30 days post-handoff. Field memo back to the platform product team monthly. |
 | "What's the rollback procedure?" | Immutable snapshots of every agent version + traffic-shift back to prior version + 24h smoke test. Rollback is a feature, not an emergency. |
 
 ### Anti-patterns to avoid in Risk & Validation
@@ -551,13 +551,13 @@ What to ask:
 
 | Strong | Weak |
 |---|---|
-| "What's the typical FDE engagement at Qurrent look like in the first 90 days?" | "What's the team culture like?" |
+| "What's the typical FDE engagement at the company look like in the first 90 days?" | "What's the team culture like?" |
 | "What's the field-back-to-product loop in practice?" | "Tell me about a fun project." |
 | "What's the failure mode of a new FDE you've seen most often?" | (no questions) |
 | "What would I be doing 6 months in?" | "What do you like about working here?" |
 | "What's a customer engagement that surprised you this year?" | "Is there flexibility?" |
 
-If you can, reference something specific from Qurrent's public material (their docs, a blog post, a recent product launch). Signals preparation.
+If you can, reference something specific from the company's public material (their docs, a blog post, a recent product launch). Signals preparation.
 
 ---
 
@@ -626,10 +626,10 @@ You don't have to be perfect. Frontier labs and AI-workforce platforms reward st
   3 sign-off criteria with stakeholder owners
 
 0:55-0:60 REVERSE Q&A
-  First-90-days at Qurrent FDE
+  First-90-days at the company FDE
   Field-back-to-product loop
   Failure mode of a new FDE
-  Reference specific Qurrent material
+  Reference the company's public material
 
 THE SUB-RULES THROUGHOUT:
   Name the emotional state of the user
@@ -803,7 +803,7 @@ Mirrors the 3-level metrics framework. Order matters in the interview: lead with
 
 ### Reverse Q&A (last 5 min)
 
-- "What's the typical first-90-day FDE engagement at Qurrent look like?"
+- "What's the typical first-90-day FDE engagement at the company look like?"
 - "What's the field-back-to-product loop in practice?"
 - "What's a customer engagement that surprised you this year?"
 
@@ -823,4 +823,4 @@ Mirrors the 3-level metrics framework. Order matters in the interview: lead with
 - 4-dimensional testing framework with weighted eval composition
 - 3 named sign-off criteria with owners
 
-If you can do this end-to-end in 60 minutes on whatever case Qurrent throws at you, you'll hit the FDE bar.
+If you can do this end-to-end in 60 minutes on whatever case the company throws at you, you'll hit the FDE bar.

@@ -1,8 +1,8 @@
 # 12 — Helix Mock Case Worked Example (the live Review response)
 
-> An end-to-end "what I'd actually say" walkthrough of the 60-min Helix Review round. Mirrors the Sentinel mock case in the Qurrent playbook, but uses Helix's actual stakeholders (Sarah, David, Rachel, Mei, Aditya, James, Carmen) and content (MNPI, citation grounding, earnings notes). Made-up numbers where credible; framework choices defended throughout.
+> An end-to-end "what I'd actually say" walkthrough of the 60-min Helix Review round. Mirrors the Sentinel mock case in the recommendation playbook, but uses Helix's actual stakeholders (Sarah, David, Rachel, Mei, Aditya, James, Carmen) and content (MNPI, citation grounding, earnings notes). Made-up numbers where credible; framework choices defended throughout.
 >
-> **Stays true to:** OpenAI Deployed PM emphasis (pass^k=5, eval suite as deliverable, configuration not fine-tuning, customer-first framing, production thinking). Sierra Agent Strategist principles (3-lens framework, Outcome Risk Matrix, confidence over size, sequencing, engagement gap as parallel track, read-only v1 as the senior move, principles-before-reactive, out-of-scope equally explicit, metric tension named, "strong but flawed > polished mediocre" mindset).
+> **Stays true to:** OpenAI Deployed PM emphasis (pass^k=5, eval suite as deliverable, configuration not fine-tuning, customer-first framing, production thinking). Forward Deployed Engineer principles (3-lens framework, Outcome Risk Matrix, confidence over size, sequencing, engagement gap as parallel track, read-only v1 as the senior move, principles-before-reactive, out-of-scope equally explicit, metric tension named, "strong but flawed > polished mediocre" mindset).
 
 ## How to use this file
 
@@ -199,7 +199,7 @@ Read this **after** files 09 (decision principles), 10 (3-lens applied), and 11 
 
 What I'd ask:
 
-- "What's the typical FDE engagement at OpenAI / Sierra / Anthropic look like in the first 90 days?"
+- "What's the typical FDE engagement at OpenAI /  / Anthropic look like in the first 90 days?"
 - "What's the field-back-to-product loop in practice? When I find a config-vs-fine-tune insight, how does that get back to the product team?"
 - "What's the failure mode of a new FDE you've seen most often?"
 - "What's a customer engagement that surprised you this year?"
@@ -210,7 +210,7 @@ What I'd ask:
 
 A condensed checklist of moves it executes:
 
-- Opens with the 3-lens restatement (Sierra principle: insight first, not activity)
+- Opens with the 3-lens restatement ( principle: insight first, not activity)
 - Defends the wedge with "confidence over size" before any probe (file 09, Principle 1)
 - Names Carmen as the silent skeptic in stakeholder mapping (file 09: relationship over headcount)
 - Uses 4-source convergence by name (process maturity signal)
@@ -219,14 +219,14 @@ A condensed checklist of moves it executes:
 - Names the 5 principles of AI workforce design before drawing agents (file 11)
 - Maps 7 agents to shapes from the catalog (file 11)
 - Names orchestration pattern + read/write patterns explicitly (file 11)
-- Defends with "configuration, not fine-tuning" (Sierra ADLC + OpenAI emphasis)
+- Defends with "configuration, not fine-tuning" (the agent development lifecycle + OpenAI emphasis)
 - Names the engagement gap as the parallel track (file 09, Principle 4)
 - Risks organized into Business / UX / Technical buckets with detection signals (file 11)
 - Pass^k=5 named explicitly (OpenAI emphasis)
 - 3 sign-off criteria with named owners (file 09)
-- Metric tension named: speed vs zero-MNPI streak (Sierra principle)
+- Metric tension named: speed vs zero-MNPI streak ( principle)
 - Read-only v1 framed defensively, not apologetically (file 09, Principle 6)
-- Closes with the strong-but-flawed mindset reminder (Sierra + OpenAI shared culture)
+- Closes with the strong-but-flawed mindset reminder ( + OpenAI shared culture)
 
 If you can do this end-to-end on the Helix case (or any structurally similar case), you'll hit the FDE final-round bar.
 

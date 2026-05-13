@@ -35,7 +35,7 @@ Production rollout started Monday week 5. Hassan owns operations; Sienna owns we
 
 ### Product gaps
 
-4. **No first-class "immutable agent snapshot" primitive.** Sierra's ADLC pattern is right and we re-implemented it manually (model_version + prompt + knowledge-base hash). A platform primitive that bundles these as one versioned artifact would have saved a week of plumbing. The MCP and Agent SDK roadmap should consider this.
+4. **No first-class "immutable agent snapshot" primitive.** the company's ADLC pattern is right and we re-implemented it manually (model_version + prompt + knowledge-base hash). A platform primitive that bundles these as one versioned artifact would have saved a week of plumbing. The MCP and Agent SDK roadmap should consider this.
 
 5. **No native LLM-as-judge calibration tooling.** Brier score, reliability diagrams, calibration curves — all DIY. Calibration is the gap between "the eval passes" and "we trust the routing decision." A platform-level calibration helper would land hard with FDE customers.
 
@@ -43,7 +43,7 @@ Production rollout started Monday week 5. Hassan owns operations; Sienna owns we
 
 ### Platform investments worth making
 
-7. **State-aware policy libraries.** Insurance has 50 state DOIs; healthcare has 50 state Medicaid agencies; finance has multiple regulators per state. A first-class "regulatory variance" data structure with versioning, diffing, and audit hooks would be a moat. Sierra has a primitive for this; Anthropic could go deeper.
+7. **State-aware policy libraries.** Insurance has 50 state DOIs; healthcare has 50 state Medicaid agencies; finance has multiple regulators per state. A first-class "regulatory variance" data structure with versioning, diffing, and audit hooks would be a moat.  has a primitive for this; Anthropic could go deeper.
 
 8. **Death-spiral monitor primitive.** Rolling-window drift detection for accuracy / latency / escalation rate is a per-customer build today. As a platform primitive (with PagerDuty / Slack / OpsGenie connectors prebuilt), it'd be a click-deploy.
 

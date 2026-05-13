@@ -1,6 +1,6 @@
 # Simulation 2: 5-Hour Take-Home + 60-Min Review (~6 hours total)
 
-> The actual final-round format used by OpenAI Deployed PM, Anthropic Forward Deployed, and Sierra Agent Strategist. A real 5-hour clock followed by a real Review round.
+> The actual final-round format used by OpenAI Deployed PM, Anthropic Forward Deployed, and Forward Deployed Engineer. A real 5-hour clock followed by a real Review round.
 
 ## What this simulation tests
 

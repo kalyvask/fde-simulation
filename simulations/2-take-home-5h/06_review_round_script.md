@@ -12,7 +12,7 @@
 | 40-55 min | Risk + path to production | List risks, show eval, show observability, name sign-off criteria |
 | 55-60 min | Your questions back | 2-3 sharp questions referencing the interviewer's public work |
 
-## The opening 90-second restatement (Sierra 3-lens transfer)
+## The opening 90-second restatement ( 3-lens transfer)
 
 Open the Review with the 3-lens framing. It primes the interviewer for every architectural choice you've made and tells them which lens to probe first:
 
@@ -176,7 +176,7 @@ Within 24 hours:
 
 ## The point of this round
 
-Sierra and OpenAI use the 60-minute Review to test ONE thing: **can you defend technical decisions to a senior peer under sustained pushback for an hour, while staying calibrated about what's known vs unknown?**
+OpenAI and Anthropic use the 60-minute Review to test ONE thing: **can you defend technical decisions to a senior peer under sustained pushback for an hour, while staying calibrated about what's known vs unknown?**
 
 The take-home shows what you can build. The Review shows what you can defend. Both matter. The Review matters more for offer decisions.
 
