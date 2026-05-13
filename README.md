@@ -12,6 +12,10 @@ There's almost no public material that simulates this. Most guides are generic P
 
 It's structured for self-study, peer mocks, or Claude-Code-as-interviewer.
 
+## Quickstart
+
+5 minutes from clone to your first agent run: see [QUICKSTART.md](QUICKSTART.md).
+
 ## Pick your simulation
 
 | Simulation | Time | What you produce | When to use it |

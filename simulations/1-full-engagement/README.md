@@ -29,9 +29,19 @@ You can run both cases sequentially to test domain-portability — that's actual
 1. Read the case's `00_brief.md` (the customer prompt)
 2. For each weekly phase, open the folder and read `EXERCISE.md` **first**
 3. Do the exercise. Spend the suggested time. Don't peek at the reference solution.
-4. After you've produced your own artifact, compare against `reference_solution/`
-5. Note the gaps between your work and the reference. Those gaps are your prep targets.
-6. By the end of 4 weeks, you should have a portfolio piece (your prototype + memo) and a clear sense of where your FDE skill is strong vs weak.
+4. **Week 1 (discovery)**: use `01_week1_discovery/STAKEHOLDER_INTERVIEWS.md` to run interactive role-play interviews. Claude plays each persona (CCO, CISO, Compliance, lead user, silent skeptic). You conduct real discovery conversations.
+5. **After each phase**: grade your work automatically using the Claude prompts in [`GRADE_YOUR_WORK.md`](GRADE_YOUR_WORK.md). 5 dimensions × 0-3 each = max 15 per phase, with specific feedback per dimension.
+6. Note the gaps between your work and the reference. Those gaps are your prep targets.
+7. By the end of 4 weeks, you should have a portfolio piece (your prototype + memo) and a clear sense of where your FDE skill is strong vs weak.
+
+## Interactive components
+
+| Component | What it does | Where |
+|---|---|---|
+| **Stakeholder role-play prompts** | Claude plays each persona; you conduct real discovery interviews | `<case>/01_week1_discovery/STAKEHOLDER_INTERVIEWS.md` |
+| **Synthetic data generators** | Working Python that produces synthetic FNOLs / earnings calls deterministically with a seed | `<case>/02_week2_solution/prototype/<case>_agent/data/synthetic.py` |
+| **Eval harness with pass^k=5** | Weighted eval cases; examiner-readable trace per case | `<case>/02_week2_solution/prototype/scripts/run_eval.py` |
+| **Automated grading** | Claude grades your submission against the reference per phase | [`GRADE_YOUR_WORK.md`](GRADE_YOUR_WORK.md) |
 
 ## The honest tradeoff
 
