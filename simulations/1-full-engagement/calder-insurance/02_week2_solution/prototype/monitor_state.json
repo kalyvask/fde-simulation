@@ -1,0 +1,5105 @@
+[
+  {
+    "timestamp": "2026-05-01T01:54:00+00:00",
+    "claim_id": "CL-SIM-00-000",
+    "decision": "adjuster_review",
+    "duration_ms": 5633,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-01T11:32:00+00:00",
+    "claim_id": "CL-SIM-00-001",
+    "decision": "auto_send",
+    "duration_ms": 6852,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-01T10:04:00+00:00",
+    "claim_id": "CL-SIM-00-002",
+    "decision": "auto_send",
+    "duration_ms": 6835,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-01T00:27:00+00:00",
+    "claim_id": "CL-SIM-00-003",
+    "decision": "auto_send",
+    "duration_ms": 5996,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-01T11:58:00+00:00",
+    "claim_id": "CL-SIM-00-004",
+    "decision": "auto_send",
+    "duration_ms": 6169,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-01T00:06:00+00:00",
+    "claim_id": "CL-SIM-00-005",
+    "decision": "auto_send",
+    "duration_ms": 7766,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-01T07:12:00+00:00",
+    "claim_id": "CL-SIM-00-006",
+    "decision": "auto_send",
+    "duration_ms": 7907,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-01T01:34:00+00:00",
+    "claim_id": "CL-SIM-00-007",
+    "decision": "auto_send",
+    "duration_ms": 8921,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-01T05:52:00+00:00",
+    "claim_id": "CL-SIM-00-008",
+    "decision": "auto_send",
+    "duration_ms": 6652,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-01T06:27:00+00:00",
+    "claim_id": "CL-SIM-00-009",
+    "decision": "adjuster_review",
+    "duration_ms": 3528,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-01T10:43:00+00:00",
+    "claim_id": "CL-SIM-00-010",
+    "decision": "auto_send",
+    "duration_ms": 7071,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-01T00:46:00+00:00",
+    "claim_id": "CL-SIM-00-011",
+    "decision": "auto_send",
+    "duration_ms": 4296,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-01T01:21:00+00:00",
+    "claim_id": "CL-SIM-00-012",
+    "decision": "auto_send",
+    "duration_ms": 6780,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-01T06:13:00+00:00",
+    "claim_id": "CL-SIM-00-013",
+    "decision": "adjuster_review",
+    "duration_ms": 4708,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-01T11:26:00+00:00",
+    "claim_id": "CL-SIM-00-014",
+    "decision": "adjuster_review",
+    "duration_ms": 7798,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-01T02:55:00+00:00",
+    "claim_id": "CL-SIM-00-015",
+    "decision": "auto_send",
+    "duration_ms": 4959,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-01T07:53:00+00:00",
+    "claim_id": "CL-SIM-00-016",
+    "decision": "auto_send",
+    "duration_ms": 7939,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-01T11:41:00+00:00",
+    "claim_id": "CL-SIM-00-017",
+    "decision": "auto_send",
+    "duration_ms": 5658,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-01T00:57:00+00:00",
+    "claim_id": "CL-SIM-00-018",
+    "decision": "adjuster_review",
+    "duration_ms": 7079,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-01T03:36:00+00:00",
+    "claim_id": "CL-SIM-00-019",
+    "decision": "auto_send",
+    "duration_ms": 6061,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-01T12:15:00+00:00",
+    "claim_id": "CL-SIM-00-020",
+    "decision": "auto_send",
+    "duration_ms": 4957,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-01T07:49:00+00:00",
+    "claim_id": "CL-SIM-00-021",
+    "decision": "adjuster_review",
+    "duration_ms": 4552,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-01T12:42:00+00:00",
+    "claim_id": "CL-SIM-00-022",
+    "decision": "auto_send",
+    "duration_ms": 5640,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-01T06:48:00+00:00",
+    "claim_id": "CL-SIM-00-023",
+    "decision": "auto_send",
+    "duration_ms": 7781,
+    "eval_passed": false
+  },
+  {
+    "timestamp": "2026-05-01T02:21:00+00:00",
+    "claim_id": "CL-SIM-00-024",
+    "decision": "auto_send",
+    "duration_ms": 6192,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-01T10:42:00+00:00",
+    "claim_id": "CL-SIM-00-025",
+    "decision": "adjuster_review",
+    "duration_ms": 6051,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-01T10:10:00+00:00",
+    "claim_id": "CL-SIM-00-026",
+    "decision": "adjuster_review",
+    "duration_ms": 2121,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-01T09:26:00+00:00",
+    "claim_id": "CL-SIM-00-027",
+    "decision": "auto_send",
+    "duration_ms": 9184,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-01T12:18:00+00:00",
+    "claim_id": "CL-SIM-00-028",
+    "decision": "adjuster_review",
+    "duration_ms": 7673,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-01T05:48:00+00:00",
+    "claim_id": "CL-SIM-00-029",
+    "decision": "adjuster_review",
+    "duration_ms": 4143,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-01T07:44:00+00:00",
+    "claim_id": "CL-SIM-00-030",
+    "decision": "adjuster_review",
+    "duration_ms": 5382,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-01T13:00:00+00:00",
+    "claim_id": "CL-SIM-00-031",
+    "decision": "adjuster_review",
+    "duration_ms": 3444,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-01T10:40:00+00:00",
+    "claim_id": "CL-SIM-00-032",
+    "decision": "adjuster_review",
+    "duration_ms": 4479,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-01T13:00:00+00:00",
+    "claim_id": "CL-SIM-00-033",
+    "decision": "adjuster_review",
+    "duration_ms": 4224,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-01T09:03:00+00:00",
+    "claim_id": "CL-SIM-00-034",
+    "decision": "auto_send",
+    "duration_ms": 4387,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-01T06:11:00+00:00",
+    "claim_id": "CL-SIM-00-035",
+    "decision": "auto_send",
+    "duration_ms": 4788,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-01T05:14:00+00:00",
+    "claim_id": "CL-SIM-00-036",
+    "decision": "adjuster_review",
+    "duration_ms": 5911,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-01T12:29:00+00:00",
+    "claim_id": "CL-SIM-00-037",
+    "decision": "auto_send",
+    "duration_ms": 7738,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-01T12:58:00+00:00",
+    "claim_id": "CL-SIM-00-038",
+    "decision": "auto_send",
+    "duration_ms": 7349,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-01T02:49:00+00:00",
+    "claim_id": "CL-SIM-00-039",
+    "decision": "adjuster_review",
+    "duration_ms": 7364,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-01T07:13:00+00:00",
+    "claim_id": "CL-SIM-00-040",
+    "decision": "auto_send",
+    "duration_ms": 8069,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-01T12:10:00+00:00",
+    "claim_id": "CL-SIM-00-041",
+    "decision": "auto_send",
+    "duration_ms": 4712,
+    "eval_passed": false
+  },
+  {
+    "timestamp": "2026-05-01T11:05:00+00:00",
+    "claim_id": "CL-SIM-00-042",
+    "decision": "auto_send",
+    "duration_ms": 7127,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-01T01:05:00+00:00",
+    "claim_id": "CL-SIM-00-043",
+    "decision": "auto_send",
+    "duration_ms": 4830,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-01T03:55:00+00:00",
+    "claim_id": "CL-SIM-00-044",
+    "decision": "auto_send",
+    "duration_ms": 8150,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-01T01:09:00+00:00",
+    "claim_id": "CL-SIM-00-045",
+    "decision": "auto_send",
+    "duration_ms": 5906,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-01T01:12:00+00:00",
+    "claim_id": "CL-SIM-00-046",
+    "decision": "auto_send",
+    "duration_ms": 5492,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-01T12:20:00+00:00",
+    "claim_id": "CL-SIM-00-047",
+    "decision": "auto_send",
+    "duration_ms": 7501,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-01T08:04:00+00:00",
+    "claim_id": "CL-SIM-00-048",
+    "decision": "adjuster_review",
+    "duration_ms": 4288,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-01T11:14:00+00:00",
+    "claim_id": "CL-SIM-00-049",
+    "decision": "auto_send",
+    "duration_ms": 6059,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-01T07:58:00+00:00",
+    "claim_id": "CL-SIM-00-050",
+    "decision": "auto_send",
+    "duration_ms": 7858,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-01T01:02:00+00:00",
+    "claim_id": "CL-SIM-00-051",
+    "decision": "auto_send",
+    "duration_ms": 6529,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-01T01:51:00+00:00",
+    "claim_id": "CL-SIM-00-052",
+    "decision": "adjuster_review",
+    "duration_ms": 6400,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-01T04:45:00+00:00",
+    "claim_id": "CL-SIM-00-053",
+    "decision": "auto_send",
+    "duration_ms": 7322,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-01T01:17:00+00:00",
+    "claim_id": "CL-SIM-00-054",
+    "decision": "auto_send",
+    "duration_ms": 7021,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-01T09:13:00+00:00",
+    "claim_id": "CL-SIM-00-055",
+    "decision": "auto_send",
+    "duration_ms": 4349,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-01T12:51:00+00:00",
+    "claim_id": "CL-SIM-00-056",
+    "decision": "auto_send",
+    "duration_ms": 6668,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-01T06:50:00+00:00",
+    "claim_id": "CL-SIM-00-057",
+    "decision": "auto_send",
+    "duration_ms": 7296,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-01T00:02:00+00:00",
+    "claim_id": "CL-SIM-00-058",
+    "decision": "auto_send",
+    "duration_ms": 5549,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-01T07:13:00+00:00",
+    "claim_id": "CL-SIM-00-059",
+    "decision": "auto_send",
+    "duration_ms": 8414,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-02T11:17:00+00:00",
+    "claim_id": "CL-SIM-01-000",
+    "decision": "auto_send",
+    "duration_ms": 6508,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-02T09:53:00+00:00",
+    "claim_id": "CL-SIM-01-001",
+    "decision": "auto_send",
+    "duration_ms": 6840,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-02T05:21:00+00:00",
+    "claim_id": "CL-SIM-01-002",
+    "decision": "adjuster_review",
+    "duration_ms": 4268,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-02T02:41:00+00:00",
+    "claim_id": "CL-SIM-01-003",
+    "decision": "adjuster_review",
+    "duration_ms": 4905,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-02T03:10:00+00:00",
+    "claim_id": "CL-SIM-01-004",
+    "decision": "adjuster_review",
+    "duration_ms": 8516,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-02T09:43:00+00:00",
+    "claim_id": "CL-SIM-01-005",
+    "decision": "adjuster_review",
+    "duration_ms": 7035,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-02T10:34:00+00:00",
+    "claim_id": "CL-SIM-01-006",
+    "decision": "adjuster_review",
+    "duration_ms": 4735,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-02T04:27:00+00:00",
+    "claim_id": "CL-SIM-01-007",
+    "decision": "adjuster_review",
+    "duration_ms": 4182,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-02T04:04:00+00:00",
+    "claim_id": "CL-SIM-01-008",
+    "decision": "adjuster_review",
+    "duration_ms": 7270,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-02T12:49:00+00:00",
+    "claim_id": "CL-SIM-01-009",
+    "decision": "auto_send",
+    "duration_ms": 7382,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-02T10:36:00+00:00",
+    "claim_id": "CL-SIM-01-010",
+    "decision": "auto_send",
+    "duration_ms": 6384,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-02T04:31:00+00:00",
+    "claim_id": "CL-SIM-01-011",
+    "decision": "adjuster_review",
+    "duration_ms": 5785,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-02T01:10:00+00:00",
+    "claim_id": "CL-SIM-01-012",
+    "decision": "auto_send",
+    "duration_ms": 5200,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-02T12:00:00+00:00",
+    "claim_id": "CL-SIM-01-013",
+    "decision": "auto_send",
+    "duration_ms": 6442,
+    "eval_passed": false
+  },
+  {
+    "timestamp": "2026-05-02T13:46:00+00:00",
+    "claim_id": "CL-SIM-01-014",
+    "decision": "auto_send",
+    "duration_ms": 8561,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-02T11:19:00+00:00",
+    "claim_id": "CL-SIM-01-015",
+    "decision": "adjuster_review",
+    "duration_ms": 5935,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-02T04:30:00+00:00",
+    "claim_id": "CL-SIM-01-016",
+    "decision": "adjuster_review",
+    "duration_ms": 7289,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-02T10:19:00+00:00",
+    "claim_id": "CL-SIM-01-017",
+    "decision": "adjuster_review",
+    "duration_ms": 6986,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-02T11:43:00+00:00",
+    "claim_id": "CL-SIM-01-018",
+    "decision": "auto_send",
+    "duration_ms": 5647,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-02T00:52:00+00:00",
+    "claim_id": "CL-SIM-01-019",
+    "decision": "adjuster_review",
+    "duration_ms": 7530,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-02T04:43:00+00:00",
+    "claim_id": "CL-SIM-01-020",
+    "decision": "adjuster_review",
+    "duration_ms": 5401,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-02T02:45:00+00:00",
+    "claim_id": "CL-SIM-01-021",
+    "decision": "auto_send",
+    "duration_ms": 6487,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-02T07:17:00+00:00",
+    "claim_id": "CL-SIM-01-022",
+    "decision": "auto_send",
+    "duration_ms": 8556,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-02T02:32:00+00:00",
+    "claim_id": "CL-SIM-01-023",
+    "decision": "auto_send",
+    "duration_ms": 8135,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-02T09:56:00+00:00",
+    "claim_id": "CL-SIM-01-024",
+    "decision": "auto_send",
+    "duration_ms": 5403,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-02T13:35:00+00:00",
+    "claim_id": "CL-SIM-01-025",
+    "decision": "auto_send",
+    "duration_ms": 5987,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-02T06:06:00+00:00",
+    "claim_id": "CL-SIM-01-026",
+    "decision": "adjuster_review",
+    "duration_ms": 5802,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-02T06:56:00+00:00",
+    "claim_id": "CL-SIM-01-027",
+    "decision": "auto_send",
+    "duration_ms": 6498,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-02T04:02:00+00:00",
+    "claim_id": "CL-SIM-01-028",
+    "decision": "auto_send",
+    "duration_ms": 8506,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-02T00:25:00+00:00",
+    "claim_id": "CL-SIM-01-029",
+    "decision": "adjuster_review",
+    "duration_ms": 5392,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-02T13:21:00+00:00",
+    "claim_id": "CL-SIM-01-030",
+    "decision": "auto_send",
+    "duration_ms": 6765,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-02T04:33:00+00:00",
+    "claim_id": "CL-SIM-01-031",
+    "decision": "adjuster_review",
+    "duration_ms": 2963,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-02T06:31:00+00:00",
+    "claim_id": "CL-SIM-01-032",
+    "decision": "auto_send",
+    "duration_ms": 6470,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-02T07:51:00+00:00",
+    "claim_id": "CL-SIM-01-033",
+    "decision": "auto_send",
+    "duration_ms": 4974,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-02T03:53:00+00:00",
+    "claim_id": "CL-SIM-01-034",
+    "decision": "adjuster_review",
+    "duration_ms": 4989,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-02T01:11:00+00:00",
+    "claim_id": "CL-SIM-01-035",
+    "decision": "auto_send",
+    "duration_ms": 4522,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-02T10:56:00+00:00",
+    "claim_id": "CL-SIM-01-036",
+    "decision": "auto_send",
+    "duration_ms": 4561,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-02T00:28:00+00:00",
+    "claim_id": "CL-SIM-01-037",
+    "decision": "adjuster_review",
+    "duration_ms": 3188,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-02T03:02:00+00:00",
+    "claim_id": "CL-SIM-01-038",
+    "decision": "auto_send",
+    "duration_ms": 6216,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-02T05:53:00+00:00",
+    "claim_id": "CL-SIM-01-039",
+    "decision": "auto_send",
+    "duration_ms": 5756,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-02T10:20:00+00:00",
+    "claim_id": "CL-SIM-01-040",
+    "decision": "auto_send",
+    "duration_ms": 8203,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-02T00:45:00+00:00",
+    "claim_id": "CL-SIM-01-041",
+    "decision": "auto_send",
+    "duration_ms": 7936,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-02T13:45:00+00:00",
+    "claim_id": "CL-SIM-01-042",
+    "decision": "auto_send",
+    "duration_ms": 5328,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-02T06:12:00+00:00",
+    "claim_id": "CL-SIM-01-043",
+    "decision": "auto_send",
+    "duration_ms": 3376,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-02T05:38:00+00:00",
+    "claim_id": "CL-SIM-01-044",
+    "decision": "auto_send",
+    "duration_ms": 5399,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-02T08:39:00+00:00",
+    "claim_id": "CL-SIM-01-045",
+    "decision": "auto_send",
+    "duration_ms": 5137,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-02T06:52:00+00:00",
+    "claim_id": "CL-SIM-01-046",
+    "decision": "auto_send",
+    "duration_ms": 4877,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-02T06:28:00+00:00",
+    "claim_id": "CL-SIM-01-047",
+    "decision": "auto_send",
+    "duration_ms": 5471,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-02T10:30:00+00:00",
+    "claim_id": "CL-SIM-01-048",
+    "decision": "auto_send",
+    "duration_ms": 3439,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-02T03:35:00+00:00",
+    "claim_id": "CL-SIM-01-049",
+    "decision": "auto_send",
+    "duration_ms": 7381,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-02T11:10:00+00:00",
+    "claim_id": "CL-SIM-01-050",
+    "decision": "auto_send",
+    "duration_ms": 3698,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-02T13:32:00+00:00",
+    "claim_id": "CL-SIM-01-051",
+    "decision": "auto_send",
+    "duration_ms": 6605,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-02T02:53:00+00:00",
+    "claim_id": "CL-SIM-01-052",
+    "decision": "auto_send",
+    "duration_ms": 5333,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-02T01:35:00+00:00",
+    "claim_id": "CL-SIM-01-053",
+    "decision": "auto_send",
+    "duration_ms": 7965,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-02T11:28:00+00:00",
+    "claim_id": "CL-SIM-01-054",
+    "decision": "auto_send",
+    "duration_ms": 6094,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-02T08:06:00+00:00",
+    "claim_id": "CL-SIM-01-055",
+    "decision": "auto_send",
+    "duration_ms": 5005,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-02T07:46:00+00:00",
+    "claim_id": "CL-SIM-01-056",
+    "decision": "auto_send",
+    "duration_ms": 5123,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-03T06:49:00+00:00",
+    "claim_id": "CL-SIM-02-000",
+    "decision": "adjuster_review",
+    "duration_ms": 5081,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-03T00:05:00+00:00",
+    "claim_id": "CL-SIM-02-001",
+    "decision": "auto_send",
+    "duration_ms": 7797,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-03T03:44:00+00:00",
+    "claim_id": "CL-SIM-02-002",
+    "decision": "adjuster_review",
+    "duration_ms": 3399,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-03T08:50:00+00:00",
+    "claim_id": "CL-SIM-02-003",
+    "decision": "auto_send",
+    "duration_ms": 2665,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-03T02:16:00+00:00",
+    "claim_id": "CL-SIM-02-004",
+    "decision": "auto_send",
+    "duration_ms": 4617,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-03T09:32:00+00:00",
+    "claim_id": "CL-SIM-02-005",
+    "decision": "auto_send",
+    "duration_ms": 8806,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-03T12:16:00+00:00",
+    "claim_id": "CL-SIM-02-006",
+    "decision": "auto_send",
+    "duration_ms": 4823,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-03T09:21:00+00:00",
+    "claim_id": "CL-SIM-02-007",
+    "decision": "auto_send",
+    "duration_ms": 7411,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-03T12:49:00+00:00",
+    "claim_id": "CL-SIM-02-008",
+    "decision": "adjuster_review",
+    "duration_ms": 8309,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-03T13:04:00+00:00",
+    "claim_id": "CL-SIM-02-009",
+    "decision": "auto_send",
+    "duration_ms": 4695,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-03T12:10:00+00:00",
+    "claim_id": "CL-SIM-02-010",
+    "decision": "adjuster_review",
+    "duration_ms": 5907,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-03T05:27:00+00:00",
+    "claim_id": "CL-SIM-02-011",
+    "decision": "auto_send",
+    "duration_ms": 6550,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-03T02:36:00+00:00",
+    "claim_id": "CL-SIM-02-012",
+    "decision": "auto_send",
+    "duration_ms": 6215,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-03T06:57:00+00:00",
+    "claim_id": "CL-SIM-02-013",
+    "decision": "auto_send",
+    "duration_ms": 5274,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-03T06:38:00+00:00",
+    "claim_id": "CL-SIM-02-014",
+    "decision": "auto_send",
+    "duration_ms": 5914,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-03T11:52:00+00:00",
+    "claim_id": "CL-SIM-02-015",
+    "decision": "adjuster_review",
+    "duration_ms": 7237,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-03T06:00:00+00:00",
+    "claim_id": "CL-SIM-02-016",
+    "decision": "adjuster_review",
+    "duration_ms": 4461,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-03T07:09:00+00:00",
+    "claim_id": "CL-SIM-02-017",
+    "decision": "auto_send",
+    "duration_ms": 5540,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-03T08:19:00+00:00",
+    "claim_id": "CL-SIM-02-018",
+    "decision": "adjuster_review",
+    "duration_ms": 3121,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-03T00:29:00+00:00",
+    "claim_id": "CL-SIM-02-019",
+    "decision": "auto_send",
+    "duration_ms": 4490,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-03T07:58:00+00:00",
+    "claim_id": "CL-SIM-02-020",
+    "decision": "auto_send",
+    "duration_ms": 3457,
+    "eval_passed": false
+  },
+  {
+    "timestamp": "2026-05-03T09:06:00+00:00",
+    "claim_id": "CL-SIM-02-021",
+    "decision": "adjuster_review",
+    "duration_ms": 4279,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-03T10:58:00+00:00",
+    "claim_id": "CL-SIM-02-022",
+    "decision": "auto_send",
+    "duration_ms": 6994,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-03T03:06:00+00:00",
+    "claim_id": "CL-SIM-02-023",
+    "decision": "adjuster_review",
+    "duration_ms": 5049,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-03T12:59:00+00:00",
+    "claim_id": "CL-SIM-02-024",
+    "decision": "auto_send",
+    "duration_ms": 6512,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-03T07:11:00+00:00",
+    "claim_id": "CL-SIM-02-025",
+    "decision": "adjuster_review",
+    "duration_ms": 6058,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-03T05:58:00+00:00",
+    "claim_id": "CL-SIM-02-026",
+    "decision": "adjuster_review",
+    "duration_ms": 5946,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-03T11:07:00+00:00",
+    "claim_id": "CL-SIM-02-027",
+    "decision": "adjuster_review",
+    "duration_ms": 6909,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-03T10:36:00+00:00",
+    "claim_id": "CL-SIM-02-028",
+    "decision": "adjuster_review",
+    "duration_ms": 6019,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-03T11:25:00+00:00",
+    "claim_id": "CL-SIM-02-029",
+    "decision": "adjuster_review",
+    "duration_ms": 7388,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-03T06:17:00+00:00",
+    "claim_id": "CL-SIM-02-030",
+    "decision": "adjuster_review",
+    "duration_ms": 5259,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-03T12:45:00+00:00",
+    "claim_id": "CL-SIM-02-031",
+    "decision": "auto_send",
+    "duration_ms": 5955,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-03T09:52:00+00:00",
+    "claim_id": "CL-SIM-02-032",
+    "decision": "adjuster_review",
+    "duration_ms": 4916,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-03T11:33:00+00:00",
+    "claim_id": "CL-SIM-02-033",
+    "decision": "auto_send",
+    "duration_ms": 3268,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-03T10:06:00+00:00",
+    "claim_id": "CL-SIM-02-034",
+    "decision": "auto_send",
+    "duration_ms": 8322,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-03T01:44:00+00:00",
+    "claim_id": "CL-SIM-02-035",
+    "decision": "auto_send",
+    "duration_ms": 5074,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-03T13:35:00+00:00",
+    "claim_id": "CL-SIM-02-036",
+    "decision": "auto_send",
+    "duration_ms": 7959,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-03T05:55:00+00:00",
+    "claim_id": "CL-SIM-02-037",
+    "decision": "auto_send",
+    "duration_ms": 5500,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-03T00:12:00+00:00",
+    "claim_id": "CL-SIM-02-038",
+    "decision": "auto_send",
+    "duration_ms": 5318,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-03T01:48:00+00:00",
+    "claim_id": "CL-SIM-02-039",
+    "decision": "auto_send",
+    "duration_ms": 3751,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-03T02:36:00+00:00",
+    "claim_id": "CL-SIM-02-040",
+    "decision": "auto_send",
+    "duration_ms": 8208,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-03T11:06:00+00:00",
+    "claim_id": "CL-SIM-02-041",
+    "decision": "adjuster_review",
+    "duration_ms": 6466,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-03T07:26:00+00:00",
+    "claim_id": "CL-SIM-02-042",
+    "decision": "auto_send",
+    "duration_ms": 4058,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-03T05:30:00+00:00",
+    "claim_id": "CL-SIM-02-043",
+    "decision": "auto_send",
+    "duration_ms": 6110,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-03T04:09:00+00:00",
+    "claim_id": "CL-SIM-02-044",
+    "decision": "auto_send",
+    "duration_ms": 5241,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-03T11:24:00+00:00",
+    "claim_id": "CL-SIM-02-045",
+    "decision": "auto_send",
+    "duration_ms": 8679,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-03T03:37:00+00:00",
+    "claim_id": "CL-SIM-02-046",
+    "decision": "auto_send",
+    "duration_ms": 6324,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-03T04:46:00+00:00",
+    "claim_id": "CL-SIM-02-047",
+    "decision": "auto_send",
+    "duration_ms": 5435,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-03T03:15:00+00:00",
+    "claim_id": "CL-SIM-02-048",
+    "decision": "adjuster_review",
+    "duration_ms": 4650,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-03T08:20:00+00:00",
+    "claim_id": "CL-SIM-02-049",
+    "decision": "auto_send",
+    "duration_ms": 5903,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-03T07:38:00+00:00",
+    "claim_id": "CL-SIM-02-050",
+    "decision": "auto_send",
+    "duration_ms": 7502,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-03T03:46:00+00:00",
+    "claim_id": "CL-SIM-02-051",
+    "decision": "auto_send",
+    "duration_ms": 5893,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-03T09:26:00+00:00",
+    "claim_id": "CL-SIM-02-052",
+    "decision": "auto_send",
+    "duration_ms": 8013,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-03T12:43:00+00:00",
+    "claim_id": "CL-SIM-02-053",
+    "decision": "auto_send",
+    "duration_ms": 4815,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-03T03:56:00+00:00",
+    "claim_id": "CL-SIM-02-054",
+    "decision": "adjuster_review",
+    "duration_ms": 7123,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-04T12:40:00+00:00",
+    "claim_id": "CL-SIM-03-000",
+    "decision": "auto_send",
+    "duration_ms": 5873,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-04T08:15:00+00:00",
+    "claim_id": "CL-SIM-03-001",
+    "decision": "adjuster_review",
+    "duration_ms": 4842,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-04T12:58:00+00:00",
+    "claim_id": "CL-SIM-03-002",
+    "decision": "auto_send",
+    "duration_ms": 5657,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-04T03:52:00+00:00",
+    "claim_id": "CL-SIM-03-003",
+    "decision": "auto_send",
+    "duration_ms": 6475,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-04T12:05:00+00:00",
+    "claim_id": "CL-SIM-03-004",
+    "decision": "auto_send",
+    "duration_ms": 5182,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-04T11:54:00+00:00",
+    "claim_id": "CL-SIM-03-005",
+    "decision": "auto_send",
+    "duration_ms": 9811,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-04T12:50:00+00:00",
+    "claim_id": "CL-SIM-03-006",
+    "decision": "auto_send",
+    "duration_ms": 7165,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-04T07:31:00+00:00",
+    "claim_id": "CL-SIM-03-007",
+    "decision": "auto_send",
+    "duration_ms": 4394,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-04T04:18:00+00:00",
+    "claim_id": "CL-SIM-03-008",
+    "decision": "auto_send",
+    "duration_ms": 3039,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-04T01:15:00+00:00",
+    "claim_id": "CL-SIM-03-009",
+    "decision": "auto_send",
+    "duration_ms": 6188,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-04T02:35:00+00:00",
+    "claim_id": "CL-SIM-03-010",
+    "decision": "adjuster_review",
+    "duration_ms": 4621,
+    "eval_passed": false
+  },
+  {
+    "timestamp": "2026-05-04T02:01:00+00:00",
+    "claim_id": "CL-SIM-03-011",
+    "decision": "auto_send",
+    "duration_ms": 5308,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-04T10:10:00+00:00",
+    "claim_id": "CL-SIM-03-012",
+    "decision": "auto_send",
+    "duration_ms": 6077,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-04T07:33:00+00:00",
+    "claim_id": "CL-SIM-03-013",
+    "decision": "adjuster_review",
+    "duration_ms": 7602,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-04T07:19:00+00:00",
+    "claim_id": "CL-SIM-03-014",
+    "decision": "auto_send",
+    "duration_ms": 4309,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-04T13:01:00+00:00",
+    "claim_id": "CL-SIM-03-015",
+    "decision": "adjuster_review",
+    "duration_ms": 4381,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-04T11:16:00+00:00",
+    "claim_id": "CL-SIM-03-016",
+    "decision": "adjuster_review",
+    "duration_ms": 5920,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-04T06:58:00+00:00",
+    "claim_id": "CL-SIM-03-017",
+    "decision": "auto_send",
+    "duration_ms": 7697,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-04T04:58:00+00:00",
+    "claim_id": "CL-SIM-03-018",
+    "decision": "adjuster_review",
+    "duration_ms": 5510,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-04T01:12:00+00:00",
+    "claim_id": "CL-SIM-03-019",
+    "decision": "auto_send",
+    "duration_ms": 6987,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-04T13:26:00+00:00",
+    "claim_id": "CL-SIM-03-020",
+    "decision": "auto_send",
+    "duration_ms": 3511,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-04T01:57:00+00:00",
+    "claim_id": "CL-SIM-03-021",
+    "decision": "auto_send",
+    "duration_ms": 4352,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-04T04:32:00+00:00",
+    "claim_id": "CL-SIM-03-022",
+    "decision": "auto_send",
+    "duration_ms": 6614,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-04T12:46:00+00:00",
+    "claim_id": "CL-SIM-03-023",
+    "decision": "auto_send",
+    "duration_ms": 6191,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-04T07:29:00+00:00",
+    "claim_id": "CL-SIM-03-024",
+    "decision": "adjuster_review",
+    "duration_ms": 4925,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-04T08:32:00+00:00",
+    "claim_id": "CL-SIM-03-025",
+    "decision": "auto_send",
+    "duration_ms": 3643,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-04T10:12:00+00:00",
+    "claim_id": "CL-SIM-03-026",
+    "decision": "adjuster_review",
+    "duration_ms": 4595,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-04T01:33:00+00:00",
+    "claim_id": "CL-SIM-03-027",
+    "decision": "adjuster_review",
+    "duration_ms": 6348,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-04T09:49:00+00:00",
+    "claim_id": "CL-SIM-03-028",
+    "decision": "auto_send",
+    "duration_ms": 8330,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-04T09:50:00+00:00",
+    "claim_id": "CL-SIM-03-029",
+    "decision": "adjuster_review",
+    "duration_ms": 6131,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-04T08:01:00+00:00",
+    "claim_id": "CL-SIM-03-030",
+    "decision": "auto_send",
+    "duration_ms": 4667,
+    "eval_passed": false
+  },
+  {
+    "timestamp": "2026-05-04T07:26:00+00:00",
+    "claim_id": "CL-SIM-03-031",
+    "decision": "auto_send",
+    "duration_ms": 6230,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-04T01:33:00+00:00",
+    "claim_id": "CL-SIM-03-032",
+    "decision": "auto_send",
+    "duration_ms": 4692,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-04T02:44:00+00:00",
+    "claim_id": "CL-SIM-03-033",
+    "decision": "auto_send",
+    "duration_ms": 6518,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-04T04:55:00+00:00",
+    "claim_id": "CL-SIM-03-034",
+    "decision": "auto_send",
+    "duration_ms": 3744,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-04T01:30:00+00:00",
+    "claim_id": "CL-SIM-03-035",
+    "decision": "auto_send",
+    "duration_ms": 7284,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-04T13:11:00+00:00",
+    "claim_id": "CL-SIM-03-036",
+    "decision": "auto_send",
+    "duration_ms": 1352,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-04T09:15:00+00:00",
+    "claim_id": "CL-SIM-03-037",
+    "decision": "auto_send",
+    "duration_ms": 5390,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-04T08:50:00+00:00",
+    "claim_id": "CL-SIM-03-038",
+    "decision": "auto_send",
+    "duration_ms": 5885,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-04T03:28:00+00:00",
+    "claim_id": "CL-SIM-03-039",
+    "decision": "adjuster_review",
+    "duration_ms": 3699,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-04T04:54:00+00:00",
+    "claim_id": "CL-SIM-03-040",
+    "decision": "auto_send",
+    "duration_ms": 5556,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-04T10:23:00+00:00",
+    "claim_id": "CL-SIM-03-041",
+    "decision": "auto_send",
+    "duration_ms": 5076,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-04T05:18:00+00:00",
+    "claim_id": "CL-SIM-03-042",
+    "decision": "auto_send",
+    "duration_ms": 5171,
+    "eval_passed": false
+  },
+  {
+    "timestamp": "2026-05-05T07:52:00+00:00",
+    "claim_id": "CL-SIM-04-000",
+    "decision": "auto_send",
+    "duration_ms": 5586,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-05T02:37:00+00:00",
+    "claim_id": "CL-SIM-04-001",
+    "decision": "auto_send",
+    "duration_ms": 5427,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-05T08:14:00+00:00",
+    "claim_id": "CL-SIM-04-002",
+    "decision": "auto_send",
+    "duration_ms": 4050,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-05T09:24:00+00:00",
+    "claim_id": "CL-SIM-04-003",
+    "decision": "adjuster_review",
+    "duration_ms": 6539,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-05T02:19:00+00:00",
+    "claim_id": "CL-SIM-04-004",
+    "decision": "auto_send",
+    "duration_ms": 7689,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-05T13:28:00+00:00",
+    "claim_id": "CL-SIM-04-005",
+    "decision": "auto_send",
+    "duration_ms": 4386,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-05T00:02:00+00:00",
+    "claim_id": "CL-SIM-04-006",
+    "decision": "adjuster_review",
+    "duration_ms": 8030,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-05T10:01:00+00:00",
+    "claim_id": "CL-SIM-04-007",
+    "decision": "auto_send",
+    "duration_ms": 4189,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-05T08:15:00+00:00",
+    "claim_id": "CL-SIM-04-008",
+    "decision": "auto_send",
+    "duration_ms": 3264,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-05T09:16:00+00:00",
+    "claim_id": "CL-SIM-04-009",
+    "decision": "auto_send",
+    "duration_ms": 8562,
+    "eval_passed": false
+  },
+  {
+    "timestamp": "2026-05-05T04:04:00+00:00",
+    "claim_id": "CL-SIM-04-010",
+    "decision": "auto_send",
+    "duration_ms": 4560,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-05T13:14:00+00:00",
+    "claim_id": "CL-SIM-04-011",
+    "decision": "auto_send",
+    "duration_ms": 5094,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-05T06:30:00+00:00",
+    "claim_id": "CL-SIM-04-012",
+    "decision": "auto_send",
+    "duration_ms": 7344,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-05T14:00:00+00:00",
+    "claim_id": "CL-SIM-04-013",
+    "decision": "auto_send",
+    "duration_ms": 8039,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-05T10:04:00+00:00",
+    "claim_id": "CL-SIM-04-014",
+    "decision": "auto_send",
+    "duration_ms": 8969,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-05T07:30:00+00:00",
+    "claim_id": "CL-SIM-04-015",
+    "decision": "adjuster_review",
+    "duration_ms": 6023,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-05T11:10:00+00:00",
+    "claim_id": "CL-SIM-04-016",
+    "decision": "auto_send",
+    "duration_ms": 5659,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-05T13:20:00+00:00",
+    "claim_id": "CL-SIM-04-017",
+    "decision": "auto_send",
+    "duration_ms": 4582,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-05T05:36:00+00:00",
+    "claim_id": "CL-SIM-04-018",
+    "decision": "auto_send",
+    "duration_ms": 7756,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-05T06:29:00+00:00",
+    "claim_id": "CL-SIM-04-019",
+    "decision": "auto_send",
+    "duration_ms": 3608,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-05T09:14:00+00:00",
+    "claim_id": "CL-SIM-04-020",
+    "decision": "adjuster_review",
+    "duration_ms": 3558,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-05T10:46:00+00:00",
+    "claim_id": "CL-SIM-04-021",
+    "decision": "auto_send",
+    "duration_ms": 5549,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-05T01:40:00+00:00",
+    "claim_id": "CL-SIM-04-022",
+    "decision": "auto_send",
+    "duration_ms": 6848,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-05T01:42:00+00:00",
+    "claim_id": "CL-SIM-04-023",
+    "decision": "auto_send",
+    "duration_ms": 4682,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-05T13:35:00+00:00",
+    "claim_id": "CL-SIM-04-024",
+    "decision": "adjuster_review",
+    "duration_ms": 2755,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-05T07:21:00+00:00",
+    "claim_id": "CL-SIM-04-025",
+    "decision": "adjuster_review",
+    "duration_ms": 3899,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-05T02:54:00+00:00",
+    "claim_id": "CL-SIM-04-026",
+    "decision": "adjuster_review",
+    "duration_ms": 5422,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-05T06:31:00+00:00",
+    "claim_id": "CL-SIM-04-027",
+    "decision": "auto_send",
+    "duration_ms": 5990,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-05T07:52:00+00:00",
+    "claim_id": "CL-SIM-04-028",
+    "decision": "auto_send",
+    "duration_ms": 9108,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-05T11:22:00+00:00",
+    "claim_id": "CL-SIM-04-029",
+    "decision": "adjuster_review",
+    "duration_ms": 6886,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-05T02:41:00+00:00",
+    "claim_id": "CL-SIM-04-030",
+    "decision": "adjuster_review",
+    "duration_ms": 2760,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-05T10:01:00+00:00",
+    "claim_id": "CL-SIM-04-031",
+    "decision": "adjuster_review",
+    "duration_ms": 8031,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-05T05:09:00+00:00",
+    "claim_id": "CL-SIM-04-032",
+    "decision": "adjuster_review",
+    "duration_ms": 5257,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-05T08:14:00+00:00",
+    "claim_id": "CL-SIM-04-033",
+    "decision": "adjuster_review",
+    "duration_ms": 4760,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-05T11:56:00+00:00",
+    "claim_id": "CL-SIM-04-034",
+    "decision": "adjuster_review",
+    "duration_ms": 6759,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-05T11:14:00+00:00",
+    "claim_id": "CL-SIM-04-035",
+    "decision": "auto_send",
+    "duration_ms": 8798,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-05T00:50:00+00:00",
+    "claim_id": "CL-SIM-04-036",
+    "decision": "auto_send",
+    "duration_ms": 5952,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-05T04:53:00+00:00",
+    "claim_id": "CL-SIM-04-037",
+    "decision": "auto_send",
+    "duration_ms": 6136,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-05T03:14:00+00:00",
+    "claim_id": "CL-SIM-04-038",
+    "decision": "auto_send",
+    "duration_ms": 8478,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-05T12:18:00+00:00",
+    "claim_id": "CL-SIM-04-039",
+    "decision": "auto_send",
+    "duration_ms": 5457,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-05T10:42:00+00:00",
+    "claim_id": "CL-SIM-04-040",
+    "decision": "auto_send",
+    "duration_ms": 5062,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-05T07:31:00+00:00",
+    "claim_id": "CL-SIM-04-041",
+    "decision": "adjuster_review",
+    "duration_ms": 5273,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-05T05:34:00+00:00",
+    "claim_id": "CL-SIM-04-042",
+    "decision": "auto_send",
+    "duration_ms": 6397,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-06T13:25:00+00:00",
+    "claim_id": "CL-SIM-05-000",
+    "decision": "auto_send",
+    "duration_ms": 7615,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-06T02:48:00+00:00",
+    "claim_id": "CL-SIM-05-001",
+    "decision": "adjuster_review",
+    "duration_ms": 5471,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-06T08:13:00+00:00",
+    "claim_id": "CL-SIM-05-002",
+    "decision": "auto_send",
+    "duration_ms": 4951,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-06T07:59:00+00:00",
+    "claim_id": "CL-SIM-05-003",
+    "decision": "auto_send",
+    "duration_ms": 8711,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-06T03:51:00+00:00",
+    "claim_id": "CL-SIM-05-004",
+    "decision": "auto_send",
+    "duration_ms": 5123,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-06T13:43:00+00:00",
+    "claim_id": "CL-SIM-05-005",
+    "decision": "auto_send",
+    "duration_ms": 1660,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-06T06:44:00+00:00",
+    "claim_id": "CL-SIM-05-006",
+    "decision": "adjuster_review",
+    "duration_ms": 4191,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-06T11:28:00+00:00",
+    "claim_id": "CL-SIM-05-007",
+    "decision": "adjuster_review",
+    "duration_ms": 5423,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-06T10:53:00+00:00",
+    "claim_id": "CL-SIM-05-008",
+    "decision": "auto_send",
+    "duration_ms": 6650,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-06T09:34:00+00:00",
+    "claim_id": "CL-SIM-05-009",
+    "decision": "auto_send",
+    "duration_ms": 6489,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-06T11:03:00+00:00",
+    "claim_id": "CL-SIM-05-010",
+    "decision": "adjuster_review",
+    "duration_ms": 7271,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-06T06:58:00+00:00",
+    "claim_id": "CL-SIM-05-011",
+    "decision": "adjuster_review",
+    "duration_ms": 2860,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-06T00:38:00+00:00",
+    "claim_id": "CL-SIM-05-012",
+    "decision": "auto_send",
+    "duration_ms": 5122,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-06T02:18:00+00:00",
+    "claim_id": "CL-SIM-05-013",
+    "decision": "auto_send",
+    "duration_ms": 5831,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-06T12:40:00+00:00",
+    "claim_id": "CL-SIM-05-014",
+    "decision": "auto_send",
+    "duration_ms": 3867,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-06T07:04:00+00:00",
+    "claim_id": "CL-SIM-05-015",
+    "decision": "auto_send",
+    "duration_ms": 5301,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-06T10:30:00+00:00",
+    "claim_id": "CL-SIM-05-016",
+    "decision": "auto_send",
+    "duration_ms": 6169,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-06T07:34:00+00:00",
+    "claim_id": "CL-SIM-05-017",
+    "decision": "auto_send",
+    "duration_ms": 5683,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-06T06:11:00+00:00",
+    "claim_id": "CL-SIM-05-018",
+    "decision": "adjuster_review",
+    "duration_ms": 5060,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-06T06:07:00+00:00",
+    "claim_id": "CL-SIM-05-019",
+    "decision": "adjuster_review",
+    "duration_ms": 4070,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-06T02:05:00+00:00",
+    "claim_id": "CL-SIM-05-020",
+    "decision": "auto_send",
+    "duration_ms": 6095,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-06T10:54:00+00:00",
+    "claim_id": "CL-SIM-05-021",
+    "decision": "auto_send",
+    "duration_ms": 5212,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-06T13:25:00+00:00",
+    "claim_id": "CL-SIM-05-022",
+    "decision": "auto_send",
+    "duration_ms": 8431,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-06T13:03:00+00:00",
+    "claim_id": "CL-SIM-05-023",
+    "decision": "auto_send",
+    "duration_ms": 5614,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-06T13:52:00+00:00",
+    "claim_id": "CL-SIM-05-024",
+    "decision": "auto_send",
+    "duration_ms": 5398,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-06T00:02:00+00:00",
+    "claim_id": "CL-SIM-05-025",
+    "decision": "adjuster_review",
+    "duration_ms": 6546,
+    "eval_passed": false
+  },
+  {
+    "timestamp": "2026-05-06T02:13:00+00:00",
+    "claim_id": "CL-SIM-05-026",
+    "decision": "auto_send",
+    "duration_ms": 6017,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-06T02:14:00+00:00",
+    "claim_id": "CL-SIM-05-027",
+    "decision": "adjuster_review",
+    "duration_ms": 5109,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-06T04:03:00+00:00",
+    "claim_id": "CL-SIM-05-028",
+    "decision": "auto_send",
+    "duration_ms": 6972,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-06T07:11:00+00:00",
+    "claim_id": "CL-SIM-05-029",
+    "decision": "auto_send",
+    "duration_ms": 5916,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-06T08:07:00+00:00",
+    "claim_id": "CL-SIM-05-030",
+    "decision": "auto_send",
+    "duration_ms": 4497,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-06T03:46:00+00:00",
+    "claim_id": "CL-SIM-05-031",
+    "decision": "auto_send",
+    "duration_ms": 7334,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-06T13:22:00+00:00",
+    "claim_id": "CL-SIM-05-032",
+    "decision": "auto_send",
+    "duration_ms": 5111,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-06T00:31:00+00:00",
+    "claim_id": "CL-SIM-05-033",
+    "decision": "adjuster_review",
+    "duration_ms": 4731,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-06T06:51:00+00:00",
+    "claim_id": "CL-SIM-05-034",
+    "decision": "auto_send",
+    "duration_ms": 7643,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-06T01:22:00+00:00",
+    "claim_id": "CL-SIM-05-035",
+    "decision": "auto_send",
+    "duration_ms": 7285,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-06T02:09:00+00:00",
+    "claim_id": "CL-SIM-05-036",
+    "decision": "adjuster_review",
+    "duration_ms": 4532,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-06T10:11:00+00:00",
+    "claim_id": "CL-SIM-05-037",
+    "decision": "auto_send",
+    "duration_ms": 4396,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-06T10:19:00+00:00",
+    "claim_id": "CL-SIM-05-038",
+    "decision": "auto_send",
+    "duration_ms": 5997,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-06T13:07:00+00:00",
+    "claim_id": "CL-SIM-05-039",
+    "decision": "auto_send",
+    "duration_ms": 5087,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-06T07:20:00+00:00",
+    "claim_id": "CL-SIM-05-040",
+    "decision": "auto_send",
+    "duration_ms": 5983,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-06T07:05:00+00:00",
+    "claim_id": "CL-SIM-05-041",
+    "decision": "auto_send",
+    "duration_ms": 7152,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-06T05:20:00+00:00",
+    "claim_id": "CL-SIM-05-042",
+    "decision": "auto_send",
+    "duration_ms": 5192,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-06T01:08:00+00:00",
+    "claim_id": "CL-SIM-05-043",
+    "decision": "adjuster_review",
+    "duration_ms": 6413,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-07T01:38:00+00:00",
+    "claim_id": "CL-SIM-06-000",
+    "decision": "auto_send",
+    "duration_ms": 5248,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-07T09:35:00+00:00",
+    "claim_id": "CL-SIM-06-001",
+    "decision": "auto_send",
+    "duration_ms": 6368,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-07T07:00:00+00:00",
+    "claim_id": "CL-SIM-06-002",
+    "decision": "auto_send",
+    "duration_ms": 4532,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-07T12:18:00+00:00",
+    "claim_id": "CL-SIM-06-003",
+    "decision": "adjuster_review",
+    "duration_ms": 3646,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-07T05:19:00+00:00",
+    "claim_id": "CL-SIM-06-004",
+    "decision": "auto_send",
+    "duration_ms": 4884,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-07T03:49:00+00:00",
+    "claim_id": "CL-SIM-06-005",
+    "decision": "auto_send",
+    "duration_ms": 5312,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-07T09:29:00+00:00",
+    "claim_id": "CL-SIM-06-006",
+    "decision": "auto_send",
+    "duration_ms": 5955,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-07T09:34:00+00:00",
+    "claim_id": "CL-SIM-06-007",
+    "decision": "auto_send",
+    "duration_ms": 3846,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-07T10:28:00+00:00",
+    "claim_id": "CL-SIM-06-008",
+    "decision": "auto_send",
+    "duration_ms": 3873,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-07T11:50:00+00:00",
+    "claim_id": "CL-SIM-06-009",
+    "decision": "adjuster_review",
+    "duration_ms": 5082,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-07T11:59:00+00:00",
+    "claim_id": "CL-SIM-06-010",
+    "decision": "auto_send",
+    "duration_ms": 7028,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-07T02:26:00+00:00",
+    "claim_id": "CL-SIM-06-011",
+    "decision": "auto_send",
+    "duration_ms": 5139,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-07T02:25:00+00:00",
+    "claim_id": "CL-SIM-06-012",
+    "decision": "auto_send",
+    "duration_ms": 6447,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-07T06:25:00+00:00",
+    "claim_id": "CL-SIM-06-013",
+    "decision": "auto_send",
+    "duration_ms": 5684,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-07T06:18:00+00:00",
+    "claim_id": "CL-SIM-06-014",
+    "decision": "auto_send",
+    "duration_ms": 4190,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-07T00:53:00+00:00",
+    "claim_id": "CL-SIM-06-015",
+    "decision": "adjuster_review",
+    "duration_ms": 8989,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-07T00:50:00+00:00",
+    "claim_id": "CL-SIM-06-016",
+    "decision": "auto_send",
+    "duration_ms": 5494,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-07T07:32:00+00:00",
+    "claim_id": "CL-SIM-06-017",
+    "decision": "auto_send",
+    "duration_ms": 7987,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-07T08:44:00+00:00",
+    "claim_id": "CL-SIM-06-018",
+    "decision": "adjuster_review",
+    "duration_ms": 4692,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-07T08:18:00+00:00",
+    "claim_id": "CL-SIM-06-019",
+    "decision": "auto_send",
+    "duration_ms": 6321,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-07T03:45:00+00:00",
+    "claim_id": "CL-SIM-06-020",
+    "decision": "auto_send",
+    "duration_ms": 5648,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-07T03:36:00+00:00",
+    "claim_id": "CL-SIM-06-021",
+    "decision": "auto_send",
+    "duration_ms": 5691,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-07T04:56:00+00:00",
+    "claim_id": "CL-SIM-06-022",
+    "decision": "auto_send",
+    "duration_ms": 8284,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-07T06:29:00+00:00",
+    "claim_id": "CL-SIM-06-023",
+    "decision": "auto_send",
+    "duration_ms": 5920,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-07T09:32:00+00:00",
+    "claim_id": "CL-SIM-06-024",
+    "decision": "auto_send",
+    "duration_ms": 6000,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-07T00:43:00+00:00",
+    "claim_id": "CL-SIM-06-025",
+    "decision": "auto_send",
+    "duration_ms": 5255,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-07T01:19:00+00:00",
+    "claim_id": "CL-SIM-06-026",
+    "decision": "auto_send",
+    "duration_ms": 4059,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-07T07:07:00+00:00",
+    "claim_id": "CL-SIM-06-027",
+    "decision": "adjuster_review",
+    "duration_ms": 4902,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-07T05:32:00+00:00",
+    "claim_id": "CL-SIM-06-028",
+    "decision": "adjuster_review",
+    "duration_ms": 7376,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-07T06:10:00+00:00",
+    "claim_id": "CL-SIM-06-029",
+    "decision": "adjuster_review",
+    "duration_ms": 5261,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-07T04:09:00+00:00",
+    "claim_id": "CL-SIM-06-030",
+    "decision": "auto_send",
+    "duration_ms": 5307,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-07T12:43:00+00:00",
+    "claim_id": "CL-SIM-06-031",
+    "decision": "auto_send",
+    "duration_ms": 6155,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-07T02:52:00+00:00",
+    "claim_id": "CL-SIM-06-032",
+    "decision": "adjuster_review",
+    "duration_ms": 4564,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-07T13:14:00+00:00",
+    "claim_id": "CL-SIM-06-033",
+    "decision": "auto_send",
+    "duration_ms": 4429,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-07T13:58:00+00:00",
+    "claim_id": "CL-SIM-06-034",
+    "decision": "auto_send",
+    "duration_ms": 6218,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-07T02:57:00+00:00",
+    "claim_id": "CL-SIM-06-035",
+    "decision": "auto_send",
+    "duration_ms": 6359,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-07T11:11:00+00:00",
+    "claim_id": "CL-SIM-06-036",
+    "decision": "adjuster_review",
+    "duration_ms": 7811,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-07T09:37:00+00:00",
+    "claim_id": "CL-SIM-06-037",
+    "decision": "auto_send",
+    "duration_ms": 5164,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-07T09:38:00+00:00",
+    "claim_id": "CL-SIM-06-038",
+    "decision": "auto_send",
+    "duration_ms": 7120,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-07T05:23:00+00:00",
+    "claim_id": "CL-SIM-06-039",
+    "decision": "adjuster_review",
+    "duration_ms": 5687,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-07T07:32:00+00:00",
+    "claim_id": "CL-SIM-06-040",
+    "decision": "auto_send",
+    "duration_ms": 6375,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-07T01:15:00+00:00",
+    "claim_id": "CL-SIM-06-041",
+    "decision": "auto_send",
+    "duration_ms": 3877,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-07T00:58:00+00:00",
+    "claim_id": "CL-SIM-06-042",
+    "decision": "auto_send",
+    "duration_ms": 5301,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-07T01:32:00+00:00",
+    "claim_id": "CL-SIM-06-043",
+    "decision": "auto_send",
+    "duration_ms": 7899,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-07T07:53:00+00:00",
+    "claim_id": "CL-SIM-06-044",
+    "decision": "auto_send",
+    "duration_ms": 8157,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-07T13:49:00+00:00",
+    "claim_id": "CL-SIM-06-045",
+    "decision": "auto_send",
+    "duration_ms": 5102,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-07T10:19:00+00:00",
+    "claim_id": "CL-SIM-06-046",
+    "decision": "auto_send",
+    "duration_ms": 6112,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-07T05:51:00+00:00",
+    "claim_id": "CL-SIM-06-047",
+    "decision": "auto_send",
+    "duration_ms": 6235,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-07T11:01:00+00:00",
+    "claim_id": "CL-SIM-06-048",
+    "decision": "adjuster_review",
+    "duration_ms": 5822,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-07T08:55:00+00:00",
+    "claim_id": "CL-SIM-06-049",
+    "decision": "auto_send",
+    "duration_ms": 7409,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-07T04:49:00+00:00",
+    "claim_id": "CL-SIM-06-050",
+    "decision": "auto_send",
+    "duration_ms": 6146,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-07T10:46:00+00:00",
+    "claim_id": "CL-SIM-06-051",
+    "decision": "auto_send",
+    "duration_ms": 3565,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-07T01:36:00+00:00",
+    "claim_id": "CL-SIM-06-052",
+    "decision": "auto_send",
+    "duration_ms": 4935,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-08T02:33:00+00:00",
+    "claim_id": "CL-SIM-07-000",
+    "decision": "adjuster_review",
+    "duration_ms": 10247,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-08T02:24:00+00:00",
+    "claim_id": "CL-SIM-07-001",
+    "decision": "auto_send",
+    "duration_ms": 8690,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-08T02:12:00+00:00",
+    "claim_id": "CL-SIM-07-002",
+    "decision": "auto_send",
+    "duration_ms": 11536,
+    "eval_passed": false
+  },
+  {
+    "timestamp": "2026-05-08T05:17:00+00:00",
+    "claim_id": "CL-SIM-07-003",
+    "decision": "auto_send",
+    "duration_ms": 8669,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-08T11:59:00+00:00",
+    "claim_id": "CL-SIM-07-004",
+    "decision": "auto_send",
+    "duration_ms": 8450,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-08T11:41:00+00:00",
+    "claim_id": "CL-SIM-07-005",
+    "decision": "auto_send",
+    "duration_ms": 11360,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-08T00:18:00+00:00",
+    "claim_id": "CL-SIM-07-006",
+    "decision": "adjuster_review",
+    "duration_ms": 10738,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-08T03:39:00+00:00",
+    "claim_id": "CL-SIM-07-007",
+    "decision": "adjuster_review",
+    "duration_ms": 9599,
+    "eval_passed": false
+  },
+  {
+    "timestamp": "2026-05-08T02:38:00+00:00",
+    "claim_id": "CL-SIM-07-008",
+    "decision": "adjuster_review",
+    "duration_ms": 8525,
+    "eval_passed": false
+  },
+  {
+    "timestamp": "2026-05-08T01:43:00+00:00",
+    "claim_id": "CL-SIM-07-009",
+    "decision": "adjuster_review",
+    "duration_ms": 7119,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-08T11:17:00+00:00",
+    "claim_id": "CL-SIM-07-010",
+    "decision": "adjuster_review",
+    "duration_ms": 8892,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-08T02:14:00+00:00",
+    "claim_id": "CL-SIM-07-011",
+    "decision": "auto_send",
+    "duration_ms": 10036,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-08T10:39:00+00:00",
+    "claim_id": "CL-SIM-07-012",
+    "decision": "auto_send",
+    "duration_ms": 10281,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-08T07:28:00+00:00",
+    "claim_id": "CL-SIM-07-013",
+    "decision": "adjuster_review",
+    "duration_ms": 7926,
+    "eval_passed": false
+  },
+  {
+    "timestamp": "2026-05-08T10:25:00+00:00",
+    "claim_id": "CL-SIM-07-014",
+    "decision": "adjuster_review",
+    "duration_ms": 11301,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-08T07:39:00+00:00",
+    "claim_id": "CL-SIM-07-015",
+    "decision": "adjuster_review",
+    "duration_ms": 9764,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-08T03:18:00+00:00",
+    "claim_id": "CL-SIM-07-016",
+    "decision": "adjuster_review",
+    "duration_ms": 13384,
+    "eval_passed": false
+  },
+  {
+    "timestamp": "2026-05-08T07:31:00+00:00",
+    "claim_id": "CL-SIM-07-017",
+    "decision": "adjuster_review",
+    "duration_ms": 9208,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-08T02:45:00+00:00",
+    "claim_id": "CL-SIM-07-018",
+    "decision": "auto_send",
+    "duration_ms": 10942,
+    "eval_passed": false
+  },
+  {
+    "timestamp": "2026-05-08T02:21:00+00:00",
+    "claim_id": "CL-SIM-07-019",
+    "decision": "auto_send",
+    "duration_ms": 11125,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-08T01:45:00+00:00",
+    "claim_id": "CL-SIM-07-020",
+    "decision": "auto_send",
+    "duration_ms": 10052,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-08T02:07:00+00:00",
+    "claim_id": "CL-SIM-07-021",
+    "decision": "adjuster_review",
+    "duration_ms": 9598,
+    "eval_passed": false
+  },
+  {
+    "timestamp": "2026-05-08T02:30:00+00:00",
+    "claim_id": "CL-SIM-07-022",
+    "decision": "auto_send",
+    "duration_ms": 8306,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-08T03:47:00+00:00",
+    "claim_id": "CL-SIM-07-023",
+    "decision": "auto_send",
+    "duration_ms": 12092,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-08T06:45:00+00:00",
+    "claim_id": "CL-SIM-07-024",
+    "decision": "adjuster_review",
+    "duration_ms": 7203,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-08T01:23:00+00:00",
+    "claim_id": "CL-SIM-07-025",
+    "decision": "adjuster_review",
+    "duration_ms": 12912,
+    "eval_passed": false
+  },
+  {
+    "timestamp": "2026-05-08T11:05:00+00:00",
+    "claim_id": "CL-SIM-07-026",
+    "decision": "adjuster_review",
+    "duration_ms": 10110,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-08T00:39:00+00:00",
+    "claim_id": "CL-SIM-07-027",
+    "decision": "adjuster_review",
+    "duration_ms": 10612,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-08T12:02:00+00:00",
+    "claim_id": "CL-SIM-07-028",
+    "decision": "adjuster_review",
+    "duration_ms": 7469,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-08T01:21:00+00:00",
+    "claim_id": "CL-SIM-07-029",
+    "decision": "adjuster_review",
+    "duration_ms": 9682,
+    "eval_passed": false
+  },
+  {
+    "timestamp": "2026-05-08T10:23:00+00:00",
+    "claim_id": "CL-SIM-07-030",
+    "decision": "adjuster_review",
+    "duration_ms": 10333,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-08T04:55:00+00:00",
+    "claim_id": "CL-SIM-07-031",
+    "decision": "adjuster_review",
+    "duration_ms": 10298,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-08T10:37:00+00:00",
+    "claim_id": "CL-SIM-07-032",
+    "decision": "adjuster_review",
+    "duration_ms": 10267,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-08T08:31:00+00:00",
+    "claim_id": "CL-SIM-07-033",
+    "decision": "auto_send",
+    "duration_ms": 11295,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-08T02:27:00+00:00",
+    "claim_id": "CL-SIM-07-034",
+    "decision": "adjuster_review",
+    "duration_ms": 9686,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-08T06:01:00+00:00",
+    "claim_id": "CL-SIM-07-035",
+    "decision": "adjuster_review",
+    "duration_ms": 7581,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-08T06:09:00+00:00",
+    "claim_id": "CL-SIM-07-036",
+    "decision": "adjuster_review",
+    "duration_ms": 10609,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-08T08:39:00+00:00",
+    "claim_id": "CL-SIM-07-037",
+    "decision": "auto_send",
+    "duration_ms": 9196,
+    "eval_passed": false
+  },
+  {
+    "timestamp": "2026-05-08T00:44:00+00:00",
+    "claim_id": "CL-SIM-07-038",
+    "decision": "auto_send",
+    "duration_ms": 9485,
+    "eval_passed": false
+  },
+  {
+    "timestamp": "2026-05-08T04:19:00+00:00",
+    "claim_id": "CL-SIM-07-039",
+    "decision": "auto_send",
+    "duration_ms": 9150,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-08T11:12:00+00:00",
+    "claim_id": "CL-SIM-07-040",
+    "decision": "auto_send",
+    "duration_ms": 9938,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-08T12:32:00+00:00",
+    "claim_id": "CL-SIM-07-041",
+    "decision": "auto_send",
+    "duration_ms": 10434,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-08T10:58:00+00:00",
+    "claim_id": "CL-SIM-07-042",
+    "decision": "adjuster_review",
+    "duration_ms": 10539,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-08T07:55:00+00:00",
+    "claim_id": "CL-SIM-07-043",
+    "decision": "auto_send",
+    "duration_ms": 8557,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-08T12:13:00+00:00",
+    "claim_id": "CL-SIM-07-044",
+    "decision": "auto_send",
+    "duration_ms": 9627,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-08T05:00:00+00:00",
+    "claim_id": "CL-SIM-07-045",
+    "decision": "adjuster_review",
+    "duration_ms": 10298,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-08T05:17:00+00:00",
+    "claim_id": "CL-SIM-07-046",
+    "decision": "adjuster_review",
+    "duration_ms": 6478,
+    "eval_passed": false
+  },
+  {
+    "timestamp": "2026-05-08T09:16:00+00:00",
+    "claim_id": "CL-SIM-07-047",
+    "decision": "adjuster_review",
+    "duration_ms": 11607,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-08T13:19:00+00:00",
+    "claim_id": "CL-SIM-07-048",
+    "decision": "adjuster_review",
+    "duration_ms": 9993,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-08T04:39:00+00:00",
+    "claim_id": "CL-SIM-07-049",
+    "decision": "adjuster_review",
+    "duration_ms": 7373,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-08T06:35:00+00:00",
+    "claim_id": "CL-SIM-07-050",
+    "decision": "adjuster_review",
+    "duration_ms": 11821,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-08T11:48:00+00:00",
+    "claim_id": "CL-SIM-07-051",
+    "decision": "adjuster_review",
+    "duration_ms": 11114,
+    "eval_passed": false
+  },
+  {
+    "timestamp": "2026-05-08T12:24:00+00:00",
+    "claim_id": "CL-SIM-07-052",
+    "decision": "adjuster_review",
+    "duration_ms": 8668,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-08T03:04:00+00:00",
+    "claim_id": "CL-SIM-07-053",
+    "decision": "adjuster_review",
+    "duration_ms": 9234,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-08T05:13:00+00:00",
+    "claim_id": "CL-SIM-07-054",
+    "decision": "adjuster_review",
+    "duration_ms": 10052,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-08T02:50:00+00:00",
+    "claim_id": "CL-SIM-07-055",
+    "decision": "auto_send",
+    "duration_ms": 9237,
+    "eval_passed": false
+  },
+  {
+    "timestamp": "2026-05-08T06:01:00+00:00",
+    "claim_id": "CL-SIM-07-056",
+    "decision": "auto_send",
+    "duration_ms": 9854,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-08T10:54:00+00:00",
+    "claim_id": "CL-SIM-07-057",
+    "decision": "auto_send",
+    "duration_ms": 10061,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-08T06:12:00+00:00",
+    "claim_id": "CL-SIM-07-058",
+    "decision": "adjuster_review",
+    "duration_ms": 9309,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-09T00:31:00+00:00",
+    "claim_id": "CL-SIM-08-000",
+    "decision": "adjuster_review",
+    "duration_ms": 7459,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-09T01:08:00+00:00",
+    "claim_id": "CL-SIM-08-001",
+    "decision": "adjuster_review",
+    "duration_ms": 7863,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-09T06:10:00+00:00",
+    "claim_id": "CL-SIM-08-002",
+    "decision": "adjuster_review",
+    "duration_ms": 7635,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-09T06:19:00+00:00",
+    "claim_id": "CL-SIM-08-003",
+    "decision": "adjuster_review",
+    "duration_ms": 8661,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-09T09:47:00+00:00",
+    "claim_id": "CL-SIM-08-004",
+    "decision": "adjuster_review",
+    "duration_ms": 8626,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-09T01:56:00+00:00",
+    "claim_id": "CL-SIM-08-005",
+    "decision": "adjuster_review",
+    "duration_ms": 10466,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-09T08:50:00+00:00",
+    "claim_id": "CL-SIM-08-006",
+    "decision": "adjuster_review",
+    "duration_ms": 8417,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-09T07:36:00+00:00",
+    "claim_id": "CL-SIM-08-007",
+    "decision": "adjuster_review",
+    "duration_ms": 9058,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-09T11:50:00+00:00",
+    "claim_id": "CL-SIM-08-008",
+    "decision": "auto_send",
+    "duration_ms": 8733,
+    "eval_passed": false
+  },
+  {
+    "timestamp": "2026-05-09T07:42:00+00:00",
+    "claim_id": "CL-SIM-08-009",
+    "decision": "adjuster_review",
+    "duration_ms": 9542,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-09T01:29:00+00:00",
+    "claim_id": "CL-SIM-08-010",
+    "decision": "auto_send",
+    "duration_ms": 13813,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-09T12:06:00+00:00",
+    "claim_id": "CL-SIM-08-011",
+    "decision": "adjuster_review",
+    "duration_ms": 8608,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-09T05:07:00+00:00",
+    "claim_id": "CL-SIM-08-012",
+    "decision": "auto_send",
+    "duration_ms": 8683,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-09T13:32:00+00:00",
+    "claim_id": "CL-SIM-08-013",
+    "decision": "adjuster_review",
+    "duration_ms": 6163,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-09T03:25:00+00:00",
+    "claim_id": "CL-SIM-08-014",
+    "decision": "auto_send",
+    "duration_ms": 9645,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-09T09:46:00+00:00",
+    "claim_id": "CL-SIM-08-015",
+    "decision": "adjuster_review",
+    "duration_ms": 11244,
+    "eval_passed": false
+  },
+  {
+    "timestamp": "2026-05-09T09:24:00+00:00",
+    "claim_id": "CL-SIM-08-016",
+    "decision": "adjuster_review",
+    "duration_ms": 9913,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-09T12:14:00+00:00",
+    "claim_id": "CL-SIM-08-017",
+    "decision": "auto_send",
+    "duration_ms": 9132,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-09T13:07:00+00:00",
+    "claim_id": "CL-SIM-08-018",
+    "decision": "adjuster_review",
+    "duration_ms": 8808,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-09T01:15:00+00:00",
+    "claim_id": "CL-SIM-08-019",
+    "decision": "adjuster_review",
+    "duration_ms": 9148,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-09T05:52:00+00:00",
+    "claim_id": "CL-SIM-08-020",
+    "decision": "adjuster_review",
+    "duration_ms": 10404,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-09T13:06:00+00:00",
+    "claim_id": "CL-SIM-08-021",
+    "decision": "auto_send",
+    "duration_ms": 7830,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-09T00:56:00+00:00",
+    "claim_id": "CL-SIM-08-022",
+    "decision": "auto_send",
+    "duration_ms": 8230,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-09T12:06:00+00:00",
+    "claim_id": "CL-SIM-08-023",
+    "decision": "adjuster_review",
+    "duration_ms": 9355,
+    "eval_passed": false
+  },
+  {
+    "timestamp": "2026-05-09T08:51:00+00:00",
+    "claim_id": "CL-SIM-08-024",
+    "decision": "auto_send",
+    "duration_ms": 10145,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-09T09:24:00+00:00",
+    "claim_id": "CL-SIM-08-025",
+    "decision": "adjuster_review",
+    "duration_ms": 8561,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-09T10:29:00+00:00",
+    "claim_id": "CL-SIM-08-026",
+    "decision": "adjuster_review",
+    "duration_ms": 8588,
+    "eval_passed": false
+  },
+  {
+    "timestamp": "2026-05-09T02:37:00+00:00",
+    "claim_id": "CL-SIM-08-027",
+    "decision": "adjuster_review",
+    "duration_ms": 9485,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-09T10:19:00+00:00",
+    "claim_id": "CL-SIM-08-028",
+    "decision": "adjuster_review",
+    "duration_ms": 9886,
+    "eval_passed": false
+  },
+  {
+    "timestamp": "2026-05-09T01:23:00+00:00",
+    "claim_id": "CL-SIM-08-029",
+    "decision": "adjuster_review",
+    "duration_ms": 9299,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-09T09:50:00+00:00",
+    "claim_id": "CL-SIM-08-030",
+    "decision": "adjuster_review",
+    "duration_ms": 9976,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-09T00:31:00+00:00",
+    "claim_id": "CL-SIM-08-031",
+    "decision": "adjuster_review",
+    "duration_ms": 11395,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-09T04:56:00+00:00",
+    "claim_id": "CL-SIM-08-032",
+    "decision": "auto_send",
+    "duration_ms": 9138,
+    "eval_passed": false
+  },
+  {
+    "timestamp": "2026-05-09T06:55:00+00:00",
+    "claim_id": "CL-SIM-08-033",
+    "decision": "adjuster_review",
+    "duration_ms": 10564,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-09T01:01:00+00:00",
+    "claim_id": "CL-SIM-08-034",
+    "decision": "adjuster_review",
+    "duration_ms": 8053,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-09T02:27:00+00:00",
+    "claim_id": "CL-SIM-08-035",
+    "decision": "adjuster_review",
+    "duration_ms": 10347,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-09T12:31:00+00:00",
+    "claim_id": "CL-SIM-08-036",
+    "decision": "auto_send",
+    "duration_ms": 8646,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-09T08:47:00+00:00",
+    "claim_id": "CL-SIM-08-037",
+    "decision": "auto_send",
+    "duration_ms": 10749,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-09T07:57:00+00:00",
+    "claim_id": "CL-SIM-08-038",
+    "decision": "adjuster_review",
+    "duration_ms": 8714,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-09T06:33:00+00:00",
+    "claim_id": "CL-SIM-08-039",
+    "decision": "auto_send",
+    "duration_ms": 9757,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-09T02:43:00+00:00",
+    "claim_id": "CL-SIM-08-040",
+    "decision": "auto_send",
+    "duration_ms": 11692,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-09T02:43:00+00:00",
+    "claim_id": "CL-SIM-08-041",
+    "decision": "adjuster_review",
+    "duration_ms": 8530,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-09T08:30:00+00:00",
+    "claim_id": "CL-SIM-08-042",
+    "decision": "auto_send",
+    "duration_ms": 8848,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-09T07:48:00+00:00",
+    "claim_id": "CL-SIM-08-043",
+    "decision": "auto_send",
+    "duration_ms": 9510,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-09T06:01:00+00:00",
+    "claim_id": "CL-SIM-08-044",
+    "decision": "adjuster_review",
+    "duration_ms": 9103,
+    "eval_passed": false
+  },
+  {
+    "timestamp": "2026-05-10T04:52:00+00:00",
+    "claim_id": "CL-SIM-09-000",
+    "decision": "adjuster_review",
+    "duration_ms": 11484,
+    "eval_passed": false
+  },
+  {
+    "timestamp": "2026-05-10T07:21:00+00:00",
+    "claim_id": "CL-SIM-09-001",
+    "decision": "adjuster_review",
+    "duration_ms": 9370,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-10T00:46:00+00:00",
+    "claim_id": "CL-SIM-09-002",
+    "decision": "adjuster_review",
+    "duration_ms": 10925,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-10T03:19:00+00:00",
+    "claim_id": "CL-SIM-09-003",
+    "decision": "adjuster_review",
+    "duration_ms": 9143,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-10T09:23:00+00:00",
+    "claim_id": "CL-SIM-09-004",
+    "decision": "adjuster_review",
+    "duration_ms": 10939,
+    "eval_passed": false
+  },
+  {
+    "timestamp": "2026-05-10T11:36:00+00:00",
+    "claim_id": "CL-SIM-09-005",
+    "decision": "auto_send",
+    "duration_ms": 9967,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-10T05:47:00+00:00",
+    "claim_id": "CL-SIM-09-006",
+    "decision": "auto_send",
+    "duration_ms": 9989,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-10T02:27:00+00:00",
+    "claim_id": "CL-SIM-09-007",
+    "decision": "adjuster_review",
+    "duration_ms": 7736,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-10T02:20:00+00:00",
+    "claim_id": "CL-SIM-09-008",
+    "decision": "auto_send",
+    "duration_ms": 9398,
+    "eval_passed": false
+  },
+  {
+    "timestamp": "2026-05-10T08:51:00+00:00",
+    "claim_id": "CL-SIM-09-009",
+    "decision": "adjuster_review",
+    "duration_ms": 8081,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-10T10:27:00+00:00",
+    "claim_id": "CL-SIM-09-010",
+    "decision": "adjuster_review",
+    "duration_ms": 8381,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-10T10:31:00+00:00",
+    "claim_id": "CL-SIM-09-011",
+    "decision": "auto_send",
+    "duration_ms": 9086,
+    "eval_passed": false
+  },
+  {
+    "timestamp": "2026-05-10T09:05:00+00:00",
+    "claim_id": "CL-SIM-09-012",
+    "decision": "adjuster_review",
+    "duration_ms": 10793,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-10T08:06:00+00:00",
+    "claim_id": "CL-SIM-09-013",
+    "decision": "auto_send",
+    "duration_ms": 7979,
+    "eval_passed": false
+  },
+  {
+    "timestamp": "2026-05-10T09:57:00+00:00",
+    "claim_id": "CL-SIM-09-014",
+    "decision": "adjuster_review",
+    "duration_ms": 11152,
+    "eval_passed": false
+  },
+  {
+    "timestamp": "2026-05-10T11:44:00+00:00",
+    "claim_id": "CL-SIM-09-015",
+    "decision": "auto_send",
+    "duration_ms": 8533,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-10T13:14:00+00:00",
+    "claim_id": "CL-SIM-09-016",
+    "decision": "auto_send",
+    "duration_ms": 8825,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-10T00:52:00+00:00",
+    "claim_id": "CL-SIM-09-017",
+    "decision": "auto_send",
+    "duration_ms": 10511,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-10T06:29:00+00:00",
+    "claim_id": "CL-SIM-09-018",
+    "decision": "adjuster_review",
+    "duration_ms": 11354,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-10T00:32:00+00:00",
+    "claim_id": "CL-SIM-09-019",
+    "decision": "auto_send",
+    "duration_ms": 9201,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-10T07:08:00+00:00",
+    "claim_id": "CL-SIM-09-020",
+    "decision": "adjuster_review",
+    "duration_ms": 8570,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-10T07:00:00+00:00",
+    "claim_id": "CL-SIM-09-021",
+    "decision": "adjuster_review",
+    "duration_ms": 8204,
+    "eval_passed": false
+  },
+  {
+    "timestamp": "2026-05-10T12:24:00+00:00",
+    "claim_id": "CL-SIM-09-022",
+    "decision": "adjuster_review",
+    "duration_ms": 8407,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-10T03:32:00+00:00",
+    "claim_id": "CL-SIM-09-023",
+    "decision": "auto_send",
+    "duration_ms": 11211,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-10T02:57:00+00:00",
+    "claim_id": "CL-SIM-09-024",
+    "decision": "adjuster_review",
+    "duration_ms": 9479,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-10T09:19:00+00:00",
+    "claim_id": "CL-SIM-09-025",
+    "decision": "adjuster_review",
+    "duration_ms": 9830,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-10T11:49:00+00:00",
+    "claim_id": "CL-SIM-09-026",
+    "decision": "adjuster_review",
+    "duration_ms": 7126,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-10T04:12:00+00:00",
+    "claim_id": "CL-SIM-09-027",
+    "decision": "adjuster_review",
+    "duration_ms": 8427,
+    "eval_passed": false
+  },
+  {
+    "timestamp": "2026-05-10T13:09:00+00:00",
+    "claim_id": "CL-SIM-09-028",
+    "decision": "adjuster_review",
+    "duration_ms": 12909,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-10T12:01:00+00:00",
+    "claim_id": "CL-SIM-09-029",
+    "decision": "adjuster_review",
+    "duration_ms": 7592,
+    "eval_passed": false
+  },
+  {
+    "timestamp": "2026-05-10T12:18:00+00:00",
+    "claim_id": "CL-SIM-09-030",
+    "decision": "adjuster_review",
+    "duration_ms": 9743,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-10T11:32:00+00:00",
+    "claim_id": "CL-SIM-09-031",
+    "decision": "adjuster_review",
+    "duration_ms": 10691,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-10T13:11:00+00:00",
+    "claim_id": "CL-SIM-09-032",
+    "decision": "auto_send",
+    "duration_ms": 8584,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-10T04:54:00+00:00",
+    "claim_id": "CL-SIM-09-033",
+    "decision": "auto_send",
+    "duration_ms": 12494,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-10T12:45:00+00:00",
+    "claim_id": "CL-SIM-09-034",
+    "decision": "adjuster_review",
+    "duration_ms": 11122,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-10T09:11:00+00:00",
+    "claim_id": "CL-SIM-09-035",
+    "decision": "adjuster_review",
+    "duration_ms": 8395,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-10T12:38:00+00:00",
+    "claim_id": "CL-SIM-09-036",
+    "decision": "auto_send",
+    "duration_ms": 9046,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-10T11:25:00+00:00",
+    "claim_id": "CL-SIM-09-037",
+    "decision": "auto_send",
+    "duration_ms": 9666,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-10T05:38:00+00:00",
+    "claim_id": "CL-SIM-09-038",
+    "decision": "auto_send",
+    "duration_ms": 10579,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-10T13:09:00+00:00",
+    "claim_id": "CL-SIM-09-039",
+    "decision": "adjuster_review",
+    "duration_ms": 13539,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-10T11:08:00+00:00",
+    "claim_id": "CL-SIM-09-040",
+    "decision": "auto_send",
+    "duration_ms": 8584,
+    "eval_passed": false
+  },
+  {
+    "timestamp": "2026-05-10T08:08:00+00:00",
+    "claim_id": "CL-SIM-09-041",
+    "decision": "auto_send",
+    "duration_ms": 9545,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-10T01:00:00+00:00",
+    "claim_id": "CL-SIM-09-042",
+    "decision": "auto_send",
+    "duration_ms": 8266,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-10T09:47:00+00:00",
+    "claim_id": "CL-SIM-09-043",
+    "decision": "adjuster_review",
+    "duration_ms": 9292,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-10T02:59:00+00:00",
+    "claim_id": "CL-SIM-09-044",
+    "decision": "adjuster_review",
+    "duration_ms": 6583,
+    "eval_passed": false
+  },
+  {
+    "timestamp": "2026-05-10T00:37:00+00:00",
+    "claim_id": "CL-SIM-09-045",
+    "decision": "auto_send",
+    "duration_ms": 8100,
+    "eval_passed": false
+  },
+  {
+    "timestamp": "2026-05-10T04:56:00+00:00",
+    "claim_id": "CL-SIM-09-046",
+    "decision": "auto_send",
+    "duration_ms": 10557,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-10T09:41:00+00:00",
+    "claim_id": "CL-SIM-09-047",
+    "decision": "auto_send",
+    "duration_ms": 10720,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-10T10:56:00+00:00",
+    "claim_id": "CL-SIM-09-048",
+    "decision": "adjuster_review",
+    "duration_ms": 8911,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-10T02:17:00+00:00",
+    "claim_id": "CL-SIM-09-049",
+    "decision": "auto_send",
+    "duration_ms": 8537,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-10T02:46:00+00:00",
+    "claim_id": "CL-SIM-09-050",
+    "decision": "auto_send",
+    "duration_ms": 9695,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-10T12:15:00+00:00",
+    "claim_id": "CL-SIM-09-051",
+    "decision": "adjuster_review",
+    "duration_ms": 9277,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-10T12:55:00+00:00",
+    "claim_id": "CL-SIM-09-052",
+    "decision": "adjuster_review",
+    "duration_ms": 6856,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-10T10:54:00+00:00",
+    "claim_id": "CL-SIM-09-053",
+    "decision": "auto_send",
+    "duration_ms": 10339,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-10T11:25:00+00:00",
+    "claim_id": "CL-SIM-09-054",
+    "decision": "adjuster_review",
+    "duration_ms": 7901,
+    "eval_passed": false
+  },
+  {
+    "timestamp": "2026-05-11T05:31:00+00:00",
+    "claim_id": "CL-SIM-10-000",
+    "decision": "auto_send",
+    "duration_ms": 10974,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-11T04:33:00+00:00",
+    "claim_id": "CL-SIM-10-001",
+    "decision": "auto_send",
+    "duration_ms": 9563,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-11T12:20:00+00:00",
+    "claim_id": "CL-SIM-10-002",
+    "decision": "auto_send",
+    "duration_ms": 9397,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-11T11:23:00+00:00",
+    "claim_id": "CL-SIM-10-003",
+    "decision": "adjuster_review",
+    "duration_ms": 10912,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-11T06:55:00+00:00",
+    "claim_id": "CL-SIM-10-004",
+    "decision": "auto_send",
+    "duration_ms": 12278,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-11T11:46:00+00:00",
+    "claim_id": "CL-SIM-10-005",
+    "decision": "adjuster_review",
+    "duration_ms": 8042,
+    "eval_passed": false
+  },
+  {
+    "timestamp": "2026-05-11T05:02:00+00:00",
+    "claim_id": "CL-SIM-10-006",
+    "decision": "adjuster_review",
+    "duration_ms": 10186,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-11T07:45:00+00:00",
+    "claim_id": "CL-SIM-10-007",
+    "decision": "auto_send",
+    "duration_ms": 13204,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-11T07:05:00+00:00",
+    "claim_id": "CL-SIM-10-008",
+    "decision": "auto_send",
+    "duration_ms": 11654,
+    "eval_passed": false
+  },
+  {
+    "timestamp": "2026-05-11T03:43:00+00:00",
+    "claim_id": "CL-SIM-10-009",
+    "decision": "auto_send",
+    "duration_ms": 8185,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-11T10:10:00+00:00",
+    "claim_id": "CL-SIM-10-010",
+    "decision": "auto_send",
+    "duration_ms": 10920,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-11T01:19:00+00:00",
+    "claim_id": "CL-SIM-10-011",
+    "decision": "auto_send",
+    "duration_ms": 10303,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-11T09:20:00+00:00",
+    "claim_id": "CL-SIM-10-012",
+    "decision": "auto_send",
+    "duration_ms": 10050,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-11T08:52:00+00:00",
+    "claim_id": "CL-SIM-10-013",
+    "decision": "adjuster_review",
+    "duration_ms": 11277,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-11T12:14:00+00:00",
+    "claim_id": "CL-SIM-10-014",
+    "decision": "auto_send",
+    "duration_ms": 11007,
+    "eval_passed": false
+  },
+  {
+    "timestamp": "2026-05-11T07:44:00+00:00",
+    "claim_id": "CL-SIM-10-015",
+    "decision": "adjuster_review",
+    "duration_ms": 10469,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-11T09:37:00+00:00",
+    "claim_id": "CL-SIM-10-016",
+    "decision": "adjuster_review",
+    "duration_ms": 6855,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-11T06:45:00+00:00",
+    "claim_id": "CL-SIM-10-017",
+    "decision": "adjuster_review",
+    "duration_ms": 10137,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-11T03:43:00+00:00",
+    "claim_id": "CL-SIM-10-018",
+    "decision": "auto_send",
+    "duration_ms": 10823,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-11T01:01:00+00:00",
+    "claim_id": "CL-SIM-10-019",
+    "decision": "auto_send",
+    "duration_ms": 9887,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-11T08:03:00+00:00",
+    "claim_id": "CL-SIM-10-020",
+    "decision": "adjuster_review",
+    "duration_ms": 7341,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-11T12:26:00+00:00",
+    "claim_id": "CL-SIM-10-021",
+    "decision": "auto_send",
+    "duration_ms": 10891,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-11T06:31:00+00:00",
+    "claim_id": "CL-SIM-10-022",
+    "decision": "adjuster_review",
+    "duration_ms": 10766,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-11T11:17:00+00:00",
+    "claim_id": "CL-SIM-10-023",
+    "decision": "auto_send",
+    "duration_ms": 8773,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-11T05:56:00+00:00",
+    "claim_id": "CL-SIM-10-024",
+    "decision": "adjuster_review",
+    "duration_ms": 10997,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-11T03:48:00+00:00",
+    "claim_id": "CL-SIM-10-025",
+    "decision": "auto_send",
+    "duration_ms": 9432,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-11T05:05:00+00:00",
+    "claim_id": "CL-SIM-10-026",
+    "decision": "adjuster_review",
+    "duration_ms": 9195,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-11T03:55:00+00:00",
+    "claim_id": "CL-SIM-10-027",
+    "decision": "adjuster_review",
+    "duration_ms": 7953,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-11T04:42:00+00:00",
+    "claim_id": "CL-SIM-10-028",
+    "decision": "adjuster_review",
+    "duration_ms": 11308,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-11T11:16:00+00:00",
+    "claim_id": "CL-SIM-10-029",
+    "decision": "adjuster_review",
+    "duration_ms": 7695,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-11T00:16:00+00:00",
+    "claim_id": "CL-SIM-10-030",
+    "decision": "adjuster_review",
+    "duration_ms": 11336,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-11T11:28:00+00:00",
+    "claim_id": "CL-SIM-10-031",
+    "decision": "auto_send",
+    "duration_ms": 10326,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-11T12:38:00+00:00",
+    "claim_id": "CL-SIM-10-032",
+    "decision": "adjuster_review",
+    "duration_ms": 7767,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-11T13:14:00+00:00",
+    "claim_id": "CL-SIM-10-033",
+    "decision": "adjuster_review",
+    "duration_ms": 10199,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-11T04:56:00+00:00",
+    "claim_id": "CL-SIM-10-034",
+    "decision": "adjuster_review",
+    "duration_ms": 11200,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-11T13:11:00+00:00",
+    "claim_id": "CL-SIM-10-035",
+    "decision": "auto_send",
+    "duration_ms": 8514,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-11T05:09:00+00:00",
+    "claim_id": "CL-SIM-10-036",
+    "decision": "auto_send",
+    "duration_ms": 11313,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-11T04:41:00+00:00",
+    "claim_id": "CL-SIM-10-037",
+    "decision": "adjuster_review",
+    "duration_ms": 9336,
+    "eval_passed": false
+  },
+  {
+    "timestamp": "2026-05-11T12:32:00+00:00",
+    "claim_id": "CL-SIM-10-038",
+    "decision": "auto_send",
+    "duration_ms": 8387,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-11T05:52:00+00:00",
+    "claim_id": "CL-SIM-10-039",
+    "decision": "auto_send",
+    "duration_ms": 8373,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-11T13:24:00+00:00",
+    "claim_id": "CL-SIM-10-040",
+    "decision": "adjuster_review",
+    "duration_ms": 8991,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-11T03:08:00+00:00",
+    "claim_id": "CL-SIM-10-041",
+    "decision": "auto_send",
+    "duration_ms": 8050,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-11T03:50:00+00:00",
+    "claim_id": "CL-SIM-10-042",
+    "decision": "adjuster_review",
+    "duration_ms": 8784,
+    "eval_passed": false
+  },
+  {
+    "timestamp": "2026-05-11T09:35:00+00:00",
+    "claim_id": "CL-SIM-10-043",
+    "decision": "adjuster_review",
+    "duration_ms": 6880,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-11T09:02:00+00:00",
+    "claim_id": "CL-SIM-10-044",
+    "decision": "adjuster_review",
+    "duration_ms": 9545,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-11T07:40:00+00:00",
+    "claim_id": "CL-SIM-10-045",
+    "decision": "auto_send",
+    "duration_ms": 10510,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-11T12:21:00+00:00",
+    "claim_id": "CL-SIM-10-046",
+    "decision": "auto_send",
+    "duration_ms": 10883,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-11T00:40:00+00:00",
+    "claim_id": "CL-SIM-10-047",
+    "decision": "auto_send",
+    "duration_ms": 9964,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-11T12:59:00+00:00",
+    "claim_id": "CL-SIM-10-048",
+    "decision": "auto_send",
+    "duration_ms": 9002,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-11T05:40:00+00:00",
+    "claim_id": "CL-SIM-10-049",
+    "decision": "adjuster_review",
+    "duration_ms": 8575,
+    "eval_passed": false
+  },
+  {
+    "timestamp": "2026-05-11T03:36:00+00:00",
+    "claim_id": "CL-SIM-10-050",
+    "decision": "auto_send",
+    "duration_ms": 10228,
+    "eval_passed": false
+  },
+  {
+    "timestamp": "2026-05-11T08:10:00+00:00",
+    "claim_id": "CL-SIM-10-051",
+    "decision": "auto_send",
+    "duration_ms": 9323,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-11T12:00:00+00:00",
+    "claim_id": "CL-SIM-10-052",
+    "decision": "adjuster_review",
+    "duration_ms": 11137,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-11T06:29:00+00:00",
+    "claim_id": "CL-SIM-10-053",
+    "decision": "adjuster_review",
+    "duration_ms": 8533,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-11T05:15:00+00:00",
+    "claim_id": "CL-SIM-10-054",
+    "decision": "adjuster_review",
+    "duration_ms": 7746,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-12T12:59:00+00:00",
+    "claim_id": "CL-SIM-11-000",
+    "decision": "auto_send",
+    "duration_ms": 9358,
+    "eval_passed": false
+  },
+  {
+    "timestamp": "2026-05-12T06:19:00+00:00",
+    "claim_id": "CL-SIM-11-001",
+    "decision": "adjuster_review",
+    "duration_ms": 12374,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-12T00:16:00+00:00",
+    "claim_id": "CL-SIM-11-002",
+    "decision": "adjuster_review",
+    "duration_ms": 10349,
+    "eval_passed": false
+  },
+  {
+    "timestamp": "2026-05-12T09:53:00+00:00",
+    "claim_id": "CL-SIM-11-003",
+    "decision": "auto_send",
+    "duration_ms": 9222,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-12T09:43:00+00:00",
+    "claim_id": "CL-SIM-11-004",
+    "decision": "auto_send",
+    "duration_ms": 10451,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-12T11:10:00+00:00",
+    "claim_id": "CL-SIM-11-005",
+    "decision": "auto_send",
+    "duration_ms": 8168,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-12T12:20:00+00:00",
+    "claim_id": "CL-SIM-11-006",
+    "decision": "auto_send",
+    "duration_ms": 11670,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-12T02:52:00+00:00",
+    "claim_id": "CL-SIM-11-007",
+    "decision": "auto_send",
+    "duration_ms": 9006,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-12T03:08:00+00:00",
+    "claim_id": "CL-SIM-11-008",
+    "decision": "auto_send",
+    "duration_ms": 10159,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-12T10:57:00+00:00",
+    "claim_id": "CL-SIM-11-009",
+    "decision": "auto_send",
+    "duration_ms": 6665,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-12T13:57:00+00:00",
+    "claim_id": "CL-SIM-11-010",
+    "decision": "auto_send",
+    "duration_ms": 9070,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-12T07:02:00+00:00",
+    "claim_id": "CL-SIM-11-011",
+    "decision": "adjuster_review",
+    "duration_ms": 9116,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-12T03:43:00+00:00",
+    "claim_id": "CL-SIM-11-012",
+    "decision": "adjuster_review",
+    "duration_ms": 9088,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-12T10:32:00+00:00",
+    "claim_id": "CL-SIM-11-013",
+    "decision": "auto_send",
+    "duration_ms": 12531,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-12T00:16:00+00:00",
+    "claim_id": "CL-SIM-11-014",
+    "decision": "adjuster_review",
+    "duration_ms": 8163,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-12T00:12:00+00:00",
+    "claim_id": "CL-SIM-11-015",
+    "decision": "adjuster_review",
+    "duration_ms": 9176,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-12T08:34:00+00:00",
+    "claim_id": "CL-SIM-11-016",
+    "decision": "auto_send",
+    "duration_ms": 7670,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-12T13:45:00+00:00",
+    "claim_id": "CL-SIM-11-017",
+    "decision": "auto_send",
+    "duration_ms": 10942,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-12T04:06:00+00:00",
+    "claim_id": "CL-SIM-11-018",
+    "decision": "adjuster_review",
+    "duration_ms": 12529,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-12T13:54:00+00:00",
+    "claim_id": "CL-SIM-11-019",
+    "decision": "adjuster_review",
+    "duration_ms": 9669,
+    "eval_passed": false
+  },
+  {
+    "timestamp": "2026-05-12T07:50:00+00:00",
+    "claim_id": "CL-SIM-11-020",
+    "decision": "auto_send",
+    "duration_ms": 8915,
+    "eval_passed": false
+  },
+  {
+    "timestamp": "2026-05-12T03:51:00+00:00",
+    "claim_id": "CL-SIM-11-021",
+    "decision": "adjuster_review",
+    "duration_ms": 9789,
+    "eval_passed": false
+  },
+  {
+    "timestamp": "2026-05-12T11:05:00+00:00",
+    "claim_id": "CL-SIM-11-022",
+    "decision": "auto_send",
+    "duration_ms": 8957,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-12T06:28:00+00:00",
+    "claim_id": "CL-SIM-11-023",
+    "decision": "adjuster_review",
+    "duration_ms": 7389,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-12T01:24:00+00:00",
+    "claim_id": "CL-SIM-11-024",
+    "decision": "adjuster_review",
+    "duration_ms": 9820,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-12T13:23:00+00:00",
+    "claim_id": "CL-SIM-11-025",
+    "decision": "adjuster_review",
+    "duration_ms": 13508,
+    "eval_passed": false
+  },
+  {
+    "timestamp": "2026-05-12T00:43:00+00:00",
+    "claim_id": "CL-SIM-11-026",
+    "decision": "adjuster_review",
+    "duration_ms": 8925,
+    "eval_passed": false
+  },
+  {
+    "timestamp": "2026-05-12T11:48:00+00:00",
+    "claim_id": "CL-SIM-11-027",
+    "decision": "auto_send",
+    "duration_ms": 9042,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-12T04:47:00+00:00",
+    "claim_id": "CL-SIM-11-028",
+    "decision": "auto_send",
+    "duration_ms": 9571,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-12T00:33:00+00:00",
+    "claim_id": "CL-SIM-11-029",
+    "decision": "adjuster_review",
+    "duration_ms": 9657,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-12T02:27:00+00:00",
+    "claim_id": "CL-SIM-11-030",
+    "decision": "auto_send",
+    "duration_ms": 9284,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-12T06:47:00+00:00",
+    "claim_id": "CL-SIM-11-031",
+    "decision": "auto_send",
+    "duration_ms": 8911,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-12T06:38:00+00:00",
+    "claim_id": "CL-SIM-11-032",
+    "decision": "auto_send",
+    "duration_ms": 11340,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-12T06:33:00+00:00",
+    "claim_id": "CL-SIM-11-033",
+    "decision": "auto_send",
+    "duration_ms": 12357,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-12T08:32:00+00:00",
+    "claim_id": "CL-SIM-11-034",
+    "decision": "auto_send",
+    "duration_ms": 12952,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-12T01:40:00+00:00",
+    "claim_id": "CL-SIM-11-035",
+    "decision": "adjuster_review",
+    "duration_ms": 10223,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-12T10:09:00+00:00",
+    "claim_id": "CL-SIM-11-036",
+    "decision": "adjuster_review",
+    "duration_ms": 8338,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-12T00:30:00+00:00",
+    "claim_id": "CL-SIM-11-037",
+    "decision": "auto_send",
+    "duration_ms": 9843,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-12T09:26:00+00:00",
+    "claim_id": "CL-SIM-11-038",
+    "decision": "auto_send",
+    "duration_ms": 7894,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-12T11:36:00+00:00",
+    "claim_id": "CL-SIM-11-039",
+    "decision": "auto_send",
+    "duration_ms": 7618,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-12T04:12:00+00:00",
+    "claim_id": "CL-SIM-11-040",
+    "decision": "auto_send",
+    "duration_ms": 11265,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-12T02:37:00+00:00",
+    "claim_id": "CL-SIM-11-041",
+    "decision": "adjuster_review",
+    "duration_ms": 9683,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-12T06:09:00+00:00",
+    "claim_id": "CL-SIM-11-042",
+    "decision": "adjuster_review",
+    "duration_ms": 8651,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-12T05:15:00+00:00",
+    "claim_id": "CL-SIM-11-043",
+    "decision": "adjuster_review",
+    "duration_ms": 9549,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-12T07:21:00+00:00",
+    "claim_id": "CL-SIM-11-044",
+    "decision": "adjuster_review",
+    "duration_ms": 8805,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-12T06:57:00+00:00",
+    "claim_id": "CL-SIM-11-045",
+    "decision": "adjuster_review",
+    "duration_ms": 11112,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-12T13:23:00+00:00",
+    "claim_id": "CL-SIM-11-046",
+    "decision": "adjuster_review",
+    "duration_ms": 10517,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-12T04:58:00+00:00",
+    "claim_id": "CL-SIM-11-047",
+    "decision": "adjuster_review",
+    "duration_ms": 9939,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-12T04:08:00+00:00",
+    "claim_id": "CL-SIM-11-048",
+    "decision": "auto_send",
+    "duration_ms": 7130,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-12T06:29:00+00:00",
+    "claim_id": "CL-SIM-11-049",
+    "decision": "adjuster_review",
+    "duration_ms": 9359,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-12T02:51:00+00:00",
+    "claim_id": "CL-SIM-11-050",
+    "decision": "adjuster_review",
+    "duration_ms": 10677,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-12T08:15:00+00:00",
+    "claim_id": "CL-SIM-11-051",
+    "decision": "auto_send",
+    "duration_ms": 7183,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-12T08:27:00+00:00",
+    "claim_id": "CL-SIM-11-052",
+    "decision": "auto_send",
+    "duration_ms": 12260,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-12T01:49:00+00:00",
+    "claim_id": "CL-SIM-11-053",
+    "decision": "adjuster_review",
+    "duration_ms": 11004,
+    "eval_passed": false
+  },
+  {
+    "timestamp": "2026-05-12T06:29:00+00:00",
+    "claim_id": "CL-SIM-11-054",
+    "decision": "auto_send",
+    "duration_ms": 9563,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-13T07:20:00+00:00",
+    "claim_id": "CL-SIM-12-000",
+    "decision": "auto_send",
+    "duration_ms": 12076,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-13T05:28:00+00:00",
+    "claim_id": "CL-SIM-12-001",
+    "decision": "auto_send",
+    "duration_ms": 6365,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-13T08:10:00+00:00",
+    "claim_id": "CL-SIM-12-002",
+    "decision": "adjuster_review",
+    "duration_ms": 13351,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-13T11:51:00+00:00",
+    "claim_id": "CL-SIM-12-003",
+    "decision": "auto_send",
+    "duration_ms": 8628,
+    "eval_passed": false
+  },
+  {
+    "timestamp": "2026-05-13T13:20:00+00:00",
+    "claim_id": "CL-SIM-12-004",
+    "decision": "adjuster_review",
+    "duration_ms": 7533,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-13T01:56:00+00:00",
+    "claim_id": "CL-SIM-12-005",
+    "decision": "auto_send",
+    "duration_ms": 11440,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-13T09:18:00+00:00",
+    "claim_id": "CL-SIM-12-006",
+    "decision": "adjuster_review",
+    "duration_ms": 9538,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-13T12:05:00+00:00",
+    "claim_id": "CL-SIM-12-007",
+    "decision": "adjuster_review",
+    "duration_ms": 9151,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-13T11:49:00+00:00",
+    "claim_id": "CL-SIM-12-008",
+    "decision": "adjuster_review",
+    "duration_ms": 11039,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-13T02:22:00+00:00",
+    "claim_id": "CL-SIM-12-009",
+    "decision": "auto_send",
+    "duration_ms": 7317,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-13T11:14:00+00:00",
+    "claim_id": "CL-SIM-12-010",
+    "decision": "adjuster_review",
+    "duration_ms": 8207,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-13T10:12:00+00:00",
+    "claim_id": "CL-SIM-12-011",
+    "decision": "adjuster_review",
+    "duration_ms": 10177,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-13T08:38:00+00:00",
+    "claim_id": "CL-SIM-12-012",
+    "decision": "auto_send",
+    "duration_ms": 10566,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-13T06:08:00+00:00",
+    "claim_id": "CL-SIM-12-013",
+    "decision": "auto_send",
+    "duration_ms": 8359,
+    "eval_passed": false
+  },
+  {
+    "timestamp": "2026-05-13T10:08:00+00:00",
+    "claim_id": "CL-SIM-12-014",
+    "decision": "auto_send",
+    "duration_ms": 11710,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-13T06:03:00+00:00",
+    "claim_id": "CL-SIM-12-015",
+    "decision": "adjuster_review",
+    "duration_ms": 10806,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-13T09:36:00+00:00",
+    "claim_id": "CL-SIM-12-016",
+    "decision": "auto_send",
+    "duration_ms": 8833,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-13T13:35:00+00:00",
+    "claim_id": "CL-SIM-12-017",
+    "decision": "adjuster_review",
+    "duration_ms": 8139,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-13T04:24:00+00:00",
+    "claim_id": "CL-SIM-12-018",
+    "decision": "adjuster_review",
+    "duration_ms": 9462,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-13T03:46:00+00:00",
+    "claim_id": "CL-SIM-12-019",
+    "decision": "adjuster_review",
+    "duration_ms": 7583,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-13T13:10:00+00:00",
+    "claim_id": "CL-SIM-12-020",
+    "decision": "auto_send",
+    "duration_ms": 9186,
+    "eval_passed": false
+  },
+  {
+    "timestamp": "2026-05-13T08:14:00+00:00",
+    "claim_id": "CL-SIM-12-021",
+    "decision": "adjuster_review",
+    "duration_ms": 8701,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-13T01:27:00+00:00",
+    "claim_id": "CL-SIM-12-022",
+    "decision": "adjuster_review",
+    "duration_ms": 10272,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-13T07:46:00+00:00",
+    "claim_id": "CL-SIM-12-023",
+    "decision": "auto_send",
+    "duration_ms": 9198,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-13T05:56:00+00:00",
+    "claim_id": "CL-SIM-12-024",
+    "decision": "adjuster_review",
+    "duration_ms": 7355,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-13T05:07:00+00:00",
+    "claim_id": "CL-SIM-12-025",
+    "decision": "adjuster_review",
+    "duration_ms": 10377,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-13T00:23:00+00:00",
+    "claim_id": "CL-SIM-12-026",
+    "decision": "auto_send",
+    "duration_ms": 8151,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-13T12:38:00+00:00",
+    "claim_id": "CL-SIM-12-027",
+    "decision": "adjuster_review",
+    "duration_ms": 7692,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-13T02:43:00+00:00",
+    "claim_id": "CL-SIM-12-028",
+    "decision": "adjuster_review",
+    "duration_ms": 8005,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-13T10:44:00+00:00",
+    "claim_id": "CL-SIM-12-029",
+    "decision": "adjuster_review",
+    "duration_ms": 10245,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-13T07:22:00+00:00",
+    "claim_id": "CL-SIM-12-030",
+    "decision": "adjuster_review",
+    "duration_ms": 9253,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-13T07:19:00+00:00",
+    "claim_id": "CL-SIM-12-031",
+    "decision": "adjuster_review",
+    "duration_ms": 6401,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-13T03:30:00+00:00",
+    "claim_id": "CL-SIM-12-032",
+    "decision": "adjuster_review",
+    "duration_ms": 8733,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-13T13:38:00+00:00",
+    "claim_id": "CL-SIM-12-033",
+    "decision": "auto_send",
+    "duration_ms": 6937,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-13T05:33:00+00:00",
+    "claim_id": "CL-SIM-12-034",
+    "decision": "adjuster_review",
+    "duration_ms": 11186,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-13T10:54:00+00:00",
+    "claim_id": "CL-SIM-12-035",
+    "decision": "adjuster_review",
+    "duration_ms": 10967,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-13T06:41:00+00:00",
+    "claim_id": "CL-SIM-12-036",
+    "decision": "auto_send",
+    "duration_ms": 7826,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-13T13:53:00+00:00",
+    "claim_id": "CL-SIM-12-037",
+    "decision": "auto_send",
+    "duration_ms": 11867,
+    "eval_passed": false
+  },
+  {
+    "timestamp": "2026-05-13T10:29:00+00:00",
+    "claim_id": "CL-SIM-12-038",
+    "decision": "auto_send",
+    "duration_ms": 8888,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-13T01:59:00+00:00",
+    "claim_id": "CL-SIM-12-039",
+    "decision": "adjuster_review",
+    "duration_ms": 8352,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-13T08:43:00+00:00",
+    "claim_id": "CL-SIM-12-040",
+    "decision": "adjuster_review",
+    "duration_ms": 7887,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-13T08:18:00+00:00",
+    "claim_id": "CL-SIM-12-041",
+    "decision": "auto_send",
+    "duration_ms": 8382,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-13T11:00:00+00:00",
+    "claim_id": "CL-SIM-12-042",
+    "decision": "auto_send",
+    "duration_ms": 9920,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-13T03:11:00+00:00",
+    "claim_id": "CL-SIM-12-043",
+    "decision": "adjuster_review",
+    "duration_ms": 10302,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-13T00:54:00+00:00",
+    "claim_id": "CL-SIM-12-044",
+    "decision": "auto_send",
+    "duration_ms": 11148,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-13T06:33:00+00:00",
+    "claim_id": "CL-SIM-12-045",
+    "decision": "auto_send",
+    "duration_ms": 8985,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-13T08:26:00+00:00",
+    "claim_id": "CL-SIM-12-046",
+    "decision": "adjuster_review",
+    "duration_ms": 7142,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-13T02:51:00+00:00",
+    "claim_id": "CL-SIM-12-047",
+    "decision": "adjuster_review",
+    "duration_ms": 9622,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-13T12:59:00+00:00",
+    "claim_id": "CL-SIM-12-048",
+    "decision": "adjuster_review",
+    "duration_ms": 10548,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-13T13:19:00+00:00",
+    "claim_id": "CL-SIM-12-049",
+    "decision": "adjuster_review",
+    "duration_ms": 9718,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-14T09:22:00+00:00",
+    "claim_id": "CL-SIM-13-000",
+    "decision": "adjuster_review",
+    "duration_ms": 8436,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-14T06:15:00+00:00",
+    "claim_id": "CL-SIM-13-001",
+    "decision": "adjuster_review",
+    "duration_ms": 8977,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-14T12:58:00+00:00",
+    "claim_id": "CL-SIM-13-002",
+    "decision": "auto_send",
+    "duration_ms": 5149,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-14T11:09:00+00:00",
+    "claim_id": "CL-SIM-13-003",
+    "decision": "auto_send",
+    "duration_ms": 8195,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-14T00:33:00+00:00",
+    "claim_id": "CL-SIM-13-004",
+    "decision": "adjuster_review",
+    "duration_ms": 7895,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-14T02:00:00+00:00",
+    "claim_id": "CL-SIM-13-005",
+    "decision": "auto_send",
+    "duration_ms": 11749,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-14T13:50:00+00:00",
+    "claim_id": "CL-SIM-13-006",
+    "decision": "auto_send",
+    "duration_ms": 8387,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-14T07:18:00+00:00",
+    "claim_id": "CL-SIM-13-007",
+    "decision": "adjuster_review",
+    "duration_ms": 6735,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-14T03:31:00+00:00",
+    "claim_id": "CL-SIM-13-008",
+    "decision": "auto_send",
+    "duration_ms": 10165,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-14T10:11:00+00:00",
+    "claim_id": "CL-SIM-13-009",
+    "decision": "adjuster_review",
+    "duration_ms": 7668,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-14T12:00:00+00:00",
+    "claim_id": "CL-SIM-13-010",
+    "decision": "adjuster_review",
+    "duration_ms": 6178,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-14T11:35:00+00:00",
+    "claim_id": "CL-SIM-13-011",
+    "decision": "auto_send",
+    "duration_ms": 7866,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-14T12:48:00+00:00",
+    "claim_id": "CL-SIM-13-012",
+    "decision": "auto_send",
+    "duration_ms": 13593,
+    "eval_passed": false
+  },
+  {
+    "timestamp": "2026-05-14T02:09:00+00:00",
+    "claim_id": "CL-SIM-13-013",
+    "decision": "auto_send",
+    "duration_ms": 7208,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-14T02:29:00+00:00",
+    "claim_id": "CL-SIM-13-014",
+    "decision": "auto_send",
+    "duration_ms": 10702,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-14T08:21:00+00:00",
+    "claim_id": "CL-SIM-13-015",
+    "decision": "adjuster_review",
+    "duration_ms": 7262,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-14T10:42:00+00:00",
+    "claim_id": "CL-SIM-13-016",
+    "decision": "adjuster_review",
+    "duration_ms": 7470,
+    "eval_passed": false
+  },
+  {
+    "timestamp": "2026-05-14T01:35:00+00:00",
+    "claim_id": "CL-SIM-13-017",
+    "decision": "adjuster_review",
+    "duration_ms": 10131,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-14T11:51:00+00:00",
+    "claim_id": "CL-SIM-13-018",
+    "decision": "auto_send",
+    "duration_ms": 7000,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-14T00:02:00+00:00",
+    "claim_id": "CL-SIM-13-019",
+    "decision": "auto_send",
+    "duration_ms": 12193,
+    "eval_passed": false
+  },
+  {
+    "timestamp": "2026-05-14T01:35:00+00:00",
+    "claim_id": "CL-SIM-13-020",
+    "decision": "auto_send",
+    "duration_ms": 7359,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-14T01:04:00+00:00",
+    "claim_id": "CL-SIM-13-021",
+    "decision": "auto_send",
+    "duration_ms": 10071,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-14T07:19:00+00:00",
+    "claim_id": "CL-SIM-13-022",
+    "decision": "auto_send",
+    "duration_ms": 8176,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-14T09:20:00+00:00",
+    "claim_id": "CL-SIM-13-023",
+    "decision": "auto_send",
+    "duration_ms": 9543,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-14T08:16:00+00:00",
+    "claim_id": "CL-SIM-13-024",
+    "decision": "auto_send",
+    "duration_ms": 11500,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-14T10:41:00+00:00",
+    "claim_id": "CL-SIM-13-025",
+    "decision": "auto_send",
+    "duration_ms": 7931,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-14T02:07:00+00:00",
+    "claim_id": "CL-SIM-13-026",
+    "decision": "auto_send",
+    "duration_ms": 10405,
+    "eval_passed": false
+  },
+  {
+    "timestamp": "2026-05-14T07:18:00+00:00",
+    "claim_id": "CL-SIM-13-027",
+    "decision": "adjuster_review",
+    "duration_ms": 10887,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-14T02:15:00+00:00",
+    "claim_id": "CL-SIM-13-028",
+    "decision": "auto_send",
+    "duration_ms": 8521,
+    "eval_passed": false
+  },
+  {
+    "timestamp": "2026-05-14T01:35:00+00:00",
+    "claim_id": "CL-SIM-13-029",
+    "decision": "auto_send",
+    "duration_ms": 12394,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-14T06:20:00+00:00",
+    "claim_id": "CL-SIM-13-030",
+    "decision": "auto_send",
+    "duration_ms": 9209,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-14T12:23:00+00:00",
+    "claim_id": "CL-SIM-13-031",
+    "decision": "auto_send",
+    "duration_ms": 9106,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-14T11:11:00+00:00",
+    "claim_id": "CL-SIM-13-032",
+    "decision": "adjuster_review",
+    "duration_ms": 10358,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-14T10:07:00+00:00",
+    "claim_id": "CL-SIM-13-033",
+    "decision": "adjuster_review",
+    "duration_ms": 10085,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-14T00:09:00+00:00",
+    "claim_id": "CL-SIM-13-034",
+    "decision": "adjuster_review",
+    "duration_ms": 9078,
+    "eval_passed": false
+  },
+  {
+    "timestamp": "2026-05-14T11:50:00+00:00",
+    "claim_id": "CL-SIM-13-035",
+    "decision": "adjuster_review",
+    "duration_ms": 10132,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-14T06:32:00+00:00",
+    "claim_id": "CL-SIM-13-036",
+    "decision": "adjuster_review",
+    "duration_ms": 9741,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-14T05:06:00+00:00",
+    "claim_id": "CL-SIM-13-037",
+    "decision": "adjuster_review",
+    "duration_ms": 8842,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-14T12:51:00+00:00",
+    "claim_id": "CL-SIM-13-038",
+    "decision": "auto_send",
+    "duration_ms": 8079,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-14T09:36:00+00:00",
+    "claim_id": "CL-SIM-13-039",
+    "decision": "adjuster_review",
+    "duration_ms": 7747,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-14T07:30:00+00:00",
+    "claim_id": "CL-SIM-13-040",
+    "decision": "adjuster_review",
+    "duration_ms": 10073,
+    "eval_passed": false
+  },
+  {
+    "timestamp": "2026-05-14T10:30:00+00:00",
+    "claim_id": "CL-SIM-13-041",
+    "decision": "auto_send",
+    "duration_ms": 11924,
+    "eval_passed": false
+  },
+  {
+    "timestamp": "2026-05-14T01:28:00+00:00",
+    "claim_id": "CL-SIM-13-042",
+    "decision": "auto_send",
+    "duration_ms": 9990,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-14T05:59:00+00:00",
+    "claim_id": "CL-SIM-13-043",
+    "decision": "auto_send",
+    "duration_ms": 10092,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-14T02:23:00+00:00",
+    "claim_id": "CL-SIM-13-044",
+    "decision": "adjuster_review",
+    "duration_ms": 8803,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-14T12:18:00+00:00",
+    "claim_id": "CL-SIM-13-045",
+    "decision": "auto_send",
+    "duration_ms": 8606,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-14T11:47:00+00:00",
+    "claim_id": "CL-SIM-13-046",
+    "decision": "adjuster_review",
+    "duration_ms": 11254,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-14T10:21:00+00:00",
+    "claim_id": "CL-SIM-13-047",
+    "decision": "adjuster_review",
+    "duration_ms": 6988,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-14T05:02:00+00:00",
+    "claim_id": "CL-SIM-13-048",
+    "decision": "auto_send",
+    "duration_ms": 10061,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-14T06:35:00+00:00",
+    "claim_id": "CL-SIM-13-049",
+    "decision": "adjuster_review",
+    "duration_ms": 6894,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-14T10:08:00+00:00",
+    "claim_id": "CL-SIM-13-050",
+    "decision": "adjuster_review",
+    "duration_ms": 9678,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-14T05:24:00+00:00",
+    "claim_id": "CL-SIM-13-051",
+    "decision": "adjuster_review",
+    "duration_ms": 9349,
+    "eval_passed": false
+  },
+  {
+    "timestamp": "2026-05-14T09:42:00+00:00",
+    "claim_id": "CL-SIM-13-052",
+    "decision": "adjuster_review",
+    "duration_ms": 8615,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-14T13:08:00+00:00",
+    "claim_id": "CL-SIM-13-053",
+    "decision": "adjuster_review",
+    "duration_ms": 9234,
+    "eval_passed": true
+  },
+  {
+    "timestamp": "2026-05-14T00:14:00+00:00",
+    "claim_id": "CL-SIM-13-054",
+    "decision": "adjuster_review",
+    "duration_ms": 10013,
+    "eval_passed": true
+  }
+]

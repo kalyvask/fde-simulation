@@ -1,0 +1,7 @@
+anthropic>=0.40.0
+openai>=1.40.0
+pydantic>=2.6.0
+python-dotenv>=1.0.0
+pytest>=8.0.0
+datasets>=2.18.0
+yfinance>=0.2.0
