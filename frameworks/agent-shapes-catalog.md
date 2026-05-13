@@ -56,6 +56,39 @@ The default tiers in the catalog are good for most cases. Deviate only when:
 
 Don't deviate just to look sophisticated. "Sonnet because the drafter is synthesis-heavy and volume is 80 notes / quarter" beats "Sonnet because it's the best model."
 
+## Deterministic vs non-deterministic at the OUTPUT SCHEMA level (not just the agent level)
+
+The agent-level split (this agent is deterministic, that one is LLM) is the obvious cut. The sharper cut is at the **output schema** level:
+
+- **The output schema itself is deterministic.** The agent must produce a structured output with a fixed set of fields (e.g., "50 columns in this exact format"). The schema is hard-coded; the validation that the output matches the schema is deterministic.
+- **The input parsing IS non-deterministic.** Customer-submitted emails, free-text descriptions, attached PDFs — these require LLM parsing to extract the structured fields that the deterministic output schema expects.
+- **The human-in-the-loop sits at the seam.** A confidence-low parse routes to a human to confirm the extracted fields before they hit the deterministic output schema.
+
+### Worked example: change-request ingestion for a manufacturing customer
+
+| Layer | Deterministic or LLM? | Why |
+|---|---|---|
+| Output schema (50-column "change request record") | **Deterministic** | The downstream supply-chain system requires this exact schema; any deviation breaks the integration |
+| Validation that output matches schema (right types, required fields populated) | **Deterministic** | Schema validation is a rules problem |
+| Parsing email body → structured fields | **LLM** | Free-text email with variable formatting; no rules can handle the variance |
+| Parsing PDF attachment → structured fields | **LLM** + OCR | Same problem with worse input |
+| Confidence threshold on the parse | **Deterministic** | The threshold is configured; below it → human queue |
+| Human review on low-confidence parses | **Human-in-loop** | The seam between LLM extraction and deterministic schema |
+
+### The defense if probed
+
+When the interviewer asks "what's deterministic vs LLM in your design", the answer is:
+
+> "I split it at the output schema level, not the agent level. The output schema is fixed and deterministic — every output has these N fields in this format, validated by rules. The parsing of unstructured inputs to fill that schema is where I use LLMs, because no rules can handle the variance in customer-submitted formats. The human-in-the-loop sits at the seam: confidence-low parses go to a human to confirm before the output is finalized."
+
+This framing is shared by AI workforce platforms that contractually commit to output quality — they need the schema to be deterministic to enforce SLAs.
+
+### When to use this framing
+
+- Input analysis / ingestion agents (variable input formats → structured output)
+- Document parsers (invoices, claims, contracts)
+- Anywhere the input is unstructured and the output is structured by integration requirements
+
 ## Quick reference
 
 ```

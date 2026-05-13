@@ -2,6 +2,21 @@
 
 > A structural playbook for the Forward Deployed Engineer recommendation interview. The interview is high-level (recommendation-shape, no take-home build) and tests three explicit topics: Discovery, Solution Strategy, Risk & Validation. This document gives you the order in which to deploy frameworks, the points to land in each section, the predictable probes per topic, and the anti-patterns to avoid.
 
+## Tone calibration (read this before anything else)
+
+This interview is **conversational, not a presentation.** Some candidates over-prepare and deliver structured monologues. Real FDE interviewers run it as a 60-minute working session: short opener, conversational back-and-forth, the interviewer narrows scope when you go wide, asks clarifying questions, and expects you to ask clarifying questions back.
+
+Signals of good fit:
+- You ask "may I take 10 seconds to think?" instead of stalling
+- You pause for the interviewer to redirect when they want to narrow
+- You let them probe rather than over-explaining
+- Your answers are 60-90 seconds each, not 3-minute monologues
+
+Signals of weak fit:
+- You launch into a memorized framework recitation
+- You expand scope when the interviewer is asking you to narrow
+- You don't ask any clarifying questions during the case
+
 ## What the company is testing
 
 A 60-min FDE interview probes the same skill as OpenAI and Anthropic's Forward Deployed roles, with a tighter format:
@@ -11,6 +26,24 @@ A 60-min FDE interview probes the same skill as OpenAI and Anthropic's Forward D
 - Three explicit topics, in order: Discovery → Solution → Risk
 
 The three topics map cleanly to the FDE engagement lifecycle: scope discovery → solution design → production readiness. They are testing whether you can lead an enterprise AI engagement from cold-start to production-grade without a senior FDE supervising you.
+
+## The single most important framing (the contract-SLA principle)
+
+Many AI workforce platforms (especially the ones with a "contractually-guaranteed outcomes" business model) anchor the entire engagement on **metrics that go IN the contract**. Discovery isn't just "learn about the customer's KPIs"; it's "find the metrics you will commit to deliver, in writing, by week N of the engagement."
+
+This changes how you treat Discovery:
+- You need a clean BASELINE metric ("today this takes a human 20 min end-to-end")
+- You need a clean TARGET metric ("agent will do it in 5 min")
+- Both numbers go in the contract
+- Solutioning is anchored on those numbers
+- Testing validates against those numbers
+- Maintenance mode = you're now on the hook for those numbers
+
+When the interviewer asks "how would you approach discovery", do not leave without naming **what metrics you would commit to contractually** by the end of discovery. This single move separates senior from mid candidates.
+
+| Bad | Better |
+|---|---|
+| "I'd talk to stakeholders to understand their KPIs" | "I'd talk to stakeholders to identify the 1-3 metrics we'd commit to in the contract. Today's baseline + the target. Examples for a manufacturing change-mgmt case: time-from-request-to-order (baseline 4 days; target 4 hours), error rate (baseline 12%; target <2%)." |
 
 ## The 60-minute structure
 
@@ -438,6 +471,9 @@ The trust-level table is the answer to "where's the human in the loop?"
 - Skipping the trust-level structure
 - Not naming the metric tension
 - Not naming out-of-scope items explicitly
+- **Expanding scope when the interviewer is narrowing it.** If they say "let's keep it simple to one flow", DO NOT respond with a list of all flows. Pick the one most representative flow, name why you picked it, and go deep. The interviewer is testing whether you can read the room and focus.
+- **Listing all input channels (email, phone, portal, text) without picking the one that matters most.** Senior move: "Email is the messiest non-deterministic case; the portal channels are deterministic. I'd start with the email path since solving that solves the harder problem." Names the det/non-det split early.
+- **Hand-waving the FDE handoff.** If asked "how would you communicate this to the FDE", a strong answer names the artifact ("AI Logic Doc") + what's in it (input schema, output schema, trust levels, eval cases, out-of-scope). The eval suite is one section of the doc, not the whole doc. See `ai_logic_doc_template.md`.
 
 ---
 
@@ -542,6 +578,56 @@ These three gates are non-negotiable. Naming them with owners shows you've thoug
 - Risks without mitigations
 - Mitigations without stakeholder owners
 - "Drift detection" without a specific window or threshold
+
+---
+
+## PM behavioral probes (interspersed throughout the interview)
+
+These are not in a single section. Interviewers fold them into the case to test whether you can handle the operational realities of an FDE engagement. Have a structured answer ready for each.
+
+### Probe: "How do you handle a deadline conflict between the customer's expectation and your FDE team's capacity?"
+
+The senior answer is structured in 4 layers:
+
+1. **Internal mitigation first**: can another FDE pick up part of the work? Can scope be re-sequenced? Can you (the strategist) take on data work or schema design to free up engineering?
+2. **Scope reduction**: is there a sub-wedge that hits 80% of the value with 50% of the engineering? Propose this before extending the timeline.
+3. **Transparent renegotiation**: if no workaround, go to the customer in writing within 24 hours with: (a) what's changed, (b) the new realistic timeline, (c) the impact on the contract metrics, (d) options.
+4. **Document the lesson**: was this a planning failure, a customer-introduced scope creep, or an estimation issue? Affects how you scope the NEXT engagement.
+
+**The principle**: don't surprise the customer at the deadline. Surprise them at the moment you know the deadline is at risk, with options.
+
+### Probe: "What if you commit to an SLA in the contract and then post-launch you're not meeting it?"
+
+The senior answer is structured in 3 layers:
+
+1. **Root cause first**: is this a data issue (input quality changed), a process issue (volume shifted), or an agent issue (model drift or design flaw)? Different root causes drive different responses.
+2. **Time-bound recovery plan**: name a specific number of weeks and what will change. "Two-week recovery sprint to address [specific gap]; if not closed by then, we renegotiate scope."
+3. **Customer comms cadence**: weekly check-in for the recovery period; written status updates; no surprises.
+
+If the SLA is structurally wrong (e.g., the baseline was over-estimated), renegotiate the scope of the contract rather than letting the SLA quietly fail.
+
+**The principle**: an SLA miss is a relationship test. Customers forgive a miss when you're transparent about the cause and committed to a specific fix. They don't forgive silent failure.
+
+### Probe: "How do you handle scope creep mid-engagement?"
+
+The senior answer:
+
+1. **Anchor on the contract metrics + AI Logic Doc**: "We agreed the wedge was X. The new ask is Y. Is Y still in scope of X?"
+2. **If Y is genuinely new**: propose it as a v1.5 conversation with a separate engagement or a contract extension; do not silently absorb it.
+3. **If Y is a clarification of X**: amend the AI Logic Doc, get the customer's sign-off in writing, then build it.
+
+**The principle**: scope changes are normal. Silent scope absorption is what kills engagements.
+
+### Probe: "Tell me about a time you had to push back on a customer."
+
+Have a 2-min structured story ready:
+- The situation (15 sec)
+- What the customer wanted (15 sec)
+- Why it was a problem (30 sec)
+- How you reframed (30 sec)
+- The outcome (30 sec)
+
+The signal the interviewer is looking for: did you push back with substance (data, alternatives, named trade-offs) or with politics ("our team can't")? Substance wins.
 
 ---
 
@@ -824,3 +910,146 @@ Mirrors the 3-level metrics framework. Order matters in the interview: lead with
 - 3 named sign-off criteria with owners
 
 If you can do this end-to-end in 60 minutes on whatever case the company throws at you, you'll hit the FDE bar.
+
+---
+
+## Mock case worked example #2: Acme Manufacturing (engineering change management)
+
+> A second domain to test portability. Mirrors a real AI workforce platform case structure. The case shape is multi-tenant input (hundreds of customers, each in a different format) feeding a sequential 3-step workflow.
+
+### The case (as the interviewer would present it)
+
+> "Acme Manufacturing is a large international company with plants worldwide. They build physical products for customers like hyperscalers and large enterprises. Their business goal is to automate their currently manual engineering change management process. When a customer wants a change to something they're manufacturing, the workflow has 3 sequential steps: (1) change request ingestion, (2) bill of materials update, (3) change order creation in the supply chain system. The current process is highly manual and error-prone. Each of their hundreds of customers submits change requests in a different format and via different channels (email, customer portal, sometimes phone). Anticipated benefits: labor efficiency, accuracy, and speed. Key stakeholders: CTO (gate-keeper for all new tools) and global services VP (champions, runs the team that does this work today). IT landscape: Equator (current source for some change requests via portal), Connectus (supply chain management at end of flow), and a homegrown orchestrator. Walk us through how you'd approach this."
+
+### How I'd open (20 seconds)
+
+> "Let me restate. Acme wants to compress a 3-step manual workflow — change request ingestion, bill of materials update, change order creation — into an AI workforce. The hardest layer is ingestion because customers submit in different formats. Before we go deeper, what's the rough baseline today? Time-from-request-to-order? Error rate? That's what would go in the contract."
+
+If they don't have a baseline (which is common in early discovery), commit to finding it in week 1 as the first deliverable.
+
+### Section 1 — Discovery (~20 min)
+
+**Stakeholder map**:
+
+| Archetype | Person | Why |
+|---|---|---|
+| Economic buyer | CTO | Vets every tool; gate-keeper for production deployment |
+| Champion | Global Services VP | Brought us in; owns the team day-to-day; needs the headcount win |
+| Lead user | Senior change-management analyst (TBD via VP intro) | Owns the daily work; knows the workflow with timestamps |
+| Silent skeptic | Supply chain operations lead | Downstream of change orders in Connectus; will reject if errors flow downstream |
+| Tech owner | IT lead (TBD) | Owns Equator + Connectus + orchestrator; knows the API surface |
+| Compliance | Manufacturing quality / regulatory lead | Some customer changes have certification implications |
+| Operations | Whoever owns the homegrown orchestrator | Post-handoff cadence and runtime ownership |
+
+**Information I'd gather**:
+
+- **People**: VP's real timeline + ROI target; senior analyst's workflow walkthrough with timestamps for ALL 3 steps; supply chain lead's "what would make you reject this"; IT lead's read-write permissions on Equator + Connectus.
+- **Data**: 90 days of change requests with categories + processing time + error rate; volume distribution by customer (Pareto?); breakdown of submission channels (email vs portal vs other).
+- **Process**: existing SOPs per step; the orchestrator's logic; how Equator + Connectus integrate today.
+- **External**: industry benchmarks for change-management cycle time; regulatory frameworks for product change documentation.
+
+**4-source convergence**:
+
+> "Buyer (CTO) cares about labor efficiency + accuracy. Brief says 3-step workflow. Industry says input-parsing for variable formats is the deflection sweet spot. Operator (senior analyst) will tell me whether the bottleneck is ingestion (parsing) or the BOM update (looking up parts) or the order creation (Connectus integration). I'd bet on ingestion based on the brief, but I'd validate with the operator before committing scope."
+
+**Metrics I'd commit to in the contract** (after discovery):
+
+| Metric | Baseline (TBD week 1) | Target (engagement end) | Owner |
+|---|---|---|---|
+| Time from request to change order | TBD | TBD (likely days → hours) | VP |
+| Error rate on bill-of-materials updates | TBD | TBD (likely 12% → <2%) | VP |
+| Manual hours per change request | TBD | TBD (likely 90 min → <15 min) | VP |
+
+### Section 2 — Solution Strategy (~25 min)
+
+**The interviewer narrowed scope** (key moment in the real interview): "Let's keep it simple to one flow." Pick the email path. Why: email is the messiest non-deterministic input; portal submissions are deterministic. Solving email solves the harder problem.
+
+**3-lens scaffold for the email-ingestion wedge**:
+
+| CUSTOMER | PRODUCT | TECHNICAL |
+|---|---|---|
+| **Who**: Senior change-management analyst (40 changes/wk per analyst); CTO (downstream consumer) | **Intent**: Parse customer-emailed change requests into the structured change-request schema | **Read**: Customer email inbox (or webhook from email system); customer master data for vendor matching |
+| **State**: Exhausted (highly manual); anxious about errors that hit production | **In scope**: Email parsing → structured fields (part numbers, change description, target date, priority); ambiguous → human queue | **Write**: NONE in v1; output to staging table for human approval before push to Equator/Connectus |
+| **JTBD**: (1) Parse the email, (2) Validate required fields are present, (3) Route to analyst queue if ambiguous | **Out of scope**: BOM update logic, Connectus integration, customer-portal changes, phone/text channels | **Freshness**: Email live; customer master daily |
+| **Why failing today**: 90 min per request, 12% error rate, growing volume | **Trust**: Act on high-confidence parses; ask analyst on ambiguous fields; escalate on unknown customer / unfamiliar product | **ONE risk**: Customer-format drift (a customer changes their email template mid-quarter; parser breaks silently) |
+| **Hard**: Hundreds of customers, each with different email templates | **Fallback**: Route to analyst queue with extracted fields + reasoning + confidence per field | **Validation**: 100-email eval (top 20 customers × 5 templates each) + adversarial set (truncated emails, attachments, multi-issue) + closed beta with 1 customer segment for 2 weeks |
+|  | **Metric tension**: Speed vs accuracy. Protect accuracy (downstream error costs > speed gains) |  |
+
+**Candidate wedges + Outcome Risk Matrix**:
+
+| Wedge | Value | Risk | Decision |
+|---|---|---|---|
+| Email parsing only (one channel) | High | Low (analyst approves before push) | **Ship as v1** |
+| Email + portal (both channels) | High | Med (portal is already structured; not the bottleneck) | Defer to v1.5 |
+| Full 3-step automation (ingest + BOM + order) | High | High (BOM update touches production; one bad update = recall risk) | Defer to v2 with hard guardrails |
+| BOM update only | Medium | High (mid-pipeline change without ingestion fix doesn't move TTV) | De-prioritize |
+
+**Wedge defense**: "Email parsing is the highest-value-lowest-risk slice. Solving email solves the format-variance problem; portal channels are already structured. v1 keeps the BOM update + Connectus integration human-approved."
+
+**Workforce design (5 agents)**:
+
+| Agent | Shape | Tier | Det/LLM | Why |
+|---|---|---|---|---|
+| 1. Intake classifier | Classifier | Haiku | Deterministic-leaning | Routes by customer + change category |
+| 2. Field extractor | Extractor | Sonnet | LLM | Variable email formats; synthesis required |
+| 3. Schema validator | Compliance critic | Deterministic | Rules | Output schema is fixed; validation is rules-based |
+| 4. Ambiguity flagger | Critic / judge | Sonnet | LLM-as-judge | Catches confidence-low parses for human review |
+| 5. Audit trace generator | Auditor | Deterministic | Det | Examiner-readable log per request |
+
+**The deterministic / non-deterministic framing the interviewer cares about**:
+
+| Layer | Det or LLM | Why |
+|---|---|---|
+| Output schema (change request record, 30+ fields) | **Deterministic** | Downstream Equator/Connectus integration requires exact schema |
+| Validation of output against schema | **Deterministic** | Rules problem |
+| Parsing email body → schema fields | **LLM** | Variable formats |
+| Confidence threshold | **Deterministic** | Configured; below it → human queue |
+| Human-in-loop on low-confidence parses | **Human** | Trust seam |
+
+**Integration**:
+- Read: email webhook + customer master data (read-only)
+- Write: staging table only in v1; one-click approval to push to Equator after analyst review (v1.5); autonomous push for high-confidence requests after 90 days clean Tier 2 (v2)
+
+**FDE handoff**: I'd write an AI Logic Doc (template in `ai_logic_doc_template.md`) covering input schema + output schema + trust levels + 10-15 eval cases + 3 sign-off criteria + open questions. 1-2 pages. Engineering doesn't redo discovery.
+
+### Section 3 — Risk & Validation (~10 min)
+
+**Business risks**:
+
+| Risk | Mitigation | Owner | Detection |
+|---|---|---|---|
+| Wrong field reaches Connectus → wrong part ordered → recall | Schema validation + analyst review on all v1 outputs | CTO + VP | Recall rate; customer complaint rate |
+| Customer-format drift (template change breaks parser silently) | Per-customer eval cases; monitor parse confidence per customer over rolling 7 days; alert on drop | VP | Per-customer confidence below baseline by >5% |
+| SLA breach on cycle time | If breach: root cause (data/process/agent), 2-week recovery sprint, weekly customer comms | VP + me | Cycle time tracked daily; alert at 80% of SLA target |
+
+**UX risks**:
+
+| Risk | Mitigation | Owner | Detection |
+|---|---|---|---|
+| Analyst loses trust if too many false-positives in their queue | Confidence threshold tuned; weekly eval review with analyst | VP | Analyst override rate on routed items |
+| Customer-facing communication suffers (acknowledgments slow) | Auto-acknowledge on ingest (deterministic); separate from the parsing pipeline | VP | Time to acknowledgment |
+
+**Technical risks**:
+
+| Risk | Mitigation | Owner | Detection |
+|---|---|---|---|
+| Model drift over weeks | Eval re-run every release; 7-day rolling drift on parse accuracy per customer | IT lead | Drift >5% on any customer |
+| Vendor outage | Failover to alternate provider on extractor; degraded mode = all routes to human queue | IT lead | Provider status; failure rate |
+| Equator / Connectus API change | Versioned schema contracts; weekly contract test | IT lead | Extraction failure rate |
+
+**3 sign-off criteria**:
+
+1. Pass^k=5 with variance ≤5% on 100-email eval — IT lead
+2. Quality / regulatory sign-off on output schema mapping — quality lead
+3. Senior analyst reviews 50 sample parses and confirms she'd put her name on each — senior analyst
+
+**Metric tension closed out**: "Speed vs accuracy. We protect accuracy. A wrong field in Connectus means a recall; a slow process means an annoyed customer. The latter is recoverable."
+
+### What this second mock case demonstrates (beyond the Sentinel case)
+
+- Multi-tenant input variance (the format-drift risk + per-customer monitoring)
+- The deterministic-output-schema vs LLM-input-parsing split
+- Contract-level SLAs with explicit baseline + target metrics
+- AI Logic Doc as the strategist-to-FDE handoff
+- Scope discipline: when the interviewer narrows you to "one flow", you pick the messiest flow and go deep
+- PM behavioral grounding: SLA breach, scope creep, deadline conflict all answered with structure
