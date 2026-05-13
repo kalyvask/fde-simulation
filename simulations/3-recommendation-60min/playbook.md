@@ -43,7 +43,7 @@ When the interviewer asks "how would you approach discovery", do not leave witho
 
 | Bad | Better |
 |---|---|
-| "I'd talk to stakeholders to understand their KPIs" | "I'd talk to stakeholders to identify the 1-3 metrics we'd commit to in the contract. Today's baseline + the target. Examples for a manufacturing change-mgmt case: time-from-request-to-order (baseline 4 days; target 4 hours), error rate (baseline 12%; target <2%)." |
+| "I'd talk to stakeholders to understand their KPIs" | "I'd talk to stakeholders to identify the 1-3 metrics we'd commit to in the contract. Today's baseline + the target. Examples: cycle time (baseline X; target Y), error rate (baseline 12%; target <2%), manual hours per case (baseline 90 min; target <15 min)." |
 
 ## The 60-minute structure
 
@@ -913,143 +913,71 @@ If you can do this end-to-end in 60 minutes on whatever case the company throws 
 
 ---
 
-## Mock case worked example #2: Acme Manufacturing (engineering change management)
+## Common case shapes you might encounter
 
-> A second domain to test portability. Mirrors a real AI workforce platform case structure. The case shape is multi-tenant input (hundreds of customers, each in a different format) feeding a sequential 3-step workflow.
+Cases vary by domain but cluster into a small number of structural shapes. Recognize the shape early and you can deploy the right frameworks without reinventing them.
 
-### The case (as the interviewer would present it)
+### Shape 1 — Single-workflow automation with variable input
 
-> "Acme Manufacturing is a large international company with plants worldwide. They build physical products for customers like hyperscalers and large enterprises. Their business goal is to automate their currently manual engineering change management process. When a customer wants a change to something they're manufacturing, the workflow has 3 sequential steps: (1) change request ingestion, (2) bill of materials update, (3) change order creation in the supply chain system. The current process is highly manual and error-prone. Each of their hundreds of customers submits change requests in a different format and via different channels (email, customer portal, sometimes phone). Anticipated benefits: labor efficiency, accuracy, and speed. Key stakeholders: CTO (gate-keeper for all new tools) and global services VP (champions, runs the team that does this work today). IT landscape: Equator (current source for some change requests via portal), Connectus (supply chain management at end of flow), and a homegrown orchestrator. Walk us through how you'd approach this."
+**Pattern**: customer has a manual workflow with a single primary step (e.g., draft a note, process a claim, triage a ticket). The input is unstructured or semi-structured; the output is a structured artifact.
 
-### How I'd open (20 seconds)
+**Frameworks that fit**:
+- 3-lens scaffold with strong emphasis on **out-of-scope = in-scope**
+- Deterministic output schema + LLM input parsing (see `frameworks/agent-shapes-catalog.md`)
+- 5-agent workforce (Intake / Extractor / Drafter / Critic / Auditor)
 
-> "Let me restate. Acme wants to compress a 3-step manual workflow — change request ingestion, bill of materials update, change order creation — into an AI workforce. The hardest layer is ingestion because customers submit in different formats. Before we go deeper, what's the rough baseline today? Time-from-request-to-order? Error rate? That's what would go in the contract."
+**Wedge pattern**: human-in-loop on every output in v1; one-click approval in v1.5; autonomous on high-confidence cases in v2.
 
-If they don't have a baseline (which is common in early discovery), commit to finding it in week 1 as the first deliverable.
+### Shape 2 — Multi-tenant input variance
 
-### Section 1 — Discovery (~20 min)
+**Pattern**: customer has hundreds of their own customers, each submitting requests in different formats (email, portal, file upload). The agent has to normalize across formats.
 
-**Stakeholder map**:
+**Frameworks that fit**:
+- Output schema is deterministic (downstream system requires it); input parsing is LLM
+- Per-tenant confidence monitoring (drift can hide in one tenant for weeks)
+- Adversarial eval cases per tenant template
 
-| Archetype | Person | Why |
-|---|---|---|
-| Economic buyer | CTO | Vets every tool; gate-keeper for production deployment |
-| Champion | Global Services VP | Brought us in; owns the team day-to-day; needs the headcount win |
-| Lead user | Senior change-management analyst (TBD via VP intro) | Owns the daily work; knows the workflow with timestamps |
-| Silent skeptic | Supply chain operations lead | Downstream of change orders in Connectus; will reject if errors flow downstream |
-| Tech owner | IT lead (TBD) | Owns Equator + Connectus + orchestrator; knows the API surface |
-| Compliance | Manufacturing quality / regulatory lead | Some customer changes have certification implications |
-| Operations | Whoever owns the homegrown orchestrator | Post-handoff cadence and runtime ownership |
+**Wedge pattern**: start with the messiest channel (unstructured email); structured channels are deferred because they're already deterministic.
 
-**Information I'd gather**:
+### Shape 3 — Sequential multi-step workflow
 
-- **People**: VP's real timeline + ROI target; senior analyst's workflow walkthrough with timestamps for ALL 3 steps; supply chain lead's "what would make you reject this"; IT lead's read-write permissions on Equator + Connectus.
-- **Data**: 90 days of change requests with categories + processing time + error rate; volume distribution by customer (Pareto?); breakdown of submission channels (email vs portal vs other).
-- **Process**: existing SOPs per step; the orchestrator's logic; how Equator + Connectus integrate today.
-- **External**: industry benchmarks for change-management cycle time; regulatory frameworks for product change documentation.
+**Pattern**: the workflow has 3-5 sequential steps. Output of step N is input to step N+1. Customer wants to automate the whole pipeline.
 
-**4-source convergence**:
+**Frameworks that fit**:
+- Wedge selection: start with the highest-value, lowest-risk step (rarely step 1 or step N)
+- Sequencing logic (Phase 1: one step / Phase 2: two steps / Phase 3: full pipeline)
+- Trust levels per step (each step has its own act / ask / escalate)
 
-> "Buyer (CTO) cares about labor efficiency + accuracy. Brief says 3-step workflow. Industry says input-parsing for variable formats is the deflection sweet spot. Operator (senior analyst) will tell me whether the bottleneck is ingestion (parsing) or the BOM update (looking up parts) or the order creation (Connectus integration). I'd bet on ingestion based on the brief, but I'd validate with the operator before committing scope."
+**Wedge pattern**: automate one step at a time. Each step graduates from human-in-loop → approval-gated → autonomous independently.
 
-**Metrics I'd commit to in the contract** (after discovery):
+### Shape 4 — Augmentation of expert workflow
 
-| Metric | Baseline (TBD week 1) | Target (engagement end) | Owner |
-|---|---|---|---|
-| Time from request to change order | TBD | TBD (likely days → hours) | VP |
-| Error rate on bill-of-materials updates | TBD | TBD (likely 12% → <2%) | VP |
-| Manual hours per change request | TBD | TBD (likely 90 min → <15 min) | VP |
+**Pattern**: customer has senior experts doing high-skill work (analysts, doctors, lawyers). The agent assists them, doesn't replace them.
 
-### Section 2 — Solution Strategy (~25 min)
+**Frameworks that fit**:
+- 3-lens with explicit emotional state (exhausted + anxious is common)
+- Trust levels heavy on "ask the expert" not "act autonomously"
+- Engagement metric tracked separately from quality metric (does the expert use the agent's output or rewrite from scratch?)
 
-**The interviewer narrowed scope** (key moment in the real interview): "Let's keep it simple to one flow." Pick the email path. Why: email is the messiest non-deterministic input; portal submissions are deterministic. Solving email solves the harder problem.
+**Wedge pattern**: read-only v1; draft for expert review; agent never publishes without expert approval.
 
-**3-lens scaffold for the email-ingestion wedge**:
+### Shape 5 — High-regulatory-surface workflow
 
-| CUSTOMER | PRODUCT | TECHNICAL |
-|---|---|---|
-| **Who**: Senior change-management analyst (40 changes/wk per analyst); CTO (downstream consumer) | **Intent**: Parse customer-emailed change requests into the structured change-request schema | **Read**: Customer email inbox (or webhook from email system); customer master data for vendor matching |
-| **State**: Exhausted (highly manual); anxious about errors that hit production | **In scope**: Email parsing → structured fields (part numbers, change description, target date, priority); ambiguous → human queue | **Write**: NONE in v1; output to staging table for human approval before push to Equator/Connectus |
-| **JTBD**: (1) Parse the email, (2) Validate required fields are present, (3) Route to analyst queue if ambiguous | **Out of scope**: BOM update logic, Connectus integration, customer-portal changes, phone/text channels | **Freshness**: Email live; customer master daily |
-| **Why failing today**: 90 min per request, 12% error rate, growing volume | **Trust**: Act on high-confidence parses; ask analyst on ambiguous fields; escalate on unknown customer / unfamiliar product | **ONE risk**: Customer-format drift (a customer changes their email template mid-quarter; parser breaks silently) |
-| **Hard**: Hundreds of customers, each with different email templates | **Fallback**: Route to analyst queue with extracted fields + reasoning + confidence per field | **Validation**: 100-email eval (top 20 customers × 5 templates each) + adversarial set (truncated emails, attachments, multi-issue) + closed beta with 1 customer segment for 2 weeks |
-|  | **Metric tension**: Speed vs accuracy. Protect accuracy (downstream error costs > speed gains) |  |
+**Pattern**: customer is in a regulated industry (finance, insurance, healthcare). Every output has compliance implications.
 
-**Candidate wedges + Outcome Risk Matrix**:
+**Frameworks that fit**:
+- Compliance critic as a deterministic gate before any LLM call
+- Audit trace as a first-class artifact
+- 3 sign-off criteria with compliance as one of them
+- Failure-mode reversibility front and center
 
-| Wedge | Value | Risk | Decision |
-|---|---|---|---|
-| Email parsing only (one channel) | High | Low (analyst approves before push) | **Ship as v1** |
-| Email + portal (both channels) | High | Med (portal is already structured; not the bottleneck) | Defer to v1.5 |
-| Full 3-step automation (ingest + BOM + order) | High | High (BOM update touches production; one bad update = recall risk) | Defer to v2 with hard guardrails |
-| BOM update only | Medium | High (mid-pipeline change without ingestion fix doesn't move TTV) | De-prioritize |
+**Wedge pattern**: regulatory leak is the kill criteria; v1 protects the regulatory streak.
 
-**Wedge defense**: "Email parsing is the highest-value-lowest-risk slice. Solving email solves the format-variance problem; portal channels are already structured. v1 keeps the BOM update + Connectus integration human-approved."
+### What this tells you in the interview
 
-**Workforce design (5 agents)**:
+When you hear the case, identify the shape in the first 60 seconds. Then deploy:
+- The frameworks that fit the shape
+- The wedge pattern typical of that shape
+- The risks bucketed by Business / UX / Technical
 
-| Agent | Shape | Tier | Det/LLM | Why |
-|---|---|---|---|---|
-| 1. Intake classifier | Classifier | Haiku | Deterministic-leaning | Routes by customer + change category |
-| 2. Field extractor | Extractor | Sonnet | LLM | Variable email formats; synthesis required |
-| 3. Schema validator | Compliance critic | Deterministic | Rules | Output schema is fixed; validation is rules-based |
-| 4. Ambiguity flagger | Critic / judge | Sonnet | LLM-as-judge | Catches confidence-low parses for human review |
-| 5. Audit trace generator | Auditor | Deterministic | Det | Examiner-readable log per request |
-
-**The deterministic / non-deterministic framing the interviewer cares about**:
-
-| Layer | Det or LLM | Why |
-|---|---|---|
-| Output schema (change request record, 30+ fields) | **Deterministic** | Downstream Equator/Connectus integration requires exact schema |
-| Validation of output against schema | **Deterministic** | Rules problem |
-| Parsing email body → schema fields | **LLM** | Variable formats |
-| Confidence threshold | **Deterministic** | Configured; below it → human queue |
-| Human-in-loop on low-confidence parses | **Human** | Trust seam |
-
-**Integration**:
-- Read: email webhook + customer master data (read-only)
-- Write: staging table only in v1; one-click approval to push to Equator after analyst review (v1.5); autonomous push for high-confidence requests after 90 days clean Tier 2 (v2)
-
-**FDE handoff**: I'd write an AI Logic Doc (template in `ai_logic_doc_template.md`) covering input schema + output schema + trust levels + 10-15 eval cases + 3 sign-off criteria + open questions. 1-2 pages. Engineering doesn't redo discovery.
-
-### Section 3 — Risk & Validation (~10 min)
-
-**Business risks**:
-
-| Risk | Mitigation | Owner | Detection |
-|---|---|---|---|
-| Wrong field reaches Connectus → wrong part ordered → recall | Schema validation + analyst review on all v1 outputs | CTO + VP | Recall rate; customer complaint rate |
-| Customer-format drift (template change breaks parser silently) | Per-customer eval cases; monitor parse confidence per customer over rolling 7 days; alert on drop | VP | Per-customer confidence below baseline by >5% |
-| SLA breach on cycle time | If breach: root cause (data/process/agent), 2-week recovery sprint, weekly customer comms | VP + me | Cycle time tracked daily; alert at 80% of SLA target |
-
-**UX risks**:
-
-| Risk | Mitigation | Owner | Detection |
-|---|---|---|---|
-| Analyst loses trust if too many false-positives in their queue | Confidence threshold tuned; weekly eval review with analyst | VP | Analyst override rate on routed items |
-| Customer-facing communication suffers (acknowledgments slow) | Auto-acknowledge on ingest (deterministic); separate from the parsing pipeline | VP | Time to acknowledgment |
-
-**Technical risks**:
-
-| Risk | Mitigation | Owner | Detection |
-|---|---|---|---|
-| Model drift over weeks | Eval re-run every release; 7-day rolling drift on parse accuracy per customer | IT lead | Drift >5% on any customer |
-| Vendor outage | Failover to alternate provider on extractor; degraded mode = all routes to human queue | IT lead | Provider status; failure rate |
-| Equator / Connectus API change | Versioned schema contracts; weekly contract test | IT lead | Extraction failure rate |
-
-**3 sign-off criteria**:
-
-1. Pass^k=5 with variance ≤5% on 100-email eval — IT lead
-2. Quality / regulatory sign-off on output schema mapping — quality lead
-3. Senior analyst reviews 50 sample parses and confirms she'd put her name on each — senior analyst
-
-**Metric tension closed out**: "Speed vs accuracy. We protect accuracy. A wrong field in Connectus means a recall; a slow process means an annoyed customer. The latter is recoverable."
-
-### What this second mock case demonstrates (beyond the Sentinel case)
-
-- Multi-tenant input variance (the format-drift risk + per-customer monitoring)
-- The deterministic-output-schema vs LLM-input-parsing split
-- Contract-level SLAs with explicit baseline + target metrics
-- AI Logic Doc as the strategist-to-FDE handoff
-- Scope discipline: when the interviewer narrows you to "one flow", you pick the messiest flow and go deep
-- PM behavioral grounding: SLA breach, scope creep, deadline conflict all answered with structure
+Most real cases are some combination of 2-3 shapes. Identifying the shape lets you re-use mental models instead of solving every case from scratch.

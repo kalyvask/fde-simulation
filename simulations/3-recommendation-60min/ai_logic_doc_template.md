@@ -40,12 +40,12 @@ Example: "Build a citation-grounded earnings-note drafter for senior TMT analyst
 | [Secondary KPI] | [Number] | [Number] | [Stakeholder name] |
 | [Quality threshold] | [Number] | [Number] | [Stakeholder name] |
 
-Example for change-management:
+Example (generic enterprise workflow):
 | Metric | Baseline | Target | Owner |
 |---|---|---|---|
-| Time from request to change order | 4 days | 4 hours | VP Global Services |
-| Error rate on bill-of-materials updates | 12% | <2% | VP Global Services |
-| Manual hours per change request | 90 min | <15 min | VP Global Services |
+| End-to-end cycle time | X hours | Y hours | Operations VP |
+| Error rate | 12% | <2% | Operations VP |
+| Manual hours per case | 90 min | <15 min | Operations VP |
 
 ## 3. The 3-lens scaffold (filled in)
 

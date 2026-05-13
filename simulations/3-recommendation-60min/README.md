@@ -20,7 +20,7 @@ Whether you can deploy the FDE frameworks (4-source convergence, 3-lens scaffold
 
 | File | Purpose |
 |---|---|
-| `playbook.md` | The full 60-minute playbook with frameworks, points to land, predictable probes, anti-patterns, PM behavioral probes, and TWO end-to-end worked mock cases: Sentinel Software (B2B SaaS support automation) and Acme Manufacturing (engineering change management) |
+| `playbook.md` | The full 60-minute playbook with frameworks, points to land, predictable probes, anti-patterns, PM behavioral probes, a Sentinel Software (B2B SaaS support automation) mock case worked end-to-end, and a "common case shapes" section that covers the 5 structural patterns most FDE cases fall into |
 | `ai_logic_doc_template.md` | Template for the strategist-to-FDE handoff artifact. 1-2 page structured doc that engineering uses as the input contract. Common in AI workforce platforms where the FDE is far from discovery. |
 
 ## How to run this simulation

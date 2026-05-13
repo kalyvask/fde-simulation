@@ -64,11 +64,13 @@ The agent-level split (this agent is deterministic, that one is LLM) is the obvi
 - **The input parsing IS non-deterministic.** Customer-submitted emails, free-text descriptions, attached PDFs — these require LLM parsing to extract the structured fields that the deterministic output schema expects.
 - **The human-in-the-loop sits at the seam.** A confidence-low parse routes to a human to confirm the extracted fields before they hit the deterministic output schema.
 
-### Worked example: change-request ingestion for a manufacturing customer
+### Worked example: parsing unstructured customer requests into a fixed schema
+
+A common enterprise pattern: customers submit requests in variable formats (email body, PDF attachment, form-field). The downstream system expects a structured record with a fixed set of fields.
 
 | Layer | Deterministic or LLM? | Why |
 |---|---|---|
-| Output schema (50-column "change request record") | **Deterministic** | The downstream supply-chain system requires this exact schema; any deviation breaks the integration |
+| Output schema (fixed N-column record) | **Deterministic** | The downstream system requires this exact schema; any deviation breaks the integration |
 | Validation that output matches schema (right types, required fields populated) | **Deterministic** | Schema validation is a rules problem |
 | Parsing email body → structured fields | **LLM** | Free-text email with variable formatting; no rules can handle the variance |
 | Parsing PDF attachment → structured fields | **LLM** + OCR | Same problem with worse input |
