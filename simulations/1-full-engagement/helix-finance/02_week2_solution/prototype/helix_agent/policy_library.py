@@ -47,6 +47,50 @@ def is_mnpi_watch_list_violation(claim: dict[str, Any]) -> tuple[bool, str | Non
     return False, None
 
 
+def is_input_compliance_violation(claim: dict[str, Any]) -> tuple[bool, str | None]:
+    """Detects HARD-BLOCK compliance violations in the INPUT transcript / filing.
+
+    Only position-sizing recommendations trigger a hard block at the input layer.
+    This is because position-sizing in source material is an explicit
+    recommendation that should never flow through the agent, regardless of
+    whether the LLM would echo it. The agent does not silently scrub it; it
+    blocks and escalates.
+
+    M&A speculation is intentionally NOT a hard block here — it's a sensitive
+    topic that requires analyst judgment, so it flows through to the LLM
+    pipeline and gets escalated to analyst_review downstream (via the
+    compliance critic on the output draft or the tone supervisor).
+
+    Same lexicon as rule_1 in the post-draft compliance critic, applied to
+    inputs. This is the second deterministic gate (after MNPI watch list)
+    before any LLM call.
+
+    Returns (must_block, rule_id).
+    """
+    text_fields = [
+        str(claim.get("transcript", "")),
+        str(claim.get("prepared_remarks", "")),
+        str(claim.get("qa_section", "")),
+        str(claim.get("filing", "")),
+    ]
+    combined = " ".join(text_fields).lower()
+
+    # Position-sizing lexicon (same as rule_1)
+    position_sizing_patterns = [
+        "position sized at",
+        "sized at ",
+        "% position",
+        "position size",
+        "recommend a long",
+        "recommend a short",
+    ]
+    for pattern in position_sizing_patterns:
+        if pattern in combined:
+            return True, f"policy.input_position_sizing:{pattern.strip()}"
+
+    return False, None
+
+
 # ----------------------------------------------------------------------------
 # Mei's 3 unwritten compliance rules
 # ----------------------------------------------------------------------------
