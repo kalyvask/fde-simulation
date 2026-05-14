@@ -26,13 +26,14 @@ You can run both cases sequentially to test domain-portability — that's actual
 
 ## How to run this simulation
 
-1. Read the case's `00_brief.md` (the customer prompt)
-2. For each weekly phase, open the folder and read `EXERCISE.md` **first**
-3. Do the exercise. Spend the suggested time. Don't peek at the reference solution.
-4. **Week 1 (discovery)**: use `01_week1_discovery/STAKEHOLDER_INTERVIEWS.md` to run interactive role-play interviews. Claude plays each persona (CCO, CISO, Compliance, lead user, silent skeptic). You conduct real discovery conversations.
-5. **After each phase**: grade your work automatically using the Claude prompts in [`GRADE_YOUR_WORK.md`](GRADE_YOUR_WORK.md). 5 dimensions × 0-3 each = max 15 per phase, with specific feedback per dimension.
-6. Note the gaps between your work and the reference. Those gaps are your prep targets.
-7. By the end of 4 weeks, you should have a portfolio piece (your prototype + memo) and a clear sense of where your FDE skill is strong vs weak.
+1. **Open `START_HERE.md`** in the case folder (Calder or Helix) — the in-character kickoff. The customer's email arrives, the engagement clock starts, your prep schedule for day 1 is laid out.
+2. Read `00_brief.md` for the formal customer brief.
+3. For each weekly phase, open the folder and read `EXERCISE.md` **first**.
+4. Do the exercise. Spend the suggested time. Don't peek at the reference solution.
+5. **Week 1 (discovery)**: use `01_week1_discovery/STAKEHOLDER_INTERVIEWS.md` to run interactive role-play interviews. Claude plays each persona (CCO, CISO, Compliance, lead user, silent skeptic). You conduct real discovery conversations.
+6. **After each phase**: grade your work automatically using the Claude prompts in [`GRADE_YOUR_WORK.md`](GRADE_YOUR_WORK.md). 5 dimensions × 0-3 each = max 15 per phase, with specific feedback per dimension.
+7. Note the gaps between your work and the reference. Those gaps are your prep targets.
+8. By the end of 4 weeks, you should have a portfolio piece (your prototype + memo) and a clear sense of where your FDE skill is strong vs weak. Then fill in [`RETRO_TEMPLATE.md`](RETRO_TEMPLATE.md) and package using [`PORTFOLIO_TEMPLATE.md`](PORTFOLIO_TEMPLATE.md).
 
 ## Interactive components
 

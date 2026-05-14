@@ -2,12 +2,19 @@
 
 > A 4-week guided FDE engagement on the Calder Insurance case. You do the work; the reference solutions show what good looks like AFTER you've attempted each phase.
 
+## To begin the engagement: open [`START_HERE.md`](START_HERE.md)
+
+That's the in-character entry point — Maria's email lands in your inbox at 7:45 AM Tuesday, the engagement clock starts, the 9 AM kickoff is on the calendar. The reading list, the prep schedule, and the mindset reminders are there.
+
+This file (`EXERCISE.md`) is the structural reference — the 4-week shape, the deliverables, the frameworks to deploy. Read it AFTER you've opened `START_HERE.md`.
+
 ## Before you start
 
-1. Read `00_brief.md` — the customer prompt
-2. Pick your work cadence: 4 weeks at ~10 hours/week, or a compressed 2-week sprint at 20 hours/week
-3. Set up a fresh repo for your work (don't edit this one)
-4. Have an Anthropic or OpenAI API key configured (for the build phases)
+1. **Open [`START_HERE.md`](START_HERE.md)** — the in-character kickoff
+2. Read `00_brief.md` — the formal customer brief (Maria refers to this in her email)
+3. Pick your work cadence: 4 weeks at ~10 hours/week, or a compressed 2-week sprint at 20 hours/week
+4. Set up a fresh repo for your work (don't edit this one)
+5. Have an Anthropic or OpenAI API key configured (for the build phases)
 
 ## The 4-week structure
 
