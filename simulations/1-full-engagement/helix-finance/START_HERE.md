@@ -82,13 +82,15 @@ It's now **6:20 AM Monday, your engagement week 1**. You have ~2.5 hours before 
 
 1. **Read [`00_brief.md`](00_brief.md)** (10 min) — the formal customer context. The fund, the 80-name coverage book, the IT landscape, the constraints.
 
-2. **Read [`EXERCISE.md`](../helix-finance/EXERCISE.md)** if you haven't (5 min) — the 4-week structure and what you'll produce.
+2. **Open the interactive whiteboard with Helix pre-loaded**: [`../../../tools/agent_design_practice.html?case=helix`](../../../tools/agent_design_practice.html?case=helix) (3 min to load, 45 min to use). The 3-lens table opens with Helix's stakeholders + numbers visible in Reference mode. Switch to Practice mode to fill your own draft before the kickoff. The kickoff email from Sarah is in the briefing panel at the top.
 
-3. **Skim [`01_week1_discovery/STAKEHOLDER_INTERVIEWS.md`](01_week1_discovery/STAKEHOLDER_INTERVIEWS.md)** (5 min) — the 7 stakeholder role-play prompts. Sarah first this morning. David afternoon. Rachel tomorrow.
+3. **Read [`EXERCISE.md`](EXERCISE.md)** if you haven't (5 min) — the 4-week structure and what you'll produce.
 
-4. **Pre-pick 8-10 questions for Sarah** (15 min) — sharp ones, framed around her three named kill-criteria. Don't ask anything that's already in her email.
+4. **Skim [`01_week1_discovery/STAKEHOLDER_INTERVIEWS.md`](01_week1_discovery/STAKEHOLDER_INTERVIEWS.md)** (5 min) — the 7 stakeholder role-play prompts.
 
-5. **Don't peek at the reference solutions yet.** `01_week1_discovery/discovery_memo.md` is the reference; open it only AFTER you've produced your own.
+5. **Pre-pick 8-10 questions for Sarah** (15 min) — sharp ones, framed around her three named kill-criteria. Don't ask anything that's already in her email.
+
+6. **Don't peek at the reference solutions yet.** `01_week1_discovery/discovery_memo.md` is the reference; open it only AFTER you've produced your own.
 
 ### The 9 AM meeting with Sarah
 

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title> Agent Design — 3-Lens Whiteboard Practice</title>
+<title>FDE 3-Lens Whiteboard Practice — Case-Aware</title>
 <style>
   :root {
     --customer: #2563eb;
@@ -15,10 +15,10 @@
     --text: #111827;
     --muted: #6b7280;
     --soft: #f3f4f6;
+    --briefing: #fef3c7;
+    --briefing-border: #fcd34d;
   }
-
   * { box-sizing: border-box; }
-
   body {
     margin: 0;
     font-family: system-ui, -apple-system, "Segoe UI", Roboto, Inter, sans-serif;
@@ -26,8 +26,6 @@
     color: var(--text);
     line-height: 1.5;
   }
-
-  /* ---------- Header ---------- */
   header {
     background: var(--card);
     border-bottom: 1px solid var(--border);
@@ -36,372 +34,121 @@
     top: 0;
     z-index: 10;
   }
-
-  header h1 {
-    margin: 0 0 12px;
-    font-size: 18px;
-    font-weight: 600;
-    letter-spacing: -0.01em;
-  }
-
-  .controls {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-    align-items: center;
-  }
-
-  .controls select,
-  .controls input {
-    padding: 7px 10px;
-    border: 1px solid var(--border);
-    border-radius: 6px;
-    font-family: inherit;
-    font-size: 14px;
-    background: var(--card);
-  }
-
-  .controls select { min-width: 320px; }
-  .controls input  { min-width: 220px; flex: 1; }
-
-  button {
-    padding: 7px 14px;
-    border: 1px solid var(--border);
-    background: var(--card);
-    border-radius: 6px;
-    cursor: pointer;
-    font-family: inherit;
-    font-size: 14px;
-    transition: all 0.15s;
-  }
-
+  header h1 { margin: 0 0 4px; font-size: 18px; font-weight: 600; }
+  header .case-line { color: var(--muted); font-size: 13px; margin: 0 0 12px; }
+  .controls { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+  .controls select { padding: 7px 10px; border: 1px solid var(--border); border-radius: 6px; font-family: inherit; font-size: 14px; background: var(--card); min-width: 320px; }
+  button { padding: 7px 14px; border: 1px solid var(--border); background: var(--card); border-radius: 6px; cursor: pointer; font-family: inherit; font-size: 14px; transition: all 0.15s; }
   button:hover { background: var(--soft); }
-
-  button.active {
-    background: #111827;
-    color: white;
-    border-color: #111827;
-  }
-
-  #timer {
-    font-family: "SF Mono", "Consolas", "Courier New", monospace;
-    font-size: 20px;
-    font-weight: 600;
-    min-width: 80px;
-    text-align: center;
-    padding: 4px 10px;
-    border: 1px solid var(--border);
-    border-radius: 6px;
-    background: var(--card);
-  }
-
+  button.active { background: #111827; color: white; border-color: #111827; }
+  #timer { font-family: "SF Mono", "Consolas", "Courier New", monospace; font-size: 20px; font-weight: 600; min-width: 80px; text-align: center; padding: 4px 10px; border: 1px solid var(--border); border-radius: 6px; background: var(--card); }
   #timer.warning  { color: #ea580c; border-color: #ea580c; background: #fff7ed; }
   #timer.critical { color: #dc2626; border-color: #dc2626; background: #fef2f2; animation: pulse 0.8s ease-in-out infinite; }
+  @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.6; } }
+  .toggle { display: inline-flex; border: 1px solid var(--border); border-radius: 6px; overflow: hidden; }
+  .toggle button { border: none; border-radius: 0; margin: 0; }
 
-  @keyframes pulse {
-    0%, 100% { opacity: 1; }
-    50%      { opacity: 0.6; }
-  }
+  #briefingPanel { background: var(--briefing); border: 1px solid var(--briefing-border); border-radius: 8px; margin: 24px auto 0; max-width: 1700px; width: calc(100% - 48px); padding: 18px 22px; }
+  #briefingPanel.hidden { display: none; }
+  .briefing-meta { font-size: 12px; text-transform: uppercase; letter-spacing: 0.08em; color: #92400e; font-weight: 700; margin-bottom: 4px; }
+  .briefing-title { font-size: 15px; font-weight: 600; margin: 0 0 10px; color: #78350f; }
+  .briefing-email { background: rgba(255, 255, 255, 0.6); border-radius: 6px; padding: 14px 16px; font-size: 13px; line-height: 1.55; }
+  .briefing-email .header-line { display: grid; grid-template-columns: 60px 1fr; gap: 8px; margin-bottom: 2px; }
+  .briefing-email .header-line strong { color: #92400e; font-size: 12px; }
+  .briefing-email hr { margin: 10px 0; border: none; border-top: 1px solid rgba(146, 64, 14, 0.2); }
+  .briefing-body { white-space: pre-wrap; font-size: 13px; color: var(--text); }
+  .briefing-clock { margin-top: 12px; font-size: 13px; color: #78350f; font-style: italic; }
 
-  .toggle {
-    display: inline-flex;
-    border: 1px solid var(--border);
-    border-radius: 6px;
-    overflow: hidden;
-  }
-
-  .toggle button {
-    border: none;
-    border-radius: 0;
-    margin: 0;
-  }
-
-  /* ---------- Main layout ---------- */
-  main {
-    display: grid;
-    grid-template-columns: 1fr 300px;
-    gap: 24px;
-    padding: 24px;
-    max-width: 1700px;
-    margin: 0 auto;
-  }
-
-  /* ---------- Columns ---------- */
-  .columns {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 16px;
-    margin-bottom: 24px;
-  }
-
-  .column {
-    background: var(--card);
-    border-radius: 8px;
-    border: 1px solid var(--border);
-    overflow: hidden;
-  }
-
+  main { display: grid; grid-template-columns: 1fr 300px; gap: 24px; padding: 24px; max-width: 1700px; margin: 0 auto; }
+  .columns { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; margin-bottom: 24px; }
+  .column { background: var(--card); border-radius: 8px; border: 1px solid var(--border); overflow: hidden; }
   .column.customer  { border-top: 4px solid var(--customer); }
   .column.product   { border-top: 4px solid var(--product); }
   .column.technical { border-top: 4px solid var(--technical); }
-
-  .column-header {
-    padding: 14px 16px 10px;
-    border-bottom: 1px solid var(--border);
-  }
-
-  .column-header h2 {
-    margin: 0;
-    font-size: 13px;
-    font-weight: 700;
-    letter-spacing: 0.1em;
-  }
-
+  .column-header { padding: 14px 16px 10px; border-bottom: 1px solid var(--border); }
+  .column-header h2 { margin: 0; font-size: 13px; font-weight: 700; letter-spacing: 0.1em; }
   .column.customer  .column-header h2 { color: var(--customer); }
   .column.product   .column-header h2 { color: var(--product); }
   .column.technical .column-header h2 { color: var(--technical); }
-
-  .time-label {
-    font-size: 11px;
-    color: var(--muted);
-    font-weight: 500;
-    margin-left: 6px;
-  }
-
-  .bullets {
-    list-style: none;
-    margin: 0;
-    padding: 12px 16px;
-  }
-
-  .bullets li {
-    margin-bottom: 14px;
-    padding-bottom: 12px;
-    border-bottom: 1px dashed var(--soft);
-  }
-
-  .bullets li:last-child {
-    border-bottom: none;
-    margin-bottom: 0;
-    padding-bottom: 0;
-  }
-
-  .bullets li strong {
-    display: block;
-    font-size: 11px;
-    color: var(--muted);
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
-    margin-bottom: 6px;
-    font-weight: 700;
-  }
-
-  .placeholder {
-    color: #9ca3af;
-    font-size: 12px;
-    font-style: italic;
-    margin-bottom: 4px;
-  }
-
-  .reference-text {
-    font-size: 13.5px;
-    color: var(--text);
-    line-height: 1.5;
-  }
-
-  textarea {
-    width: 100%;
-    min-height: 50px;
-    padding: 6px 8px;
-    border: 1px solid var(--border);
-    border-radius: 4px;
-    font-family: inherit;
-    font-size: 13px;
-    resize: vertical;
-    background: var(--card);
-  }
-
-  textarea:focus {
-    outline: 2px solid var(--customer);
-    outline-offset: -1px;
-  }
-
+  .time-label { font-size: 11px; color: var(--muted); font-weight: 500; margin-left: 6px; }
+  .bullets { list-style: none; margin: 0; padding: 12px 16px; }
+  .bullets li { margin-bottom: 14px; padding-bottom: 12px; border-bottom: 1px dashed var(--soft); }
+  .bullets li:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .bullets li strong { display: block; font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 6px; font-weight: 700; }
+  .placeholder { color: #9ca3af; font-size: 12px; font-style: italic; margin-bottom: 4px; }
+  .reference-text { font-size: 13.5px; color: var(--text); line-height: 1.5; }
+  textarea { width: 100%; min-height: 50px; padding: 6px 8px; border: 1px solid var(--border); border-radius: 4px; font-family: inherit; font-size: 13px; resize: vertical; background: var(--card); }
+  textarea:focus { outline: 2px solid var(--customer); outline-offset: -1px; }
   .column.product   textarea:focus { outline-color: var(--product); }
   .column.technical textarea:focus { outline-color: var(--technical); }
-
-  /* Mode toggling */
   body.practice-mode .reference-text { display: none; }
   body.practice-mode .placeholder    { display: block; }
   body.practice-mode textarea        { display: block; }
-
   body.reference-mode .placeholder { display: none; }
   body.reference-mode textarea     { display: none; }
   body.reference-mode .reference-text { display: block; }
 
-  /* ---------- Sidebar ---------- */
-  aside.sidebar {
-    background: var(--card);
-    border-radius: 8px;
-    border: 1px solid var(--border);
-    padding: 20px;
-    align-self: start;
-    position: sticky;
-    top: 120px;
-  }
-
-  aside.sidebar h3 {
-    margin: 0 0 14px;
-    font-size: 12px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: var(--text);
-  }
-
-  aside.sidebar ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-
-  aside.sidebar li {
-    padding: 10px 0;
-    border-bottom: 1px solid var(--border);
-    font-size: 13px;
-    line-height: 1.5;
-  }
-
+  aside.sidebar { background: var(--card); border-radius: 8px; border: 1px solid var(--border); padding: 20px; align-self: start; position: sticky; top: 120px; }
+  aside.sidebar h3 { margin: 0 0 14px; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; }
+  aside.sidebar ul { list-style: none; margin: 0; padding: 0; }
+  aside.sidebar li { padding: 10px 0; border-bottom: 1px solid var(--border); font-size: 13px; line-height: 1.5; }
   aside.sidebar li:last-child { border-bottom: none; padding-bottom: 0; }
   aside.sidebar li:first-child { padding-top: 0; }
+  aside.sidebar li strong { display: block; color: var(--text); font-size: 13px; margin-bottom: 2px; }
 
-  aside.sidebar li strong {
-    display: block;
-    color: var(--text);
-    font-size: 13px;
-    margin-bottom: 2px;
-  }
-
-  /* ---------- Probes + self-check ---------- */
-  .probes, .self-check {
-    background: var(--card);
-    border-radius: 8px;
-    border: 1px solid var(--border);
-    padding: 20px;
-    margin-bottom: 16px;
-  }
-
-  .probes h3, .self-check h3 {
-    margin: 0 0 14px;
-    font-size: 12px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-  }
-
-  .probes-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 20px;
-  }
-
-  .probe-col h4 {
-    margin: 0 0 8px;
-    font-size: 11px;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    font-weight: 700;
-  }
-
+  .probes, .self-check { background: var(--card); border-radius: 8px; border: 1px solid var(--border); padding: 20px; margin-bottom: 16px; }
+  .probes h3, .self-check h3 { margin: 0 0 14px; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; }
+  .probes-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; }
+  .probe-col h4 { margin: 0 0 8px; font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; font-weight: 700; }
   .probe-col.customer  h4 { color: var(--customer); }
   .probe-col.product   h4 { color: var(--product); }
   .probe-col.technical h4 { color: var(--technical); }
-
-  .probe-col ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-
-  .probe-col li {
-    font-size: 13px;
-    padding: 5px 0;
-    color: var(--muted);
-    line-height: 1.45;
-  }
-
-  .self-check ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-
-  .self-check li {
-    padding: 9px 0;
-    border-bottom: 1px solid var(--soft);
-    font-size: 14px;
-    cursor: pointer;
-    transition: color 0.1s;
-  }
-
+  .probe-col ul { list-style: none; margin: 0; padding: 0; }
+  .probe-col li { font-size: 13px; padding: 5px 0; color: var(--muted); line-height: 1.45; }
+  .self-check ul { list-style: none; margin: 0; padding: 0; }
+  .self-check li { padding: 9px 0; border-bottom: 1px solid var(--soft); font-size: 14px; cursor: pointer; }
   .self-check li:last-child { border-bottom: none; }
-
-  .self-check li::before {
-    content: "☐  ";
-    color: var(--muted);
-    font-weight: 700;
-    margin-right: 4px;
-  }
-
-  .self-check li.checked {
-    color: var(--muted);
-    text-decoration: line-through;
-  }
-
+  .self-check li::before { content: "☐  "; color: var(--muted); font-weight: 700; margin-right: 4px; }
+  .self-check li.checked { color: var(--muted); text-decoration: line-through; }
   .self-check li.checked::before { content: "☑  "; color: var(--product); }
 
-  /* ---------- Responsive ---------- */
-  @media (max-width: 1200px) {
-    main { grid-template-columns: 1fr; }
-    aside.sidebar { position: static; }
-  }
-
-  @media (max-width: 900px) {
-    .columns, .probes-grid { grid-template-columns: 1fr; }
-  }
-
-  /* ---------- Print ---------- */
+  @media (max-width: 1200px) { main { grid-template-columns: 1fr; } aside.sidebar { position: static; } }
+  @media (max-width: 900px) { .columns, .probes-grid { grid-template-columns: 1fr; } }
   @media print {
-    header .controls { display: none; }
+    header .controls, #briefingPanel { display: none; }
     aside.sidebar { position: static; page-break-inside: avoid; }
     main { grid-template-columns: 1fr; max-width: 100%; }
     .columns { grid-template-columns: 1fr 1fr 1fr; }
-    textarea { display: none !important; }
-    .placeholder { display: none !important; }
+    textarea, .placeholder { display: none !important; }
     .reference-text { display: block !important; }
     body { background: white; }
-    .column, .probes, .self-check, aside.sidebar {
-      border: 1px solid #ccc;
-      box-shadow: none;
-      page-break-inside: avoid;
-    }
+    .column, .probes, .self-check, aside.sidebar { border: 1px solid #ccc; box-shadow: none; page-break-inside: avoid; }
   }
 </style>
 </head>
 <body class="practice-mode">
 
 <header>
-  <h1> Agent Design — 3-Lens Whiteboard Practice</h1>
+  <h1>FDE 3-Lens Whiteboard Practice</h1>
+  <p class="case-line" id="caseLine">Pick a case to begin. Real cases (Calder, Helix) open with the in-character kickoff email.</p>
   <div class="controls">
-    <select id="promptSelect">
-      <option value="0">— Select a practice prompt —</option>
-      <option value="1">Refund-processing agent for e-commerce (frustrated customer)</option>
-      <option value="2">Sales-call summarizer for B2B SaaS (rushed customer)</option>
-      <option value="3">Healthcare prior-auth assistant for clinician (time-pressured)</option>
-      <option value="4">Onboarding agent for fintech (anxious, regulated)</option>
-      <option value="5">Contract clause extractor for law firm (meticulous)</option>
-      <option value="6">Loyalty Program Advisor for an airline (worked example)</option>
+    <select id="caseSelect">
+      <option value="">— Pick a case —</option>
+      <optgroup label="Real engagement cases (case study auto-opens)">
+        <option value="calder">Calder Specialty Insurance — FNOL workforce</option>
+        <option value="helix">Helix Capital — Earnings-note workforce</option>
+      </optgroup>
+      <optgroup label="Generic practice prompts">
+        <option value="refund">Refund-processing agent (e-commerce, frustrated customer)</option>
+        <option value="sales">Sales-call summarizer (B2B SaaS, rushed customer)</option>
+        <option value="priorauth">Healthcare prior-auth assistant (time-pressured clinician)</option>
+        <option value="onboarding">Onboarding agent for a fintech (anxious, regulated)</option>
+        <option value="contract">Contract clause extractor (law firm, meticulous)</option>
+      </optgroup>
+      <optgroup label="Worked example">
+        <option value="loyalty">Loyalty Program Advisor for an airline</option>
+      </optgroup>
     </select>
-    <input type="text" id="customPrompt" placeholder="Or type your own prompt…">
     <button id="startTimer">Start 5-min timer</button>
     <span id="timer">5:00</span>
     <div class="toggle">
@@ -412,170 +159,65 @@
   </div>
 </header>
 
+<section id="briefingPanel" class="hidden">
+  <div class="briefing-meta" id="briefingMeta"></div>
+  <h2 class="briefing-title" id="briefingTitle"></h2>
+  <div class="briefing-email">
+    <div class="header-line"><strong>From:</strong>    <span id="briefingFrom"></span></div>
+    <div class="header-line"><strong>To:</strong>      <span id="briefingTo"></span></div>
+    <div class="header-line"><strong>Cc:</strong>      <span id="briefingCc"></span></div>
+    <div class="header-line"><strong>Subject:</strong> <span id="briefingSubject"></span></div>
+    <hr/>
+    <div class="briefing-body" id="briefingBody"></div>
+  </div>
+  <div class="briefing-clock" id="briefingClock"></div>
+</section>
+
 <main>
   <div class="content">
-
     <div class="columns">
-
-      <!-- CUSTOMER -->
       <div class="column customer">
-        <div class="column-header">
-          <h2>CUSTOMER<span class="time-label">· 90s</span></h2>
-        </div>
-        <ul class="bullets">
-          <li>
-            <strong>Who</strong>
-            <div class="placeholder">specific persona, not "users"</div>
-            <div class="reference-text">Loyalty program member, often returning, high-intent on trip planning, occasionally browsing.</div>
-            <textarea data-key="customer-who"></textarea>
-          </li>
-          <li>
-            <strong>Emotional state</strong>
-            <div class="placeholder">stressed / anxious / curious / overwhelmed / frustrated</div>
-            <div class="reference-text">Curious (planning) OR anxious (close to expiration / status threshold). Different from a frustrated reservations customer.</div>
-            <textarea data-key="customer-emotional"></textarea>
-          </li>
-          <li>
-            <strong>JTBD — top 3 intents</strong>
-            <div class="placeholder">3 concrete jobs, prioritized</div>
-            <div class="reference-text">(1) Check points balance. (2) Understand redemption options for an upcoming trip. (3) Understand status implications for booking decisions.</div>
-            <textarea data-key="customer-jtbd"></textarea>
-          </li>
-          <li>
-            <strong>Why failing today</strong>
-            <div class="placeholder">specific friction, not generic UX</div>
-            <div class="reference-text">Loyalty queries route to live agents → 30+ min wait time → customer either abandons or churns.</div>
-            <textarea data-key="customer-failing"></textarea>
-          </li>
-          <li>
-            <strong>What's hard (root cause)</strong>
-            <div class="placeholder">structural issue, not symptom</div>
-            <div class="reference-text">Customer doesn't know if their question is "simple" (lookup) or "nuanced" (which redemption is best). Has to assume the worst and call.</div>
-            <textarea data-key="customer-hard"></textarea>
-          </li>
+        <div class="column-header"><h2>CUSTOMER<span class="time-label">· 90s</span></h2></div>
+        <ul class="bullets" id="customerBullets">
+          <li data-cell="who"><strong>Who</strong><div class="placeholder"></div><div class="reference-text"></div><textarea data-key="customer-who"></textarea></li>
+          <li data-cell="emotional_state"><strong>Emotional state</strong><div class="placeholder"></div><div class="reference-text"></div><textarea data-key="customer-emotional"></textarea></li>
+          <li data-cell="jtbd"><strong>JTBD — top 3 intents</strong><div class="placeholder"></div><div class="reference-text"></div><textarea data-key="customer-jtbd"></textarea></li>
+          <li data-cell="why_failing"><strong>Why failing today</strong><div class="placeholder"></div><div class="reference-text"></div><textarea data-key="customer-failing"></textarea></li>
+          <li data-cell="whats_hard"><strong>What's hard (root cause)</strong><div class="placeholder"></div><div class="reference-text"></div><textarea data-key="customer-hard"></textarea></li>
         </ul>
       </div>
-
-      <!-- PRODUCT -->
       <div class="column product">
-        <div class="column-header">
-          <h2>PRODUCT<span class="time-label">· 90s</span></h2>
-        </div>
-        <ul class="bullets">
-          <li>
-            <strong>Intent</strong>
-            <div class="placeholder">what the customer is trying to do</div>
-            <div class="reference-text">Loyalty information + simple decision support.</div>
-            <textarea data-key="product-intent"></textarea>
-          </li>
-          <li>
-            <strong>In scope</strong>
-            <div class="placeholder">list 3-5 concrete capabilities</div>
-            <div class="reference-text">Points balance, expiration dates, redemption options, tier benefits, status calculations, "what's my balance worth" comparisons.</div>
-            <textarea data-key="product-inscope"></textarea>
-          </li>
-          <li>
-            <strong>Out of scope <em style="color:#9ca3af;font-weight:500;text-transform:none;letter-spacing:0">(equally explicit)</em></strong>
-            <div class="placeholder">define as explicitly as in-scope</div>
-            <div class="reference-text">Account changes (no write), reservation transactions, M&amp;A / company-financial speculation, anything requiring real-time external data, advisory recommendations ("which redemption is best for ME?").</div>
-            <textarea data-key="product-outscope"></textarea>
-          </li>
-          <li>
-            <strong>Trust levels (act / ask / escalate)</strong>
-            <div class="placeholder">when does the agent act autonomously vs ask vs escalate</div>
-            <div class="reference-text"><b>Act:</b> factual lookups (balance, dates, policy quotes). <b>Ask:</b> edge cases ("here are 3 redemption options — would you like me to compare them?"). <b>Escalate:</b> advisory queries, account-specific exceptions, anything ambiguous.</div>
-            <textarea data-key="product-trust"></textarea>
-          </li>
-          <li>
-            <strong>Fallback</strong>
-            <div class="placeholder">what happens when confidence is low</div>
-            <div class="reference-text">"Let me connect you to a loyalty specialist" with one-click handoff; agent passes context; no repeating.</div>
-            <textarea data-key="product-fallback"></textarea>
-          </li>
-          <li>
-            <strong>Metric + tension <em style="color:#9ca3af;font-weight:500;text-transform:none;letter-spacing:0">(name which you protect)</em></strong>
-            <div class="placeholder">containment vs CSAT, speed vs accuracy, breadth vs depth</div>
-            <div class="reference-text"><b>Primary:</b> 70% containment within in-scope queries. <b>TENSION:</b> Containment vs CSAT — we protect CSAT (≥4.0 floor), would rather escalate borderline cases than risk a wrong answer that erodes trust.</div>
-            <textarea data-key="product-metric"></textarea>
-          </li>
+        <div class="column-header"><h2>PRODUCT<span class="time-label">· 90s</span></h2></div>
+        <ul class="bullets" id="productBullets">
+          <li data-cell="intent"><strong>Intent</strong><div class="placeholder"></div><div class="reference-text"></div><textarea data-key="product-intent"></textarea></li>
+          <li data-cell="in_scope"><strong>In scope</strong><div class="placeholder"></div><div class="reference-text"></div><textarea data-key="product-inscope"></textarea></li>
+          <li data-cell="out_of_scope"><strong>Out of scope <em style="color:#9ca3af;font-weight:500;text-transform:none;letter-spacing:0">(equally explicit)</em></strong><div class="placeholder"></div><div class="reference-text"></div><textarea data-key="product-outscope"></textarea></li>
+          <li data-cell="trust"><strong>Trust levels (act / ask / escalate)</strong><div class="placeholder"></div><div class="reference-text"></div><textarea data-key="product-trust"></textarea></li>
+          <li data-cell="fallback"><strong>Fallback</strong><div class="placeholder"></div><div class="reference-text"></div><textarea data-key="product-fallback"></textarea></li>
+          <li data-cell="metric_tension"><strong>Metric + tension</strong><div class="placeholder"></div><div class="reference-text"></div><textarea data-key="product-metric"></textarea></li>
         </ul>
       </div>
-
-      <!-- TECHNICAL -->
       <div class="column technical">
-        <div class="column-header">
-          <h2>TECHNICAL<span class="time-label">· 60s · keep light</span></h2>
-        </div>
-        <ul class="bullets">
-          <li>
-            <strong>Read access</strong>
-            <div class="placeholder">specific data sources</div>
-            <div class="reference-text">Loyalty database (balance, tier, transaction history), policy documentation, FAQ corpus.</div>
-            <textarea data-key="technical-read"></textarea>
-          </li>
-          <li>
-            <strong>Write access</strong>
-            <div class="placeholder">usually NONE in v1</div>
-            <div class="reference-text"><b>NONE in v1.</b> Only writes are to the escalation queue (logging human handoffs).</div>
-            <textarea data-key="technical-write"></textarea>
-          </li>
-          <li>
-            <strong>Data freshness</strong>
-            <div class="placeholder">live / cached / batched</div>
-            <div class="reference-text">Balance read live; policy with 1-hour cache; FAQ indexed corpus.</div>
-            <textarea data-key="technical-freshness"></textarea>
-          </li>
-          <li>
-            <strong>ONE specific integration risk</strong>
-            <div class="placeholder">PII / latency / regulatory / data quality — pick one and detail it</div>
-            <div class="reference-text"><b>Stale policy documentation.</b> If a loyalty policy changes (e.g., redemption rates), the agent could cite stale info. Mitigation: policy-version pinning + scheduled cache refresh + LLM-as-judge check before send.</div>
-            <textarea data-key="technical-risk"></textarea>
-          </li>
-          <li>
-            <strong>Validation plan</strong>
-            <div class="placeholder">PoC + eval set + compliance + closed beta</div>
-            <div class="reference-text">PoC + 50-case eval set (factual lookup + edge cases) + compliance sign-off + senior-analyst review of 20 sample drafts + closed beta with 100 customers.</div>
-            <textarea data-key="technical-validation"></textarea>
-          </li>
+        <div class="column-header"><h2>TECHNICAL<span class="time-label">· 60s · keep light</span></h2></div>
+        <ul class="bullets" id="technicalBullets">
+          <li data-cell="read"><strong>Read access</strong><div class="placeholder"></div><div class="reference-text"></div><textarea data-key="technical-read"></textarea></li>
+          <li data-cell="write"><strong>Write access</strong><div class="placeholder"></div><div class="reference-text"></div><textarea data-key="technical-write"></textarea></li>
+          <li data-cell="data_freshness"><strong>Data freshness</strong><div class="placeholder"></div><div class="reference-text"></div><textarea data-key="technical-freshness"></textarea></li>
+          <li data-cell="risk"><strong>ONE specific integration risk</strong><div class="placeholder"></div><div class="reference-text"></div><textarea data-key="technical-risk"></textarea></li>
+          <li data-cell="validation"><strong>Validation plan</strong><div class="placeholder"></div><div class="reference-text"></div><textarea data-key="technical-validation"></textarea></li>
         </ul>
       </div>
-
     </div>
 
-    <!-- PROBES -->
     <div class="probes">
       <h3>Predictable Probes</h3>
       <div class="probes-grid">
-        <div class="probe-col customer">
-          <h4>Customer column</h4>
-          <ul>
-            <li>"Walk me through a difficult customer interaction. How does the agent handle frustration?"</li>
-            <li>"A customer was mis-handled by a previous AI rollout. How do you re-earn trust?"</li>
-            <li>"How do you avoid sounding like a chatbot?"</li>
-          </ul>
-        </div>
-        <div class="probe-col product">
-          <h4>Product column</h4>
-          <ul>
-            <li>"What's the experience if the customer asks something out of scope?"</li>
-            <li>"If 30% of conversations are at the scope boundary, how do you decide what to add?"</li>
-            <li>"How do you measure containment quality, not just rate?"</li>
-            <li>"What does week-4 look like vs week-1?"</li>
-          </ul>
-        </div>
-        <div class="probe-col technical">
-          <h4>Technical column</h4>
-          <ul>
-            <li>"Why read-only? Defend it."</li>
-            <li>"Where's the human-in-the-loop in week 1 vs week 8?"</li>
-            <li>"What's the worst-case if data freshness is off by 24 hours?"</li>
-            <li>"How does compliance review work at scale?"</li>
-          </ul>
-        </div>
+        <div class="probe-col customer"><h4>Customer column</h4><ul id="probesCustomer"></ul></div>
+        <div class="probe-col product"><h4>Product column</h4><ul id="probesProduct"></ul></div>
+        <div class="probe-col technical"><h4>Technical column</h4><ul id="probesTechnical"></ul></div>
       </div>
     </div>
 
-    <!-- SELF CHECK -->
     <div class="self-check">
       <h3>After you finish, ask yourself</h3>
       <ul>
@@ -587,106 +229,417 @@
         <li>Did you land a one-sentence synthesis at the end?</li>
       </ul>
     </div>
-
   </div>
 
-  <!-- SIDEBAR -->
   <aside class="sidebar">
     <h3>Quick Reference Rules</h3>
     <ul>
-      <li><strong>Name the emotional state</strong>Stressed / anxious / curious. This single move drives design decisions and signals product seniority.</li>
+      <li><strong>Name the emotional state</strong>Stressed / anxious / curious. Drives every design decision.</li>
       <li><strong>Out-of-scope = in-scope</strong>Define both equally explicitly. Shows judgment, not laziness.</li>
-      <li><strong>Name the metric tension</strong>Containment vs CSAT. Speed vs accuracy. Pick which you protect in v1 and say why.</li>
+      <li><strong>Name the metric tension</strong>Containment vs CSAT. Speed vs accuracy. Pick which you protect.</li>
       <li><strong>Distinguish read vs write</strong>Write almost always NONE in v1. Read-only v1 is the senior move.</li>
-      <li><strong>One specific risk</strong>Not a generic list. "Documentation retrieval with policy-version pinning" beats "we'd use RAG and have guardrails."</li>
-      <li><strong>Never jump columns</strong>If the interviewer probes out of sequence, park it: "Let me note that in the technical column and come back to it."</li>
-      <li><strong>Pace yourself</strong>0:00–0:30 restate · 0:30–2:00 Customer · 2:00–3:30 Product · 3:30–4:30 Technical · 4:30–5:00 synthesize.</li>
-      <li><strong>Then stop</strong>Let the interviewer probe. Their probes are the test.</li>
+      <li><strong>One specific risk</strong>Not a generic list. "Policy-version pinning" beats "we'd use guardrails."</li>
+      <li><strong>Never jump columns</strong>If probed out of sequence: "Let me note that and close this column first."</li>
+      <li><strong>Pace</strong>0:00–0:30 restate · 0:30–2:00 Customer · 2:00–3:30 Product · 3:30–4:30 Technical · 4:30–5:00 synthesize.</li>
+      <li><strong>Then stop</strong>Let the interviewer probe.</li>
     </ul>
   </aside>
-
 </main>
 
 <script>
-  // ---------- Mode toggle ----------
-  document.querySelectorAll('.mode-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const mode = btn.dataset.mode;
-      document.querySelectorAll('.mode-btn').forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      document.body.className = mode + '-mode';
-    });
-  });
+const CASES = {
+  calder: {
+    name: "Calder Specialty Insurance — FNOL workforce",
+    caseLine: "4-week FDE engagement · personal-lines insurance · pre-kickoff briefing",
+    briefing: {
+      meta: "7:45 AM Tuesday — your inbox",
+      title: "Email from Maria Vasquez, CCO",
+      from: "Maria Vasquez <m.vasquez@calderspecialty.com>",
+      to: "You (FDE Lead)",
+      cc: "Greg Hadley, Anil Gupta",
+      subject: "Calder engagement — kickoff Tuesday 9 AM",
+      body:
+`Looking forward to today's 9 AM. I want to use the 45 minutes well, so a few things up front.
 
-  // ---------- Timer ----------
-  let timerInterval = null;
-  let secondsLeft = 300;
-  const timerEl = document.getElementById('timer');
-  const timerBtn = document.getElementById('startTimer');
+We process ~600 claims/day, peaks of 1,200 after weather events. Short version, our FNOL-to-first-touch is 4.2 hours against a 1-hour SLA, our LAE ratio is 12.4% versus industry 10.8%, and our claims-handling cost is up 18% in two years.
 
-  function updateTimer() {
-    const m = Math.floor(secondsLeft / 60);
-    const s = secondsLeft % 60;
-    timerEl.textContent = `${m}:${s.toString().padStart(2, '0')}`;
-    timerEl.classList.toggle('warning',  secondsLeft <= 90 && secondsLeft > 30);
-    timerEl.classList.toggle('critical', secondsLeft <= 30 && secondsLeft > 0);
+Three things keeping me up at night:
+
+1. Two NAIC market-conduct findings in the last 18 months. Both rooted in delayed customer communications after first notice of loss. A third means a state DOI consent order. Kill-criteria one.
+
+2. LAE ratio up 180 basis points. Board wants it back to trailing average. I'd take half that gap. Kill-criteria two.
+
+3. We lost two senior analysts in Q4 — both cited the morning-after-FNOL grind. The one that actually made me pick up the phone. Kill-criteria three.
+
+I've seen three AI-workforce pitches in the last 18 months. Two looked great in demo. Both died in compliance review. I don't want that.
+
+For 9 AM: arrive with questions, not answers.
+
+— Maria`,
+      clock: "The engagement clock is running. You have 70 minutes before the 9 AM kickoff. Use this whiteboard to draft your 3-lens table — Practice mode for your own working draft; switch to Reference mode AFTER the kickoff to compare against the senior version."
+    },
+    customer: {
+      who:               "Maria Vasquez (CCO) — economic buyer. Greg Hadley (SVP Claims Ops) — champion. Janet (Sr Adjuster, 18 yrs) — lead user. Tom Reilly (QA) — owns 'bad close' definition. Rachel Nieman (CISO) — default-no. Marcus Hill (Compliance) — owns state-DOI gate.",
+      emotional_state:   "Maria: anxious about NAIC findings (2 in 18 months); 3rd = state DOI consent order. Janet: exhausted (4.2h FNOL-to-first-touch on 1h SLA; 8% Q4 attrition). Marcus: default-no until proven safe.",
+      jtbd:              "(1) Cut LAE ratio 12.4% → 11% on $300M GWP = ~$4.2M/yr; (2) Replace one BPO contract ($6M/yr) with retained 30% human review = ~$3.5M net; (3) Stop senior-analyst churn caused by the morning grind.",
+      why_failing:       "180 claims FTEs spend 4.2h on first-touch on a 1h SLA. Two BPOs cost $11M/yr with uneven quality (2 NAIC findings tied to BPO mishandling). 14-state DOI variance + Guidewire deeply customized + slow API-gateway team.",
+      whats_hard:        "Need 30% claims-ops cost reduction in 18 months per board. Some states require licensed adjuster on coverage decisions. PHI surface on bodily-injury claims. BPO contracts have ~12 months left (replaceable); replacing internal staff is politically forbidden."
+    },
+    product: {
+      intent:            "Auto-acknowledge + draft first-status updates to claimants for first-party physical damage under $2,500. Read-only v1. Adjuster reviews every draft before send.",
+      in_scope:          "Auto-acknowledge on FNOL submission. Draft first-status comm. Route to adjuster queue with reasoning trace. Deterministic state-DOI variance check (NJ + 13 others). Auto-pay-eligible triage on the slice.",
+      out_of_scope:      "Coverage decisions (some states require licensed adjuster). Settlement decisions. Bodily-injury drafting (PHI surface). Multi-vehicle complications. Any write to Guidewire in v1. Claims over $2,500.",
+      trust:             "Act: deterministic FNOL parse, state-DOI rule check. Ask: adjuster reviews every draft before send in v1. Escalate: elderly party, bodily-injury, SIU fraud flag, multi-vehicle, claimant-mishandled-by-prior-BPO.",
+      fallback:          "Confidence-low → route to Tom's QA queue with full reasoning trace. Never auto-send on uncertainty. Janet sees every weird case.",
+      metric_tension:    "Primary: FNOL-to-first-touch 4.2h → 30min on slice; 80% straight-through; LAE ratio -140bps in 18mo. TENSION: speed vs zero-NAIC-finding streak — protect the streak (Marcus's veto wins)."
+    },
+    technical: {
+      read:              "Guidewire ClaimCenter v10 (read-only via internal API gateway, 1-wk setup), Salesforce (claimant CRM), Twilio (channels), Verisk (fraud signals), policy/state-DOI rules library, prior-quarter close-rate history.",
+      write:             "NONE to production systems in v1. Drafts to a Postgres staging table; Janet one-click approval pushes to Guidewire via existing webhook. Audit trace to immutable log.",
+      data_freshness:    "FNOL events: live. State DOI rules: 24-hr cache with Marcus-signal refresh. Twilio: live. Guidewire policy lookup: live with 30-sec TTL.",
+      risk:              "Stale state-DOI rule version mid-engagement. Mitigation: per-invocation rule version check + Marcus-owned versioning log + LLM-as-judge tier-2 check on regulatory language + scheduled cache invalidation.",
+      validation:        "PoC + 80-case weighted eval across 6 states (NJ + PA + NY + 3 more) + Marcus state-DOI sign-off + Janet 20-draft signoff (≥18/20) + Tom hostile QA review + 2-wk NJ-only closed beta + pass^k=5 production threshold."
+    },
+    probes: {
+      customer: [
+        "Walk me through a difficult FNOL — the elderly-party multi-vehicle case. How does the agent handle the comm?",
+        "What about a claimant mis-handled by a prior BPO? How do you re-earn trust?",
+        "How do you avoid sounding like a chatbot — Janet's voice, not ChatGPT?"
+      ],
+      product: [
+        "What's the experience if the claimant asks about coverage in their reply?",
+        "If 30% of cases hit the state-DOI variance boundary, how do you decide what to add?",
+        "How do you measure NAIC-finding-likelihood, not just speed?",
+        "Janet vs Tom — they grade differently. Which one's bar do you optimize for?"
+      ],
+      technical: [
+        "Why read-only on Guidewire? Defend it.",
+        "Where's the human-in-the-loop in week 1 vs week 8?",
+        "Worst-case if state DOI rules are out of date by 24 hours?",
+        "Marcus is the bottleneck. How do you avoid a 9-month compliance review like the last AI vendor?"
+      ]
+    }
+  },
+
+  helix: {
+    name: "Helix Capital — Earnings-note workforce",
+    caseLine: "4-week FDE engagement · long-short equity hedge fund · pre-kickoff briefing",
+    briefing: {
+      meta: "6:15 AM Monday — your inbox",
+      title: "Email from Sarah Mendez, CIO & Managing Partner",
+      from: "Sarah Mendez <smendez@helixcapital.com>",
+      to: "You (FDE Lead)",
+      cc: "David Park, Aditya Sharma",
+      subject: "Helix engagement — kickoff Monday 9 AM, before market open",
+      body:
+`Looking forward to the 9 AM. Before-market on Mondays is the only sane time for a 45-min meeting in our shop, so I'm using it.
+
+Helix Capital. $2.3B long-short equity. 12 investment professionals — 5 senior analysts, 4 associates, 3 traders. We cover ~80 names across TMT, consumer, and industrials.
+
+Every senior analyst spends ~4 hours per covered name the morning after that company's earnings call drafting a one-pager. 80 names × 4 quarters × 4 hours = 1,280 hours per analyst per year.
+
+We lost two senior analysts in 2025 — both cited the morning grind as unsustainable. Notes also land hours after market open, costing alpha.
+
+What kills me: if you build something that hallucinates a number into a note, and a PM trades on it, we're looking at trading losses, fund-reputation damage, and potentially SEC scrutiny. We had ZERO MNPI incidents in three years. I'd like to stay that way.
+
+Three things up front:
+
+1. Zero MNPI incidents is THE kill criteria. Any architecture that doesn't make MNPI leak architecturally impossible — not just unlikely — doesn't pass our compliance gate. Mei owns that.
+
+2. Senior-analyst veto. Rachel (our senior TMT analyst) will not roll this out unless she signs off on 20 sample drafts she'd be willing to put her name on. Make her your friend.
+
+3. 4 weeks to demo. Something a PM can actually use, not a pilot.
+
+For 9 AM: arrive with questions, not answers.
+
+— Sarah`,
+      clock: "The engagement clock is running. You have ~2.5 hours before the 9 AM kickoff. Use this whiteboard to draft your 3-lens table — Practice mode for your own working draft; switch to Reference mode AFTER the kickoff to compare against the senior version."
+    },
+    customer: {
+      who:               "Sarah Mendez (CIO/MP) — economic buyer. David Park (Head of Research) — champion. Rachel Kim (Sr TMT Analyst, 9 yrs) — lead user. Mei Liu (Compliance) — default-no. Aditya Sharma (CTO, 1 jr eng) — tech owner. Carmen Diaz (Sr Trader) — silent skeptic. James O'Brien (COO) — handoff.",
+      emotional_state:   "Sarah: anxious (3-yr zero-MNPI streak is reputational floor). Rachel: exhausted (1,280 hrs/yr per analyst on drafting; 2 seniors quit 2025). Carmen: distrustful (burned twice in 5 yrs by hallucinated numbers). Mei: default-no until proven safe.",
+      jtbd:              "(1) Compress senior-analyst review 4h → 30min/note (~$5M/yr recovered analyst time on 5 analysts × 1,280 hrs × $800 loaded); (2) Preserve zero-MNPI streak; (3) Stop analyst churn that nearly cost 2 more seniors.",
+      why_failing:       "4h/note × 80 names × 4 quarters per analyst — drafting is verification + formatting + voice-matching, not analysis. Notes land hours after market open, leaking alpha. Tone shifts in management commentary are the biggest signal humans catch and LLMs miss.",
+      whats_hard:        "Rachel can't distinguish 'AI summary' from 'AI-assisted draft I can defend'. Speed vs rigor — both lose. Compliance surface: SEC + FINRA + CFA + Reg FD + Chinese wall + jurisdictional overlays (MiFID II, FCA, SFC, JFSA, ASIC)."
+    },
+    product: {
+      intent:            "Citation-grounded earnings-note drafter + tone-shift detector. Read-only v1. Senior-analyst approves before any output reaches PM or trading desk. 4-wk demo target.",
+      in_scope:          "Pre-call read of consensus + prior quarter. Real-time KPI extraction. Citation-grounded draft (every number traces to current-call source). Tone-shift flags vs prior quarter. Audit trace as 1st-class artifact. ~50 names in scope (single-call format).",
+      out_of_scope:      "M&A commentary (Reg FD minefield). Position-sizing recommendations (Chinese wall + Reg FD). Auto-publish to PMS or trader distribution. Multi-quarter retrieval (v1 = prior 1 quarter only). Watch-list names. Any write to PMS / published-notes folder in v1.",
+      trust:             "Act: deterministic MNPI scrubber (fires before any LLM call), citation verifier, schema validator. Ask: drafter shows citation chain before Rachel edits; tone supervisor flags borderline calls. Escalate: any policy combination Compliance Critic flags.",
+      fallback:          "Confidence-low or citation-chain-broken → Rachel's queue with partial draft + reasoning trace. Never silent-fail. Never auto-publish on uncertainty.",
+      metric_tension:    "Primary: 30-min senior-analyst review per note. Adoption: 70%+ analysts ship draft w/o re-write by week 6. TENSION: speed vs zero-MNPI streak — protect the streak (Mei's veto wins)."
+    },
+    technical: {
+      read:              "FactSet (earnings transcripts), Bloomberg consensus (read-only sandbox), prior-quarter notes (internal Postgres on Snowflake-Python sandbox), MNPI watch list (Mei-owned, per-invocation pull, NEVER cached at startup), audit-trace standard, SubjECTive-QA labels (eval-only).",
+      write:             "NONE in v1. Drafts to holding queue, NEVER to PMS / trader distribution / published-notes folder. Only writes: escalation queue + immutable audit trace.",
+      data_freshness:    "Transcripts: live during/after call. Consensus: live on Bloomberg sandbox. MNPI watch list: per-invocation pull. Policy docs: 24-hr cache w/ Mei refresh trigger.",
+      risk:              "MNPI watch-list drift — Mei adds a name mid-quarter, scrubber works off stale cache, MNPI leak occurs. Mitigation: scrubber pulls watch list at start of EVERY agent invocation + Mei-owned audit log + LLM-as-judge tier-2 check before draft leaves holding queue.",
+      validation:        "PoC + 80-case weighted eval (TMT + consumer + industrials, adversarial: MNPI smuggling, hallucinated guidance, position-sizing slip, tone-shift miss) + pass^k=5 + Mei MNPI sign-off + Rachel 20-draft signoff (≥18/20) + Carmen hostile review + 2-wk TMT-only closed beta."
+    },
+    probes: {
+      customer: [
+        "Rachel has 9 years tenure. What would make her quietly route around the agent in week 6?",
+        "Carmen has been burned twice by hallucinated numbers. How do you re-earn her trust before week 3?",
+        "How do you avoid sounding like ChatGPT — Rachel's voice, not generic equity research?"
+      ],
+      product: [
+        "If management says 'we expect strong margins in 2027' with a conditional, and your drafter drops the conditional, what's the failure mode?",
+        "What about a Q3 call where management speculates about a competitor by name? Reg FD risk — what does the drafter do?",
+        "How do you measure tone-shift quality, not just absolute tone?",
+        "Carmen's 'visible citation system' ask — implement or defer?"
+      ],
+      technical: [
+        "Why per-invocation MNPI watch-list pull, not cached? What's the cost of fail-closed?",
+        "Where's the human-in-the-loop in week 1 vs week 8?",
+        "Worst-case if Anthropic has a 30-min outage during earnings season?",
+        "Pass^k=5 with variance 3% on 80 cases — what's the next eval gap?"
+      ]
+    }
+  },
+
+  refund: {
+    name: "Refund-processing agent (e-commerce, frustrated customer)",
+    caseLine: "Generic practice — fill the table cold, then compare with Reference mode",
+    briefing: null,
+    customer: { who: "Customer-support agent at an e-commerce retailer; frustrated end-customer.", emotional_state: "Customer frustrated (slow refund); agent overwhelmed (high ticket volume).", jtbd: "(1) Resolve refund request, (2) Confirm policy compliance, (3) Avoid escalation.", why_failing: "Long wait times; refund policy varies by SKU; agent navigates 4 systems.", whats_hard: "Refund policy edge cases; chargeback risk; emotional regulation on hostile customers." },
+    product: { intent: "Auto-classify refund type + draft empathetic response. Human approves before send.", in_scope: "Refund classification (return/damaged/wrong), policy lookup, empathy-calibrated drafting.", out_of_scope: "Account-level credits over $X (manager-only), chargebacks (Finance), product-quality complaints.", trust: "Act: deterministic policy lookup. Ask: agent reviews every draft. Escalate: > $X or hostile-sentiment.", fallback: "Confidence-low → human queue with reasoning trace.", metric_tension: "Speed vs CSAT. Protect CSAT — angry customer = worst outcome." },
+    technical: { read: "Shopify/Magento order DB (read-only API), Zendesk/Intercom ticket history, refund-policy doc.", write: "NONE in v1; drafts to holding queue for agent approval.", data_freshness: "Order DB live; policy 24-hr cache; ticket history live.", risk: "Policy doc out of date during pricing season. Mitigation: weekly policy-doc version check + LLM-as-judge tier-2.", validation: "100-ticket weighted eval + pass^k=5 + 1-wk closed beta with 2 senior agents." },
+    probes: { customer: ["Hostile customer threatening chargeback — how does the agent handle it?", "Customer mis-handled by previous AI bot — how to re-earn trust?"], product: ["What if 30% of requests are at policy boundary?", "How do you measure refund-quality, not just throughput?"], technical: ["Why read-only? Defend it.", "Where's the human-in-loop in week 1 vs week 8?"] }
+  },
+
+  sales: {
+    name: "Sales-call summarizer (B2B SaaS, rushed customer)",
+    caseLine: "Generic practice — fill the table cold",
+    briefing: null,
+    customer: { who: "Account executive at a B2B SaaS company.", emotional_state: "Rushed — 8 meetings/day, no time to write notes.", jtbd: "(1) Summarize call into CRM, (2) Capture action items, (3) Flag deal risk.", why_failing: "AE spends 30 min/call on notes; notes get skipped; deal-risk signals missed.", whats_hard: "CRM-quality requirements; ambiguous customer language; multi-stakeholder call dynamics." },
+    product: { intent: "Transcribe + summarize sales calls into CRM-ready format with action items and risk flags.", in_scope: "Call transcription, structured summary (BANT / MEDDIC), action-item extraction, deal-stage signal.", out_of_scope: "Pipeline forecasting; competitive-intel notes; contract negotiation summary.", trust: "Act: transcription + structured fields. Ask: AE reviews before CRM commit. Escalate: deal-risk signal.", fallback: "AE queue with reasoning.", metric_tension: "Coverage vs accuracy. Protect accuracy on CRM commit." },
+    technical: { read: "Gong/Chorus recordings, Salesforce CRM (read), deal-stage definitions.", write: "NONE direct to CRM in v1; AE approves.", data_freshness: "Recordings live post-call; CRM schema versioned.", risk: "Hallucinated action item attributed to wrong attendee. Mitigation: speaker-attribution check + AE review.", validation: "50-call eval + pass^k=5 + AE acceptance review." },
+    probes: { customer: ["Different reps grade summaries differently — which one's bar?"], product: ["What does the agent do on a multi-stakeholder call with conflicting signals?"], technical: ["Direct CRM write — when, after how many weeks of clean approvals?"] }
+  },
+
+  priorauth: {
+    name: "Healthcare prior-auth assistant (clinician)",
+    caseLine: "Generic practice — fill the table cold",
+    briefing: null,
+    customer: { who: "Clinician at a regional health system; utilization-review nurse downstream.", emotional_state: "Time-pressured; high-stakes (denied auth = delayed care).", jtbd: "(1) Pre-fill prior-auth forms, (2) Match payer requirements, (3) Reduce denial rate.", why_failing: "30 min/auth manual data entry; payer requirements change quarterly; denials cost time + dollars.", whats_hard: "Payer variance (Aetna, Anthem, BCBS, UHC each differ); state Medicaid variance; PHI handling." },
+    product: { intent: "Pre-fill prior-auth forms from EHR data, matched to payer-specific requirements.", in_scope: "Form pre-fill (Epic/Cerner read), payer-rule matching, denial-risk scoring, clinician review queue.", out_of_scope: "Clinical decision-making; auto-submission; appeals letters; psychiatric care.", trust: "Act: deterministic EHR extraction + payer rule lookup. Ask: clinician reviews every pre-fill. Escalate: high denial-risk or unusual procedure.", fallback: "Clinician queue with named gaps.", metric_tension: "Time saved vs denial rate. Protect denial rate (denied = delayed care = liability)." },
+    technical: { read: "Epic/Cerner via FHIR (read-only), payer-rule library (~6 payers, quarterly updates).", write: "NONE in v1; pre-fills to PDF; clinician submits.", data_freshness: "EHR live; payer rules quarterly cache w/ change-detection.", risk: "Payer rule update lag. Mitigation: weekly rule-version check + LLM-as-judge tier-2 on regulatory language.", validation: "200-auth eval across 6 payers + pass^k=5 + 2-wk closed beta with 3 clinicians." },
+    probes: { customer: ["Clinician burned by prior tech — re-earn trust how?"], product: ["What if Anthem's rules conflict with state Medicaid?"], technical: ["PHI handling — defend the architecture."] }
+  },
+
+  onboarding: {
+    name: "Onboarding agent for a fintech (anxious, regulated)",
+    caseLine: "Generic practice — fill the table cold",
+    briefing: null,
+    customer: { who: "New retail-banking customer; compliance officer downstream.", emotional_state: "Anxious (sharing financial data); regulated industry (KYC + AML).", jtbd: "(1) Guide identity verification, (2) Collect required docs, (3) Match account-type fit.", why_failing: "30% drop-off in onboarding flow; manual KYC takes 48hrs; document quality uneven.", whats_hard: "KYC + AML state variance; AML thresholds; PII handling; deepfake-doc risk." },
+    product: { intent: "Conversational onboarding agent that guides KYC + doc collection + account selection.", in_scope: "Identity verification flow, doc upload + extraction, account-type recommendation, fraud-signal scoring.", out_of_scope: "Account funding; underwriting; account closures; high-risk-customer onboarding (in-person).", trust: "Act: deterministic doc-type detection + KYC field extraction. Ask: customer confirms extracted data. Escalate: low-confidence or fraud signal.", fallback: "Compliance queue.", metric_tension: "Onboarding completion vs AML risk. Protect AML — false-negative = regulatory exposure." },
+    technical: { read: "Persona/Onfido (ID verif), state-specific KYC rule library, fraud-signal API.", write: "Customer record created after compliance sign-off; NEVER auto-approved.", data_freshness: "ID-verif live; KYC rules quarterly.", risk: "Deepfake-doc submission. Mitigation: liveness check + provider-side fraud signal + ratio threshold.", validation: "500-onboarding eval (real fraud + adversarial deepfakes) + pass^k=5 + compliance sign-off." },
+    probes: { customer: ["Customer rage-quits at doc upload — what does the agent do?"], product: ["What's out of scope and why?"], technical: ["Deepfake threat — defend your stack."] }
+  },
+
+  contract: {
+    name: "Contract clause extractor (law firm, meticulous)",
+    caseLine: "Generic practice — fill the table cold",
+    briefing: null,
+    customer: { who: "Junior associate at a corporate law firm; senior partner downstream.", emotional_state: "Meticulous; low tolerance for error (missed clause = malpractice exposure).", jtbd: "(1) Extract key clauses, (2) Compare to firm's standard, (3) Flag deviations.", why_failing: "Junior associates spend 4 hrs reviewing a 50-page MSA; clauses missed; deviation flags inconsistent.", whats_hard: "Clause-language variation across jurisdictions; client-specific preferences; ambiguous defined terms." },
+    product: { intent: "Extract standard clauses + flag deviations from firm playbook.", in_scope: "Clause extraction (indemnity, IP, termination, governing law), deviation flagging, playbook comparison.", out_of_scope: "Negotiation drafting; opinion letters; cross-border M&A review; IP-licensing specifics.", trust: "Act: deterministic section detection + clause-text extraction. Ask: associate reviews every extraction. Escalate: deviation from playbook or low-confidence parse.", fallback: "Associate queue with section-page citation.", metric_tension: "Coverage vs precision. Protect precision — missed clause = malpractice." },
+    technical: { read: "Contract PDFs (OCR + extraction), firm playbook DB, prior-deal precedent DB.", write: "NONE direct; outputs to review queue.", data_freshness: "Playbook quarterly review; precedent DB weekly.", risk: "Jurisdictional clause variation missed. Mitigation: jurisdiction-aware playbook + deterministic governing-law detection.", validation: "200-contract eval + pass^k=5 + senior-partner sign-off on 20 outputs." },
+    probes: { customer: ["Partner who reviewed 30 contracts last quarter and trusts no AI — earn trust how?"], product: ["What if firm playbook contradicts industry standard for a clause type?"], technical: ["Why no direct drafting — defend it."] }
+  },
+
+  loyalty: {
+    name: "Loyalty Program Advisor for an airline (worked example)",
+    caseLine: "Practice prompt with reference-quality content — switch to Reference mode for the worked example",
+    briefing: null,
+    customer: {
+      who: "Loyalty program member, often returning, high-intent on trip planning.",
+      emotional_state: "Curious (planning) OR anxious (close to expiration / status threshold).",
+      jtbd: "(1) Check points balance. (2) Understand redemption options. (3) Understand status implications.",
+      why_failing: "Loyalty queries route to live agents → 30+ min wait → customer abandons or churns.",
+      whats_hard: "Customer doesn't know if their question is 'simple' (lookup) or 'nuanced' (best redemption)."
+    },
+    product: {
+      intent: "Loyalty information + simple decision support.",
+      in_scope: "Points balance, expiration, redemption options, tier benefits, status calculations.",
+      out_of_scope: "Account changes, reservation transactions, M&A speculation, advisory recommendations.",
+      trust: "Act: factual lookups. Ask: edge cases. Escalate: advisory queries, account-specific exceptions.",
+      fallback: "One-click handoff to loyalty specialist; agent passes context.",
+      metric_tension: "70% containment within scope. TENSION: Containment vs CSAT — protect CSAT (≥4.0 floor)."
+    },
+    technical: {
+      read: "Loyalty database (balance, tier, transaction history), policy documentation, FAQ corpus.",
+      write: "NONE in v1. Only writes are to escalation queue.",
+      data_freshness: "Balance live; policy 1-hour cache; FAQ indexed corpus.",
+      risk: "Stale policy documentation. Mitigation: policy-version pinning + scheduled cache refresh + LLM-as-judge check.",
+      validation: "PoC + 50-case eval set + compliance sign-off + senior-analyst review of 20 sample drafts + closed beta with 100 customers."
+    },
+    probes: {
+      customer: ["Walk me through a difficult customer interaction.", "Customer mis-handled by previous AI rollout — re-earn trust how?"],
+      product: ["What if customer asks something out of scope?", "How do you measure containment quality, not just rate?"],
+      technical: ["Why read-only? Defend it.", "What's the worst-case if data freshness is wrong by 24 hours?"]
+    }
+  }
+};
+
+function renderCase(caseId) {
+  const c = CASES[caseId];
+  const briefingPanel = document.getElementById('briefingPanel');
+  const caseLine = document.getElementById('caseLine');
+
+  if (!c) {
+    briefingPanel.classList.add('hidden');
+    caseLine.textContent = "Pick a case to begin. Real cases (Calder, Helix) open with the in-character kickoff email.";
+    clearCells();
+    renderProbes({customer: [], product: [], technical: []});
+    return;
   }
 
-  timerBtn.addEventListener('click', () => {
-    if (timerInterval) {
+  caseLine.textContent = c.caseLine;
+
+  if (c.briefing) {
+    briefingPanel.classList.remove('hidden');
+    document.getElementById('briefingMeta').textContent = c.briefing.meta;
+    document.getElementById('briefingTitle').textContent = c.briefing.title;
+    document.getElementById('briefingFrom').textContent = c.briefing.from;
+    document.getElementById('briefingTo').textContent = c.briefing.to;
+    document.getElementById('briefingCc').textContent = c.briefing.cc;
+    document.getElementById('briefingSubject').textContent = c.briefing.subject;
+    document.getElementById('briefingBody').textContent = c.briefing.body;
+    document.getElementById('briefingClock').textContent = c.briefing.clock || "";
+  } else {
+    briefingPanel.classList.add('hidden');
+  }
+
+  renderColumn('customerBullets', c.customer);
+  renderColumn('productBullets', c.product);
+  renderColumn('technicalBullets', c.technical);
+  renderProbes(c.probes);
+}
+
+function renderColumn(ulId, data) {
+  document.getElementById(ulId).querySelectorAll('li').forEach(li => {
+    const key = li.dataset.cell;
+    const value = data[key] || "";
+    li.querySelector('.placeholder').textContent = value ? "(reference loaded — switch to Reference mode to see)" : "fill in your own version";
+    li.querySelector('.reference-text').textContent = value;
+  });
+}
+
+function clearCells() {
+  ['customerBullets', 'productBullets', 'technicalBullets'].forEach(ulId => {
+    document.getElementById(ulId).querySelectorAll('li').forEach(li => {
+      li.querySelector('.placeholder').textContent = "fill in your own version";
+      li.querySelector('.reference-text').textContent = "";
+    });
+  });
+}
+
+function renderProbes(probes) {
+  const map = { customer: 'probesCustomer', product: 'probesProduct', technical: 'probesTechnical' };
+  Object.keys(map).forEach(k => {
+    const ul = document.getElementById(map[k]);
+    ul.innerHTML = "";
+    const items = probes[k] || [];
+    if (items.length === 0) {
+      const li = document.createElement('li');
+      li.textContent = "(no probes loaded — pick a case)";
+      li.style.color = "#9ca3af";
+      ul.appendChild(li);
+    } else {
+      items.forEach(p => {
+        const li = document.createElement('li');
+        li.textContent = `"${p}"`;
+        ul.appendChild(li);
+      });
+    }
+  });
+}
+
+document.querySelectorAll('.mode-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.mode-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    document.body.className = btn.dataset.mode + '-mode';
+  });
+});
+
+let timerInterval = null;
+let secondsLeft = 300;
+const timerEl = document.getElementById('timer');
+const timerBtn = document.getElementById('startTimer');
+function updateTimer() {
+  const m = Math.floor(secondsLeft / 60);
+  const s = secondsLeft % 60;
+  timerEl.textContent = `${m}:${s.toString().padStart(2, '0')}`;
+  timerEl.classList.toggle('warning',  secondsLeft <= 90 && secondsLeft > 30);
+  timerEl.classList.toggle('critical', secondsLeft <= 30 && secondsLeft > 0);
+}
+timerBtn.addEventListener('click', () => {
+  if (timerInterval) {
+    clearInterval(timerInterval);
+    timerInterval = null;
+    timerBtn.textContent = 'Start 5-min timer';
+    secondsLeft = 300;
+    updateTimer();
+    return;
+  }
+  timerBtn.textContent = 'Reset';
+  timerInterval = setInterval(() => {
+    secondsLeft--;
+    updateTimer();
+    if (secondsLeft <= 0) {
       clearInterval(timerInterval);
       timerInterval = null;
       timerBtn.textContent = 'Start 5-min timer';
-      secondsLeft = 300;
-      updateTimer();
-      return;
+      timerEl.textContent = "TIME";
     }
-    timerBtn.textContent = 'Reset';
-    timerInterval = setInterval(() => {
-      secondsLeft--;
-      updateTimer();
-      if (secondsLeft <= 0) {
-        clearInterval(timerInterval);
-        timerInterval = null;
-        timerBtn.textContent = 'Start 5-min timer';
-        timerEl.textContent = "TIME";
-      }
-    }, 1000);
-  });
+  }, 1000);
+});
+updateTimer();
 
-  updateTimer();
+const caseSelect = document.getElementById('caseSelect');
+caseSelect.addEventListener('change', (e) => {
+  const caseId = e.target.value;
+  renderCase(caseId);
+  if (caseId === 'calder' || caseId === 'helix' || caseId === 'loyalty') {
+    document.querySelector('.mode-btn[data-mode="reference"]').click();
+  } else if (caseId) {
+    document.querySelector('.mode-btn[data-mode="practice"]').click();
+  }
+});
 
-  // ---------- Prompt selector ----------
-  const promptSelect = document.getElementById('promptSelect');
-  promptSelect.addEventListener('change', (e) => {
-    if (e.target.value === '6') {
-      // Loyalty example — switch to reference mode automatically
-      document.querySelector('.mode-btn[data-mode="reference"]').click();
-    } else if (e.target.value !== '0') {
-      document.querySelector('.mode-btn[data-mode="practice"]').click();
-    }
-  });
+document.querySelectorAll('textarea').forEach(ta => {
+  const key = 'agent_design_' + ta.dataset.key;
+  ta.value = localStorage.getItem(key) || '';
+  ta.addEventListener('input', () => localStorage.setItem(key, ta.value));
+});
 
-  // ---------- Persist textareas to localStorage ----------
+document.getElementById('clearAll').addEventListener('click', () => {
+  if (!confirm('Clear all practice notes? This cannot be undone.')) return;
   document.querySelectorAll('textarea').forEach(ta => {
-    const key = 'agent_design_' + ta.dataset.key;
-    ta.value = localStorage.getItem(key) || '';
-    ta.addEventListener('input', () => localStorage.setItem(key, ta.value));
+    ta.value = '';
+    localStorage.removeItem('agent_design_' + ta.dataset.key);
   });
+});
 
-  // ---------- Clear notes ----------
-  document.getElementById('clearAll').addEventListener('click', () => {
-    if (!confirm('Clear all practice notes? This cannot be undone.')) return;
-    document.querySelectorAll('textarea').forEach(ta => {
-      ta.value = '';
-      localStorage.removeItem('agent_design_' + ta.dataset.key);
-    });
-  });
+document.querySelectorAll('.self-check li').forEach(li => {
+  li.addEventListener('click', () => li.classList.toggle('checked'));
+});
 
-  // ---------- Self-check toggle ----------
-  document.querySelectorAll('.self-check li').forEach(li => {
-    li.addEventListener('click', () => li.classList.toggle('checked'));
-  });
+(function deepLink() {
+  const params = new URLSearchParams(window.location.search);
+  const caseParam = params.get('case');
+  if (caseParam && CASES[caseParam]) {
+    caseSelect.value = caseParam;
+    renderCase(caseParam);
+    if (caseParam === 'calder' || caseParam === 'helix' || caseParam === 'loyalty') {
+      document.querySelector('.mode-btn[data-mode="reference"]').click();
+    }
+  } else {
+    renderProbes({customer: [], product: [], technical: []});
+  }
+})();
 </script>
 </body>
 </html>

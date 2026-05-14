@@ -71,13 +71,15 @@ It's now **7:50 AM Tuesday, your engagement week 1**. You have 70 minutes before
 
 1. **Read [`00_brief.md`](00_brief.md)** (10 min) — the formal customer brief. Numbers, stakeholders, constraints, working hypothesis Greg sent over.
 
-2. **Read [`EXERCISE.md`](../calder-insurance/EXERCISE.md)** if you haven't (5 min) — the 4-week structure and what you'll produce.
+2. **Open the interactive whiteboard with Calder pre-loaded**: [`../../../tools/agent_design_practice.html?case=calder`](../../../tools/agent_design_practice.html?case=calder) (3 min to load, 30 min to use). The 3-lens table opens with Calder's stakeholders + numbers visible in Reference mode. Switch to Practice mode to fill your own draft before the kickoff. The kickoff email from Maria is in the briefing panel at the top.
 
-3. **Skim [`01_week1_discovery/interview_questions.md`](01_week1_discovery/interview_questions.md)** (10 min) — the question bank you'll use across all stakeholder interviews. Pre-pick the 8-10 you want to ask Maria.
+3. **Read [`EXERCISE.md`](EXERCISE.md)** if you haven't (5 min) — the 4-week structure and what you'll produce.
 
-4. **Open [`01_week1_discovery/STAKEHOLDER_INTERVIEWS.md`](01_week1_discovery/STAKEHOLDER_INTERVIEWS.md)** (5 min) — your day-by-day cadence. Maria first this morning. Greg this afternoon. Priya tomorrow.
+4. **Skim [`01_week1_discovery/interview_questions.md`](01_week1_discovery/interview_questions.md)** (10 min) — the question bank. Pre-pick the 8-10 you want to ask Maria.
 
-5. **Don't peek at the reference solutions yet.** They're in `01_week1_discovery/discovery_memo.md`, `stakeholder_map.md`, `recap_email_to_maria.md`, `rachel_one_pager.md`. Open them only AFTER you've produced your own.
+5. **Open [`01_week1_discovery/STAKEHOLDER_INTERVIEWS.md`](01_week1_discovery/STAKEHOLDER_INTERVIEWS.md)** (5 min) — your day-by-day cadence.
+
+6. **Don't peek at the reference solutions yet.** They're in `01_week1_discovery/discovery_memo.md`, `stakeholder_map.md`, `recap_email_to_maria.md`, `rachel_one_pager.md`. Open them only AFTER you've produced your own.
 
 ### The 9 AM meeting with Maria
 
