@@ -1,22 +1,22 @@
 # Helix Capital — How to Run This Simulation
 
-> A 2-week guided FDE engagement on the Helix Capital case (hedge fund earnings-note automation). Different domain from Calder, same FDE skill. You do the work; the reference solutions show what good looks like AFTER you've attempted each phase.
+> A 4-week guided FDE engagement on the Helix Capital case (hedge fund earnings-note automation). Different domain from Calder, same FDE skill. You do the work; the reference solutions show what good looks like AFTER you've attempted each phase.
 
 ## Before you start
 
 1. Read `00_brief.md` — the customer prompt
-2. Allocate ~20 hours over 2 weeks (or compressed sprint)
-3. Set up a fresh repo for your work
-4. Have an Anthropic or OpenAI API key configured (for the build phase)
+2. Pick your work cadence: 4 weeks at ~10 hours/week, or a compressed 2-week sprint at 20 hours/week
+3. Set up a fresh repo for your work (don't edit this one)
+4. Have an Anthropic or OpenAI API key configured (for the build phases)
 
-## The 2-week structure
+## The 4-week structure
 
 | Week | Folder | Your time |
 |---|---|---|
-| 1 | `01_week1_discovery/` | 6-8 hours |
-| 2 | `02_week2_solution/` (includes build + eval) | 10-14 hours |
-
-The Helix engagement is faster than Calder because the customer brief is more constrained (4-week demo target; one specific workflow).
+| 1 | `01_week1_discovery/` | 6-10 hours |
+| 2 | `02_week2_solution/` | 6-10 hours |
+| 3 | `03_week3_validation/` | 8-12 hours |
+| 4 | `04_week4_handoff/` | 4-8 hours |
 
 ## Discipline: do the exercise before reading the reference
 
@@ -82,19 +82,65 @@ What you should produce:
 
 Reference: `prototype/evals/`
 
-## At the end of 2 weeks
+## Week 3 — Validation (8-12 hours)
+
+**Your goal**: validate the prototype with stakeholders. Rachel's 20-draft review is the political gate.
+
+**What you should produce**:
+- 20 sample drafts curated for Rachel's review (mix of routine + adversarial)
+- Stakeholder session notes (Rachel 20-draft review, Mei biweekly compliance check, Sarah weekly status, Carmen hostile review)
+- Updated eval suite incorporating findings from the review sessions
+- 3 sign-off criteria status update — green / yellow / red with named owners
+- Architecture revisions from the validation sessions
+
+**Frameworks to deploy**:
+- Hostile review pattern (invite the skeptic to find what's wrong, not validate what's right)
+- 3 sign-off criteria with named owners
+- Trusted Advisor formula (especially for Mei + Carmen, who go from default-no to active partner)
+
+**Reference solution**: `03_week3_validation/sessions/` (4 stakeholder session notes)
+
+## Week 4 — Production Gates + Handoff (4-8 hours)
+
+**Your goal**: ship the wedge to production with named operational ownership.
+
+**What you should produce**:
+- Field memo (1-2 pages) summarizing what was learned + what would change in the AI lab product
+- Run-book + rollback decision tree + platform-boundary doc
+- Wedge demo session (all stakeholders, including downstream consumer Carmen)
+- Handoff to operational owner Aditya (CTO) with named cadence through week 13
+- Risks remaining, bucketed Business / UX / Technical with detection signals
+
+**Frameworks to deploy**:
+- Field-back-to-product memo structure
+- 3-level metrics (Technical / UX / Business) with tension named
+- Bucket-organized risks with detection signals
+- Quick Win Milestone retrospectively reviewed
+
+**Reference solution**: `04_week4_handoff/field_memo.md`, session notes in `04_week4_handoff/sessions/`
+
+## At the end of 4 weeks
 
 You should have:
-- A working earnings-note agent prototype on synthetic data
-- 30-50 case weighted eval suite with pass^k=5 results
+- A working earnings-note agent prototype on synthetic data (your version)
+- 50+ case weighted eval suite with pass^k=5 results
 - 4-slide deck defending the architecture
-- 1-page discovery memo
-- Working knowledge of citation grounding + MNPI scrubbing + LLM-as-judge calibration
+- 1-page discovery memo + 1-page wedge proposal + 2-page field memo
+- 4 stakeholder session notes (validation phase)
+- Run-book + rollback procedure + platform-boundary doc
+- Working knowledge of citation grounding + MNPI scrubbing + LLM-as-judge calibration + hostile-review pattern
 
 This is the same skill set the 5-hour take-home (sim 2) tests under time pressure. Doing the full engagement first builds the muscle memory; doing the 5-hour version next tests whether you can execute under a clock.
+
+## At the end of week 4
+
+After your engagement completes:
+1. Fill in [`../RETRO_TEMPLATE.md`](../RETRO_TEMPLATE.md) — be specific, subtract 1 point per dimension from your gut score
+2. Package the artifacts using [`../PORTFOLIO_TEMPLATE.md`](../PORTFOLIO_TEMPLATE.md) — the work becomes a real interview signal only if you package it
+3. Use [`../GRADE_YOUR_WORK.md`](../GRADE_YOUR_WORK.md) per phase to get a structured Claude-graded score before moving on
 
 ## Why two cases (Calder + Helix)?
 
 Running both cases sequentially tests **domain portability** — a real FDE skill. The frameworks (3-lens, Outcome Risk Matrix, agent shapes, workflow decomposition) are the same in insurance and finance. The specific stakeholders, kill-criteria, and integration risks differ. If you can produce defensible work in both domains, that's a strong signal.
 
-The senior FDE move: do Helix second after Calder. By Helix you should be deploying frameworks in your sleep and spending your time on the case specifics, not on framework selection.
+The senior FDE move: **do Calder full-path first, then Helix skip-ahead**. See [`../SKIP_AHEAD.md`](../SKIP_AHEAD.md) for the 15-hour skip-ahead path that does Helix weeks 3-4 cold while loading weeks 1-2 from the reference. Tests build + handoff craft on a new domain without re-doing discovery reps. Total time across both cases: ~45-50 hours.

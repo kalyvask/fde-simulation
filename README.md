@@ -34,7 +34,9 @@ All four are designed to be runnable in Claude Code (with Claude as the simulate
 | **Calder Insurance** | Personal-lines insurance / FNOL | Mid-market insurer with 1M+ claims/year | First-Notice-of-Loss agent workforce |
 | **Helix Capital** | Long-short equity hedge fund | $2.3B fund, 12 investment professionals | Citation-grounded earnings-note drafter |
 
-Both use synthetic data. Both have working Python prototype scaffolds with eval suites.
+Both use synthetic data. Both have working Python prototype scaffolds with eval suites. Both run a full 4-week engagement structure (discovery → solution → validation → handoff) with reference solutions per phase.
+
+**Skip-ahead path**: after completing one case full-path, run the other in ~15 hours via `simulations/1-full-engagement/SKIP_AHEAD.md` — loads weeks 1-2 from reference, does weeks 3-4 cold. Tests build + handoff craft on a new domain.
 
 ## Frameworks (used across all simulations)
 

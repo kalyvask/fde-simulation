@@ -116,4 +116,16 @@ You should have:
 - 1-page discovery memo + field memo
 - A clear sense of where your FDE skill is strong vs weak
 
+## After the engagement
+
+Three artifacts to produce after week 4 (each ~30-60 min):
+
+1. **Fill in [`../RETRO_TEMPLATE.md`](../RETRO_TEMPLATE.md)** — be specific, be honest, subtract 1 point per dimension from your gut score
+2. **Package using [`../PORTFOLIO_TEMPLATE.md`](../PORTFOLIO_TEMPLATE.md)** — the work becomes a real interview signal only if you package it
+3. **Self-grade via [`../GRADE_YOUR_WORK.md`](../GRADE_YOUR_WORK.md)** — per-phase Claude-graded scores with specific feedback
+
 This is a portfolio piece. Put it on GitHub. Show it to interviewers when they ask "have you ever built an agent workforce."
+
+## Already done Calder once? Try the skip-ahead path on Helix
+
+If you've completed Calder full-path, do Helix via [`../SKIP_AHEAD.md`](../SKIP_AHEAD.md) — 15-hour path that loads weeks 1-2 from reference and does weeks 3-4 cold on a new domain. Tests build + handoff craft without re-doing discovery reps.

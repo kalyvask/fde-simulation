@@ -42,6 +42,9 @@ You can run both cases sequentially to test domain-portability — that's actual
 | **Synthetic data generators** | Working Python that produces synthetic FNOLs / earnings calls deterministically with a seed | `<case>/02_week2_solution/prototype/<case>_agent/data/synthetic.py` |
 | **Eval harness with pass^k=5** | Weighted eval cases; examiner-readable trace per case | `<case>/02_week2_solution/prototype/scripts/run_eval.py` |
 | **Automated grading** | Claude grades your submission against the reference per phase | [`GRADE_YOUR_WORK.md`](GRADE_YOUR_WORK.md) |
+| **Engagement retrospective template** | End-of-week-4 retro: what worked, what didn't, what you'd change | [`RETRO_TEMPLATE.md`](RETRO_TEMPLATE.md) |
+| **Portfolio piece template** | How to package the artifacts so they're ready for a real FDE interview | [`PORTFOLIO_TEMPLATE.md`](PORTFOLIO_TEMPLATE.md) |
+| **Skip-ahead path** | For senior candidates: do weeks 3-4 cold (~15 hours), load weeks 1-2 from reference. Best move: full Calder → skip-ahead Helix | [`SKIP_AHEAD.md`](SKIP_AHEAD.md) |
 
 ## The honest tradeoff
 
