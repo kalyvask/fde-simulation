@@ -2,11 +2,22 @@
 
 > First take. Don't re-record. The interviewer is looking for clarity under time pressure, not polish.
 
-## Why this matters
+## Why this matters — and why it's THE differentiator
 
-OpenAI specifically requires a video walkthrough on Deployed PM (Codex) and FDE take-homes. Per the JD: FDEs present to executives weekly. The video is testing whether you can communicate technical decisions to a non-technical stakeholder under time pressure.
+**The video walkthrough is the single most distinctive signal in product-first AI lab FDE take-homes.**
 
- often skips the video requirement but if you offer one, you score higher on the "Communication" rubric dimension.
+Public sources consistently flag this as the unique element of major AI lab Deployed PM / FDE processes — and the reason is direct: FDEs present to executives weekly. The video is a direct simulation of the daily work, not a documentation artifact.
+
+Most candidates treat the video like a screencast walkthrough of their code. That's the wrong mental model. The video is a **5-minute executive briefing**, with you presenting to a senior customer-facing decision-maker. Your code is the supporting evidence, not the subject.
+
+Three things separate strong videos from rejected ones:
+1. **Live demo, not screenshots** — show the agent running, not a slide of "results"
+2. **Show your face** — increases interviewer signal substantially; reads as confident and customer-ready
+3. **End with what's NOT in v1** — naming what you cut is a stronger signal than naming what you built
+
+If your interview process includes a video walkthrough, treat it as **the deliverable** the company is grading, not a supporting artifact. The deck and the repo are evidence; the video is the performance.
+
+For interview processes that don't require a video, including one anyway is a strong move — it scores up on the "Communication" rubric dimension and signals customer-readiness.
 
 ## The 5-minute structure
 

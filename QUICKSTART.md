@@ -106,7 +106,23 @@ Total time: ~90 min including prep.
 
 ---
 
-## Path D: Just the frameworks (no time at all)
+## Path D: Client simulation round (~20-30 min per scenario)
+
+Best if: you're preparing for the FDE-loop round that's a live customer role-play (frustrated client, scope dispute, SLA breach).
+
+```bash
+cd simulations/4-client-simulation
+```
+
+1. Read `playbook.md` once (~15 min)
+2. Open a fresh Claude conversation
+3. Copy one of the 5 scenarios from the playbook
+4. Run it live for 20-30 min — Claude plays the customer
+5. At the end, ask Claude to grade you against the 5-step de-escalation script + the 4 strong-signal markers
+
+Do one scenario per evening over a week. By scenario 5, the de-escalation script should be muscle memory.
+
+## Path E: Just the frameworks (no time at all)
 
 Best if: you have an interview tomorrow and want the cheat sheet.
 

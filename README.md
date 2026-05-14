@@ -23,8 +23,9 @@ It's structured for self-study, peer mocks, or Claude-Code-as-interviewer.
 | [`1-full-engagement`](simulations/1-full-engagement/) | 20-40 hours, 2-4 weeks | Discovery memo + wedge proposal + working Python agent prototype + weighted eval suite + field memo | Portfolio piece. Practice the full FDE skill from cold-start to production. |
 | [`2-take-home-5h`](simulations/2-take-home-5h/) | 6 hours (5h build + 1h Review) | Repo + 4-slide deck + 5-min video + eval results, then a 60-min Review transcript | Dress rehearsal for the actual final round at frontier labs. |
 | [`3-recommendation-60min`](simulations/3-recommendation-60min/) | 1 hour | A structured live conversation, no artifact required | Recruiter screens, early-stage onsites, any 60-min Review without a take-home. |
+| [`4-client-simulation`](simulations/4-client-simulation/) | 20-30 min per scenario × 5 | Live role-play transcript with self-grading | The round that eliminates technically-strong candidates. Practice de-escalation, ownership language, composure under pressure. |
 
-All three are designed to be runnable in Claude Code (with Claude as the simulated interviewer for sims 2 and 3). The artifacts themselves are general-purpose study material.
+All four are designed to be runnable in Claude Code (with Claude as the simulated interviewer / customer). The artifacts themselves are general-purpose study material.
 
 ## Two case studies (both included in sim 1)
 
@@ -35,9 +36,9 @@ All three are designed to be runnable in Claude Code (with Claude as the simulat
 
 Both use synthetic data. Both have working Python prototype scaffolds with eval suites.
 
-## Frameworks (used across all three sims)
+## Frameworks (used across all simulations)
 
-Six portable frameworks that show up in every FDE engagement. Internalize these and they generalize to any case:
+Nine portable frameworks that show up in every FDE engagement. Internalize these and they generalize to any case:
 
 1. [4-source convergence](frameworks/4-source-convergence.md) — Buyer / Brief / Industry / Operator triangulation for discovery
 2. [3-lens scaffold](frameworks/3-lens-scaffold.md) — Customer / Product / Technical for any agent design
@@ -45,6 +46,9 @@ Six portable frameworks that show up in every FDE engagement. Internalize these 
 4. [Workflow decomposition](frameworks/workflow-decomposition.md) — 5-step method for drawing agent boundaries from a manual process
 5. [Agent shapes catalog](frameworks/agent-shapes-catalog.md) — 7 standard agent shapes (Extractor, Classifier, Synthesizer, Critic, Compliance critic, Router, Auditor)
 6. [4-dimensional testing](frameworks/4-dimensional-testing.md) — Static eval + Pass^k + Adversarial + Production observability
+7. [Behavioral story types](frameworks/behavioral-story-types.md) — The 5 stories you must have, with a 6-section template per story (Principle / Situation / Complication / Actions+Tradeoff / Outcome / Lesson)
+8. [Ownership language guide](frameworks/ownership-language-guide.md) — Action verb + first person + specific outcome + business consequence. The single most-cited differentiator in FDE interview write-ups.
+9. [Company calibration](frameworks/company-calibration.md) — What different employer archetypes care about (research-first AI lab, product-first AI lab, AI workforce platform, enterprise vendor) with compensation reference bands
 
 ## Tools
 
