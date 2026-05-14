@@ -80,11 +80,11 @@ It's now **6:20 AM Monday, your engagement week 1**. You have ~2.5 hours before 
 
 ### What to do in the next 2.5 hours
 
-1. **Read [`00_brief.md`](00_brief.md)** (10 min) — the formal customer context. The fund, the 80-name coverage book, the IT landscape, the constraints.
+1. **Open the case brief** (read 12-15 min): [`CASE_BRIEF.html`](CASE_BRIEF.html) — clean consulting-style read of the Helix case. Problem in Sarah's voice, named stakeholders with roles, headline numbers, the 4-hours-per-note math, constraints, kill-criteria, working hypothesis. Open this in your browser; print-friendly if you want a hard copy. (The same content lives in [`00_brief.md`](00_brief.md) as plain markdown if you prefer.)
 
-2. **Open the interactive whiteboard with Helix pre-loaded**: [`../../../tools/agent_design_practice.html?case=helix`](../../../tools/agent_design_practice.html?case=helix) (3 min to load, 45 min to use). The 3-lens table opens with Helix's stakeholders + numbers visible in Reference mode. Switch to Practice mode to fill your own draft before the kickoff. The kickoff email from Sarah is in the briefing panel at the top.
+2. **Open the 3-lens whiteboard with Helix pre-loaded** (~45 min): [`../../../tools/agent_design_practice.html?case=helix`](../../../tools/agent_design_practice.html?case=helix) — draft your stakeholder map + wedge hypothesis in Practice mode. Switch to Reference mode AFTER your kickoff to compare against the senior version.
 
-3. **Read [`EXERCISE.md`](EXERCISE.md)** if you haven't (5 min) — the 4-week structure and what you'll produce.
+3. **Skim [`EXERCISE.md`](EXERCISE.md)** if you haven't (5 min) — the 4-week structure and what you'll produce.
 
 4. **Skim [`01_week1_discovery/STAKEHOLDER_INTERVIEWS.md`](01_week1_discovery/STAKEHOLDER_INTERVIEWS.md)** (5 min) — the 7 stakeholder role-play prompts.
 

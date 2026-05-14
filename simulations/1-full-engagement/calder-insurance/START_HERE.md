@@ -69,11 +69,11 @@ It's now **7:50 AM Tuesday, your engagement week 1**. You have 70 minutes before
 
 ### What to do in the next 70 minutes
 
-1. **Read [`00_brief.md`](00_brief.md)** (10 min) — the formal customer brief. Numbers, stakeholders, constraints, working hypothesis Greg sent over.
+1. **Open the case brief** (read 10-12 min): [`CASE_BRIEF.html`](CASE_BRIEF.html) — clean consulting-style read of the Calder case. Problem in Maria's voice, named stakeholders with roles, headline numbers, constraints, working hypothesis, what's being asked of you. Open this in your browser; print-friendly if you want a hard copy. (The same content lives in [`00_brief.md`](00_brief.md) as plain markdown if you prefer.)
 
-2. **Open the interactive whiteboard with Calder pre-loaded**: [`../../../tools/agent_design_practice.html?case=calder`](../../../tools/agent_design_practice.html?case=calder) (3 min to load, 30 min to use). The 3-lens table opens with Calder's stakeholders + numbers visible in Reference mode. Switch to Practice mode to fill your own draft before the kickoff. The kickoff email from Maria is in the briefing panel at the top.
+2. **Open the 3-lens whiteboard with Calder pre-loaded** (~30 min): [`../../../tools/agent_design_practice.html?case=calder`](../../../tools/agent_design_practice.html?case=calder) — draft your stakeholder map + wedge hypothesis in Practice mode. Switch to Reference mode AFTER your kickoff to compare against the senior version.
 
-3. **Read [`EXERCISE.md`](EXERCISE.md)** if you haven't (5 min) — the 4-week structure and what you'll produce.
+3. **Skim [`EXERCISE.md`](EXERCISE.md)** if you haven't (5 min) — the 4-week structure and what you'll produce.
 
 4. **Skim [`01_week1_discovery/interview_questions.md`](01_week1_discovery/interview_questions.md)** (10 min) — the question bank. Pre-pick the 8-10 you want to ask Maria.
 

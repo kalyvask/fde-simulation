@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Calder Specialty Insurance — Customer Brief</title>
+<style>
+  :root {
+    --ink: #1a1a1a;
+    --muted: #6b6b6b;
+    --rule: #d8d8d2;
+    --bg: #faf8f3;
+    --panel: #ffffff;
+    --accent: #6b1c1c;
+    --tag: #f3ede0;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: var(--bg); color: var(--ink); }
+  body {
+    font-family: "Charter", "Georgia", "Iowan Old Style", serif;
+    font-size: 17px;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+  .page {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 56px 48px 96px;
+    background: var(--panel);
+    border-left: 1px solid var(--rule);
+    border-right: 1px solid var(--rule);
+    min-height: 100vh;
+  }
+  .meta {
+    font-family: "Inter", -apple-system, "Segoe UI", sans-serif;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--muted);
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+  h1 {
+    font-family: "Inter", -apple-system, sans-serif;
+    font-weight: 700;
+    font-size: 34px;
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+    margin: 0 0 6px 0;
+  }
+  .subtitle {
+    font-family: "Inter", -apple-system, sans-serif;
+    font-size: 14px;
+    color: var(--muted);
+    margin-bottom: 36px;
+    padding-bottom: 24px;
+    border-bottom: 2px solid var(--ink);
+  }
+  h2 {
+    font-family: "Inter", -apple-system, sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: -0.005em;
+    margin: 48px 0 18px 0;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--rule);
+  }
+  h3 {
+    font-family: "Inter", -apple-system, sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--accent);
+    margin: 30px 0 10px 0;
+  }
+  p { margin: 0 0 14px 0; }
+  ul, ol { margin: 0 0 14px 0; padding-left: 22px; }
+  li { margin-bottom: 6px; }
+  strong { color: var(--ink); font-weight: 600; }
+  .disclaimer {
+    background: var(--tag);
+    border-left: 3px solid var(--accent);
+    padding: 12px 18px;
+    font-family: "Inter", -apple-system, sans-serif;
+    font-size: 13px;
+    color: var(--muted);
+    margin-bottom: 32px;
+    line-height: 1.5;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 14px 0 24px 0;
+    font-family: "Inter", -apple-system, sans-serif;
+    font-size: 14px;
+  }
+  th, td {
+    text-align: left;
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--rule);
+    vertical-align: top;
+  }
+  th {
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    color: var(--muted);
+    border-bottom: 2px solid var(--ink);
+  }
+  td.label {
+    font-weight: 600;
+    color: var(--ink);
+    width: 35%;
+  }
+  blockquote {
+    margin: 24px 0;
+    padding: 22px 26px;
+    background: #fbf6ed;
+    border-left: 4px solid var(--accent);
+    font-size: 17px;
+    line-height: 1.55;
+    font-style: italic;
+    color: var(--ink);
+  }
+  blockquote .attr {
+    display: block;
+    margin-top: 12px;
+    font-style: normal;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--muted);
+    font-family: "Inter", sans-serif;
+  }
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0;
+    margin: 16px 0 24px 0;
+    border-top: 1px solid var(--rule);
+    border-left: 1px solid var(--rule);
+  }
+  .stats div {
+    border-right: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+    padding: 12px 14px;
+    font-family: "Inter", sans-serif;
+    font-size: 13px;
+  }
+  .stats .k {
+    color: var(--muted);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 4px;
+  }
+  .stats .v {
+    color: var(--ink);
+    font-weight: 600;
+    font-size: 14px;
+  }
+  .next-action {
+    margin-top: 56px;
+    padding: 24px 26px;
+    background: #fbf6ed;
+    border: 2px solid var(--accent);
+    border-radius: 6px;
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  .next-action h3 {
+    margin-top: 0;
+    color: var(--accent);
+  }
+  .next-action a {
+    color: var(--accent);
+    font-weight: 600;
+  }
+  footer {
+    margin-top: 60px;
+    padding-top: 18px;
+    border-top: 1px solid var(--rule);
+    font-family: "Inter", sans-serif;
+    font-size: 11px;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    display: flex;
+    justify-content: space-between;
+  }
+  .accent { color: var(--accent); }
+  @media print {
+    body { background: white; }
+    .page { border: none; padding: 32px; }
+    .next-action { display: none; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="meta">
+    <span>Engagement Brief · Week 1 Discovery</span>
+    <span>Confidential — Internal Use</span>
+  </div>
+
+  <h1>Calder Specialty Insurance</h1>
+  <div class="subtitle">FNOL AI Workforce — Forward Deployed Engagement Kickoff</div>
+
+  <div class="disclaimer">
+    Calder is a fictional composite based on real PE-backed mid-market specialty auto carriers. All names, numbers, and quotes are illustrative and used to simulate a realistic FDE engagement.
+  </div>
+
+  <h2>At a glance</h2>
+  <div class="stats">
+    <div><div class="k">Industry</div><div class="v">Specialty P&amp;C insurance</div></div>
+    <div><div class="k">Lines</div><div class="v">Commercial auto, non-standard personal auto</div></div>
+    <div><div class="k">GWP</div><div class="v">~$300M</div></div>
+    <div><div class="k">Footprint</div><div class="v">14 Northeast US states</div></div>
+    <div><div class="k">Headcount</div><div class="v">800 (180 in claims)</div></div>
+    <div><div class="k">Ownership</div><div class="v">PE-backed, acquired 2023</div></div>
+    <div><div class="k">Tech stack</div><div class="v">Guidewire ClaimCenter v10, Salesforce, Twilio, Verisk</div></div>
+    <div><div class="k">Why now</div><div class="v">Board: 30% claims-ops cost reduction in 18 months</div></div>
+  </div>
+
+  <h2>The presenting problem</h2>
+  <blockquote>
+    Our claims-handling cost is up 18% in two years. FNOL-to-first-touch is averaging 4.2 hours against a 1-hour SLA. We're paying two BPOs $42 a claim and the quality is uneven — last quarter we had two market-conduct findings tied to BPO mishandling. The board wants a number, not a pilot. I need 30% out of claims ops within 18 months and I'd rather absorb work back in-house with AI than renew the BPO contracts.
+    <span class="attr">— Maria Vasquez, Chief Claims Officer · Kickoff call</span>
+  </blockquote>
+
+  <h2>Stakeholders</h2>
+  <table>
+    <thead>
+      <tr><th>Role</th><th>Name (illustrative)</th><th>Why they matter</th></tr>
+    </thead>
+    <tbody>
+      <tr><td class="label">Chief Claims Officer</td><td>Maria Vasquez</td><td>Economic buyer. Owns the 30% target.</td></tr>
+      <tr><td class="label">SVP Claims Operations</td><td>Greg Hadley</td><td>Champion candidate. Owns daily workflow.</td></tr>
+      <tr><td class="label">Director, FNOL Operations</td><td>Priya Shah</td><td>Operator. Knows where the workflow actually breaks.</td></tr>
+      <tr><td class="label">Frontline claims adjusters</td><td>(3-5 to interview)</td><td>Primary users. Know the soul-crushing parts.</td></tr>
+      <tr><td class="label">Quality / Audit Lead</td><td>Tom Reilly</td><td>Defines a "bad close." Owns regulator-facing exposure.</td></tr>
+      <tr><td class="label">SIU Lead (fraud)</td><td>Dana Kowalski</td><td>Highest-risk reviewer. Defines the fraud-flag bar.</td></tr>
+      <tr><td class="label">CIO</td><td>Anil Gupta</td><td>Owns Guidewire footprint and integrations.</td></tr>
+      <tr><td class="label">CISO</td><td>Rachel Nieman</td><td>Decides whether claim data can leave the tenant.</td></tr>
+      <tr><td class="label">Compliance Officer</td><td>Marcus Hill</td><td>State DOI rules, Unfair Claims Settlement Practices Act.</td></tr>
+      <tr><td class="label">Finance / Actuary</td><td>Lin Zhao</td><td>Owns LAE ratio and the savings model.</td></tr>
+      <tr><td class="label">BPO Contract Owner</td><td>Kevin Park</td><td>Knows BPO economics and exit terms.</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Current-state numbers</h2>
+  <p>The shape of the problem in figures Maria's team would put on a board page.</p>
+  <table>
+    <tbody>
+      <tr><td class="label">Claims per day</td><td>~600 (peaks of 1,200 after weather events)</td></tr>
+      <tr><td class="label">Channel mix</td><td>55% phone · 25% web/app · 12% agent portal · 8% email</td></tr>
+      <tr><td class="label">Cost per claim by tier</td><td>$42 (BPO L1) · $78 (internal L2) · $310 (complex/SIU)</td></tr>
+      <tr><td class="label">BPO spend</td><td>~$11M / year across two vendors</td></tr>
+      <tr><td class="label">Internal claims FTE cost</td><td>~$22M / year (180 staff)</td></tr>
+      <tr><td class="label">LAE ratio</td><td>12.4% of premium · industry benchmark for line ~10.8%</td></tr>
+      <tr><td class="label">Cycle time</td><td>Median FNOL → first-touch 4.2h · FNOL → first-payment 9.1 days</td></tr>
+      <tr><td class="label">Quality</td><td>Estimated 4-6% claim leakage (over/underpayment)</td></tr>
+      <tr><td class="label">Customer NPS at FNOL</td><td>31</td></tr>
+    </tbody>
+  </table>
+
+  <h2>The opportunity (back-of-envelope)</h2>
+  <ul>
+    <li>Cutting LAE ratio from 12.4% → 11.0% on $300M GWP = <strong>$4.2M annual savings</strong>.</li>
+    <li>Replacing one BPO contract ($6M / yr) with an in-house AI workforce + 30% retained human review = <strong>~$3.5M net annual savings</strong>.</li>
+    <li>Combined target: <strong>~$7-8M / year</strong>, sustainable, before reinvestment in new lines.</li>
+  </ul>
+
+  <h2>The constraints</h2>
+  <p>Named upfront — these are not surprises, they are the design parameters.</p>
+  <table>
+    <tbody>
+      <tr><td class="label">Regulatory</td><td>14 state DOIs. Unfair Claims Settlement Practices Act applies in all of them. Some states require human licensed adjusters to make coverage decisions.</td></tr>
+      <tr><td class="label">Data residency</td><td>PII + medical records (PHI) on bodily-injury claims. Anthropic BAA needed; OpenAI BAA in procurement review.</td></tr>
+      <tr><td class="label">System</td><td>Guidewire ClaimCenter is heavily customized. Any integration goes through a slow internal API gateway team.</td></tr>
+      <tr><td class="label">Political</td><td>Two BPO contracts have ~12 months left. Replacing them is the easiest sell. Replacing internal staff is not.</td></tr>
+      <tr><td class="label">Audit</td><td>All AI-assisted decisions need a human-readable trace for the next NAIC market-conduct exam.</td></tr>
+    </tbody>
+  </table>
+
+  <h2>The bet (working hypothesis)</h2>
+  <p>The narrowest, highest-impact wedge is <strong>auto-pay-eligible triage</strong> on first-party physical damage claims under $2,500. Ingest FNOL narrative, photos, and repair estimate; validate against policy; route to auto-pay or to a human adjuster.</p>
+  <p>Estimated 25% of claim volume, currently sent to BPO L1 at $42 per claim. If we get to 80% straight-through processing on this slice with audit-grade traces, we replace ~$2.5M of BPO spend and prove the workforce pattern for harder slices.</p>
+  <p><strong>Discovery's job is to confirm or break this hypothesis.</strong></p>
+
+  <div class="next-action">
+    <h3>Your move — 70 minutes to 9 AM kickoff</h3>
+    <p>Maria is expecting you with <strong>questions, not answers</strong>. Use the time to:</p>
+    <ol>
+      <li>Pre-pick the 8-10 questions you'd ask her (see <code>01_week1_discovery/interview_questions.md</code>).</li>
+      <li>Open the <a href="../../../tools/agent_design_practice.html?case=calder">3-lens whiteboard with Calder pre-loaded</a> — draft your stakeholder map and wedge hypothesis in Practice mode. Switch to Reference mode AFTER your kickoff to compare.</li>
+      <li>Open <a href="01_week1_discovery/STAKEHOLDER_INTERVIEWS.md"><code>STAKEHOLDER_INTERVIEWS.md</code></a> for the day-by-day cadence. Maria first this morning, Greg this afternoon, Priya tomorrow.</li>
+    </ol>
+    <p>Then return to <a href="START_HERE.md"><code>START_HERE.md</code></a> for Maria's email and the 9 AM meeting setup.</p>
+  </div>
+
+  <footer>
+    <span>Calder Specialty Insurance · FDE Engagement</span>
+    <span>Week 1 of 4</span>
+  </footer>
+
+</div>
+</body>
+</html>

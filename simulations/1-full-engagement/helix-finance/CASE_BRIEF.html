@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Helix Capital — Customer Brief</title>
+<style>
+  :root {
+    --ink: #131e2c;
+    --muted: #5b6677;
+    --rule: #d6dde6;
+    --bg: #f5f6f8;
+    --panel: #ffffff;
+    --accent: #1f3a5f;
+    --tag: #e8edf3;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: var(--bg); color: var(--ink); }
+  body {
+    font-family: "Charter", "Georgia", "Iowan Old Style", serif;
+    font-size: 17px;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+  .page {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 56px 48px 96px;
+    background: var(--panel);
+    border-left: 1px solid var(--rule);
+    border-right: 1px solid var(--rule);
+    min-height: 100vh;
+  }
+  .meta {
+    font-family: "Inter", -apple-system, "Segoe UI", sans-serif;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--muted);
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+  h1 {
+    font-family: "Inter", -apple-system, sans-serif;
+    font-weight: 700;
+    font-size: 34px;
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+    margin: 0 0 6px 0;
+  }
+  .subtitle {
+    font-family: "Inter", -apple-system, sans-serif;
+    font-size: 14px;
+    color: var(--muted);
+    margin-bottom: 36px;
+    padding-bottom: 24px;
+    border-bottom: 2px solid var(--ink);
+  }
+  h2 {
+    font-family: "Inter", -apple-system, sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: -0.005em;
+    margin: 48px 0 18px 0;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--rule);
+  }
+  h3 {
+    font-family: "Inter", -apple-system, sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--accent);
+    margin: 30px 0 10px 0;
+  }
+  p { margin: 0 0 14px 0; }
+  ul, ol { margin: 0 0 14px 0; padding-left: 22px; }
+  li { margin-bottom: 6px; }
+  strong { color: var(--ink); font-weight: 600; }
+  .disclaimer {
+    background: var(--tag);
+    border-left: 3px solid var(--accent);
+    padding: 12px 18px;
+    font-family: "Inter", -apple-system, sans-serif;
+    font-size: 13px;
+    color: var(--muted);
+    margin-bottom: 32px;
+    line-height: 1.5;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 14px 0 24px 0;
+    font-family: "Inter", -apple-system, sans-serif;
+    font-size: 14px;
+  }
+  th, td {
+    text-align: left;
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--rule);
+    vertical-align: top;
+  }
+  th {
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    color: var(--muted);
+    border-bottom: 2px solid var(--ink);
+  }
+  td.label {
+    font-weight: 600;
+    color: var(--ink);
+    width: 35%;
+  }
+  blockquote {
+    margin: 24px 0;
+    padding: 22px 26px;
+    background: var(--tag);
+    border-left: 4px solid var(--accent);
+    font-size: 17px;
+    line-height: 1.55;
+    font-style: italic;
+    color: var(--ink);
+  }
+  blockquote .attr {
+    display: block;
+    margin-top: 12px;
+    font-style: normal;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--muted);
+    font-family: "Inter", sans-serif;
+  }
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0;
+    margin: 16px 0 24px 0;
+    border-top: 1px solid var(--rule);
+    border-left: 1px solid var(--rule);
+  }
+  .stats div {
+    border-right: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+    padding: 12px 14px;
+    font-family: "Inter", sans-serif;
+    font-size: 13px;
+  }
+  .stats .k {
+    color: var(--muted);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 4px;
+  }
+  .stats .v {
+    color: var(--ink);
+    font-weight: 600;
+    font-size: 14px;
+  }
+  .kill-criteria {
+    background: #fef3f0;
+    border: 1px solid #fbd5c8;
+    border-left: 4px solid #b45309;
+    padding: 18px 22px;
+    margin: 24px 0;
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  .kill-criteria h3 {
+    margin-top: 0;
+    color: #b45309;
+  }
+  .next-action {
+    margin-top: 56px;
+    padding: 24px 26px;
+    background: var(--tag);
+    border: 2px solid var(--accent);
+    border-radius: 6px;
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  .next-action h3 {
+    margin-top: 0;
+    color: var(--accent);
+  }
+  .next-action a {
+    color: var(--accent);
+    font-weight: 600;
+  }
+  footer {
+    margin-top: 60px;
+    padding-top: 18px;
+    border-top: 1px solid var(--rule);
+    font-family: "Inter", sans-serif;
+    font-size: 11px;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    display: flex;
+    justify-content: space-between;
+  }
+  .accent { color: var(--accent); }
+  @media print {
+    body { background: white; }
+    .page { border: none; padding: 32px; }
+    .next-action { display: none; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="meta">
+    <span>Engagement Brief · Week 1 Discovery</span>
+    <span>Confidential — Internal Use</span>
+  </div>
+
+  <h1>Helix Capital</h1>
+  <div class="subtitle">Earnings-Note AI Workforce — Forward Deployed Engagement Kickoff</div>
+
+  <div class="disclaimer">
+    Helix is a fictional composite based on real mid-market long-short equity hedge funds. All names, numbers, and quotes are illustrative and used to simulate a realistic FDE engagement.
+  </div>
+
+  <h2>At a glance</h2>
+  <div class="stats">
+    <div><div class="k">Industry</div><div class="v">Buy-side equity research; long-short hedge fund</div></div>
+    <div><div class="k">AUM</div><div class="v">$2.3B</div></div>
+    <div><div class="k">Strategy</div><div class="v">Fundamental long-short, US large + mid cap</div></div>
+    <div><div class="k">Sectors</div><div class="v">TMT, consumer, industrials</div></div>
+    <div><div class="k">Coverage universe</div><div class="v">~80 names</div></div>
+    <div><div class="k">Team</div><div class="v">12 investment professionals + CIO + COO</div></div>
+    <div><div class="k">Ownership</div><div class="v">Independent partnership, partners are GPs</div></div>
+    <div><div class="k">Tech stack</div><div class="v">Bloomberg, FactSet, Refinitiv, Alphasense, Snowflake-Python</div></div>
+  </div>
+
+  <h2>The presenting problem</h2>
+  <blockquote>
+    Our research process is broken at the seam between earnings call and portfolio decision. Senior analysts spend 4 hours per covered name the morning after an earnings call drafting a one-pager that goes to me and the trading team. By the time the note's in my hands, market has moved and our edge is decayed. I lost two senior analysts last year and the exit interviews both said "the morning-after grind is unsustainable." I want to compress that 4-hour task to 30-minute review. The note still gets written. The analyst still owns it. The first draft is just not theirs anymore.
+    <span class="attr">— Sarah Mendez, CIO &amp; Managing Partner · Kickoff call</span>
+  </blockquote>
+
+  <h2>Stakeholders</h2>
+  <table>
+    <thead>
+      <tr><th>Role</th><th>Name (illustrative)</th><th>Why they matter</th></tr>
+    </thead>
+    <tbody>
+      <tr><td class="label">CIO / Managing Partner</td><td>Sarah Mendez</td><td>Economic buyer. Owns the burnout problem and PnL pressure from delayed alpha.</td></tr>
+      <tr><td class="label">Head of Research</td><td>David Park</td><td>Champion. Owns the research process and analyst team coverage.</td></tr>
+      <tr><td class="label">Senior Analyst, TMT (lead user)</td><td>Rachel Kim</td><td>9 years tenure. Must-win user; will quietly route around the system if she doesn't trust it.</td></tr>
+      <tr><td class="label">Senior Analysts (4 others)</td><td>sector-divided</td><td>Primary users. Will judge by quality of the draft.</td></tr>
+      <tr><td class="label">Associates (4)</td><td>various</td><td>Currently do parts of the workflow; will need new ownership boundaries.</td></tr>
+      <tr><td class="label">Compliance Officer</td><td>Mei Liu</td><td>Default-no skeptic. SEC + FINRA + CFA Standards. Owns the MNPI gate.</td></tr>
+      <tr><td class="label">CTO</td><td>Aditya Sharma</td><td>Owns Snowflake/Python research stack + Bloomberg/FactSet integrations. One junior engineer.</td></tr>
+      <tr><td class="label">COO</td><td>James O'Brien</td><td>Handles infosec (no separate CISO at this size). Will demand a one-pager.</td></tr>
+      <tr><td class="label">Senior Trader</td><td>Carmen Diaz</td><td>Downstream user. Receives the note; trades against it. Silent skeptic — burned twice by hallucinated numbers in past notes.</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Current-state numbers</h2>
+  <p>The shape of the problem in figures Sarah's team would put on a partners' page.</p>
+  <table>
+    <tbody>
+      <tr><td class="label">Coverage universe</td><td>80 names (TMT + consumer + industrials)</td></tr>
+      <tr><td class="label">Earnings cycle</td><td>4 × per year (SEC filing calendar)</td></tr>
+      <tr><td class="label">Notes per analyst per quarter</td><td>~16 (each analyst covers ~16 names)</td></tr>
+      <tr><td class="label">Time per note (current)</td><td>4 hours</td></tr>
+      <tr><td class="label">Time per note (target)</td><td>30 min review of an AI-drafted note</td></tr>
+      <tr><td class="label">Hours saved per analyst per year</td><td>1,280 → 160 = <strong>1,120 hours</strong></td></tr>
+      <tr><td class="label">Total team hours saved</td><td>5 analysts × 1,120 = <strong>5,600 hours / year</strong></td></tr>
+      <tr><td class="label">Note publication latency</td><td>Median 4h post-call; tail up to 18h</td></tr>
+      <tr><td class="label">MNPI incidents</td><td>0 in last 3 years (Mei's streak)</td></tr>
+      <tr><td class="label">Analysts lost to burnout</td><td>2 in 2025 (out of 7 at start of year)</td></tr>
+    </tbody>
+  </table>
+
+  <h2>The opportunity (back-of-envelope)</h2>
+  <ul>
+    <li><strong>Direct cost saving</strong>: 5,600 hours × $300 / hr fully loaded = $1.68M / year in analyst time.</li>
+    <li><strong>Indirect alpha capture</strong>: notes published &lt;1h post-call instead of 4-18h → analysts hit the trading window.</li>
+    <li><strong>Retention</strong>: stopping burnout-driven exits saves recruiting + ramp ($500K-1M per senior analyst).</li>
+    <li><strong>Combined target</strong>: <strong>~$2-3M / year</strong> in cost + alpha + retention value.</li>
+  </ul>
+
+  <h2>The constraints</h2>
+  <p>Named upfront — these are not surprises, they are the design parameters.</p>
+  <table>
+    <tbody>
+      <tr><td class="label">Regulatory</td><td>SEC (Reg FD, Reg BI), FINRA (research-conduct rules), CFA Institute Standards. Internal compliance review required for any published note.</td></tr>
+      <tr><td class="label">MNPI handling</td><td>Material Non-Public Information must never appear in an AI prompt or any LLM-accessible context. Strict.</td></tr>
+      <tr><td class="label">Chinese wall</td><td>Research and trading must remain logically separated. Note generation is on the research side; trading sees the note only after compliance approval.</td></tr>
+      <tr><td class="label">Hallucinated guidance</td><td>A single fabricated revenue number reaching a trading decision = potentially fund-shutting event. Numerical accuracy is non-negotiable.</td></tr>
+      <tr><td class="label">Citation requirement</td><td>Every claim in the note must be traceable to a source span (transcript, filing, or consensus database).</td></tr>
+      <tr><td class="label">Vendor risk</td><td>Anthropic BAA signed; OpenAI in evaluation. Bloomberg + FactSet data licenses constrain what can leave Helix's environment.</td></tr>
+      <tr><td class="label">Senior analyst veto</td><td>Rachel + 1 other senior analyst can veto rollout if drafts don't meet the quality bar. Must-win users.</td></tr>
+    </tbody>
+  </table>
+
+  <div class="kill-criteria">
+    <h3>Kill-criteria (Sarah's words)</h3>
+    <p><strong>Two things end this engagement for me.</strong></p>
+    <p><strong>One</strong>: a hallucinated number in a draft that leaks into a trading decision and costs us money. That's a fireable mistake for the analyst, fund-reputation damage for me, possibly SEC scrutiny if patterns emerge.</p>
+    <p><strong>Two</strong>: an MNPI-handling violation tied to AI processing. We're 3 years clean. I want to stay that way.</p>
+    <p>The first scares me more — I can see the path from a single hallucination to a $20M trading loss. The MNPI risk is procedural; we can engineer around it. The hallucination risk requires the agent to never invent numbers, full stop.</p>
+  </div>
+
+  <h2>The bet (working hypothesis)</h2>
+  <p>The narrowest, highest-impact wedge is the <strong>morning-after-earnings analyst note draft</strong>, scoped to coverage names with standard earnings call format. The agent ingests the call transcript + 10-Q + prior 4 quarters of notes + consensus estimates, then produces a 1-page draft with:</p>
+  <ul>
+    <li>KPI extraction with citation per number</li>
+    <li>Prior-quarter delta on key metrics</li>
+    <li>Tone-shift detection (management's language vs prior calls)</li>
+    <li>New risk-factor changes (MD&amp;A diff)</li>
+    <li>Draft commentary section</li>
+  </ul>
+  <p>Senior analyst reviews / edits → compliance reviews → published. Excludes M&amp;A commentary, position-sizing recommendations, and anything involving non-public information.</p>
+  <p>Target: <strong>4h analyst task → 30-min review</strong>. Drafts only — the analyst still owns the publication.</p>
+  <p><strong>Discovery's job is to confirm or break this hypothesis.</strong></p>
+
+  <div class="next-action">
+    <h3>Your move — 2.5 hours to 9 AM kickoff</h3>
+    <p>Sarah is expecting you with <strong>questions, not answers</strong>. Use the time to:</p>
+    <ol>
+      <li>Pre-pick the 8-10 questions you'd ask her — framed around her three named kill-criteria. Don't ask anything already in her email.</li>
+      <li>Open the <a href="../../../tools/agent_design_practice.html?case=helix">3-lens whiteboard with Helix pre-loaded</a> — draft your stakeholder map and wedge hypothesis in Practice mode. Switch to Reference mode AFTER your kickoff to compare.</li>
+      <li>Open <a href="01_week1_discovery/STAKEHOLDER_INTERVIEWS.md"><code>STAKEHOLDER_INTERVIEWS.md</code></a> for the day-by-day cadence. Sarah first this morning, David afternoon, Rachel + Mei + Aditya tomorrow, Carmen Day 3 morning.</li>
+    </ol>
+    <p>Then return to <a href="START_HERE.md"><code>START_HERE.md</code></a> for Sarah's email and the 9 AM meeting setup.</p>
+  </div>
+
+  <footer>
+    <span>Helix Capital · FDE Engagement</span>
+    <span>Week 1 of 4</span>
+  </footer>
+
+</div>
+</body>
+</html>
