@@ -42,7 +42,13 @@ def generate_earnings_claim(seed: int | None = None) -> dict[str, Any]:
         "transcript": sample["prepared_remarks"] + " " + sample["qa_section"],
         "prepared_remarks": sample["prepared_remarks"],
         "qa_section": sample["qa_section"],
-        "filing": "(mock 10-Q content — not yet wired)",
+        "filing": (
+            "10-Q Item 1A (Risk Factors): No material changes from the prior period's "
+            "annual report on Form 10-K. Item 2 (MD&A): Revenue growth of 12% YoY driven "
+            "by core segment expansion. Operating margin compressed 80bps on supply-side "
+            "pressure offset by pricing actions. (Synthetic mock for architecture demo; "
+            "production system pulls live FactSet feed.)"
+        ),
         "consensus_revenue": "$3.1B",
         "consensus_eps": "$1.30",
         "kpis_extracted": {

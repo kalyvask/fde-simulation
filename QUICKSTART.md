@@ -16,6 +16,24 @@ git clone https://github.com/kalyvask/fde-simulation.git
 cd fde-simulation
 ```
 
+## Fastest path: one command, full tour (~90 seconds)
+
+The fastest way to see what's in the repo. Runs both prototypes end-to-end with eval suites at pass^k=5.
+
+**macOS / Linux / WSL**:
+```bash
+bash demo.sh
+```
+
+**Windows PowerShell**:
+```powershell
+.\demo.ps1
+```
+
+You'll see two agent workforces (Calder insurance, Helix finance) running on synthetic data, with examiner-readable audit traces and weighted eval suites at the production-grade pass^k=5 threshold. No API key required.
+
+If you want to drill in further, read on — the paths below let you focus on one simulation type without running everything.
+
 ---
 
 ## Path A: Full engagement (sim 1) — 5 min to first agent run

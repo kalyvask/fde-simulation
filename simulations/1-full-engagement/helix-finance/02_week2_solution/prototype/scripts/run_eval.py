@@ -1,7 +1,9 @@
 """Run the Helix eval harness.
 
 Run from prototype/:
-    python scripts/run_eval.py [--k=N] [--cases evals/cases/seed.jsonl]
+    python scripts/run_eval.py           # default: k=5 (production threshold)
+    python scripts/run_eval.py --k 1     # demo / fast feedback
+    python scripts/run_eval.py --k 10    # high-confidence pre-release gate
 """
 from __future__ import annotations
 
@@ -16,15 +18,18 @@ from evals.harness import load_cases, run_eval, summarize
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser()
-    parser.add_argument("--k", type=int, default=1, help="pass^k consistency runs per case")
+    parser = argparse.ArgumentParser(
+        description="Pass^k eval harness. Default k=5 is the production-deploy threshold; "
+                    "variance tolerance is ≤5% across runs."
+    )
+    parser.add_argument("--k", type=int, default=5, help="pass^k consistency runs per case (default: 5)")
     parser.add_argument("--cases", default="evals/cases/seed.jsonl")
     args = parser.parse_args()
 
     cases_path = Path(__file__).parent.parent / args.cases
     cases = load_cases(cases_path)
     print(f"Loaded {len(cases)} eval cases from {cases_path.name}")
-    print(f"Running with k={args.k}")
+    print(f"Running with k={args.k} (pass^k production threshold = 5)")
     print()
 
     wf = Workforce()

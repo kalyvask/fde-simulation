@@ -90,21 +90,78 @@ class NoteDrafterAgent(BaseAgent):
         quarter = inputs.get("quarter", "QX")
         kpis = inputs.get("kpis_extracted", {})
         consensus = inputs.get("consensus", {})
+        transcript = inputs.get("transcript", "") or ""
+        qa_section = inputs.get("qa_section", "") or ""
 
         revenue = kpis.get("revenue", "N/A")
         eps = kpis.get("eps", "N/A")
+        guidance = kpis.get("guidance_range", "")
         cons_revenue = consensus.get("revenue", "N/A")
         cons_eps = consensus.get("eps", "N/A")
 
+        # Deterministic mock for tone-shift detection.
+        # Real implementation: LLM-as-judge calibrated against SubjECTive-QA.
+        # Mock heuristic: scan transcript + Q&A for sentiment keywords.
+        bullish_markers = ["momentum", "inflection", "accelerat", "strong", "raising guidance", "exceeded"]
+        cautious_markers = ["headwind", "uncertain", "softer", "tempered", "lowering guidance", "moderation"]
+        text_lower = (transcript + " " + qa_section).lower()
+        bullish_hits = [m for m in bullish_markers if m in text_lower]
+        cautious_hits = [m for m in cautious_markers if m in text_lower]
+
+        if len(bullish_hits) >= 2 and not cautious_hits:
+            tone_summary = (
+                f"Tone shift detected: notably more confident vs prior call. "
+                f"Markers: {', '.join(bullish_hits[:3])}. "
+                f"Recommended analyst review: validate management is not over-signaling on a beat."
+            )
+        elif len(cautious_hits) >= 2 and not bullish_hits:
+            tone_summary = (
+                f"Tone shift detected: more cautious vs prior call. "
+                f"Markers: {', '.join(cautious_hits[:3])}. "
+                f"Recommended analyst review: assess whether guidance is now structural vs temporary."
+            )
+        elif bullish_hits and cautious_hits:
+            tone_summary = (
+                f"Mixed tone: bullish on [{', '.join(bullish_hits[:2])}] but cautious on "
+                f"[{', '.join(cautious_hits[:2])}]. Analyst-review flag: borderline; escalate to senior."
+            )
+        else:
+            tone_summary = "No significant tone shift detected vs prior-quarter baseline (low confidence; manual review recommended)."
+
+        # Deterministic mock for risk-factor diff vs prior 10-Q.
+        # Real implementation: structured diff against indexed prior filings.
+        # Mock heuristic: based on KPI delta direction + sector.
+        if revenue != "N/A" and cons_revenue != "N/A":
+            try:
+                rev_actual = float(revenue.replace("$", "").replace("B", ""))
+                rev_cons = float(cons_revenue.replace("$", "").replace("B", ""))
+                if rev_actual < rev_cons * 0.95:
+                    risk_factors = "Material revenue miss vs consensus; expect 10-Q to add forward-looking risk language on demand softness."
+                elif rev_actual > rev_cons * 1.05:
+                    risk_factors = "Material revenue beat vs consensus; expect 10-Q risk language to soften on demand-related items."
+                else:
+                    risk_factors = "Revenue in line with consensus; expect minimal 10-Q risk-factor changes vs prior quarter."
+            except (ValueError, AttributeError):
+                risk_factors = "Risk-factor diff: KPI parse incomplete; defer to manual review of 10-Q filing."
+        else:
+            risk_factors = "Risk-factor diff: insufficient KPI data; defer to manual review of 10-Q filing."
+
+        guidance_line = (
+            f"  Forward guidance: {guidance}\n" if guidance else ""
+        )
+
         return (
-            f"{ticker} {quarter} — Earnings note\n\n"
+            f"{ticker} {quarter} — Earnings note (DRAFT — analyst review required)\n\n"
             f"Headline: Reported revenue {revenue} vs consensus {cons_revenue}; "
             f"EPS {eps} vs consensus {cons_eps}.\n\n"
             f"KPIs vs consensus:\n"
             f"  Revenue: {revenue} actual / {cons_revenue} consensus\n"
-            f"  EPS:     {eps} actual / {cons_eps} consensus\n\n"
-            f"Tone-shift summary: (mock — Tone-Shift Detector not yet wired)\n\n"
-            f"New risk factors: (mock — Risk-Factor Diff not yet wired)\n\n"
+            f"  EPS:     {eps} actual / {cons_eps} consensus\n"
+            f"{guidance_line}\n"
+            f"Tone-shift analysis:\n  {tone_summary}\n\n"
+            f"Risk-factor diff (vs prior 10-Q):\n  {risk_factors}\n\n"
             f"Outlook: Management's guidance was provided in the prepared remarks. "
-            f"See cited sections in the source transcript for specifics."
+            f"See cited sections in the source transcript for specifics. "
+            f"This draft is mock-mode output for architecture demonstration; in production "
+            f"the Drafter calls Sonnet with the full transcript + prior-quarter context."
         )
