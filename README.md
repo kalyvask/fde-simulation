@@ -2,7 +2,7 @@
 
 > Open-source training material for Forward Deployed Engineer / Deployed PM / Agent Strategist interviews at frontier AI labs and AI workforce platforms.
 >
-> Three simulations of increasing depth. Pick the one that matches the interview format you're preparing for.
+> Four simulations of increasing depth. Pick the one that matches the interview format you're preparing for.
 
 ## About
 
