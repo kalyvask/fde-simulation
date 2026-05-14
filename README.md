@@ -38,7 +38,7 @@ Both use synthetic data. Both have working Python prototype scaffolds with eval 
 
 ## Frameworks (used across all simulations)
 
-Nine portable frameworks that show up in every FDE engagement. Internalize these and they generalize to any case:
+Ten portable frameworks that show up in every FDE engagement. Internalize these and they generalize to any case:
 
 1. [4-source convergence](frameworks/4-source-convergence.md) — Buyer / Brief / Industry / Operator triangulation for discovery
 2. [3-lens scaffold](frameworks/3-lens-scaffold.md) — Customer / Product / Technical for any agent design
@@ -46,9 +46,14 @@ Nine portable frameworks that show up in every FDE engagement. Internalize these
 4. [Workflow decomposition](frameworks/workflow-decomposition.md) — 5-step method for drawing agent boundaries from a manual process
 5. [Agent shapes catalog](frameworks/agent-shapes-catalog.md) — 7 standard agent shapes (Extractor, Classifier, Synthesizer, Critic, Compliance critic, Router, Auditor)
 6. [4-dimensional testing](frameworks/4-dimensional-testing.md) — Static eval + Pass^k + Adversarial + Production observability
-7. [Behavioral story types](frameworks/behavioral-story-types.md) — The 5 stories you must have, with a 6-section template per story (Principle / Situation / Complication / Actions+Tradeoff / Outcome / Lesson)
+7. [Behavioral story types](frameworks/behavioral-story-types.md) — The 5 stories you must have, with a 6-section template per story
 8. [Ownership language guide](frameworks/ownership-language-guide.md) — Action verb + first person + specific outcome + business consequence. The single most-cited differentiator in FDE interview write-ups.
-9. [Company calibration](frameworks/company-calibration.md) — What different employer archetypes care about (research-first AI lab, product-first AI lab, AI workforce platform, enterprise vendor) with compensation reference bands
+9. [Company calibration](frameworks/company-calibration.md) — What different employer archetypes care about with compensation reference bands
+10. [Consulting & strategy frameworks](frameworks/consulting-frameworks.md) — Trusted Advisor formula, the Delta Concept (Palantir-origin), Three Whys diagnostic (SoR / CoI / Day 2), Cost-of-Inaction lens, Quick Win Milestone, Shadow IT awareness, C.A.S.E. meta-structure
+
+## Reading list
+
+A curated short list of books, papers, and blogs structured by prep stage: see [READING.md](READING.md). Includes *The Trusted Advisor*, *Pyramid Principle*, *Good Strategy / Bad Strategy*, *Designing Data-Intensive Applications*, plus key papers and blogs. Structured as a 30-day sprint / 3-month / 6-month prep arc.
 
 ## Tools
 

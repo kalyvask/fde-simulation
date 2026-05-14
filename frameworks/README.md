@@ -1,6 +1,6 @@
 # Frameworks
 
-> Nine portable frameworks that show up in every FDE engagement. Internalize these and they generalize to any case.
+> Ten portable frameworks that show up in every FDE engagement. Internalize these and they generalize to any case.
 
 | Framework | One-line definition | Deploy in... |
 |---|---|---|
@@ -10,9 +10,10 @@
 | [Workflow decomposition](workflow-decomposition.md) | 5-step method for drawing agent boundaries from a manual process | Solution Strategy |
 | [Agent shapes catalog](agent-shapes-catalog.md) | 7 standard agent shapes (Extractor / Classifier / Synthesizer / Critic / Compliance critic / Router / Auditor) | Solution Strategy |
 | [4-dimensional testing](4-dimensional-testing.md) | Static eval + Pass^k + Adversarial + Production observability | Risk & Validation |
-| [Behavioral story types](behavioral-story-types.md) | 5 required story types with a 6-section template | Behavioral round (and embedded in every other round) |
+| [Behavioral story types](behavioral-story-types.md) | 5 required story types with a 6-section template; tied to the Trusted Advisor formula | Behavioral round (and embedded in every other round) |
 | [Ownership language guide](ownership-language-guide.md) | Action verb + first person + specific outcome + business consequence | All rounds — the differentiator |
 | [Company calibration](company-calibration.md) | 4 employer archetypes (research-first AI lab, product-first AI lab, AI workforce platform, enterprise vendor) with distinctive grading signals and comp bands | Pre-interview tuning |
+| [Consulting & strategy frameworks](consulting-frameworks.md) | 7 consulting-tradition frameworks: Trusted Advisor formula, the Delta Concept, Three Whys diagnostic, Cost-of-Inaction, Quick Win Milestone, Shadow IT awareness, C.A.S.E. meta-structure | Discovery + Solution Strategy + interview meta-structure |
 
 ## How to deploy them
 

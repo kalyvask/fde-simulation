@@ -53,6 +53,25 @@ Three things the interviewer will probe:
 
 The senior FDE move: literally draw this table on a whiteboard or include it on Slide 1 of your deck. The matrix is the artifact that proves you scoped on principles, not vibes.
 
+## Complementary lens: Cost-of-Inaction (CoI)
+
+The ORM frames wedges on *what you gain if you build it* (Value) × *what you risk if it goes wrong* (Risk). The **Cost-of-Inaction** lens (see [`consulting-frameworks.md`](consulting-frameworks.md)) frames the third question: *what does it cost the customer if you DON'T build this wedge?*
+
+CoI matters when:
+- The customer is skeptical the engagement is worth the budget (CoI defends the spend)
+- You need to argue for sequencing (Phase 1 CoI < Phase 2 CoI ⇒ Phase 1 is still the right starting wedge)
+- The customer has alternative vendors (CoI vs. delay-while-they-switch)
+
+For each wedge in your matrix, add an annual CoI estimate. Example:
+
+| Wedge | Value | Risk | CoI per year if not built |
+|---|---|---|---|
+| Wedge A (HITL drafter) | $500K saved | Low | $1.2M (2 senior analysts quit + alpha leak) |
+| Wedge B (auto-publish) | $1.5M saved | High | Same as A — already covered by v1 |
+| Wedge C (different workflow) | $200K saved | Low | $50K (minor annoyance) |
+
+CoI makes wedge comparison fair across different value bands. It also gives the customer a number to defend the engagement to their board.
+
 ## Quick reference
 
 ```

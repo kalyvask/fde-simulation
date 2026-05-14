@@ -39,6 +39,18 @@ When the interviewer asks "how did you decide what to build first", you say:
 
 This beats "I'd talk to stakeholders" by 10x in interview signal.
 
+## Complementary discovery framework: the Three Whys
+
+The 4-source convergence test triangulates *where* the wedge is. The **Three Whys** (see [`consulting-frameworks.md`](consulting-frameworks.md)) surface the discovery questions you should ask AT each source:
+
+| Why | The diagnostic question | What it surfaces |
+|---|---|---|
+| **System of Record** | "If two systems disagree on the data, which one is right?" | Hidden data-trust problems; shadow IT |
+| **Cost of Inaction** | "If we walked away today, what's the cost of this problem persisting for another year?" | Budget defense + sequencing logic |
+| **Day 2 Ownership** | "Who runs this system 90 days after I leave?" | Post-handoff orphaning risk |
+
+Deploy 4-source convergence to find the wedge; deploy the Three Whys to surface the non-obvious risks in week 1.
+
 ## When sources diverge
 
 If sources diverge, the rule is:

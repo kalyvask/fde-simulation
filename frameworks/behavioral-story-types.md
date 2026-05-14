@@ -2,6 +2,26 @@
 
 > Behavioral questions are not confined to a single "behavioral round" in FDE interviews. They're embedded throughout every technical round, every system design round, and the client simulation round. You don't get a section to prepare for; you get probed continuously. Means: you need polished stories ready that you can deploy in 30-90 seconds without thinking about structure.
 
+## The underlying lens: the Trusted Advisor formula
+
+Behavioral interviewers are grading one underlying question: *can we put you in front of our flagship customer next quarter and trust you'll preserve the relationship?* The framework they (often implicitly) score against is Maister's:
+
+```
+Trust = (Credibility + Reliability + Intimacy) / Self-Orientation
+```
+
+See [`consulting-frameworks.md`](consulting-frameworks.md) for the full breakdown. The 5 story types below each map to one or more of these dimensions:
+
+| Story type | What dimension it primarily signals |
+|---|---|
+| 1. Live production fix you owned | Reliability + Credibility |
+| 2. Pushing back on customer request | Low Self-Orientation (you put their long-term interest over short-term comfort) |
+| 3. Deployment failure with public consequences | Intimacy + Reliability (you handled vulnerability transparently) |
+| 4. Explaining technical limit to non-technical stakeholder | Credibility + Intimacy |
+| 5. Decision with incomplete information | Credibility (calibrated honesty under ambiguity) |
+
+When polishing each story below, ask: *which trust dimension am I demonstrating? Is it visible to the interviewer?*
+
 ## The 5 required stories
 
 Public sources consistently flag these 5 story types as the ones FDE interviewers ask for across rounds. Have one polished, specific, outcome-tied story for each.
