@@ -40,18 +40,19 @@ Both use synthetic data. Both have working Python prototype scaffolds with eval 
 
 ## Frameworks (used across all simulations)
 
-Ten portable frameworks that show up in every FDE engagement. Internalize these and they generalize to any case:
+Eleven portable frameworks that show up in every FDE engagement. Internalize these and they generalize to any case:
 
 1. [4-source convergence](frameworks/4-source-convergence.md) — Buyer / Brief / Industry / Operator triangulation for discovery
-2. [3-lens scaffold](frameworks/3-lens-scaffold.md) — Customer / Product / Technical for any agent design
+2. [3-lens scaffold](frameworks/3-lens-scaffold.md) — Customer / Product / Technical for any agent design; AI-capability-relationship segmentation for the Customer column
 3. [Outcome Risk Matrix](frameworks/outcome-risk-matrix.md) — Value × Risk-of-irreversible-failure for wedge selection
 4. [Workflow decomposition](frameworks/workflow-decomposition.md) — 5-step method for drawing agent boundaries from a manual process
 5. [Agent shapes catalog](frameworks/agent-shapes-catalog.md) — 7 standard agent shapes (Extractor, Classifier, Synthesizer, Critic, Compliance critic, Router, Auditor)
-6. [4-dimensional testing](frameworks/4-dimensional-testing.md) — Static eval + Pass^k + Adversarial + Production observability
-7. [Behavioral story types](frameworks/behavioral-story-types.md) — The 5 stories you must have, with a 6-section template per story
-8. [Ownership language guide](frameworks/ownership-language-guide.md) — Action verb + first person + specific outcome + business consequence. The single most-cited differentiator in FDE interview write-ups.
-9. [Company calibration](frameworks/company-calibration.md) — What different employer archetypes care about with compensation reference bands
-10. [Consulting & strategy frameworks](frameworks/consulting-frameworks.md) — Trusted Advisor formula, the Delta Concept (Palantir-origin), Three Whys diagnostic (SoR / CoI / Day 2), Cost-of-Inaction lens, Quick Win Milestone, Shadow IT awareness, C.A.S.E. meta-structure
+6. [Model-vs-application-layer](frameworks/model-vs-application-layer.md) — Tag every solution as model-layer (research team, slow) vs application-layer (product team, fast). The single most-missed distinction in AI PM and FDE interviews.
+7. [4-dimensional testing](frameworks/4-dimensional-testing.md) — Static eval + Pass^k + Adversarial + Production observability
+8. [Behavioral story types](frameworks/behavioral-story-types.md) — The 5 stories you must have, with a 6-section template per story
+9. [Ownership language guide](frameworks/ownership-language-guide.md) — Action verb + first person + specific outcome + business consequence. The single most-cited differentiator in FDE interview write-ups.
+10. [Company calibration](frameworks/company-calibration.md) — Employer archetypes + Tier 1/2/3 AI Product Sense landscape + comp bands ($150K-$860K)
+11. [Consulting & strategy frameworks](frameworks/consulting-frameworks.md) — 8 frameworks including Trusted Advisor, the Delta Concept, Three Whys, Cost-of-Inaction, C.A.S.E. (FDE meta-structure), and DASME (AI-PM meta-structure)
 
 ## Reading list
 

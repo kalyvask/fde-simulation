@@ -134,6 +134,37 @@ Customer-success technical work, often named accounts. The role sits between sal
 
 **$200K-$320K total comp** depending on the company's stage and named-account size.
 
+## The Tier 1 / 2 / 3 landscape for AI Product Sense rounds
+
+For AI PM roles specifically (not pure FDE), there's a related interview shape called "AI Product Sense" that's spreading across the industry. It tests whether you can think about AI products as systems — data flows, model trade-offs, agent architectures, failure modes — not just user personas and feature lists.
+
+If you're interviewing for AI PM (not just FDE), you'll likely face this round. The interview shape varies by company:
+
+| Tier | Companies | What it looks like |
+|---|---|---|
+| **Tier 1 — embedded in every round** | OpenAI, Anthropic, Google DeepMind | AI product sense is part of nearly every interview. Sample questions: "double ChatGPT image creation WAU with 3 engineers", "increase Claude Code WAU 10x". No dedicated round; AI fluency tested continuously. |
+| **Tier 2 — named round added** | Meta (IC6+/M1/M2 in Central Products), Figma | Explicit "Product Sense with AI" or "AI Product Sense" round added to the loop. Often features a vibe-coding component where you prototype while the interviewer evaluates judgment. |
+| **Tier 3 — woven into 1-2 rounds** | LinkedIn, Stripe, Uber, Netflix | Not a dedicated round. AI Product Sense embedded inside the regular product-sense round. The sneaky one — recruiter email won't mention "AI product sense" but the bar has moved. |
+
+**What this means for your prep**: even at companies that don't list "AI Product Sense" as a round, **AI fluency is being evaluated inside the regular product-sense round**. If your recruiter doesn't mention it, prepare anyway.
+
+The difference from FDE Recommendation interviews (our sim 3): AI Product Sense focuses on a single AI product / feature growth / design. FDE Recommendation focuses on customer-engagement scoping. Both share frameworks (3-lens, ORM, 4-dim testing) but the framing is different. See [`../simulations/3-recommendation-60min/`](../simulations/3-recommendation-60min/) for the FDE shape and [`consulting-frameworks.md`](consulting-frameworks.md#8-the-dasme-framework--ai-pm-specific-alternative-to-case) for the DASME framework specifically tuned to AI Product Sense.
+
+### Compensation reference for AI PM / FDE roles at frontier labs (mid-2026)
+
+Public Levels.fyi medians for PM roles at the major AI labs. AI PM roles tend to cluster at or above these medians.
+
+| Company | Median total comp (PM) | Range |
+|---|---|---|
+| **OpenAI** | ~$860K | $300K (Manager) → $950K+ (Staff). Mostly PPU-driven equity. |
+| **Meta** | ~$515K | $173K (L3) → $2.24M (Senior Director). L7 PMs at $987K median. |
+| **Google** | ~$473K | $182K (APM1) → $2.45M (L9/L10). Group PM at $757K median. Public equity. |
+| **Anthropic** | ~$468K | $468K-$651K range. Pre-IPO equity at $60B+ valuation (subject to repricing). |
+
+These are PM medians, not specifically AI PM. AI PM roles cluster at or above these per recent coaching data. AI workforce platforms (Sierra-tier and below) operate on a lower curve, typically $200K-$350K total comp. Enterprise AI vendor Solutions Engineer / Customer Engineer roles: $200K-$320K.
+
+**Negotiation anchor**: if you're at Tier 1 (OpenAI / Anthropic / DeepMind for an AI PM or FDE role), the upper end of the band is real for senior candidates with prior production-AI experience. Don't anchor too low.
+
 ## Cross-cutting calibration: small / medium / large
 
 ### Small company (< 100 people)

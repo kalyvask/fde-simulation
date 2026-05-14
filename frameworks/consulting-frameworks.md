@@ -1,6 +1,6 @@
 # Consulting & Strategy Frameworks
 
-> The 7 frameworks an FDE inherits from the consulting world. Originally surfaced from Palantir's "Delta" role definition and the broader management-consulting tradition. These complement the agent-design frameworks (3-lens, ORM, 4-dimensional testing) by giving you the customer-relationship and stakeholder-management muscle to deploy them.
+> 8 frameworks an FDE inherits from the consulting + AI-PM worlds. The first 7 came from the consulting tradition (originally surfaced from Palantir's "Delta" role definition + the broader management-consulting canon). The 8th (DASME) is the AI-PM-specific alternative to C.A.S.E. These complement the agent-design frameworks (3-lens, ORM, 4-dimensional testing) by giving you the customer-relationship + stakeholder-management muscle to deploy them.
 
 ## When to use this file
 
@@ -222,7 +222,59 @@ Don't use C.A.S.E. as a literal recitation. ("Step 1: Clarify. Step 2: Architect
 
 ---
 
-## How these 7 frameworks fit together
+## 8. The DASME framework — AI-PM-specific alternative to C.A.S.E.
+
+A 5-step structure specifically tuned for AI product sense / AI system design interviews. More AI-specific than C.A.S.E.; use when the question explicitly tests AI-product judgment (e.g., "design a churn-reduction agent", "10x Claude Code WAU", "design content-safety classification for a social platform").
+
+| Letter | Step | What you do |
+|---|---|---|
+| **D** | **Define scope** | Clarify the goal, the user, the constraint set, the metric you'd commit to. Same as Clarify in C.A.S.E. but more emphasis on naming the AI-specific success metric early (pass^k, recall@X precision, latency P95) |
+| **A** | **Architect the agents** | Sketch the system. Multi-agent if appropriate. Name which agents are LLM-based vs deterministic. Specify the orchestration pattern. |
+| **S** | **Specify data and models** | Name the model tier (Haiku/Sonnet/Opus/GPT-4o-mini/GPT-4o), the data sources, the training/eval split. Tag model-layer vs application-layer for each proposed solution (see [`model-vs-application-layer.md`](model-vs-application-layer.md)). |
+| **M** | **Map metrics** | 3-level metrics framework (technical / UX / business) with explicit tension named. Eval composition: weighted, pass^k, adversarial. |
+| **E** | **Edge cases + scale** | Adversarial attacks, drift, multi-region, multi-tenant variance, 10x scale bottleneck. Surface failure modes proactively. |
+
+### C.A.S.E. vs DASME — when to use which
+
+| Use C.A.S.E. when | Use DASME when |
+|---|---|
+| The question is shaped like a customer engagement ("walk me through how you'd approach this customer") | The question is shaped like a product/system design ("design X feature for Y product") |
+| You're in an FDE / Solutions Architect interview | You're in an AI PM / AI Product Sense interview |
+| The interviewer expects you to lead with stakeholders + scope | The interviewer expects you to lead with data flows + model trade-offs |
+| The customer/Delta framing matters | The system architecture framing matters |
+
+**For frontier-lab FDE interviews, C.A.S.E. is the default; DASME is the backup when the question is more product-design-shaped than engagement-shaped.** For AI PM interviews (OpenAI Deployed PM, Meta "Product Sense with AI"), DASME is the default.
+
+### Worked example: DASME on "design a content-safety classifier for a social platform"
+
+**D — Define scope (1 min)**: Goal is to detect harmful content (hate speech, harassment, self-harm). Users are creators (don't want false positives suppressing them) and advertisers (don't want brand safety incidents). Metric: harmful-content exposure rate (the north star); supplementary: creator satisfaction, advertiser brand-safety score, regulatory-compliance incidents per quarter.
+
+**A — Architect the agents (5 min)**: 3-tier system. Tier 1: Fast classifier (small specialized model, runs on every post, ~10ms). Tier 2: Review agent (LLM, runs on borderline cases from Tier 1, ~2s). Tier 3: Human moderator (runs on Tier 2 escalations + adversarial / novel patterns). Plus a feedback loop: human flags become Tier 1 training data on a weekly cadence.
+
+**S — Specify data + models (4 min)**:
+- Tier 1 Fast classifier: distilled small model, application-layer fine-tuning on labeled posts, retrained weekly
+- Tier 2 Review agent: LLM-as-judge (Sonnet-equivalent), no fine-tuning in v1
+- Tier 3 Human moderator: existing team, augmented with new-pattern detection
+- Training data: 10K seed labels + weekly human feedback loop = 50K+ labels by year 1
+- Model-layer work: Tier 1 retraining cadence; everything else is application-layer
+
+**M — Map metrics (3 min)**:
+- Technical: recall@95% precision, P95 latency under 10ms for Tier 1
+- UX: creator satisfaction (false positive rate), human moderator time per case
+- Business: harmful-content exposure rate (north star), advertiser brand-safety score, regulatory incidents
+- TENSION: cranking recall to 99.9% spikes false positives, creators leave. Threshold is a product decision, not a model decision. Protect creator satisfaction floor.
+
+**E — Edge cases + scale (3 min)**:
+- Adversarial: users modify images with noise to fool classifiers. Mitigation: ensemble models; if they disagree, escalate to Review Agent.
+- New patterns: novel hate symbol the classifier hasn't seen. Mitigation: human feedback loop with weekly retraining.
+- Cultural context: benign in English, slur in another language. Mitigation: language-specific classifiers with region-aware thresholds.
+- 10x scale (5B posts/day): bottleneck is Tier 1 GPU fleet. Horizontal scaling with sharding; pre-filter obvious-non-violations (high-trust accounts) to reduce classifier load 40-50%.
+
+That's DASME in 16 minutes. C.A.S.E. would have taken the same time but spent more on customer / stakeholder framing — wrong shape for this question.
+
+---
+
+## How these 8 frameworks fit together
 
 The agent-design frameworks (3-lens, ORM, 4-dim testing) tell you what to build. These tell you how to navigate the engagement:
 

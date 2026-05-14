@@ -2,6 +2,21 @@
 
 > The high-level structural conversation format. No build, no take-home. One hour to demonstrate FDE thinking on a cold case.
 
+## ⚠ Not to be confused with: AI Product Sense
+
+This simulation is for **FDE Recommendation** interviews — customer-engagement scoping, stakeholder mapping, wedge selection, sequential phase planning. The case is shaped like "an enterprise customer needs an AI workforce; walk us through how you'd approach this engagement."
+
+**AI Product Sense** is a different interview shape, used heavily at OpenAI, Anthropic, Google DeepMind, Meta (Central Products IC6+), and Figma. Sample questions: "How would you double ChatGPT image creation WAU with 3 engineers?" / "Increase Claude Code WAU 10x." The case is shaped like "design a feature / system / growth strategy for a specific AI product."
+
+| | FDE Recommendation (this sim) | AI Product Sense |
+|---|---|---|
+| Question shape | "How would you approach this customer engagement?" | "Design/grow/scale this AI product." |
+| Frameworks | C.A.S.E., 4-source convergence, 3-lens, ORM | DASME, model-vs-application-layer, AI-capability segmentation |
+| Tested at | AI workforce platforms (Sierra-tier), FDE roles at major labs | AI PM roles at frontier labs + AI-native companies |
+| Typical setting | Discovery / Solution / Risk topics with a customer case | Strategic context → Solutions → Edge cases for an AI product |
+
+If you're interviewing for an **FDE / Solutions Architect / AI Strategist** role: this sim is the right prep. If you're interviewing for an **AI PM** role at OpenAI / Anthropic / Meta: use this sim for FDE-shaped questions but also see [`../../frameworks/consulting-frameworks.md#8-the-dasme-framework--ai-pm-specific-alternative-to-case`](../../frameworks/consulting-frameworks.md) for the DASME framework that's specifically tuned to AI Product Sense.
+
 ## What this simulation tests
 
 Whether you can deploy the FDE frameworks (4-source convergence, 3-lens scaffold, Outcome Risk Matrix, 4-dimensional testing) on a fresh case in 60 minutes, structuring Discovery + Solution Strategy + Risk under time pressure.

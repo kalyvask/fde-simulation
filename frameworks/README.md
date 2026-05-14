@@ -1,19 +1,20 @@
 # Frameworks
 
-> Ten portable frameworks that show up in every FDE engagement. Internalize these and they generalize to any case.
+> Eleven portable frameworks that show up in every FDE engagement. Internalize these and they generalize to any case.
 
 | Framework | One-line definition | Deploy in... |
 |---|---|---|
 | [4-source convergence](4-source-convergence.md) | Triangulate Buyer / Brief / Industry / Operator to find the real wedge | Discovery |
-| [3-lens scaffold](3-lens-scaffold.md) | Customer / Product / Technical columns; fill before designing tech | Solution Strategy |
+| [3-lens scaffold](3-lens-scaffold.md) | Customer / Product / Technical columns; fill before designing tech. Customer column uses AI-capability-relationship segmentation, not demographics. | Solution Strategy |
 | [Outcome Risk Matrix](outcome-risk-matrix.md) | Score wedges on Value × Risk-of-irreversible-failure | Solution Strategy |
 | [Workflow decomposition](workflow-decomposition.md) | 5-step method for drawing agent boundaries from a manual process | Solution Strategy |
 | [Agent shapes catalog](agent-shapes-catalog.md) | 7 standard agent shapes (Extractor / Classifier / Synthesizer / Critic / Compliance critic / Router / Auditor) | Solution Strategy |
+| [Model-vs-application-layer](model-vs-application-layer.md) | Tag every solution as model-layer change / application-layer change / both. Distinguishes research-team work from product-team work. | Solution Strategy + Architecture defense |
 | [4-dimensional testing](4-dimensional-testing.md) | Static eval + Pass^k + Adversarial + Production observability | Risk & Validation |
 | [Behavioral story types](behavioral-story-types.md) | 5 required story types with a 6-section template; tied to the Trusted Advisor formula | Behavioral round (and embedded in every other round) |
 | [Ownership language guide](ownership-language-guide.md) | Action verb + first person + specific outcome + business consequence | All rounds — the differentiator |
-| [Company calibration](company-calibration.md) | 4 employer archetypes (research-first AI lab, product-first AI lab, AI workforce platform, enterprise vendor) with distinctive grading signals and comp bands | Pre-interview tuning |
-| [Consulting & strategy frameworks](consulting-frameworks.md) | 7 consulting-tradition frameworks: Trusted Advisor formula, the Delta Concept, Three Whys diagnostic, Cost-of-Inaction, Quick Win Milestone, Shadow IT awareness, C.A.S.E. meta-structure | Discovery + Solution Strategy + interview meta-structure |
+| [Company calibration](company-calibration.md) | 4 employer archetypes + Tier 1/2/3 AI Product Sense landscape + comp bands ($150K-$860K depending on archetype/level) | Pre-interview tuning |
+| [Consulting & strategy frameworks](consulting-frameworks.md) | 8 frameworks: Trusted Advisor formula, Delta Concept, Three Whys, Cost-of-Inaction, Quick Win Milestone, Shadow IT awareness, C.A.S.E. (FDE meta-structure), DASME (AI-PM meta-structure) | Discovery + Solution + interview meta-structure |
 
 ## How to deploy them
 
