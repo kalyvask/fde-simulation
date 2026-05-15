@@ -31,6 +31,10 @@ bash demo.sh        # macOS / Linux / WSL
 
 Runs both prototypes end-to-end at pass^k=5 production threshold. No API key required.
 
+## Driving the simulations with Claude Code
+
+If you use Claude Code as your operating environment, the repo is designed for it: `CLAUDE.md` auto-loads on session start with repo structure, stakeholder personas, and behavioral conventions (do/don't ghostwrite, grade harshly, stay in character). See [`USING_CLAUDE_CODE.md`](USING_CLAUDE_CODE.md) for the 8 patterns you'll use most — opening an engagement, stakeholder role-play, per-phase grading, extending prototypes, running the 60-min take-home Review, client-simulation scenarios, engagement state coaching, and frameworks-applied review.
+
 ## Two case studies — full 4-week engagements
 
 | Case | Domain | Customer (fictional) | Wedge |
