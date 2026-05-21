@@ -35,6 +35,20 @@ Runs both prototypes end-to-end at pass^k=5 production threshold. No API key req
 
 If you use Claude Code as your operating environment, the repo is designed for it: `CLAUDE.md` auto-loads on session start with repo structure, stakeholder personas, and behavioral conventions (do/don't ghostwrite, grade harshly, stay in character). See [`USING_CLAUDE_CODE.md`](USING_CLAUDE_CODE.md) for the 8 patterns you'll use most — opening an engagement, stakeholder role-play, per-phase grading, extending prototypes, running the 60-min take-home Review, client-simulation scenarios, engagement state coaching, and frameworks-applied review.
 
+## The credential layer — what turns practice into proof
+
+Five tools sit on top of the simulations to convert "I ran the sim" into "I scored 82 on Calder, walked into 1 of 5 expert traps, and have a defendable bundle":
+
+| Tool | What it does | Where |
+|---|---|---|
+| **Coverage map** | One-page matrix: each sim format → which interview signals it exercises, plus which company / role each format calibrates against | [`COVERAGE_MAP.md`](COVERAGE_MAP.md) |
+| **Verifiable scoring** | CLI that grades a phase artifact against the reference using a structured rubric (0-3 × 5 dimensions); produces JSON sidecar + Markdown report; prompt-cached for cheap iteration | [`scoring/`](scoring/) |
+| **Expert traps + post-mortem** | 5 traps per case that a senior FDE catches; Claude prompt that reads your artifacts and tells you which traps you walked into | [`simulations/1-full-engagement/<case>/EXPERT_TRAPS.md`](simulations/1-full-engagement/) + [`POST_MORTEM_PROMPT.md`](simulations/1-full-engagement/POST_MORTEM_PROMPT.md) |
+| **5-min hostile oral grill** | Claude prompt that runs a hostile post-take-home defense round; 8-10 grill questions, 5 ground rules, scoring rubric | [`simulations/1-full-engagement/<case>/ORAL_GRILL.md`](simulations/1-full-engagement/) |
+| **Artifact bundle exporter** | Walks your portfolio directory and emits a single submittable Markdown pack (memos + prototype tree + key files + eval output + grade summary) | [`scoring/bundle.py`](scoring/bundle.py) |
+
+End-to-end loop: run the engagement, score each phase with `scoring.grade`, run the post-mortem to detect traps, fix the highest-leverage gap, re-grade, run the oral grill, bundle for portfolio submission. See [`scoring/README.md`](scoring/README.md) for the exact commands.
+
 ## Two case studies — full 4-week engagements
 
 | Case | Domain | Customer (fictional) | Wedge |
@@ -112,18 +126,28 @@ A curated set of books, papers, and blogs for deeper FDE craft: see [READING.md]
 fde-simulation/
 ├── README.md                          # This file
 ├── QUICKSTART.md                      # 90-sec on-ramp
+├── COVERAGE_MAP.md                    # Sim format <-> interview-signal matrix + role calibration
 ├── READING.md                         # Curated reading list
 ├── LICENSE                            # MIT
 ├── demo.sh / demo.ps1                 # One-command tour
+│
+├── scoring/                           # Credential-layer tooling (Python CLIs)
+│   ├── grade.py                       # Numeric rubric grade per phase vs reference
+│   ├── bundle.py                      # Walk portfolio dir, emit submittable Markdown pack
+│   ├── rubrics.py                     # Machine-readable rubric definitions
+│   └── README.md                      # Setup + end-to-end flow
 │
 ├── simulations/
 │   ├── 1-full-engagement/             # 20-40 hours, multi-week
 │   │   ├── RETRO_TEMPLATE.md          # End-of-engagement retrospective
 │   │   ├── PORTFOLIO_TEMPLATE.md      # How to package as a portfolio piece
 │   │   ├── SKIP_AHEAD.md              # 15-hour senior path for second case
-│   │   ├── GRADE_YOUR_WORK.md         # Per-phase Claude-graded scoring
+│   │   ├── GRADE_YOUR_WORK.md         # Paste-into-Claude grading prompts
+│   │   ├── POST_MORTEM_PROMPT.md      # Trap-detection prompt; runs after all artifacts exist
 │   │   ├── calder-insurance/          # Full 4-week engagement on the FNOL case
-│   │   └── helix-finance/             # Full 4-week engagement on the earnings-note case
+│   │   │   ├── EXPERT_TRAPS.md        # 5 traps a real FDE catches (do not read pre-attempt)
+│   │   │   └── ORAL_GRILL.md          # 5-min hostile post-take-home defense Claude prompt
+│   │   └── helix-finance/             # Same shape, with its own EXPERT_TRAPS + ORAL_GRILL
 │   ├── 2-take-home-5h/                # 6 hours (5h build + 1h Review)
 │   ├── 3-recommendation-60min/        # 1 hour live conversation
 │   └── 4-client-simulation/           # Live customer-handling role-play

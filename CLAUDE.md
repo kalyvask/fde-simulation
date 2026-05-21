@@ -38,21 +38,32 @@ The simulations are designed for the user to do the work. Reference solutions ex
 .
 ├── README.md                          # Repo overview
 ├── QUICKSTART.md                      # 90-sec on-ramp
+├── COVERAGE_MAP.md                    # Sim format <-> interview-signal matrix + role calibration
 ├── USING_CLAUDE_CODE.md               # User-facing Claude Code usage patterns
 ├── CLAUDE.md                          # This file
 ├── demo.sh / demo.ps1                 # One-command tour
+│
+├── scoring/                           # Credential-layer tooling (Python)
+│   ├── grade.py                       # CLI: numeric grade per phase vs reference
+│   ├── bundle.py                      # CLI: walk portfolio dir -> single Markdown pack
+│   ├── rubrics.py                     # Machine-readable rubric definitions
+│   ├── requirements.txt               # anthropic SDK
+│   └── README.md                      # Usage docs + end-to-end flow
 │
 ├── simulations/
 │   ├── 1-full-engagement/             # The main simulation
 │   │   ├── RETRO_TEMPLATE.md          # End-of-engagement retrospective
 │   │   ├── PORTFOLIO_TEMPLATE.md      # How to package as interview portfolio
 │   │   ├── SKIP_AHEAD.md              # 15-hour senior path for case 2
-│   │   ├── GRADE_YOUR_WORK.md         # Per-phase Claude-graded scoring prompts
+│   │   ├── GRADE_YOUR_WORK.md         # Per-phase Claude-graded scoring prompts (paste-into-Claude)
+│   │   ├── POST_MORTEM_PROMPT.md      # Trap-detection prompt; runs after all artifacts exist
 │   │   ├── calder-insurance/
 │   │   │   ├── CASE_BRIEF.html        # Consulting-style case study
 │   │   │   ├── START_HERE.md          # In-character kickoff
 │   │   │   ├── 00_brief.md            # Markdown customer brief
 │   │   │   ├── EXERCISE.md            # 4-week structure
+│   │   │   ├── EXPERT_TRAPS.md        # 5 Calder traps + bonus Trap 0 (read AFTER drafting)
+│   │   │   ├── ORAL_GRILL.md          # 5-min hostile oral defense Claude prompt
 │   │   │   ├── 01_week1_discovery/    # Discovery phase
 │   │   │   │   ├── STAKEHOLDER_INTERVIEWS.md   # 8 Claude role-play prompts
 │   │   │   │   ├── discovery_memo.md           # REFERENCE — don't show pre-attempt
@@ -66,7 +77,7 @@ The simulations are designed for the user to do the work. Reference solutions ex
 │   │   │   └── 04_week4_handoff/
 │   │   │       ├── field_memo.md               # REFERENCE
 │   │   │       └── sessions/                   # Week-4 session notes (REFERENCE)
-│   │   └── helix-finance/             # Same shape as calder-insurance/
+│   │   └── helix-finance/             # Same shape as calder-insurance/ + EXPERT_TRAPS.md + ORAL_GRILL.md
 │   ├── 2-take-home-5h/                # 5h take-home + 60-min Review
 │   ├── 3-recommendation-60min/        # 1-hour live conversation
 │   └── 4-client-simulation/           # Hostile-customer role-play
@@ -98,6 +109,19 @@ The simulations are designed for the user to do the work. Reference solutions ex
 | Helix prototype end-to-end | `cd simulations/1-full-engagement/helix-finance/02_week2_solution/prototype && python scripts/run_e2e.py` |
 | Open case brief in browser | `start CASE_BRIEF.html` (Windows) / `open CASE_BRIEF.html` (macOS) |
 | Open whiteboard with Calder pre-loaded | `tools/agent_design_practice.html?case=calder` (deep-link via URL) |
+| Grade a phase against the reference | `python -m scoring.grade phase1 path/to/my_memo.md --case calder --json-output grades/phase1.json` |
+| Bundle the portfolio | `python -m scoring.bundle ~/my-fde-portfolio/calder/ --include-grades ~/my-fde-portfolio/calder/grades/ -o bundle.md` |
+
+## Credential-layer tooling
+
+These are NOT part of the simulation work itself; they wrap it.
+
+- `scoring/grade.py` — automated rubric grader. When the user says "grade my discovery memo" or "score my prototype," offer to run this rather than (or in addition to) the paste-into-Claude prompts in `GRADE_YOUR_WORK.md`.
+- `scoring/bundle.py` — packages a portfolio directory into a single submittable Markdown pack. Useful at the end of an engagement or when prepping a take-home submission.
+- `simulations/1-full-engagement/<case>/EXPERT_TRAPS.md` — the 5 traps a senior FDE catches. **Do NOT show these to the user before they've drafted their artifacts.** Like the reference solutions, they spoil the simulation.
+- `simulations/1-full-engagement/POST_MORTEM_PROMPT.md` — Claude prompt for trap detection after all artifacts exist. Run this once at the end of the engagement, before filling in the retro.
+- `simulations/1-full-engagement/<case>/ORAL_GRILL.md` — 5-minute hostile defense Claude prompt. Run this AFTER the engagement is complete; tests verbal defense.
+- `COVERAGE_MAP.md` (top-level) — sim format <-> interview signal matrix. Use this if the user asks "which simulation should I run for my [X] interview?"
 
 ## Stakeholder personas (for role-play)
 

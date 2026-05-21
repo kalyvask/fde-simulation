@@ -42,7 +42,12 @@ You can run both cases sequentially to test domain-portability — that's actual
 | **Stakeholder role-play prompts** | Claude plays each persona; you conduct real discovery interviews | `<case>/01_week1_discovery/STAKEHOLDER_INTERVIEWS.md` |
 | **Synthetic data generators** | Working Python that produces synthetic FNOLs / earnings calls deterministically with a seed | `<case>/02_week2_solution/prototype/<case>_agent/data/synthetic.py` |
 | **Eval harness with pass^k=5** | Weighted eval cases; examiner-readable trace per case | `<case>/02_week2_solution/prototype/scripts/run_eval.py` |
-| **Automated grading** | Claude grades your submission against the reference per phase | [`GRADE_YOUR_WORK.md`](GRADE_YOUR_WORK.md) |
+| **Conversational grading prompts** | Paste-into-Claude prompts for grading each phase against the reference | [`GRADE_YOUR_WORK.md`](GRADE_YOUR_WORK.md) |
+| **Automated grading CLI** | `scoring.grade` produces numeric scores + JSON + Markdown report per phase; prompt-cached | [`../../scoring/`](../../scoring/) |
+| **Expert traps (per case)** | 5 traps a real FDE catches but a candidate's first instinct walks into; bonus Trap 0 too | [`calder-insurance/EXPERT_TRAPS.md`](calder-insurance/EXPERT_TRAPS.md), [`helix-finance/EXPERT_TRAPS.md`](helix-finance/EXPERT_TRAPS.md) |
+| **Post-mortem checker** | Claude prompt that reads your engagement artifacts + trap list and tells you which traps you walked into, with quoted evidence | [`POST_MORTEM_PROMPT.md`](POST_MORTEM_PROMPT.md) |
+| **5-min hostile oral grill** | Hostile post-take-home defense round; tests whether you can defend the build verbally under pressure | [`calder-insurance/ORAL_GRILL.md`](calder-insurance/ORAL_GRILL.md), [`helix-finance/ORAL_GRILL.md`](helix-finance/ORAL_GRILL.md) |
+| **Artifact bundle exporter** | Walk your portfolio dir, emit a single submittable Markdown pack | [`../../scoring/bundle.py`](../../scoring/bundle.py) |
 | **Engagement retrospective template** | End-of-week-4 retro: what worked, what didn't, what you'd change | [`RETRO_TEMPLATE.md`](RETRO_TEMPLATE.md) |
 | **Portfolio piece template** | How to package the artifacts so they're ready for a real FDE interview | [`PORTFOLIO_TEMPLATE.md`](PORTFOLIO_TEMPLATE.md) |
 | **Skip-ahead path** | For senior candidates: do weeks 3-4 cold (~15 hours), load weeks 1-2 from reference. Best move: full Calder → skip-ahead Helix | [`SKIP_AHEAD.md`](SKIP_AHEAD.md) |
