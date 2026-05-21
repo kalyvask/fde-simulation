@@ -1,6 +1,6 @@
 # FDE Simulation
 
-> Hands-on simulations of the Forward Deployed Engineer role. Run a full customer engagement on synthetic but realistic case studies — identify problems, scope wedges, build working agent prototypes, ship eval suites, hand off to production.
+> Hands-on simulations of the Forward Deployed Engineer role. Run a full customer engagement on synthetic but realistic case studies — identify problems, scope wedges, build working agent prototypes, ship eval suites, hand off to production. Then score every artifact against the reference, detect the traps a senior FDE would catch, defend your build under a 5-minute hostile grill, and bundle the result as a portfolio piece.
 
 ## About
 
@@ -15,6 +15,10 @@ What you can do with it:
 - **Build agents** by extending the prototype scaffolds — 5-7 specialized agents per case, hybrid deterministic + LLM, examiner-readable audit traces
 - **Ship eval suites** with pass^k=5 production thresholds, weighted by failure cost, including adversarial cases
 - **Practice the customer-facing craft** via Claude-roleplay stakeholder interviews and live customer-simulation rounds
+- **Score your work** against the reference solution per phase via a structured rubric (0-3 × 5 dimensions) with a JSON sidecar so progress across attempts is trackable
+- **Detect expert traps** — the 5 places per case where a candidate's first instinct produces a defensible-looking artifact that a senior FDE would reject
+- **Defend the build verbally** under a 5-minute hostile oral grill that mirrors how OpenAI / Anthropic / Sierra / Palantir actually interview for these roles
+- **Bundle the engagement** into a single submittable Markdown pack (memos + prototype tree + key files + eval output + grade summary) ready to attach to a take-home or share as a portfolio sample
 
 The same material doubles as comprehensive interview prep for FDE-style roles at frontier AI labs and AI workforce platforms. That use is documented but secondary; the primary purpose is hands-on role simulation.
 
@@ -165,18 +169,21 @@ For Calder (Helix follows the same shape with different numbers):
 3. **Pre-fill your 3-lens whiteboard** — open `tools/agent_design_practice.html?case=calder`, draft your stakeholder map and wedge hypothesis in Practice mode.
 4. **Run the kickoff with Claude playing Maria** — paste Prompt 1 from `STAKEHOLDER_INTERVIEWS.md` into a Claude chat. Maria opens the meeting; you conduct discovery.
 5. **Run the other 7 interviews** through the week — Greg, Priya, Tom, Marcus, Rachel, frontline adjuster, Anil. Claude plays each in character.
-6. **Synthesize a discovery memo** of your own. Compare to the reference. Score per-phase via `GRADE_YOUR_WORK.md`.
-7. **Week 2-3: design + build** — apply the 3-lens scaffold, score wedge candidates on the Outcome Risk Matrix, decompose the workflow into 5-7 agents, extend the prototype scaffold, ship a weighted eval suite.
-8. **Week 4: validate + handoff** — run the 20-draft review with Rachel/Janet (Claude plays them), the hostile-review with Carmen/Tom, the operational handoff to Aditya/Anil. Write the field memo.
-9. **End of week 4**: fill in `RETRO_TEMPLATE.md`; package via `PORTFOLIO_TEMPLATE.md`.
+6. **Synthesize a discovery memo** of your own. Score it: `python -m scoring.grade phase1 my_discovery.md --case calder --json-output grades/phase1.json` (or use the paste-into-Claude prompts in `GRADE_YOUR_WORK.md`).
+7. **Week 2-3: design + build** — apply the 3-lens scaffold, score wedge candidates on the Outcome Risk Matrix, decompose the workflow into 5-7 agents, extend the prototype scaffold, ship a weighted eval suite. Grade each phase via `scoring.grade phase2` and `scoring.grade phase3`.
+8. **Week 4: validate + handoff** — run the 20-draft review with Rachel/Janet (Claude plays them), the hostile-review with Carmen/Tom, the operational handoff to Aditya/Anil. Write the field memo and grade it via `scoring.grade phase4`.
+9. **Post-mortem**: run `POST_MORTEM_PROMPT.md` against your artifacts + the case's `EXPERT_TRAPS.md`. Claude tells you which of the 5 traps you walked into, with quoted evidence and a fix-first list ordered by leverage.
+10. **Defend it verbally**: paste the case's `ORAL_GRILL.md` into a fresh Claude chat. 5 minutes, hostile tone, 6-8 grill questions. Score yourself against the 5-dimension rubric at the bottom.
+11. **Bundle the engagement**: `python -m scoring.bundle ~/my-fde-portfolio/calder/ --include-grades ~/my-fde-portfolio/calder/grades/ -o calder_bundle.md`. The output is a single Markdown pack you can attach to a take-home or share as a portfolio sample.
+12. **End of week 4**: fill in `RETRO_TEMPLATE.md`; package via `PORTFOLIO_TEMPLATE.md`.
 
-The deliverable is real: a working agent workforce, a weighted eval suite, a discovery memo, a field memo, and a retrospective. All on synthetic data, all reusable as a portfolio piece.
+The deliverable is real: a working agent workforce, a weighted eval suite, a discovery memo, a field memo, and a retrospective — all numerically scored, trap-checked, and bundled. All on synthetic data, all reusable as a portfolio piece.
 
 ## Why this is useful
 
 - **For people doing FDE work today**: a reference set of frameworks and reusable scaffolds. Both prototype patterns (Calder + Helix) port to roughly any regulated-industry deployment.
 - **For people learning the role**: end-to-end simulations that show what the job actually involves, with reference solutions per phase that calibrate against senior performance.
-- **For people interviewing for FDE roles**: the same engagement work doubles as portfolio-grade prep. See `simulations/2-take-home-5h/` for the dress-rehearsal version and `simulations/1-full-engagement/PORTFOLIO_TEMPLATE.md` for how to package the work.
+- **For people interviewing for FDE roles**: the credential layer (numeric scoring, trap detection, hostile oral grill, bundle exporter) converts the engagement output into a defendable portfolio piece. See [`scoring/README.md`](scoring/README.md) for the end-to-end flow and [`simulations/1-full-engagement/PORTFOLIO_TEMPLATE.md`](simulations/1-full-engagement/PORTFOLIO_TEMPLATE.md) for how to package the work.
 
 ## Contributing
 
