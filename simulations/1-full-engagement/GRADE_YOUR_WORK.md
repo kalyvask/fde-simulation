@@ -2,6 +2,15 @@
 
 > A self-graded rubric is fine. An LLM-graded rubric calibrated against the reference solution is better. This file gives you a Claude prompt that takes your submission and grades it against the reference, with specific feedback per dimension.
 
+## Two ways to grade
+
+There are now two ways to run the rubric:
+
+1. **Paste-into-Claude prompts (this file)** — fine for one-off grading, no setup required. Copy a prompt block, paste your submission + reference, get free-text feedback.
+2. **Automated CLI ([`scoring/grade.py`](../../scoring/grade.py))** — better when iterating. One command per phase; produces a JSON sidecar with per-dimension scores so you can track progress across attempts; prompt-cached so re-grading is cheap. See [`scoring/README.md`](../../scoring/README.md) for setup.
+
+The rubric is the same in both. Use the CLI if you're going to iterate 3+ times; use the paste prompts if you just want one quick read.
+
 ## When to use this
 
 After each phase of the full engagement simulation, when you've produced your own artifact (discovery memo, wedge proposal, prototype, field memo). Don't peek at the reference solution before this step — the grader does the comparison for you.
