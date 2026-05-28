@@ -90,7 +90,7 @@ Write-Host "  - Drafters in mock mode — set ANTHROPIC_API_KEY for live LLM cal
 Write-Host ""
 Write-Host "Next steps:" -ForegroundColor Yellow
 Write-Host "  - Read QUICKSTART.md for the 4 simulation paths"
-Write-Host "  - Read frameworks\README.md for the 10 portable frameworks"
+Write-Host "  - Read frameworks\README.md for the 11 portable frameworks"
 Write-Host "  - Try simulations\1-full-engagement\calder-insurance\EXERCISE.md"
 Write-Host "    for the 4-week guided engagement"
 Write-Host ""
