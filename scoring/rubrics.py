@@ -314,8 +314,9 @@ def build_system_prompt(rubric: Rubric) -> str:
             f'  "max_score": {rubric.max_score},',
             '  "scores": {',
             *[
-                f'    "{dim.name}": {{"score": <0-3>, "what_worked": "<one sentence>", "what_was_missing": "<one sentence>"}},'
-                for dim in rubric.dimensions
+                f'    "{dim.name}": {{"score": <0-3>, "what_worked": "<one sentence>", "what_was_missing": "<one sentence>"}}'
+                + ("," if i < len(rubric.dimensions) - 1 else "")
+                for i, dim in enumerate(rubric.dimensions)
             ],
             "  },",
             '  "total": <integer 0-' + str(rubric.max_score) + ">,",
