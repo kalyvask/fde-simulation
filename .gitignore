@@ -58,6 +58,9 @@ coverage.xml
 *.log
 logs/
 
+# Generated prototype runtime state
+monitor_state.json
+
 # Generated docs
 *.docx
 *.pdf
