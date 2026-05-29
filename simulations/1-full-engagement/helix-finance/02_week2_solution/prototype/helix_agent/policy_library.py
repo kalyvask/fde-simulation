@@ -75,14 +75,27 @@ def is_input_compliance_violation(claim: dict[str, Any]) -> tuple[bool, str | No
     ]
     combined = " ".join(text_fields).lower()
 
-    # Position-sizing lexicon (same as rule_1)
+    # Position-sizing / directional-recommendation lexicon.
+    # Covers both explicit sizing ("3% of book", "position sized at") and bare
+    # directional calls ("short position", "buy at current levels"). A research
+    # note must never carry a trade instruction across the Chinese wall, so the
+    # input gate blocks the recommendation regardless of phrasing.
     position_sizing_patterns = [
         "position sized at",
         "sized at ",
         "% position",
         "position size",
+        "% of book",
+        "long position",
+        "short position",
         "recommend a long",
         "recommend a short",
+        "recommend long",
+        "recommend short",
+        "recommend buy",
+        "recommend sell",
+        "buy at ",
+        "sell at ",
     ]
     for pattern in position_sizing_patterns:
         if pattern in combined:

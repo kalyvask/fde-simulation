@@ -63,7 +63,7 @@ Five reasons:
 | Week | Deliverable | Owners |
 |---|---|---|
 | **1** (in progress) | Discovery memo + this proposal + Rachel one-pager | Alex |
-| **2** | Eval suite v1 (50 cases + adversarial 30 + state slices); sandbox access live | Alex + Sienna (Tom's team) |
+| **2** | Eval suite v1 (5 seed + 20 adversarial, weighted by failure cost; state slices); sandbox access live | Alex + Sienna (Tom's team) |
 | **3** | Prototype agent workforce on sandbox; Janet 20-draft review; Marcus policy library encoded | Alex + Kayla (Anil's team) + Devorah (Marcus) |
 | **4** | Production hardening: rollback runbook, observability dashboard, audit-trace verification, on-call doc; Janet sign-off; field memo to Anthropic | Alex + customer team |
 

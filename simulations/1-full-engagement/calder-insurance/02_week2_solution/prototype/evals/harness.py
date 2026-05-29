@@ -24,6 +24,11 @@ class EvalCase:
     fnol: dict[str, Any]
     expected: dict[str, Any]
     weight: int = 1
+    # Cases whose expected output depends on content only the real LLM generates
+    # (e.g. catching a recommendation the mock drafter never writes). The mock
+    # pipeline cannot satisfy these, so the harness skips them in mock mode and
+    # the real-key CI job is what actually exercises them.
+    requires_llm: bool = False
 
 
 def load_cases(path: Path) -> list[EvalCase]:
@@ -37,6 +42,7 @@ def load_cases(path: Path) -> list[EvalCase]:
             fnol=d["fnol"],
             expected=d["expected"],
             weight=d.get("weight", 1),
+            requires_llm=d.get("requires_llm", False),
         ))
     return cases
 
@@ -73,9 +79,19 @@ def grade(case: EvalCase, output: dict[str, Any]) -> dict[str, Any]:
     return {"passes": passes, "details": details}
 
 
-def run_eval(workforce, cases: list[EvalCase], k: int = 1) -> list[dict]:
+def run_eval(workforce, cases: list[EvalCase], k: int = 1, mock_mode: bool = False) -> list[dict]:
     results = []
     for case in cases:
+        if mock_mode and case.requires_llm:
+            results.append({
+                "case_id": case.case_id,
+                "weight": case.weight,
+                "skipped": True,
+                "all_passed": False,
+                "run_pass_count": 0,
+                "runs": [],
+            })
+            continue
         runs = []
         for _ in range(k):
             output, trace = workforce.process_fnol(case.fnol)
@@ -87,24 +103,34 @@ def run_eval(workforce, cases: list[EvalCase], k: int = 1) -> list[dict]:
                 "rules_fired": output["rules_fired"],
                 "grades": grades,
             })
-        all_passed = all(r["grades"]["passes"] for r in runs)
+        run_pass_count = sum(1 for r in runs if r["grades"]["passes"])
+        all_passed = run_pass_count == k
         results.append({
             "case_id": case.case_id,
             "weight": case.weight,
+            "skipped": False,
             "all_passed": all_passed,
+            "run_pass_count": run_pass_count,
             "runs": runs,
         })
     return results
 
 
-def summarize(results: list[dict]) -> dict[str, Any]:
-    weighted_pass = sum(r["weight"] for r in results if r["all_passed"])
-    total_weight = sum(r["weight"] for r in results)
+def summarize(results: list[dict], k: int = 1) -> dict[str, Any]:
+    scored = [r for r in results if not r.get("skipped")]
+    skipped = [r for r in results if r.get("skipped")]
+    weighted_pass = sum(r["weight"] for r in scored if r["all_passed"])
+    total_weight = sum(r["weight"] for r in scored)
+    # A case is flaky if some-but-not-all of its k runs passed: direct evidence
+    # of run-to-run non-determinism (the thing pass^k is supposed to catch).
+    flaky = [r["case_id"] for r in scored if 0 < r.get("run_pass_count", 0) < k]
     return {
         "pass_rate": (weighted_pass / total_weight) if total_weight else 0.0,
         "passed_weight": weighted_pass,
         "total_weight": total_weight,
-        "case_count": len(results),
-        "passed_count": sum(1 for r in results if r["all_passed"]),
-        "failures": [r["case_id"] for r in results if not r["all_passed"]],
+        "case_count": len(scored),
+        "passed_count": sum(1 for r in scored if r["all_passed"]),
+        "failures": [r["case_id"] for r in scored if not r["all_passed"]],
+        "skipped": [r["case_id"] for r in skipped],
+        "flaky": flaky,
     }

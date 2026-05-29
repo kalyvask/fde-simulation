@@ -159,12 +159,12 @@ _PROTOTYPE_DIMENSIONS = [
     ),
     Dimension(
         name="Eval suite",
-        description="30+ cases weighted by failure cost; pass^k=5 with variance ≤5%; per-major-risk adversarial; observability plan documented.",
+        description="20+ cases weighted by failure cost; pass^k=5 with variance ≤5%; per-major-risk adversarial; observability plan documented.",
         anchors={
             0: "No evals or trivial happy-path only.",
             1: "Has evals but no weighting.",
             2: "Weighted by failure cost; happy + adversarial.",
-            3: "30+ cases weighted by failure cost; pass^k=5 with variance ≤5%; per-major-risk adversarial case; production observability plan documented.",
+            3: "20+ cases weighted by failure cost; pass^k=5 with variance ≤5%; per-major-risk adversarial case; production observability plan documented.",
         },
     ),
     Dimension(

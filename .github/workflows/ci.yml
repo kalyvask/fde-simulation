@@ -4,6 +4,9 @@ on:
   push:
     branches: [main]
   pull_request:
+  schedule:
+    - cron: "0 7 * * 1"   # Mondays 07:00 UTC — live real-key eval
+  workflow_dispatch:
 
 jobs:
   prototypes:
@@ -44,3 +47,45 @@ jobs:
         run: python -m pip install -q -r scoring/requirements.txt
       - name: Rubric JSON template is valid
         run: python -m scoring.selftest
+
+  live-eval:
+    # Real-key eval. The push/PR `prototypes` job forces mock mode, where pass^k
+    # is deterministic and `requires_llm` cases are skipped — so it can't measure
+    # run-to-run variance or exercise the LLM-dependent cases. This job does both,
+    # at k=5 over seed + adversarial. It runs only on schedule / manual dispatch
+    # (it costs API tokens) and only when the ANTHROPIC_API_KEY secret is present,
+    # so it never breaks fork PRs.
+    if: ${{ github.event_name == 'schedule' || github.event_name == 'workflow_dispatch' }}
+    runs-on: ubuntu-latest
+    env:
+      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Guard — is the ANTHROPIC_API_KEY secret set?
+        id: guard
+        run: |
+          if [ -z "$ANTHROPIC_API_KEY" ]; then
+            echo "have_key=false" >> "$GITHUB_OUTPUT"
+            echo "ANTHROPIC_API_KEY secret not set — live eval skipped."
+          else
+            echo "have_key=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Calder — live eval (k=5, seed + adversarial)
+        if: steps.guard.outputs.have_key == 'true'
+        working-directory: simulations/1-full-engagement/calder-insurance/02_week2_solution/prototype
+        run: |
+          python -m pip install -q -r requirements.txt
+          python scripts/run_eval.py --k 5 --cases evals/cases/seed.jsonl
+          python scripts/run_eval.py --k 5 --cases evals/cases/adversarial.jsonl
+
+      - name: Helix — live eval (k=5, seed + adversarial)
+        if: steps.guard.outputs.have_key == 'true'
+        working-directory: simulations/1-full-engagement/helix-finance/02_week2_solution/prototype
+        run: |
+          python -m pip install -q -r requirements.txt
+          python scripts/run_eval.py --k 5 --cases evals/cases/seed.jsonl
+          python scripts/run_eval.py --k 5 --cases evals/cases/adversarial.jsonl

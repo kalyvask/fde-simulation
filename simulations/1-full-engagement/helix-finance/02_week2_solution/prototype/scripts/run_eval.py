@@ -33,24 +33,35 @@ def main() -> int:
     print()
 
     wf = Workforce()
+    mock_mode = getattr(wf.drafter, "mode", "anthropic") == "mock"
     print(f"Drafter mode: {wf.drafter.mode}")
     print(f"KPI extractor mode: {wf.kpi.mode}")
     print(f"Tone supervisor mode: {wf.tone.mode}")
+    if mock_mode:
+        print("Mock mode: requires_llm cases are SKIPPED (real-key CI job exercises them).")
+        print("Note: pass^k is deterministic in mock mode — variance is only meaningful with a real key.")
     print()
 
-    results = run_eval(wf, cases, k=args.k)
-    summary = summarize(results)
+    results = run_eval(wf, cases, k=args.k, mock_mode=mock_mode)
+    summary = summarize(results, k=args.k)
 
     print("RESULTS")
     print("-" * 60)
     print(f"Pass rate (weighted): {summary['pass_rate']:.0%}  ({summary['passed_weight']}/{summary['total_weight']})")
     print(f"Cases passed: {summary['passed_count']}/{summary['case_count']}")
+    if summary["skipped"]:
+        print(f"Skipped (requires_llm): {', '.join(summary['skipped'])}")
+    if summary["flaky"]:
+        print(f"FLAKY (some-but-not-all of {args.k} runs passed): {', '.join(summary['flaky'])}")
     if summary["failures"]:
         print(f"Failures: {', '.join(summary['failures'])}")
     print()
     print("PER-CASE")
     print("-" * 60)
     for r in results:
+        if r.get("skipped"):
+            print(f"  [SKIP] {r['case_id']:45s} weight={r['weight']}  (requires_llm)")
+            continue
         status = "PASS" if r["all_passed"] else "FAIL"
         print(f"  [{status}] {r['case_id']:45s} weight={r['weight']}")
         if not r["all_passed"]:

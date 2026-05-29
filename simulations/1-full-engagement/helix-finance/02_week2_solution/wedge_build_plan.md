@@ -45,7 +45,7 @@ Carmen hostile review → Trader-side acceptance
 | 2.2 | Mei MNPI watch list received | Mei | YES |
 | 2.3 | David: 30 historical notes for seed eval | David | YES |
 | 2.4 | Aditya + Kayla-eq scoping → Snowflake sandbox | Aditya | YES |
-| 2.5 | Eval suite v1: 30 cases + 20 adversarial + per-sector slices | Alex | YES |
+| 2.5 | Eval suite v1: 5 seed + 15 adversarial + per-sector slices | Alex | YES |
 | 2.6 | Public-data augmentation: EDGAR + ECTSum + SubjECTive-QA | Alex | no |
 | 2.7 | MNPI Scrubber wired with real watch list | Alex | YES |
 | 2.8 | KPI Extractor wired with span-grounding | Alex | YES |

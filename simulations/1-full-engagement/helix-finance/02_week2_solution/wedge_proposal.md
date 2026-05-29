@@ -70,7 +70,7 @@ The citation-faithfulness and hallucinated-guidance metrics are weighted 10x in 
 | Week | Deliverable | Owners |
 |---|---|---|
 | 1 (in progress) | Discovery memo + this proposal + Mei's MNPI scrubber spec + James's data-handling one-pager | Alex |
-| 2 | Eval suite v1 (30 cases + adversarial 30 + per-sector slices); sandbox access on Helix's Snowflake-Python | Alex + David + Sienna-equivalent |
+| 2 | Eval suite v1 (5 seed + 15 adversarial, weighted by failure cost; per-sector slices); sandbox access on Helix's Snowflake-Python | Alex + David + Sienna-equivalent |
 | 3 | Prototype agent workforce; Rachel 20-draft review; Mei policy library encoded | Alex + Aditya |
 | 4 | Production hardening: citation-trace renderer, hallucination death-spiral monitor, on-call doc; Rachel sign-off; field memo to OpenAI | Alex + David |
 

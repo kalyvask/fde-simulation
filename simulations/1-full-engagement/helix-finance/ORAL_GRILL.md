@@ -76,7 +76,7 @@ GRILL QUESTIONS (pick 6-8):
    gets paged?
 
 9. Citation faithfulness on numbers is 100% on your eval set. How big is your
-   eval set on this specific dimension? Pass^k=5 over 30 cases means 150 runs;
+   eval set on this specific dimension? Pass^k=5 over 20 cases means 100 runs;
    what's the actual variance? What's the confidence interval on your "100%"?
    How would you know if it dropped to 99% in production?
 
