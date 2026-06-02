@@ -98,6 +98,16 @@ or 3.]"
 GO.
 ```
 
+## What the interviewer is also screening for (the Unforgivables)
+
+The five rubric dimensions below grade your defense. Underneath them, the interviewer is reading for the three **Unforgivables** from [`../../../frameworks/essentials-unforgivables.md`](../../../frameworks/essentials-unforgivables.md) — and the grill is where **Unforgivable 3 (entitlement / high-maintenance)** shows up most:
+
+- Defending every choice as correct, or treating a hostile question as an insult rather than a probe, reads as entitlement. Composure that opens with "here's where this breaks" reads as the opposite.
+- Implying the difficulty was the customer's fault ("the data wasn't clean enough to…") is the tell. Grit is naming the mess and owning it anyway.
+- Reaching to justify a fancier build than the wedge needed surfaces **Unforgivable 1 (chasing the trendy thing)** even when the architecture is technically sound.
+
+Going in knowing this is half the defense. The dimensions below are how it gets scored.
+
 ## Scoring rubric (use this after Claude drops character)
 
 Ask Claude: "Drop character. Grade my defense against this rubric, scoring each dimension 0-3 and totaling out of 15."

@@ -106,3 +106,14 @@ These are the traps where a senior FDE at a hedge fund engagement, or an Anthrop
 - Trap 5 → customer-first framing (silent-skeptic conversion)
 
 A clean Helix engagement avoids all 5. A typical first-attempt walks into 2-3 of them. The post-mortem checker tells you which.
+
+## What each trap signals to the hiring manager
+
+The rubric grades the artifact. The interviewer is also reading each trap as one of the three **Unforgivables** — the anti-signals that get a candidate rejected regardless of technical strength. See [`../../../frameworks/essentials-unforgivables.md`](../../../frameworks/essentials-unforgivables.md). When you run the post-mortem, translate each trap you walked into:
+
+- Trap 1 (idea-generation wedge because it's ambitious) → **Unforgivable 1: chasing the headline-worthy thing over the actual bottleneck**
+- Trap 4 (textbook tone-shift detector shipped without calibration) → **Unforgivable 1: shiny pattern over the reliability Rachel needs to trust it**
+- Trap 5 (didn't book Carmen because she "isn't a buyer") → **Unforgivable 2: passivity — didn't drive the silent skeptic who controls trader trust**
+- Trap 0 (building before the MNPI Scrubber) → **Unforgivable 2: deferred the load-bearing constraint instead of owning it in week 1**
+
+Trap 2 (letting the LLM source numbers) and Trap 3 (adding M&A / position sizing) read primarily as risk-surfacing misses, but a candidate who *defends* them under the grill — "the verifier catches it" — tips into **Unforgivable 3: entitlement**, treating the kill-criteria as someone else's problem. Self-diagnosing in the interviewer's vocabulary is the point.

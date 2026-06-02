@@ -114,3 +114,14 @@ The traps map to the 5 FDE skill dimensions in the rubric:
 - Trap 5 → risk surfacing (security as a v1 constraint)
 
 If you walked into 4 of 5, the rubric score will reflect it. If you walked into 0 of 5, the post-mortem checker will say so, and you're at the FDE final-round bar on this case.
+
+## What each trap signals to the hiring manager
+
+The rubric grades the artifact. The interviewer is also reading each trap as one of the three **Unforgivables** — the anti-signals that get a candidate rejected regardless of technical strength. See [`../../../frameworks/essentials-unforgivables.md`](../../../frameworks/essentials-unforgivables.md). When you run the post-mortem, translate each trap you walked into:
+
+- Trap 1 (auto-pay because the data is clean) → **Unforgivable 1: chasing the tractable/trendy thing over impact**
+- Trap 2 (LLM for state SLAs because "it can read the regs") → **Unforgivable 1: shiny solution over the reliability the kill-criteria demands**
+- Trap 3 (didn't ask Tom for the eval set) → **Unforgivable 2: passivity — waited for the eval set instead of driving it**
+- Trap 5 (Rachel as a week-4 checkbox) → **Unforgivable 2: passivity — didn't drive the gatekeeper toward a week-1 sign-off**
+
+Trap 4 reads as either, depending on framing (shiny drafter = Unforgivable 1; not driving the data-pull ask = Unforgivable 2). Self-diagnosing in the interviewer's vocabulary is the point: "I walked into Trap 1" is a rubric note; "I chased the trendy thing" is what they actually concluded about you.

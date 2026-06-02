@@ -93,6 +93,10 @@ from rest.]"
 GO.
 ```
 
+## What the interviewer is also screening for (the Unforgivables)
+
+The rubric grades your defense; underneath it the interviewer is reading for the three **Unforgivables** from [`../../../frameworks/essentials-unforgivables.md`](../../../frameworks/essentials-unforgivables.md). The grill is where **Unforgivable 3 (entitlement / high-maintenance)** surfaces: defending every choice as correct, treating a hostile question as an insult, or implying the difficulty was Helix's fault ("the transcript was too noisy to…"). On this case specifically, defending the LLM-sources-numbers or M&A-commentary choices instead of conceding them tips straight into it — those are Sarah's and Mei's kill-criteria, and arguing the point reads as treating the kill-criteria as someone else's problem. Composure that opens with "here's where this breaks" reads as grit, not weakness.
+
 ## Scoring rubric (use after Claude drops character)
 
 Same 5-dimension rubric as the Calder grill. Re-stated here for convenience:
