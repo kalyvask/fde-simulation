@@ -90,7 +90,7 @@ echo "  - Drafters in mock mode — set ANTHROPIC_API_KEY for live LLM calls."
 echo
 printf "${yellow}Next steps:${reset}\n"
 echo "  - Read QUICKSTART.md for the 4 simulation paths"
-echo "  - Read frameworks/README.md for the 11 portable frameworks"
+echo "  - Read frameworks/README.md for the 12 portable frameworks"
 echo "  - Try simulations/1-full-engagement/calder-insurance/EXERCISE.md"
 echo "    for the 4-week guided engagement"
 echo

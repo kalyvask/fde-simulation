@@ -101,7 +101,7 @@ Each agent run produces an examiner-readable audit trace.
 
 ### Frameworks (used across all simulations)
 
-11 portable frameworks that show up in every FDE engagement:
+12 portable frameworks that show up in every FDE engagement:
 
 1. [4-source convergence](frameworks/4-source-convergence.md) — Buyer / Brief / Industry / Operator triangulation for discovery
 2. [3-lens scaffold](frameworks/3-lens-scaffold.md) — Customer / Product / Technical for any agent design; AI-capability-relationship segmentation
@@ -114,6 +114,7 @@ Each agent run produces an examiner-readable audit trace.
 9. [Ownership language guide](frameworks/ownership-language-guide.md) — Action verb + first person + specific outcome + business consequence
 10. [Company calibration](frameworks/company-calibration.md) — Employer archetypes + comp bands
 11. [Consulting & strategy frameworks](frameworks/consulting-frameworks.md) — Trusted Advisor formula, the Delta Concept (Palantir-origin), Three Whys, Cost-of-Inaction, C.A.S.E. and DASME meta-structures
+12. [Essentials & Unforgivables](frameworks/essentials-unforgivables.md) — the hiring-side lens: the four traits they confirm + the three anti-signals that get you rejected anyway (Palantir-origin)
 
 ### Tools
 
@@ -156,7 +157,7 @@ fde-simulation/
 │   ├── 3-recommendation-60min/        # 1 hour live conversation
 │   └── 4-client-simulation/           # Live customer-handling role-play
 │
-├── frameworks/                        # 11 portable FDE frameworks
+├── frameworks/                        # 12 portable FDE frameworks
 └── tools/                             # Interactive 3-lens whiteboard
 ```
 

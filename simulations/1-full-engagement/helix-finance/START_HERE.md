@@ -134,7 +134,7 @@ Per the cadence in `STAKEHOLDER_INTERVIEWS.md`:
 
 ## When you're stuck
 
-- Need the framework? See [`../../../frameworks/`](../../../frameworks/) — 11 portable frameworks. 4-source convergence first.
+- Need the framework? See [`../../../frameworks/`](../../../frameworks/) — 12 portable frameworks. 4-source convergence first.
 - Need to know what good looks like? See [`GRADE_YOUR_WORK.md`](../GRADE_YOUR_WORK.md) — Claude grading prompt per phase.
 - Want a senior shortcut? See [`../SKIP_AHEAD.md`](../SKIP_AHEAD.md) — if you've done this before, do weeks 3-4 cold.
 - Done? See [`../RETRO_TEMPLATE.md`](../RETRO_TEMPLATE.md) at end of week 4.

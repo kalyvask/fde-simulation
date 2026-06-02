@@ -4,7 +4,7 @@
 
 ## Why this exists
 
-The repo has 4 simulation formats and 11 frameworks. Candidates ask: "I have an OpenAI Deployed PM final round in 2 weeks — which simulation should I actually run?" This map answers that.
+The repo has 4 simulation formats and 12 frameworks. Candidates ask: "I have an OpenAI Deployed PM final round in 2 weeks — which simulation should I actually run?" This map answers that.
 
 Two axes:
 1. **Which simulation format covers which interview signal** (the matrix below)

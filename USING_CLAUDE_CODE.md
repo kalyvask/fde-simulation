@@ -112,7 +112,7 @@ Claude reads your work, compares to the week-2 deliverables, names what's missin
 
 After an engagement (or mid-engagement), ask Claude to grade which frameworks you actually deployed:
 
-> "Read my discovery memo and wedge proposal. Which of the 11 frameworks in `frameworks/` did I actually use? Which did I name? Which did I skip? Score each as 'deployed / named / skipped'."
+> "Read my discovery memo and wedge proposal. Which of the 12 frameworks in `frameworks/` did I actually use? Which did I name? Which did I skip? Score each as 'deployed / named / skipped'."
 
 Useful before writing the `PORTFOLIO_TEMPLATE.md` `frameworks-applied.md` doc — Claude tells you what you actually did vs what you said you did.
 

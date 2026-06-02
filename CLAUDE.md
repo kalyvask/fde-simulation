@@ -6,7 +6,7 @@ User-facing usage guide: [`USING_CLAUDE_CODE.md`](USING_CLAUDE_CODE.md).
 
 ## What this repo is
 
-Hands-on simulations of the Forward Deployed Engineer role. Two fictional 4-week customer engagements (Calder insurance + Helix hedge fund) with working Python agent prototypes, weighted eval suites, reference solutions per phase, and stakeholder role-play prompts. Plus 4 simulation types (full engagement, 5h take-home + Review, 60-min recommendation, client simulation), 11 portable frameworks, a case-aware HTML whiteboard, and engagement-cycle artifacts (retro, portfolio, skip-ahead).
+Hands-on simulations of the Forward Deployed Engineer role. Two fictional 4-week customer engagements (Calder insurance + Helix hedge fund) with working Python agent prototypes, weighted eval suites, reference solutions per phase, and stakeholder role-play prompts. Plus 4 simulation types (full engagement, 5h take-home + Review, 60-min recommendation, client simulation), 12 portable frameworks, a case-aware HTML whiteboard, and engagement-cycle artifacts (retro, portfolio, skip-ahead).
 
 Doubles as interview prep for FDE-style roles at frontier AI labs.
 
@@ -82,7 +82,7 @@ The simulations are designed for the user to do the work. Reference solutions ex
 │   ├── 3-recommendation-60min/        # 1-hour live conversation
 │   └── 4-client-simulation/           # Hostile-customer role-play
 │
-├── frameworks/                        # 11 portable frameworks
+├── frameworks/                        # 12 portable frameworks
 │   ├── 4-source-convergence.md
 │   ├── 3-lens-scaffold.md
 │   ├── outcome-risk-matrix.md
@@ -93,7 +93,8 @@ The simulations are designed for the user to do the work. Reference solutions ex
 │   ├── behavioral-story-types.md
 │   ├── ownership-language-guide.md
 │   ├── company-calibration.md
-│   └── consulting-frameworks.md       # 8 sub-frameworks (Trusted Advisor, Delta, etc.)
+│   ├── consulting-frameworks.md       # 8 sub-frameworks (Trusted Advisor, Delta, etc.)
+│   └── essentials-unforgivables.md    # hiring-side lens: Essentials + Unforgivables (Palantir-origin)
 │
 └── tools/
     └── agent_design_practice.html     # Case-aware 3-lens whiteboard
@@ -164,6 +165,7 @@ Personas' kill-criteria, what they would and wouldn't say, and tone are in `STAK
 - **Three Whys** — System of Record / Cost of Inaction / Day 2 Ownership
 - **C.A.S.E.** — Clarify / Architect / Solve (the Delta) / Evaluate (FDE meta-structure)
 - **DASME** — Define scope / Architect agents / Specify data + models / Map metrics / Edge cases + scale (AI-PM meta-structure)
+- **Essentials & Unforgivables** — hiring-side lens: 4 Essentials (outcome-oriented, ambiguity comfort, grit, chaos tolerance) + 3 Unforgivables (chasing trendy/impact-disconnected solutions, passivity, entitlement). Use in post-mortems and the oral grill; translate each Expert Trap into the Unforgivable it signals.
 
 When suggesting or critiquing, name the framework. Don't re-derive.
 
