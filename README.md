@@ -89,12 +89,14 @@ Both prototypes run end-to-end without an API key. Drafters fall back to determi
 # Calder
 cd simulations/1-full-engagement/calder-insurance/02_week2_solution/prototype
 python scripts/run_e2e.py    # processes one synthetic FNOL through 5 agents
-python scripts/run_eval.py   # 5-case weighted eval at pass^k=5
+python scripts/run_eval.py   # 5 weighted seed cases at pass^k=5
+python scripts/run_eval.py --cases evals/cases/adversarial.jsonl   # 20 adversarial cases
 
 # Helix
 cd simulations/1-full-engagement/helix-finance/02_week2_solution/prototype
 python scripts/run_e2e.py    # processes one synthetic earnings call through 7 agents
-python scripts/run_eval.py   # 5-case weighted eval at pass^k=5
+python scripts/run_eval.py   # 5 weighted seed cases at pass^k=5
+python scripts/run_eval.py --cases evals/cases/adversarial.jsonl   # 15 adversarial cases
 ```
 
 Each agent run produces an examiner-readable audit trace.

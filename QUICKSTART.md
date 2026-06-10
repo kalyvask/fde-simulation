@@ -60,6 +60,9 @@ python scripts/run_e2e.py
 
 # Run the eval harness on 5 weighted seed cases
 python scripts/run_eval.py
+
+# Then the adversarial suite (the LLM-dependent cases need an API key; they skip in mock mode)
+python scripts/run_eval.py --cases evals/cases/adversarial.jsonl
 ```
 
 You should see a synthetic claim processed through 5 specialized agents (Intake → Drafter → Tone Supervisor → Compliance Critic → Audit) and a pass^k=5 eval run with 100% pass rate on the seed cases.

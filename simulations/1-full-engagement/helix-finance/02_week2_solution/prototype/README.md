@@ -4,7 +4,7 @@
 
 ## How to use this scaffold
 
-A **learning scaffold**, not production. The structure mirrors Calder's prototype intentionally — patterns port across domains, content swaps.
+A **learning scaffold**, not production. The structure mirrors Calder's prototype intentionally — patterns port across domains, content swaps. It is also deliberately leaner than Calder's: the observability module, examiner-readable HTML trace renderer, and monitor scripts exist only on the Calder side. Calder is the flagship scaffold; porting those pieces here is part of the exercise (see "What to extend next").
 
 1. Read the code patterns first (don't run anything yet)
 2. Run `python scripts/run_e2e.py` to see one synthetic earnings call flow end to end
@@ -39,20 +39,24 @@ prototype/
 ├── helix_agent/
 │   ├── trace.py                  # AuditTrace data model (FINRA / SEC ready)
 │   ├── policy_library.py         # MNPI watch list + Mei's compliance rules
-│   ├── workforce.py              # 9-agent orchestration
+│   ├── workforce.py              # 7-agent orchestration
 │   ├── agents/
 │   │   ├── base.py               # BaseAgent w/ auto trace
 │   │   ├── mnpi_scrubber.py      # FIRST agent in pipeline; deterministic
 │   │   ├── intake.py             # Transcript + 10-Q parser
+│   │   ├── kpi_extractor.py      # Span-grounded (value, span, source_doc) tuples
 │   │   ├── note_drafter.py       # LLM-backed note writer
+│   │   ├── tone_supervisor.py    # LLM-as-judge note-quality bar
+│   │   ├── citation_verifier.py  # Deterministic span match on every number
 │   │   └── compliance_critic.py  # Mei's rule library check
 │   └── data/synthetic.py         # Synthetic earnings call generator
 ├── evals/
 │   ├── harness.py                # Pass^k + weighted grading
-│   └── cases/seed.jsonl          # 5 hand-crafted cases
+│   └── cases/                    # seed.jsonl (5) + adversarial.jsonl (15)
 ├── scripts/
 │   ├── run_e2e.py
 │   └── run_eval.py
+├── tests/                        # policy library + reference eval tests
 └── requirements.txt
 ```
 
@@ -75,12 +79,12 @@ prototype/
 
 ## What to extend next
 
-1. **Add 25 more eval cases** — Hallucinated-guidance adversarial, MNPI smell-tests, multi-quarter context preservation
-2. **Tone-Shift Detector agent** (LLM-as-judge against SubjECTive-QA labels)
+1. **Expand the adversarial set** — more hallucinated-guidance cases, MNPI smell-tests, multi-quarter context preservation
+2. **Tone-Shift Detector agent** (cross-call management-language comparison against SubjECTive-QA labels — distinct from the per-note tone supervisor)
 3. **Consensus Comparator** with Yahoo Finance / Refinitiv integration
-4. **Citation Verifier** that checks every number maps to a source span
-5. **Examiner-readable trace renderer** for FINRA + internal compliance review
-6. **Tone-shift calibration tooling** (Brier score across SME-graded samples)
+4. **Examiner-readable trace renderer** for FINRA + internal compliance review (port `calder_agent/examiner_renderer.py`)
+5. **Tone-shift calibration tooling** (Brier score across SME-graded samples)
+6. **Observability module** (port `calder_agent/observability/death_spiral.py` and `scripts/run_monitor.py` from Calder)
 
 ## Cross-reference
 
