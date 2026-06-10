@@ -17,8 +17,8 @@ jobs:
     env:
       ANTHROPIC_API_KEY: ""   # force drafters into deterministic mock mode
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: ${{ matrix.python-version }}
 
@@ -39,8 +39,8 @@ jobs:
   scoring:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: "3.12"
       - name: Install scoring deps
@@ -53,29 +53,27 @@ jobs:
     # is deterministic and `requires_llm` cases are skipped — so it can't measure
     # run-to-run variance or exercise the LLM-dependent cases. This job does both,
     # at k=5 over seed + adversarial. It runs only on schedule / manual dispatch
-    # (it costs API tokens) and only when the ANTHROPIC_API_KEY secret is present,
-    # so it never breaks fork PRs.
+    # (it costs API tokens), so it never touches fork PRs. On those triggers a
+    # missing ANTHROPIC_API_KEY secret FAILS the run — a live eval that silently
+    # skips would masquerade as a green pass.
     if: ${{ github.event_name == 'schedule' || github.event_name == 'workflow_dispatch' }}
     runs-on: ubuntu-latest
     env:
       ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: "3.12"
-      - name: Guard — is the ANTHROPIC_API_KEY secret set?
-        id: guard
+      - name: Guard — ANTHROPIC_API_KEY secret must be set
         run: |
           if [ -z "$ANTHROPIC_API_KEY" ]; then
-            echo "have_key=false" >> "$GITHUB_OUTPUT"
-            echo "ANTHROPIC_API_KEY secret not set — live eval skipped."
-          else
-            echo "have_key=true" >> "$GITHUB_OUTPUT"
+            echo "::error::ANTHROPIC_API_KEY secret is not set — the live eval cannot run."
+            echo "::error::Add it under Settings > Secrets and variables > Actions, or this scheduled job will keep failing."
+            exit 1
           fi
 
       - name: Calder — live eval (k=5, seed + adversarial)
-        if: steps.guard.outputs.have_key == 'true'
         working-directory: simulations/1-full-engagement/calder-insurance/02_week2_solution/prototype
         run: |
           python -m pip install -q -r requirements.txt
@@ -83,7 +81,6 @@ jobs:
           python scripts/run_eval.py --k 5 --cases evals/cases/adversarial.jsonl
 
       - name: Helix — live eval (k=5, seed + adversarial)
-        if: steps.guard.outputs.have_key == 'true'
         working-directory: simulations/1-full-engagement/helix-finance/02_week2_solution/prototype
         run: |
           python -m pip install -q -r requirements.txt
