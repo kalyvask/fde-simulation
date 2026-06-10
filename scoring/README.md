@@ -9,7 +9,7 @@ pip install -r scoring/requirements.txt
 export ANTHROPIC_API_KEY=sk-ant-...      # required for grading; not needed for bundling
 ```
 
-Optional: pin a non-default model via `SCORING_MODEL=claude-opus-4-7` (the default). For grading, capability beats speed; Opus is the right call.
+Optional: pin a non-default model via `SCORING_MODEL=claude-opus-4-8` (the default). For grading, capability beats speed; Opus is the right call.
 
 ## scoring.grade — grade one engagement phase
 
@@ -157,7 +157,7 @@ python -m scoring.bundle ~/my-fde-portfolio/calder/ \
 
 ## Cost notes
 
-Per grade run with `claude-opus-4-7` and the cached system prompt: roughly 0.10 USD on a typical phase-1 grade with a 5KB submission + 5KB reference. Subsequent grades of the same phase drop to ~0.04 USD because the rubric prompt is cached.
+Per grade run with `claude-opus-4-8` and the cached system prompt: roughly 0.10 USD on a typical phase-1 grade with a 5KB submission + 5KB reference. Subsequent grades of the same phase drop to ~0.04 USD because the rubric prompt is cached.
 
 You can drop to `claude-sonnet-4-6` via `SCORING_MODEL=claude-sonnet-4-6` for ~5x cheaper at the cost of some grader calibration. Opus is recommended for grading; sonnet is fine for iteration.
 

@@ -14,7 +14,7 @@ The script:
 
 Env vars:
   ANTHROPIC_API_KEY (required)
-  SCORING_MODEL (optional, default: claude-opus-4-7)
+  SCORING_MODEL (optional, default: claude-opus-4-8)
 
 Prompt caching: the rubric system prompt is cached so subsequent grades of the
 same phase only pay tokens for the variable parts (the submission + reference).
@@ -33,7 +33,7 @@ from typing import Optional
 
 from .rubrics import RUBRICS, Rubric, build_system_prompt, list_phases
 
-DEFAULT_MODEL = os.environ.get("SCORING_MODEL", "claude-opus-4-7")
+DEFAULT_MODEL = os.environ.get("SCORING_MODEL", "claude-opus-4-8")
 REPO_ROOT = Path(__file__).resolve().parent.parent
 ENGAGEMENT_DIR = REPO_ROOT / "simulations" / "1-full-engagement"
 
