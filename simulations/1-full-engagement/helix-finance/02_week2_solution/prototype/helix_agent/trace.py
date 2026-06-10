@@ -8,8 +8,18 @@ from __future__ import annotations
 
 import uuid
 from dataclasses import dataclass, field, asdict
-from datetime import datetime
+from datetime import datetime, timezone
 from typing import Any, Optional
+
+
+def utc_now() -> datetime:
+    """Timezone-aware UTC now (datetime.utcnow is deprecated since Python 3.12)."""
+    return datetime.now(timezone.utc)
+
+
+def iso_z(dt: datetime) -> str:
+    """ISO-8601 with a Z suffix, whether dt is aware or naive UTC."""
+    return dt.isoformat().replace("+00:00", "Z") if dt.tzinfo else dt.isoformat() + "Z"
 
 
 @dataclass
@@ -40,7 +50,7 @@ class AuditTrace:
     note_id: str = ""  # finance equivalent of claim_id
     ticker: str = ""
     quarter: str = ""  # e.g., "Q3 2026"
-    started_at: datetime = field(default_factory=datetime.utcnow)
+    started_at: datetime = field(default_factory=utc_now)
     completed_at: Optional[datetime] = None
     entries: list[TraceEntry] = field(default_factory=list)
     final_output: Any = None
@@ -52,7 +62,7 @@ class AuditTrace:
         self.entries.append(entry)
 
     def close(self, final_output: Any, decision: str, reason: str = "", mnpi_block: bool = False) -> None:
-        self.completed_at = datetime.utcnow()
+        self.completed_at = utc_now()
         self.final_output = final_output
         self.final_decision = decision
         self.final_decision_reason = reason
@@ -64,9 +74,9 @@ class AuditTrace:
         lines.append(f"NOTE TRACE — {self.ticker} {self.quarter}")
         lines.append(f"Note ID: {self.note_id}")
         lines.append(f"Trace ID: {self.trace_id}")
-        lines.append(f"Started: {self.started_at.isoformat()}Z")
+        lines.append(f"Started: {iso_z(self.started_at)}")
         if self.completed_at:
-            lines.append(f"Completed: {self.completed_at.isoformat()}Z")
+            lines.append(f"Completed: {iso_z(self.completed_at)}")
         if self.mnpi_block:
             lines.append("")
             lines.append("*** MNPI WATCH-LIST BLOCK ***")

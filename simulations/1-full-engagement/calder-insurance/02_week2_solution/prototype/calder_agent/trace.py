@@ -22,8 +22,18 @@ from __future__ import annotations
 
 import uuid
 from dataclasses import dataclass, field, asdict
-from datetime import datetime
+from datetime import datetime, timezone
 from typing import Any, Optional
+
+
+def utc_now() -> datetime:
+    """Timezone-aware UTC now (datetime.utcnow is deprecated since Python 3.12)."""
+    return datetime.now(timezone.utc)
+
+
+def iso_z(dt: datetime) -> str:
+    """ISO-8601 with a Z suffix, whether dt is aware or naive UTC."""
+    return dt.isoformat().replace("+00:00", "Z") if dt.tzinfo else dt.isoformat() + "Z"
 
 
 @dataclass
@@ -52,7 +62,7 @@ class TraceEntry:
 class AuditTrace:
     trace_id: str = field(default_factory=lambda: str(uuid.uuid4()))
     claim_id: str = ""
-    started_at: datetime = field(default_factory=datetime.utcnow)
+    started_at: datetime = field(default_factory=utc_now)
     completed_at: Optional[datetime] = None
     entries: list[TraceEntry] = field(default_factory=list)
     final_output: Any = None
@@ -63,7 +73,7 @@ class AuditTrace:
         self.entries.append(entry)
 
     def close(self, final_output: Any, decision: str, reason: str = "") -> None:
-        self.completed_at = datetime.utcnow()
+        self.completed_at = utc_now()
         self.final_output = final_output
         self.final_decision = decision
         self.final_decision_reason = reason
@@ -78,9 +88,9 @@ class AuditTrace:
         lines: list[str] = []
         lines.append(f"AUDIT TRACE — Claim {self.claim_id or '(unknown)'}")
         lines.append(f"Trace ID: {self.trace_id}")
-        lines.append(f"Started: {self.started_at.isoformat()}Z")
+        lines.append(f"Started: {iso_z(self.started_at)}")
         if self.completed_at:
-            lines.append(f"Completed: {self.completed_at.isoformat()}Z")
+            lines.append(f"Completed: {iso_z(self.completed_at)}")
             lines.append(f"Total duration: {int((self.completed_at - self.started_at).total_seconds() * 1000)} ms")
         lines.append("")
         lines.append("STEPS")

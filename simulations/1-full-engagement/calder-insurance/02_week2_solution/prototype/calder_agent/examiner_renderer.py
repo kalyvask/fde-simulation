@@ -16,11 +16,10 @@ from __future__ import annotations
 
 import html
 import json
-from datetime import datetime
 from pathlib import Path
 from typing import Any
 
-from calder_agent.trace import AuditTrace
+from calder_agent.trace import AuditTrace, iso_z, utc_now
 
 
 CSS = """
@@ -143,8 +142,8 @@ OUTPUT
 def render_html(trace: AuditTrace, claim_summary: dict[str, Any] | None = None) -> str:
     decision = trace.final_decision or "unknown"
     decision_class = f"decision-{decision}"
-    started = trace.started_at.isoformat() + "Z"
-    completed = (trace.completed_at or datetime.utcnow()).isoformat() + "Z"
+    started = iso_z(trace.started_at)
+    completed = iso_z(trace.completed_at or utc_now())
     total_ms = sum(e.duration_ms for e in trace.entries) if trace.entries else 0
 
     summary_block = ""

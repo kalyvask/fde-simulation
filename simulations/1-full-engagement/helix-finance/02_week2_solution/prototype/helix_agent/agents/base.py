@@ -4,10 +4,9 @@ from __future__ import annotations
 import uuid
 from abc import ABC, abstractmethod
 from dataclasses import dataclass
-from datetime import datetime
 from typing import Any, Optional
 
-from helix_agent.trace import AuditTrace, TraceEntry
+from helix_agent.trace import AuditTrace, TraceEntry, utc_now
 
 
 @dataclass
@@ -28,9 +27,9 @@ class BaseAgent(ABC):
         ...
 
     def execute(self, inputs: dict[str, Any], trace: AuditTrace) -> AgentResult:
-        started = datetime.utcnow()
+        started = utc_now()
         result = self.run(inputs)
-        completed = datetime.utcnow()
+        completed = utc_now()
         trace.add(TraceEntry(
             step_id=str(uuid.uuid4()),
             agent_name=self.name,
