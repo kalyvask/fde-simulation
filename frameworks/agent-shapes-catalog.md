@@ -106,3 +106,7 @@ AGENT SHAPES (7 total):
 Senior move: name the shape before the agent.
   "I'd use a Classifier shape for intake" beats "I'd build an intake agent."
 ```
+
+## See also
+
+- [`production-debugging.md`](production-debugging.md) — a worked customer-support agent reference architecture: how these shapes compose into an 11-component request path you can debug against.

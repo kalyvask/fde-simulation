@@ -92,3 +92,8 @@ TESTING FRAMEWORK (4 dimensions):
      Immutable audit trace per request
      Weekly review with named operational owner
 ```
+
+## See also
+
+- [`agent-exploitation-taxonomy.md`](agent-exploitation-taxonomy.md) — names the 8 attack *types* the adversarial dimension has to cover, each with a weighted eval case.
+- [`production-debugging.md`](production-debugging.md) — the operate-time companion: reading the traces and drift signals this dimension produces once the agent is live.
