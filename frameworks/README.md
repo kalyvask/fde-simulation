@@ -1,6 +1,6 @@
 # Frameworks
 
-> Twelve portable frameworks that show up in every FDE engagement. Internalize these and they generalize to any case.
+> Fourteen portable frameworks that show up in every FDE engagement. Internalize these and they generalize to any case.
 
 | Framework | One-line definition | Deploy in... |
 |---|---|---|
@@ -16,6 +16,8 @@
 | [Company calibration](company-calibration.md) | 4 employer archetypes + Tier 1/2/3 AI Product Sense landscape + comp bands ($150K-$860K depending on archetype/level) | Pre-interview tuning |
 | [Consulting & strategy frameworks](consulting-frameworks.md) | 8 frameworks: Trusted Advisor formula, Delta Concept, Three Whys, Cost-of-Inaction, Quick Win Milestone, Shadow IT awareness, C.A.S.E. (FDE meta-structure), DASME (AI-PM meta-structure) | Discovery + Solution + interview meta-structure |
 | [Essentials & Unforgivables](essentials-unforgivables.md) | The hiring-side lens: 4 traits they confirm (outcome-oriented, ambiguity comfort, grit, chaos tolerance) + 3 Unforgivables that reject you anyway | Post-mortem + oral grill + reverse practice |
+| [Agent exploitation taxonomy](agent-exploitation-taxonomy.md) | Operate-time security: 8 attack classes (injection, jailbreak, tool abuse, exfiltration, DoS, unsafe autonomy) each with the deterministic gate that stops it | Robustness case + architecture review |
+| [Production debugging](production-debugging.md) | Customer-support agent reference architecture + latency root-cause decomposition tree + worked log-triage drill | Live-debugging case + operate-time |
 
 ## How to deploy them
 
