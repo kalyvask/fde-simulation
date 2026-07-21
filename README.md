@@ -103,7 +103,7 @@ Each agent run produces an examiner-readable audit trace.
 
 ### Frameworks (used across all simulations)
 
-14 portable frameworks that show up in every FDE engagement:
+15 portable frameworks that show up in every FDE engagement:
 
 1. [4-source convergence](frameworks/4-source-convergence.md) — Buyer / Brief / Industry / Operator triangulation for discovery
 2. [3-lens scaffold](frameworks/3-lens-scaffold.md) — Customer / Product / Technical for any agent design; AI-capability-relationship segmentation
@@ -119,6 +119,7 @@ Each agent run produces an examiner-readable audit trace.
 12. [Essentials & Unforgivables](frameworks/essentials-unforgivables.md) — the hiring-side lens: the four traits they confirm + the three anti-signals that get you rejected anyway (Palantir-origin)
 13. [Agent exploitation taxonomy](frameworks/agent-exploitation-taxonomy.md) — operate-time security: the 8 attack classes (injection, jailbreak, tool abuse, exfiltration, DoS) and the deterministic gate that stops each
 14. [Production debugging](frameworks/production-debugging.md) — customer-support agent reference architecture + a latency root-cause decomposition tree + a worked log-triage drill
+15. [System design round](frameworks/system-design-round.md) — the design-round method + AI-architecture depth (RAG failure modes, agent tool design + MCP, trajectory eval, cost levers) + a 6-prompt drill set
 
 ### Tools
 
@@ -161,7 +162,7 @@ fde-simulation/
 │   ├── 3-recommendation-60min/        # 1 hour live conversation
 │   └── 4-client-simulation/           # Live customer-handling role-play
 │
-├── frameworks/                        # 14 portable FDE frameworks
+├── frameworks/                        # 15 portable FDE frameworks
 └── tools/                             # Interactive 3-lens whiteboard
 ```
 

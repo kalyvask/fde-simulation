@@ -1,6 +1,6 @@
 # Frameworks
 
-> Fourteen portable frameworks that show up in every FDE engagement. Internalize these and they generalize to any case.
+> Fifteen portable frameworks that show up in every FDE engagement. Internalize these and they generalize to any case.
 
 | Framework | One-line definition | Deploy in... |
 |---|---|---|
@@ -18,6 +18,7 @@
 | [Essentials & Unforgivables](essentials-unforgivables.md) | The hiring-side lens: 4 traits they confirm (outcome-oriented, ambiguity comfort, grit, chaos tolerance) + 3 Unforgivables that reject you anyway | Post-mortem + oral grill + reverse practice |
 | [Agent exploitation taxonomy](agent-exploitation-taxonomy.md) | Operate-time security: 8 attack classes (injection, jailbreak, tool abuse, exfiltration, DoS, unsafe autonomy) each with the deterministic gate that stops it | Robustness case + architecture review |
 | [Production debugging](production-debugging.md) | Customer-support agent reference architecture + latency root-cause decomposition tree + worked log-triage drill | Live-debugging case + operate-time |
+| [System design round](system-design-round.md) | Design-round method + AI-architecture depth (RAG failure modes, tool design + MCP, trajectory eval, cost levers) + 6-prompt drill set | System-design round |
 
 ## How to deploy them
 

@@ -4,7 +4,7 @@
 
 ## Why this exists
 
-The repo has 4 simulation formats and 14 frameworks. Candidates ask: "I have an OpenAI Deployed PM final round in 2 weeks — which simulation should I actually run?" This map answers that.
+The repo has 4 simulation formats and 15 frameworks. Candidates ask: "I have an OpenAI Deployed PM final round in 2 weeks — which simulation should I actually run?" This map answers that.
 
 Two axes:
 1. **Which simulation format covers which interview signal** (the matrix below)
@@ -67,7 +67,7 @@ Be honest about what this repo doesn't simulate. If your loop has these signals,
 
 | Gap | Why this repo doesn't cover it | What to do instead |
 |---|---|---|
-| Live whiteboard system design (60 min, one prompt, drawn architecture) | The repo's design work happens at desk pace, not whiteboard pace | Practice DASME / C.A.S.E. on a whiteboard with a friend; use `tools/agent_design_practice.html` standalone |
+| Live whiteboard system design (60 min, one prompt, drawn architecture) | The repo's *engagement* design work happens at desk pace, not whiteboard pace | Now partly covered: [`frameworks/system-design-round.md`](frameworks/system-design-round.md) gives the round method, the AI-architecture depth it probes (RAG failure modes, tool design + MCP, trajectory eval, cost levers), and a 6-prompt drill set. Run the drills on a whiteboard against a clock; use `tools/agent_design_practice.html` as the canvas |
 | Algorithmic coding (LeetCode-style) | The repo's coding is product code, not interview puzzles | LeetCode / NeetCode separately; not a real FDE signal anyway |
 | Live API design under a clock | The prototypes have APIs but they're built at desk pace | Pair with a partner and design an API for a thrown-in customer brief in 45 min |
 | Pure ML modeling depth (training, eval design, paper-reading) | The repo is application-layer first | Read the papers in [`READING.md`](READING.md) and practice the Annotated Transformer |

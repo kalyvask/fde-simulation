@@ -75,6 +75,10 @@ For the company you're interviewing at, read:
 4. **Their API or product documentation** top-to-bottom — you should be able to discuss specific endpoints
 5. **Glassdoor + interview-experience write-ups** for the role you're applying for
 
+### Open FDE interview-prep guides
+
+- **[`aishwaryanr/awesome-generative-ai-guide` — FDE role guide](https://github.com/aishwaryanr/awesome-generative-ai-guide/tree/main/interview_prep/roles/forward-deployed-engineer)** — a free, well-structured breakdown of the FDE loop: the 7 rounds, a themed question bank, and a prep plan. Strongest on the technical half (the coding and system-design rounds). Its system-design and AI-architecture depth (RAG failure modes, agent tool design + MCP, trajectory evaluation, cost levers) informs `frameworks/system-design-round.md`. Read it for the rounds this repo simulates less deeply.
+
 ### Operational books (skim mode)
 
 - **SRE Workbook** (Google) — chapters on monitoring, incident response, and on-call. Skim only — useful for "tell me about a production incident" stories.
