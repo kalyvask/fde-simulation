@@ -97,3 +97,4 @@ TESTING FRAMEWORK (4 dimensions):
 
 - [`agent-exploitation-taxonomy.md`](agent-exploitation-taxonomy.md) — names the 8 attack *types* the adversarial dimension has to cover, each with a weighted eval case.
 - [`production-debugging.md`](production-debugging.md) — the operate-time companion: reading the traces and drift signals this dimension produces once the agent is live.
+- [`system-design-round.md`](system-design-round.md) — extends this with **trajectory evaluation** (scoring an agent's steps, not just its final output) for the design round.
