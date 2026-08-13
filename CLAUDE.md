@@ -6,7 +6,7 @@ User-facing usage guide: [`USING_CLAUDE_CODE.md`](USING_CLAUDE_CODE.md).
 
 ## What this repo is
 
-Hands-on simulations of the Forward Deployed Engineer role. Two fictional 4-week customer engagements (Calder insurance + Helix hedge fund) with working Python agent prototypes, weighted eval suites, reference solutions per phase, and stakeholder role-play prompts. Plus 4 simulation types (full engagement, 5h take-home + Review, 60-min recommendation, client simulation), 15 portable frameworks, a case-aware HTML whiteboard, and engagement-cycle artifacts (retro, portfolio, skip-ahead).
+Hands-on simulations of the Forward Deployed Engineer role. Two fictional 4-week customer engagements (Calder insurance + Helix hedge fund) with working Python agent prototypes, weighted eval suites, reference solutions per phase, and stakeholder role-play prompts. Plus 4 simulation types (full engagement, 5h take-home + Review, 60-min recommendation, client simulation), 16 portable frameworks, a case-aware HTML whiteboard, and engagement-cycle artifacts (retro, portfolio, skip-ahead).
 
 Doubles as interview prep for FDE-style roles at frontier AI labs.
 
@@ -82,7 +82,7 @@ The simulations are designed for the user to do the work. Reference solutions ex
 │   ├── 3-recommendation-60min/        # 1-hour live conversation
 │   └── 4-client-simulation/           # Hostile-customer role-play
 │
-├── frameworks/                        # 15 portable frameworks
+├── frameworks/                        # 16 portable frameworks
 │   ├── 4-source-convergence.md
 │   ├── 3-lens-scaffold.md
 │   ├── outcome-risk-matrix.md
@@ -97,7 +97,8 @@ The simulations are designed for the user to do the work. Reference solutions ex
 │   ├── essentials-unforgivables.md    # hiring-side lens: Essentials + Unforgivables (Palantir-origin)
 │   ├── agent-exploitation-taxonomy.md # operate-time security: 8 attack classes + gate per class
 │   ├── production-debugging.md        # CS-agent components + latency root-cause + log-triage drill
-│   └── system-design-round.md         # design-round method + RAG/tools/MCP/trajectory-eval/cost depth + drills
+│   ├── system-design-round.md         # design-round method + RAG/tools/MCP/trajectory-eval/cost depth + drills
+│   └── trust-surface-design.md        # adoption layer: attribution, transparency, publish gate, permissions, stakes routing
 │
 └── tools/
     └── agent_design_practice.html     # Case-aware 3-lens whiteboard
@@ -172,6 +173,8 @@ Personas' kill-criteria, what they would and wouldn't say, and tone are in `STAK
 - **Agent exploitation taxonomy** — operate-time security: 8 attack classes (direct/indirect prompt injection, jailbreak, tool abuse, PII exfiltration, cost DoS, memory extraction, unsafe autonomy) each with the deterministic gate that stops it. One principle: untrusted input reaching a trusted action.
 - **Production debugging** — customer-support agent reference architecture (11 components), latency root-cause decomposition tree (p50-vs-tail, decompose one trace by span), and a worked log-triage drill. Use for the "deploy an agent, why is it slow, read these logs" case.
 - **System design round** — the design-round method (requirements first → walking-skeleton MVP → name tradeoffs and pick → identity/observability/rollback/eval-as-release) plus the AI-architecture depth it probes: RAG failure modes, agent tool design + MCP, trajectory evaluation, cost levers. Spine it on DASME or C.A.S.E. Includes a 6-prompt drill set.
+
+- **Trust surface design** — the adoption layer, for when the eval passes but nobody delegates to the agent. Five decisions: attribution (agent vs. human, reversible per-step), transparency depth (process for the accountable user, outcome for the served user), publish gate (producing is free; reaching another human needs approval), permission inheritance (never invent a second access model), stakes routing ("can AI do it?" vs "should AI do it?"). Plus the override-rate autonomy ladder.
 
 When suggesting or critiquing, name the framework. Don't re-derive.
 

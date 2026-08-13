@@ -53,6 +53,10 @@ Three things the interviewer will probe:
 
 The senior FDE move: literally draw this table on a whiteboard or include it on Slide 1 of your deck. The matrix is the artifact that proves you scoped on principles, not vibes.
 
+## Complementary lens: the runtime version of this matrix
+
+The ORM scores *wedges* on value × irreversibility at design time. The same judgment has to run per-request at runtime — a routine claim and an emotionally loaded one are the same task type and different stakes. That's decision 5 of [`trust-surface-design.md`](trust-surface-design.md), which also gives the autonomy ladder that makes "v2 earns autonomy" measurable (override rate per action class) rather than a promise.
+
 ## Complementary lens: Cost-of-Inaction (CoI)
 
 The ORM frames wedges on *what you gain if you build it* (Value) × *what you risk if it goes wrong* (Risk). The **Cost-of-Inaction** lens (see [`consulting-frameworks.md`](consulting-frameworks.md)) frames the third question: *what does it cost the customer if you DON'T build this wedge?*
