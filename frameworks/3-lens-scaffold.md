@@ -108,6 +108,10 @@ In a full engagement: fill the table in week 1; revisit it weekly as new informa
 - ONE specific risk: MNPI watch-list drift; mitigation = per-invocation pull + Mei-owned audit log
 - Validation: PoC + 50-case weighted eval + Mei + Rachel + Carmen sign-offs
 
+## The trust-levels line has a method behind it
+
+The Product column's *trust levels (act / ask / escalate)* is one line here and an engagement's worth of decisions in practice. [`trust-surface-design.md`](trust-surface-design.md) is the method: attribution, transparency depth, the publish gate, permission inheritance, and stakes routing. Fill this column first; expand the trust line with that framework before the build plan.
+
 ## The probe this defends against
 
 When the interviewer asks "design the AI workforce", you don't draw agents. You walk through the 3-lens scaffold first. **The framework is the answer.**

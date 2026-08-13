@@ -4,7 +4,7 @@
 
 ## Why this exists
 
-The repo has 4 simulation formats and 15 frameworks. Candidates ask: "I have an OpenAI Deployed PM final round in 2 weeks — which simulation should I actually run?" This map answers that.
+The repo has 4 simulation formats and 16 frameworks. Candidates ask: "I have an OpenAI Deployed PM final round in 2 weeks — which simulation should I actually run?" This map answers that.
 
 Two axes:
 1. **Which simulation format covers which interview signal** (the matrix below)
@@ -31,6 +31,7 @@ Legend: `█` = primary coverage (deliverable proves it), `▒` = secondary cove
 | Weighted eval suite + pass^k=5 | █ | █ | ▒ | |
 | Adversarial eval cases per risk | █ | █ | | |
 | Audit trace + observability design | █ | ▒ | ▒ | |
+| Trust surface design (attribution, publish gate, permissions, stakes routing) | █ | ▒ | ▒ | ▒ |
 | Production sign-off criteria + named owners | █ | ▒ | █ | |
 | Field memo / lab-feedback synthesis | █ | | ▒ | |
 | Defending build choices verbally (Review round) | █ (via oral grill) | █ | █ | █ |
