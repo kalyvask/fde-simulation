@@ -98,7 +98,7 @@ The simulations are designed for the user to do the work. Reference solutions ex
 │   ├── agent-exploitation-taxonomy.md # operate-time security: 8 attack classes + gate per class
 │   ├── production-debugging.md        # CS-agent components + latency root-cause + log-triage drill
 │   ├── system-design-round.md         # design-round method + RAG/tools/MCP/trajectory-eval/cost depth + drills
-│   └── trust-surface-design.md        # adoption layer: attribution, transparency, publish gate, permissions, stakes routing
+│   └── trust-surface-design.md        # adoption layer: attribution, transparency, publish gate, permissions, stakes routing, autonomy ladder
 │
 └── tools/
     └── agent_design_practice.html     # Case-aware 3-lens whiteboard
@@ -174,7 +174,7 @@ Personas' kill-criteria, what they would and wouldn't say, and tone are in `STAK
 - **Production debugging** — customer-support agent reference architecture (11 components), latency root-cause decomposition tree (p50-vs-tail, decompose one trace by span), and a worked log-triage drill. Use for the "deploy an agent, why is it slow, read these logs" case.
 - **System design round** — the design-round method (requirements first → walking-skeleton MVP → name tradeoffs and pick → identity/observability/rollback/eval-as-release) plus the AI-architecture depth it probes: RAG failure modes, agent tool design + MCP, trajectory evaluation, cost levers. Spine it on DASME or C.A.S.E. Includes a 6-prompt drill set.
 
-- **Trust surface design** — the adoption layer, for when the eval passes but nobody delegates to the agent. Five decisions: attribution (agent vs. human, reversible per-step), transparency depth (process for the accountable user, outcome for the served user), publish gate (producing is free; reaching another human needs approval), permission inheritance (never invent a second access model), stakes routing ("can AI do it?" vs "should AI do it?"). Plus the override-rate autonomy ladder.
+- **Trust surface design** — the adoption layer, for when the eval passes but nobody delegates to the agent. Five decisions: attribution (agent vs. human, reversible per-step), transparency depth (process for the accountable user, outcome for the served user), publish gate (producing is free; reaching another human needs approval), permission inheritance (never invent a second access model), stakes routing ("can AI do it?" vs "should AI do it?"). Approvals render next to the object in the customer's system of record; chat is a session log, not the front door. Plus the onboarding-style autonomy ladder (launch deliberately over-gated, widen on override rate) and the refinement loop the field memo has to name an owner for.
 
 When suggesting or critiquing, name the framework. Don't re-derive.
 

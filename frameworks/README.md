@@ -19,7 +19,7 @@
 | [Agent exploitation taxonomy](agent-exploitation-taxonomy.md) | Operate-time security: 8 attack classes (injection, jailbreak, tool abuse, exfiltration, DoS, unsafe autonomy) each with the deterministic gate that stops it | Robustness case + architecture review |
 | [Production debugging](production-debugging.md) | Customer-support agent reference architecture + latency root-cause decomposition tree + worked log-triage drill | Live-debugging case + operate-time |
 | [System design round](system-design-round.md) | Design-round method + AI-architecture depth (RAG failure modes, tool design + MCP, trajectory eval, cost levers) + 6-prompt drill set | System-design round |
-| [Trust surface design](trust-surface-design.md) | The 5 decisions that make a working agent get *used*: attribution, transparency depth, publish gate, permission inheritance, stakes routing (+ override-rate autonomy ladder) | Solution Strategy + Risk & Validation + handoff |
+| [Trust surface design](trust-surface-design.md) | The 5 decisions that make a working agent get *used*: attribution, transparency depth, publish gate (and where it renders), permission inheritance, stakes routing — plus the onboarding-style autonomy ladder and the post-launch refinement loop | Solution Strategy + Risk & Validation + handoff |
 
 ## How to deploy them
 

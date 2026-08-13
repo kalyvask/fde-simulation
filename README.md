@@ -120,7 +120,7 @@ Each agent run produces an examiner-readable audit trace.
 13. [Agent exploitation taxonomy](frameworks/agent-exploitation-taxonomy.md) — operate-time security: the 8 attack classes (injection, jailbreak, tool abuse, exfiltration, DoS) and the deterministic gate that stops each
 14. [Production debugging](frameworks/production-debugging.md) — customer-support agent reference architecture + a latency root-cause decomposition tree + a worked log-triage drill
 15. [System design round](frameworks/system-design-round.md) — the design-round method + AI-architecture depth (RAG failure modes, agent tool design + MCP, trajectory eval, cost levers) + a 6-prompt drill set
-16. [Trust surface design](frameworks/trust-surface-design.md) — the adoption layer: attribution, transparency depth, publish gate, permission inheritance, stakes routing, and an override-rate autonomy ladder
+16. [Trust surface design](frameworks/trust-surface-design.md) — the adoption layer: attribution, transparency depth, publish gate (and where the approval renders), permission inheritance, stakes routing, an onboarding-style autonomy ladder, and the post-handoff refinement loop
 
 ### Tools
 

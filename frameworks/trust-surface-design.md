@@ -56,7 +56,11 @@ Draw the boundary at the point where the agent's work reaches a human other than
 
 This is the discipline already embodied in both reference prototypes (v1 is read-only, output lands in Rachel's / Janet's queue, never auto-sends). This framework names *why* so you can defend the line rather than just having drawn it, and so you can place it correctly on a case where the write path isn't obviously catastrophic.
 
-**Engagement test:** list every action the agent can take. For each, name who sees the result. Any action whose result reaches someone other than the operator, without a human approving, is an ungated publish.
+**Where the gate lives matters as much as where it sits.** The approval belongs *next to the object the agent is shaping*, in the system the user already works in — not in a separate console, review queue, or chat panel. Charlie Sutton, Chief Design Officer at Atlassian, builds agent interactions directly into Jira and Confluence rather than a side panel, and treats chat as *"a session log and a guardrail, rather than the primary method of interaction."*
+
+For an FDE this is an integration requirement, not a UX preference. An approval queue in a separate surface is where approvals go to be rubber-stamped: the reviewer has lost the context that would let them catch the problem, so you get the compliance artifact without the compliance. On Calder that means the gate is in Guidewire next to the claim, not in a standalone review app — and it is the difference between Janet actually reviewing 20 drafts and Janet clicking through 20 drafts.
+
+**Engagement test:** list every action the agent can take. For each, name who sees the result. Any action whose result reaches someone other than the operator, without a human approving, is an ungated publish. Then: is each approval rendered in the customer's system of record, or in something you built alongside it?
 
 ### 4. Permission model — inherit, don't invent
 
@@ -83,12 +87,29 @@ The formulation to use in the room: *the question isn't just "can AI do it?" but
 
 The five decisions above define v1's contract. The upgrade path is the same principle as the Outcome Risk Matrix's *"v1 protects the kill-criteria; v2 earns autonomy"*, made measurable:
 
+The mental model to give the customer is **onboarding, not configuration**. Sheta Chatterjee compares building trust with an agent to onboarding a team member: a new hire doesn't have enough context to work autonomously yet, and neither does a new agent. Gemini Enterprise deliberately starts with *more* checkpoints and approvals than it may ultimately need, then expands autonomy as the relationship proves itself in practice.
+
+Deliberate over-gating at launch is the move, and it inverts the usual instinct to launch at the autonomy level you hope to reach. Walking autonomy back after an incident costs trust you don't get returned; walking it forward costs nothing. It's also the honest answer to a buyer who reads v1's conservatism as timidity: this is the onboarding period, and here is what ends it.
+
 1. Ship gated. Every publish action requires approval.
 2. Instrument the **override rate** per action class — how often the human changes or rejects what the agent produced.
 3. Widen the gate only where the override rate is near zero over a named window (the reference engagements use 90 days).
 4. A persistently high override rate is not a prompt-tuning problem. It's evidence that this task shouldn't have been delegated, and the honest move is to say so in the field memo.
 
 This gives the customer a written answer to "when do we get to turn the human off," which is the question the economic buyer asks in week 4 and the one FDEs most often answer with vibes.
+
+## The gate is not the finish line
+
+Dimension 4 of [4-dimensional testing](4-dimensional-testing.md) is production observability. This is the reason it's load-bearing rather than a nice-to-have: an agent's real behavior distribution doesn't exist until real people use it on real work, so pre-launch validation has a ceiling that arrives well before confidence does. Rachel Been's team at Expedia releases agents before they're ready and learns from actual usage: *"You're not going to launch something that's perfect on day one, because that's not how building agents works."* Her conclusion generalizes — you can't script an agent perfectly, you can only build the conditions for it to get better.
+
+Two translations for a regulated engagement, because "release before it's ready" does not port directly to Calder or Helix:
+
+- **Early release is about polish, not safety.** The five decisions above are what make it survivable. Shipping early *behind the gates* is a different act from shipping early with autonomy.
+- **Where a bad output lands on someone other than the operator, the equivalent of "release early" is a small supervised cohort with full observability** — Janet's queue, Rachel's 20-draft review — not general availability. Same learning loop, contained blast radius. This is what week 3 validation already is; name it as the mechanism rather than a checkpoint.
+
+The handoff consequence: the field memo needs an owner for the refinement loop, not just an operational owner for the running system. Instrument for where the agent gets stuck and where users drop off *before* go-live, because that's the data the customer's team needs in month two and cannot backfill. An engagement that hands over a working agent with no loop hands over a decaying asset.
+
+**Engagement test:** what will the customer learn in the first 30 days of real use that your eval suite structurally cannot produce, who owns acting on it, and is the instrumentation in place before handoff?
 
 ## Worked example (Calder, FNOL drafting wedge)
 
@@ -99,19 +120,21 @@ This gives the customer a written answer to "when do we get to turn the human of
 | Publish gate | Agent drafts into Janet's queue. Nothing reaches the claimant without Janet's approval. No auto-close, no auto-send — the gate is at the claimant boundary, not the draft boundary |
 | Permission model | Agent runs as the adjuster's Guidewire identity; sees exactly that adjuster's book of claims. No agent-specific role. Closes Rachel Nieman's PHI-scope question |
 | Stakes routing | Routine auto-glass / minor collision → agent drafts. Fatality, minor claimant, litigation flag, or coverage denial → straight to a senior adjuster, and the adjuster is told why it routed |
-| Autonomy ladder | Override rate tracked per claim class. Gate widens on a class only after 90 days near-zero override, and Marcus signs each widening |
+| Approval placement | Approval rendered in Guidewire on the claim itself, not a standalone review console — Janet approves in the system she already lives in, with the claim context on screen |
+| Autonomy ladder | Deliberately over-gated at launch (every draft approved, including classes we expect to clear). Override rate tracked per claim class. Gate widens on a class only after 90 days near-zero override, and Marcus signs each widening |
+| Refinement loop | Stuck-points and drop-off instrumented pre-go-live; Greg's team owns the monthly review of override reasons; named in the field memo alongside the operational owner |
 
 ## The probe this defends against
 
 When the interviewer asks *"the eval passes — how do you know the adjusters will actually use it?"*, the weak answer is "we'd do training and change management." The strong answer:
 
-> "The eval proves the agent is right. It doesn't prove anyone will delegate to it, and those fail differently. I scoped the trust surface as five explicit decisions in week 2. Attribution: agent edits are tagged per-field in Guidewire and reversible per-field, which is simultaneously Janet's review affordance and Marcus's audit answer. Transparency: full trace for Janet because she signs the close, outcome-only for the claimant because they want resolution, not process. The publish gate sits at the claimant boundary, not the draft boundary — the agent produces freely, a human publishes. Permissions inherit the adjuster's Guidewire identity, so there's no second access model for Rachel to review. And routing is by stakes, not task type: a fatality claim and a fender-bender are the same object and a different human moment. Autonomy widens per claim class on a measured override rate, not on a launch date."
+> "The eval proves the agent is right. It doesn't prove anyone will delegate to it, and those fail differently. I scoped the trust surface as five explicit decisions in week 2. Attribution: agent edits are tagged per-field in Guidewire and reversible per-field, which is simultaneously Janet's review affordance and Marcus's audit answer. Transparency: full trace for Janet because she signs the close, outcome-only for the claimant because they want resolution, not process. The publish gate sits at the claimant boundary, not the draft boundary — the agent produces freely, a human publishes. Permissions inherit the adjuster's Guidewire identity, so there's no second access model for Rachel to review. And routing is by stakes, not task type: a fatality claim and a fender-bender are the same object and a different human moment. Autonomy widens per claim class on a measured override rate, not on a launch date — and the approval renders in Guidewire on the claim, because an approval in a separate console is one that gets rubber-stamped. I'd also tell Maria plainly that day-one won't be the final version: I instrument stuck-points and drop-off before go-live and hand over the refinement loop with a named owner, because an agent's real behavior distribution doesn't exist until adjusters use it."
 
 This is also the answer to *"why is your v1 so conservative"* — it isn't conservatism, it's a gate with a written removal condition.
 
 ## Where this comes from
 
-Field practice from design leaders shipping agentic products in production, collected in Figma's *Writing the rules of agentic design*: human-vs-agent attribution and process "thinking states" (Sheta Chatterjee, Google, on Gemini Enterprise), trust as deliberate infrastructure and the can-it/should-it routing rule (Thomas Vidal, Accor), transparency calibrated to context in financial services (Deidre Kolarick, Capital One), the producing-vs-publishing distinction, and permission inheritance (Atlassian). The mapping onto FDE engagement decisions and the interview defenses is this repo's.
+Field practice from design leaders shipping agentic products in production, collected in Figma's *Writing the rules of agentic design*: human-vs-agent attribution and process "thinking states" (Sheta Chatterjee, Google, on Gemini Enterprise), trust as deliberate infrastructure and the can-it/should-it routing rule (Thomas Vidal, Accor), transparency calibrated to context in financial services (Deidre Kolarick, Capital One), the producing-vs-publishing distinction, agent interactions built into existing interfaces with chat as session log (Charlie Sutton, Atlassian), permission inheritance (Atlassian), the onboarding metaphor for autonomy, and learning from real usage (Rachel Been, Expedia). The mapping onto FDE engagement decisions and the interview defenses is this repo's.
 
 ## Quick reference
 
@@ -127,8 +150,15 @@ TRUST SURFACE (name all five in week 2, before the build plan):
   5. STAKES ROUTING   Route by emotional/consequential weight, not task type
                       "Can AI do it?" vs "SHOULD AI do it?"
 
-  AUTONOMY LADDER     Ship gated -> measure override rate -> widen per class
+  WHERE THE GATE LIVES  Next to the object, in the customer's system of record.
+                        Separate console = rubber stamp. Chat = session log, not front door.
+
+  AUTONOMY LADDER     Onboard, don't configure. Launch with MORE gates than you need.
+                      Ship gated -> measure override rate -> widen per class
                       High override rate = wrong task to delegate, not a prompt bug
+
+  REFINEMENT LOOP     Pre-launch instrumentation + named owner in the field memo.
+                      Regulated = supervised cohort, not GA. Ship early behind gates.
 
 Senior move: the eval proves it's right; the trust surface proves it gets used.
 ```
@@ -139,3 +169,4 @@ Senior move: the eval proves it's right; the trust surface proves it gets used.
 - [`outcome-risk-matrix.md`](outcome-risk-matrix.md) — the same reversibility logic applied at wedge-selection time rather than per-request
 - [`agent-exploitation-taxonomy.md`](agent-exploitation-taxonomy.md) — least privilege as a security gate; decision 4 is its integration-side expression
 - [`agent-shapes-catalog.md`](agent-shapes-catalog.md) — the Auditor and Router shapes are how decisions 1 and 5 get built
+- [`4-dimensional-testing.md`](4-dimensional-testing.md) — dimension 4 (production observability) is the instrumentation the refinement loop runs on
