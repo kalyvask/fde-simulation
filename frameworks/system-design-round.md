@@ -34,6 +34,8 @@ Fixes: reranking, better chunking, lower top-k, dedup/recency filters, and a ret
 
 **MCP (Model Context Protocol)** is the emerging standard for exposing tools, resources, and prompts to a model across clients. Why it matters for an FDE: it standardizes plugging an agent into a customer's systems without bespoke glue per integration — and it widens the indirect-injection surface, because every tool result is untrusted input.
 
+MCP answers *"I need access to this capability"*; **A2A** answers *"I need another agent to own this task."* Knowing which boundary a requirement calls for — and defending why most of them are tools — is [`orchestration-topology.md`](orchestration-topology.md).
+
 ### Trajectory evaluation
 Pass^k on the *final output* (see [`4-dimensional-testing.md`](4-dimensional-testing.md)) is necessary but not sufficient for agents. **Trajectory evaluation** scores the *steps*: did the agent call the right tools in the right order, recover from a tool error, and avoid unnecessary or unsafe actions? A correct answer reached through a wrong path (it exfiltrated data, then summarized correctly) is still a failure. Evaluate both the destination and the route.
 

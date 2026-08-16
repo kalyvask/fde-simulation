@@ -61,6 +61,10 @@ When the interviewer asks "how did you decide on these agents", you say:
 
 > "I decomposed by failure mode, not by feature. Step 1: mapped Rachel's manual workflow. Step 2: identified 2 decisions and 6 executions. Step 3: grouped executions by data + tier. Step 4: added a critic at every irreversible step. Step 5: added routing for confidence-low cases. That's how we got to 7 agents — mechanically, not by guessing."
 
+## What this framework does not answer
+
+Decomposition is bottom-up: it derives boundaries from the manual workflow. It does not ask whether a boundary is *worth* creating, and it produces a flat set of agents with no named topology. Both are [`orchestration-topology.md`](orchestration-topology.md): the boundary test (a capability that differs on fewer than two of failure mode / permissions / eval criteria / tier / lifecycle / domain is a tool, not an agent) and the six composition patterns.
+
 ## Quick reference
 
 ```

@@ -109,4 +109,5 @@ Senior move: name the shape before the agent.
 
 ## See also
 
+- [`orchestration-topology.md`](orchestration-topology.md) — the shapes say what each agent *is*; this says how they compose (patterns), when a shape should be a tool instead, and what a delegated task must specify
 - [`production-debugging.md`](production-debugging.md) — a worked customer-support agent reference architecture: how these shapes compose into an 11-component request path you can debug against.
