@@ -103,7 +103,7 @@ Each agent run produces an examiner-readable audit trace.
 
 ### Frameworks (used across all simulations)
 
-16 portable frameworks that show up in every FDE engagement:
+17 portable frameworks that show up in every FDE engagement:
 
 1. [4-source convergence](frameworks/4-source-convergence.md) — Buyer / Brief / Industry / Operator triangulation for discovery
 2. [3-lens scaffold](frameworks/3-lens-scaffold.md) — Customer / Product / Technical for any agent design; AI-capability-relationship segmentation
@@ -121,6 +121,7 @@ Each agent run produces an examiner-readable audit trace.
 14. [Production debugging](frameworks/production-debugging.md) — customer-support agent reference architecture + a latency root-cause decomposition tree + a worked log-triage drill
 15. [System design round](frameworks/system-design-round.md) — the design-round method + AI-architecture depth (RAG failure modes, agent tool design + MCP, trajectory eval, cost levers) + a 6-prompt drill set
 16. [Trust surface design](frameworks/trust-surface-design.md) — the adoption layer: attribution, transparency depth, publish gate (and where the approval renders), permission inheritance, stakes routing, an onboarding-style autonomy ladder, and the post-handoff refinement loop
+17. [Orchestration topology](frameworks/orchestration-topology.md) — when a reasoning boundary beats a tool, the 6 orchestration patterns, MCP vs. A2A, delegation contracts, and the governance/observability layers
 
 ### Tools
 
@@ -163,7 +164,7 @@ fde-simulation/
 │   ├── 3-recommendation-60min/        # 1 hour live conversation
 │   └── 4-client-simulation/           # Live customer-handling role-play
 │
-├── frameworks/                        # 16 portable FDE frameworks
+├── frameworks/                        # 17 portable FDE frameworks
 └── tools/                             # Interactive 3-lens whiteboard
 ```
 

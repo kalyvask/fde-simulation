@@ -1,6 +1,6 @@
 # Frameworks
 
-> Sixteen portable frameworks that show up in every FDE engagement. Internalize these and they generalize to any case.
+> Seventeen portable frameworks that show up in every FDE engagement. Internalize these and they generalize to any case.
 
 | Framework | One-line definition | Deploy in... |
 |---|---|---|
@@ -20,12 +20,13 @@
 | [Production debugging](production-debugging.md) | Customer-support agent reference architecture + latency root-cause decomposition tree + worked log-triage drill | Live-debugging case + operate-time |
 | [System design round](system-design-round.md) | Design-round method + AI-architecture depth (RAG failure modes, tool design + MCP, trajectory eval, cost levers) + 6-prompt drill set | System-design round |
 | [Trust surface design](trust-surface-design.md) | The 5 decisions that make a working agent get *used*: attribution, transparency depth, publish gate (and where it renders), permission inheritance, stakes routing — plus the onboarding-style autonomy ladder and the post-launch refinement loop | Solution Strategy + Risk & Validation + handoff |
+| [Orchestration topology](orchestration-topology.md) | When to add a reasoning boundary vs. a tool (6-signal boundary test), the 6 orchestration patterns, MCP vs. A2A, the 6-field delegation contract, and the governance/observability layers | Solution Strategy + System-design round |
 
 ## How to deploy them
 
 In a 60-min interview, you deploy them in order:
 - Discovery: framework 1
-- Solution Strategy: frameworks 2, 3, 4, 5 (in that order)
+- Solution Strategy: frameworks 2, 3, 4, 5, then 17 (topology) if the system needs more than one agent
 - Risk & Validation: frameworks 6 and 16
 
 In a 5-hour take-home, you deploy them across hours 1-2 (discovery + architecture) and reference them in your deck.

@@ -4,7 +4,7 @@
 
 ## Why this exists
 
-The repo has 4 simulation formats and 16 frameworks. Candidates ask: "I have an OpenAI Deployed PM final round in 2 weeks — which simulation should I actually run?" This map answers that.
+The repo has 4 simulation formats and 17 frameworks. Candidates ask: "I have an OpenAI Deployed PM final round in 2 weeks — which simulation should I actually run?" This map answers that.
 
 Two axes:
 1. **Which simulation format covers which interview signal** (the matrix below)
@@ -25,6 +25,7 @@ Legend: `█` = primary coverage (deliverable proves it), `▒` = secondary cove
 | Wedge selection on Outcome Risk Matrix | █ | █ | █ | |
 | 3-lens scaffold application | █ | █ | █ | |
 | Agent workforce decomposition (5-8 agents with shapes) | █ | █ | █ | |
+| Orchestration topology + delegation contracts (why N agents, which pattern) | █ | █ | █ | |
 | Model-vs-application-layer tagging | █ | █ | █ | |
 | Hybrid deterministic + LLM discipline | █ | █ | | |
 | Working prototype that runs end-to-end | █ | █ | | |
