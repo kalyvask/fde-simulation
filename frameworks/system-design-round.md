@@ -15,6 +15,8 @@ The failure mode this round screens for is the same one the decomposition round 
 
 This maps onto the repo's existing meta-structures — **DASME** (Define scope / Architect / Specify data+models / Map metrics / Edge cases) and **C.A.S.E.** (Clarify / Architect / Solve / Evaluate) in [`consulting-frameworks.md`](consulting-frameworks.md). Use one of those as the spine; this framework is the AI-specific depth you hang on it.
 
+**The frame to name out loud: the system you're designing is a control plane** — the boundary between a probabilistic model and deterministic enterprise systems. The full component model (context, state, tools, verification, recovery) and the long-horizon depth live in [`agent-harness.md`](agent-harness.md); in the design round, naming the frame ("the model reasons; the harness constrains, persists, and verifies it") reframes a boxes-and-arrows question as an architecture-judgment one. Its **earn-autonomy** principle — start read-only, measure reliability, expand authority on evidence — is the answer to the autonomy question.
+
 ## Part 2 — The AI-architecture depth the round probes
 
 These are the four topics where candidates go shallow. Going one level deeper on each is the differentiator.
@@ -47,6 +49,9 @@ Latency is covered in [`production-debugging.md`](production-debugging.md); the 
 - Lower top-k; batch where latency allows
 - Route by difficulty (cheap model first, escalate on low confidence)
 - Cut unnecessary agent loops (the biggest hidden cost)
+
+### Long-horizon task state & recovery
+The design round increasingly asks about the **long-horizon worker** that owns an outcome across hours and hundreds of steps (rerouting shipments, reconciling ledgers, running a migration), where failures are inevitable and the goal is a system *resilient to imperfect steps*. That whole layer — explicit task state, checkpoints, idempotency, re-planning, and outcome verification — is its own framework: [`agent-harness.md`](agent-harness.md). Reach for it when the prompt is long-horizon; this repo's cases are deliberately short-horizon and don't exercise it.
 
 ## Part 3 — Drill set
 

@@ -78,6 +78,7 @@ That answer — separating baseline from tail, attributing each outlier to a *na
 - **"What components?"** → walk the 11-row request path (Part 1), grouping deterministic gates vs LLM synthesis.
 - **"Why is it slow?"** → p50 vs tail first, then decompose one trace by the Part 2 buckets, then correlate to what changed this week.
 - **"Read these logs."** → run the Part 3 checklist: baseline vs outliers, attribute each outlier to a span/component, name the missing instrumentation.
+- **"The agent says it succeeded but the customer says it didn't."** → this is a verification gap, not a latency one: verify the external side effect (read the DB), don't trust the agent's claim. The outcome-verification and recovery patterns live in [`agent-harness.md`](agent-harness.md).
 
 ## Quick reference
 

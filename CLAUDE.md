@@ -6,7 +6,7 @@ User-facing usage guide: [`USING_CLAUDE_CODE.md`](USING_CLAUDE_CODE.md).
 
 ## What this repo is
 
-Hands-on simulations of the Forward Deployed Engineer role. Two fictional 4-week customer engagements (Calder insurance + Helix hedge fund) with working Python agent prototypes, weighted eval suites, reference solutions per phase, and stakeholder role-play prompts. Plus 4 simulation types (full engagement, 5h take-home + Review, 60-min recommendation, client simulation), 17 portable frameworks, a case-aware HTML whiteboard, and engagement-cycle artifacts (retro, portfolio, skip-ahead).
+Hands-on simulations of the Forward Deployed Engineer role. Two fictional 4-week customer engagements (Calder insurance + Helix hedge fund) with working Python agent prototypes, weighted eval suites, reference solutions per phase, and stakeholder role-play prompts. Plus 4 simulation types (full engagement, 5h take-home + Review, 60-min recommendation, client simulation), 18 portable frameworks, a case-aware HTML whiteboard, and engagement-cycle artifacts (retro, portfolio, skip-ahead).
 
 Doubles as interview prep for FDE-style roles at frontier AI labs.
 
@@ -82,7 +82,7 @@ The simulations are designed for the user to do the work. Reference solutions ex
 │   ├── 3-recommendation-60min/        # 1-hour live conversation
 │   └── 4-client-simulation/           # Hostile-customer role-play
 │
-├── frameworks/                        # 17 portable frameworks
+├── frameworks/                        # 18 portable frameworks
 │   ├── 4-source-convergence.md
 │   ├── 3-lens-scaffold.md
 │   ├── outcome-risk-matrix.md
@@ -99,7 +99,8 @@ The simulations are designed for the user to do the work. Reference solutions ex
 │   ├── production-debugging.md        # CS-agent components + latency root-cause + log-triage drill
 │   ├── system-design-round.md         # design-round method + RAG/tools/MCP/trajectory-eval/cost depth + drills
 │   ├── orchestration-topology.md      # boundary test, 6 patterns, MCP vs A2A, delegation contracts, governance
-│   └── trust-surface-design.md        # adoption layer: attribution, transparency, publish gate, permissions, stakes routing, autonomy ladder
+│   ├── trust-surface-design.md        # adoption layer: attribution, transparency, publish gate, permissions, stakes routing, autonomy ladder
+│   └── agent-harness.md               # control-plane frame + long-horizon: state/checkpoint/recovery/verify/earn-autonomy
 │
 └── tools/
     └── agent_design_practice.html     # Case-aware 3-lens whiteboard
@@ -177,6 +178,8 @@ Personas' kill-criteria, what they would and wouldn't say, and tone are in `STAK
 
 - **Trust surface design** — the adoption layer, for when the eval passes but nobody delegates to the agent. Five decisions: attribution (agent vs. human, reversible per-step), transparency depth (process for the accountable user, outcome for the served user), publish gate (producing is free; reaching another human needs approval), permission inheritance (never invent a second access model), stakes routing ("can AI do it?" vs "should AI do it?"). Approvals render next to the object in the customer's system of record; chat is a session log, not the front door. Plus the onboarding-style autonomy ladder (launch deliberately over-gated, widen on override rate) and the refinement loop the field memo has to name an owner for.
 - **Orchestration topology** — the composition layer. When to add a reasoning boundary vs. a tool (boundary test: need >=2 of different failure mode / permissions / eval criteria / model tier / lifecycle / domain). Six patterns: router, supervisor, sequential, fan-out, generator-verifier, hierarchical. MCP = "I need a capability"; A2A = "I need another agent to own this task." Delegation contract: Objective -> Context -> Permissions -> Expected Output -> Completion Criteria -> Failure Behavior. Governance = model proposes, policy layer disposes. Multi-agent moves complexity into orchestration rather than removing it — sometimes one agent with good tools is right.
+
+- **The agent harness** — the control plane between a probabilistic model and deterministic enterprise systems. Unifies the repo's production-thinking frameworks (context, tools, permissions, observability, eval) and adds the long-horizon layer the short-horizon cases skip: explicit task state (not conversation history), checkpoints/recovery/idempotency, the plan→execute→verify→re-plan loop, verify-outcomes-not-intentions (side effects), and earn-autonomy. Use for long-horizon "AI worker" design questions.
 
 When suggesting or critiquing, name the framework. Don't re-derive.
 
