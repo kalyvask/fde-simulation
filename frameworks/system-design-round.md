@@ -50,6 +50,12 @@ Latency is covered in [`production-debugging.md`](production-debugging.md); the 
 - Route by difficulty (cheap model first, escalate on low confidence)
 - Cut unnecessary agent loops (the biggest hidden cost)
 
+**Cutting cost is half of it; proving it is the other half.** An FDE has to show the customer the deployment pays for itself, so know the *measurement* layers, not just the levers:
+- **Unit economics, not total cost.** Cost per user / per 1K requests / per 1M tokens, tokens per request, and prompt-cache hit rate. Total spend rising is fine if cost *per outcome* is falling because adoption grew — unit economics separate "more usage" from "less efficient." Attribute every request (tool / agent / user / tenant / model) or none of this is possible.
+- **Outcome-denominated cost** is the number that survives a skeptical exec: cost per merged PR, per review, per resolved alert — paired with a quality signal (revert rate, F1, MTTR), because a cheaper cost-per-outcome at worse quality is *not* cheaper. This is the cost-side analogue of "measure business-task success, not model accuracy" ([`4-dimensional-testing.md`](4-dimensional-testing.md)).
+- **Driver decomposition** answers *why* the bill moved with no hand-waving: Δcost ≈ adoption × engagement (requests/user) × input tokens/request × output tokens/request, reconciling to the total with **no unexplained residual**. "Cost up 30%" is useless; "up 30% = +18% adoption, +9% requests/user, +3% longer outputs, ~0 residual" is exec-review credible.
+- Re-run this before/after a **model migration** — the migration is a win only if outcome-denominated cost fell *and* the quality signals held.
+
 ### Long-horizon task state & recovery
 The design round increasingly asks about the **long-horizon worker** that owns an outcome across hours and hundreds of steps (rerouting shipments, reconciling ledgers, running a migration), where failures are inevitable and the goal is a system *resilient to imperfect steps*. That whole layer — explicit task state, checkpoints, idempotency, re-planning, and outcome verification — is its own framework: [`agent-harness.md`](agent-harness.md). Reach for it when the prompt is long-horizon; this repo's cases are deliberately short-horizon and don't exercise it.
 
@@ -68,6 +74,7 @@ Six prompts. For each: run the Part 1 method, reach for the Part 2 depth, and na
 
 - **In the system-design round:** open with requirements (Part 1), spine it on DASME or C.A.S.E., and when the interviewer probes AI depth, go one level deeper using Part 2 rather than hand-waving.
 - **As practice:** run the Part 3 drills on a whiteboard against a 45-60 min clock with a partner playing the interviewer; the standalone [`../tools/agent_design_practice.html`](../tools/agent_design_practice.html) works as the canvas.
+- **At handoff / in the ROI conversation:** hand the customer outcome-denominated cost (cost per outcome + quality held), not a raw token bill — and lead with it if a skeptical exec asks "is this worth it," backing it with the driver decomposition.
 
 ## Quick reference
 
@@ -84,7 +91,9 @@ DEPTH (go one level deeper than the candidate who fails):
   RAG           -> pipeline + failure modes (why retrieved context can hurt)
   Tools + MCP   -> single-purpose, typed args, actionable errors; MCP standardizes
   Trajectory eval -> score the steps, not just the final output
-  Cost          -> small model for routing, caching, prune context, cut loops
+  Cost          -> CUT: small model for routing, caching, prune context, cut loops
+                   PROVE: unit economics + cost-per-OUTCOME (at held quality);
+                   decompose Δcost = adoption × engagement × input × output, no residual
 
 FAILURE MODE THAT REJECTS YOU: a perfect design with no MVP sequencing.
 ```
